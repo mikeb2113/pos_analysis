@@ -108,50 +108,69 @@ NEGATIVE_QUANT = [
 ]
 
 PRONOUNS = [
-  ['I', "pronoun"],
-  ['you', "pronoun"],
-  ['my', "pronoun"],
-  ['mine', "pronoun"],
-  ['myself', "pronoun"],
-  ['we', "pronoun"],
-  ['us', "pronoun"],
-  ['our', "pronoun"],
-  ['ours', "pronoun"],
-  ['ourselves', "pronoun"],
-  ['you', "pronoun"],
-  ['you', "pronoun"],
-  ['your', "pronoun"],
-  ['yours', "pronoun"],
-  ['yourself', "pronoun"],
-  ['you', "pronoun"],
-  ['you', "pronoun"],
-  ['your', "pronoun"],
-  ['your', "pronoun"],
-  ['yourselves', "pronoun"],
-  ['he', "pronoun"],
-  ['him', "pronoun"],
-  ['his', "pronoun"],
-  ['his', "pronoun"],
-  ['himself', "pronoun"],
-  ['she', "pronoun"],
-  ['her', "pronoun"],
-  ['her', "pronoun"],
-  ['her', "pronoun"],
-  ['herself', "pronoun"],
-  ['it', "pronoun"],
-  ['it', "pronoun"],
-  ['its', "pronoun"],
-  ['itself', "pronoun"],
-  ['they', "pronoun"],
-  ['them', "pronoun"],
-  ['their', "pronoun"],
-  ['theirs', "pronoun"],
-  ['themself', "pronoun"],
-  ['they', "pronoun"],
-  ['them', "pronoun"],
-  ['their', "pronoun"],
-  ['theirs', "pronoun"],
-  ['themselves', "pronoun"],
+  ["I", "pronoun"],
+  ["you", "pronoun"],
+  ["he", "pronoun"],
+  ["she", "pronoun"],
+  ["it", "pronoun"],
+  ["we", "pronoun"],
+  ["they", "pronoun"],
+  ["me", "pronoun"],
+  ["him", "pronoun"],
+  ["her", "pronoun"],
+  ["us", "pronoun"],
+  ["them", "pronoun"],
+  ["myself", "pronoun"],
+  ["yourself", "pronoun"],
+  ["yourselves", "pronoun"],
+  ["herself", "pronoun"],
+  ["himself", "pronoun"],
+  ["itself", "pronoun"],
+  ["ourselves", "pronoun"],
+  ["themselves", "pronoun"],
+  ["themself", "pronoun"],
+  ["mine", "pronoun"],
+  ["yours", "pronoun"],
+  ["his", "pronoun"],
+  ["hers", "pronoun"],
+  ["ours", "pronoun"],
+  ["theirs", "pronoun"],
+  ["this", "pronoun"],
+  ["that", "pronoun"],
+  ["these", "pronoun"],
+  ["those", "pronoun"],
+  ["who", "pronoun"],
+  ["whom", "pronoun"],
+  ["whose", "pronoun"],
+  ["which", "pronoun"],
+  ["what", "pronoun"],
+  ["someone", "pronoun"],
+  ["somebody", "pronoun"],
+  ["something", "pronoun"],
+  ["anyone", "pronoun"],
+  ["anybody", "pronoun"],
+  ["anything", "pronoun"],
+  ["no one", "pronoun"],
+  ["nobody", "pronoun"],
+  ["everyone", "pronoun"],
+  ["everybody", "pronoun"],
+  ["everything", "pronoun"],
+  ["each", "pronoun"],
+  ["either", "pronoun"],
+  ["neither", "pronoun"],
+  ["another", "pronoun"],
+  ["other", "pronoun"],
+  ["some", "pronoun"],
+  ["many", "pronoun"],
+  ["few", "pronoun"],
+  ["all", "pronoun"],
+  ["both", "pronoun"],
+  ["none", "pronoun"],
+  ["several", "pronoun"],
+  ["any", "pronoun"],
+  ["one", "pronoun"],
+  ["each other", "pronoun"],
+  ["one another", "pronoun"]
 ]
 
 POSESSIVE_DET = [
@@ -170,9 +189,6 @@ df.to_csv("data/determiners.csv", index=False)
 
 df = pd.DataFrame(PREP, columns=["word", "pos"])
 df.to_csv("data/prepositions.csv", index=False)
-
-df = pd.DataFrame(CONJ, columns=["word", "pos"])
-df.to_csv("data/conjunctions.csv", index=False)
 
 df = pd.DataFrame(COMP, columns=["word", "pos"])
 df.to_csv("data/compositions.csv", index=False)
@@ -197,3 +213,11 @@ df.to_csv("data/pronouns.csv", index=False)
 
 df = pd.DataFrame(POSESSIVE_DET, columns=["word", "pos"])
 df.to_csv("data/posessive_det.csv", index=False)
+
+dfconj = pd.read_csv("data/dict/intermediate_data/conjunctions-in-english.csv")#take the conj csv as input
+#dfconj.rename(columns={"Word":"word"})
+df = pd.DataFrame(dfconj, columns=["Word", "pos"]) #define a new df with the word pos pattern
+df['pos'] = df['pos'].fillna("conj") #pos should be null - here, set the default fo conj
+df.rename(columns={1:"Word"}, inplace=True)
+df.rename({"Word": "word"}, axis=1, inplace=True)
+df.to_csv("data/pos/directors/conjunctions.csv", index=False)

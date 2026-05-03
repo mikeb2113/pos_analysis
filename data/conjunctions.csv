@@ -1,4 +1,246 @@
 word,pos
 and,conj
-or,conj
+that,conj
 but,conj
+or,conj
+if,conj
+when,conj
+than,conj
+because,conj
+while,conj
+where,conj
+although,conj
+whether,conj
+though,conj
+before,conj
+since,conj
+so,conj
+until,conj
+after,conj
+for,conj
+nor,conj
+unless,conj
+once,conj
+except,conj
+whereas,conj
+whilst,conj
+like,conj
+till,conj
+and/or,conj
+albeit,conj
+'cos,conj
+lest,conj
+immediately,conj
+whereupon,conj
+now,conj
+afore,conj
+plus,conj
+iff,conj
+tho',conj
+dat,conj
+notwithstanding,conj
+whereat,conj
+'cept,conj
+inasmuch,conj
+til,conj
+save,conj
+ne,conj
+only,conj
+altho',conj
+then,conj
+altho,conj
+forwhy,conj
+tofore,conj
+so that,conj
+vedder,conj
+lak,conj
+whilest,conj
+whyle,conj
+whylest,conj
+whylst,conj
+allthough,conj
+'coz,conj
+forcause,conj
+whilom,conj
+without,conj
+cus,conj
+coz,conj
+whilome,conj
+sence,conj
+in order that,conj
+quus,conj
+how,conj
+precisely unless,conj
+"when, as, and if",conj
+such that,conj
+whenas,conj
+having said that,conj
+in addition to,conj
+b'cause,conj
+whence,conj
+OR,conj
+along with,conj
+whenever,conj
+other,conj
+much less,conj
+fur,conj
+sith,conj
+less'n,conj
+but if,conj
+only for,conj
+bcos,conj
+eef,conj
+bcoz,conj
+but then,conj
+only if,conj
+soe,conj
+bekase,conj
+sithe,conj
+the way,conj
+forthy,conj
+sithen,conj
+only to,conj
+albe,conj
+sithence,conj
+caze,conj
+thy,conj
+unlesse,conj
+unlessen,conj
+even if,conj
+unlesss,conj
+to say nothing of,conj
+quhair,conj
+not,conj
+nay,conj
+quhar,conj
+in regard,conj
+andt,conj
+in case,conj
+quher,conj
+even though,conj
+inasfar as,conj
+like as,conj
+inasmuch as,conj
+let alone,conj
+like as and,conj
+like as if,conj
+wherealong,conj
+let along,conj
+both,conj
+fi,conj
+yet,conj
+whereäs,conj
+becos,conj
+and if,conj
+where'er,conj
+yt,conj
+howbeit,conj
+becoz,conj
+choose,conj
+bothe,conj
+wai,conj
+wherefore,conj
+on account,conj
+cum,conj
+on account of,conj
+in so far as,conj
+rather than,conj
+wherein,conj
+a.,conj
+whereinafter,conj
+albethey,conj
+whereinbefore,conj
+tho,conj
+provided that,conj
+beway,conj
+hyphen,conj
+thô,conj
+beways,conj
+whereof,conj
+et,conj
+whereout,conj
+whereover,conj
+buuut,conj
+thof,conj
+wheresoe'er,conj
+for that,conj
+wheresoeer,conj
+wheresoever,conj
+if and only if,conj
+if and when,conj
+wherethan,conj
+all,conj
+wheretoward,conj
+however,conj
+yf,conj
+in that,conj
+whereunto,conj
+either,conj
+directly,conj
+wherever,conj
+sobeit,conj
+thou,conj
+bycause,conj
+versus,conj
+as a result,conj
+to-whiles,conj
+wythowt,conj
+whethersoever,conj
+wythowte,conj
+thereas,conj
+if so be,conj
+in the event,conj
+for to,conj
+in the event that,conj
+unto,conj
+enaunter,conj
+outstep,conj
+insofar as,conj
+not to mention,conj
+not to say,conj
+for-than,conj
+as if,conj
+xor,conj
+nather,conj
+howsomever,conj
+twell,conj
+thanne,conj
+an if,conj
+given that,conj
+now that,conj
+as long as,conj
+ifen,conj
+else,conj
+forasmuch as,conj
+'cuz,conj
+cuz,conj
+ever since,conj
+iffen,conj
+bolth,conj
+just as soon as,conj
+nought withstanding,conj
+outcept,conj
+ergo,conj
+as soon as,conj
+nought-withstanding,conj
+if'n,conj
+yea,conj
+just in case,conj
+slash,conj
+nd,conj
+noughtwithstanding,conj
+zat,conj
+therfore,conj
+bicause,conj
+as though,conj
+as well as,conj
+against,conj
+followed by,conj
+forthan,conj
+neither,conj
+-a-,conj
+wen,conj
+when as,conj
+while one is about it,conj
+while one is at it,conj
+being that,conj

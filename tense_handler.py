@@ -1,54 +1,99 @@
-import csv
 import pandas as pd
+import re
 
-def possible_regular_past_bases(word):
-    word = word.lower()
-    candidates = []
+INPUT_FILE = "data/pos/core_pos/verbs.csv"
+OUTPUT_FILE = "data/pos/core_pos/expanded_verbs.csv"
 
-    if word.endswith("ed"):
-        candidates.append(word[:-2])
+WORD_COL = "word"
 
-    if word.endswith("d"):
-        candidates.append(word[:-1])
 
-    if word.endswith("ied"):
-        candidates.append(word[:-3] + "y")
+def is_vowel(char):
+    return char.lower() in "aeiou"
 
-    if (
-        len(word) > 4
-        and word.endswith("ed")
-        and len(word) >= 5
-        and word[-3] == word[-4]
-    ):
-        candidates.append(word[:-3])
 
-    return candidates
+def should_double_final_consonant(word):
+    """
+    Rough rule:
+    stop -> stopped, stopping
+    plan -> planned, planning
+    but not: need -> needed, needing
+    """
+    if len(word) < 3:
+        return False
 
-def classify_unknown_word(word, known_verbs):
-    bases = possible_regular_past_bases(word)
+    if word[-1] in "wxy":
+        return False
 
-    for base in bases:
-        if base in known_verbs:
-            return {
-                "word": word,
+    return (
+        not is_vowel(word[-1])
+        and is_vowel(word[-2])
+        and not is_vowel(word[-3])
+    )
+
+
+def regular_verb_forms(word):
+    word = str(word).strip().lower()
+    forms = {word}
+
+    if not word or not re.fullmatch(r"[a-z]+", word):
+        return forms
+
+    # 3rd person singular: walks, tries, goes
+    if word.endswith(("s", "x", "z", "ch", "sh", "o")):
+        forms.add(word + "es")
+    elif word.endswith("y") and len(word) > 1 and not is_vowel(word[-2]):
+        forms.add(word[:-1] + "ies")
+    else:
+        forms.add(word + "s")
+
+    # past tense: walked, tried, stopped
+    if word.endswith("e"):
+        forms.add(word + "d")
+    elif word.endswith("y") and len(word) > 1 and not is_vowel(word[-2]):
+        forms.add(word[:-1] + "ied")
+    elif should_double_final_consonant(word):
+        forms.add(word + word[-1] + "ed")
+    else:
+        forms.add(word + "ed")
+
+    # -ing form: walking, making, lying, stopping
+    if word.endswith("ie"):
+        forms.add(word[:-2] + "ying")
+    elif word.endswith("e") and word not in {"be", "see", "flee", "knee"}:
+        forms.add(word[:-1] + "ing")
+    elif should_double_final_consonant(word):
+        forms.add(word + word[-1] + "ing")
+    else:
+        forms.add(word + "ing")
+
+    return forms
+
+
+def main():
+    verbs = pd.read_csv(INPUT_FILE)
+
+    expanded_rows = []
+
+    for word in verbs[WORD_COL].dropna():
+        for form in regular_verb_forms(word):
+            expanded_rows.append({
+                "word": form,
                 "pos": "verb",
-                "tense": "past",
-                "base_form": base,
-                "source": "regular_past_rule"
-            }
+                "source_base": str(word).strip().lower()
+            })
 
-    return {
-        "word": word,
-        "pos": "unknown",
-        "tense": None,
-        "base_form": None,
-        "source": "unclassified"
-    }
+    expanded = pd.DataFrame(expanded_rows)
 
-reviews = pd.read_csv('backup_csvs/50k_reviews.csv')
-verb_list = pd.read_csv('data/pos/core_pos/verbs.csv')
-#known_verbs = pd.read_csv('')
-#reviews["Original_Review_Text"] = reviews["Review_Text"]
-for word in verb_list["word"]:
-    tensed = classify_unknown_word(word,verb_list)
-    print(tensed)
+    # remove duplicates
+    expanded = expanded.drop_duplicates(subset=["word", "pos"])
+
+    # sort nicely
+    expanded = expanded.sort_values(["word", "source_base"])
+
+    expanded.to_csv(OUTPUT_FILE, index=False)
+
+    print(f"Saved {len(expanded)} verb forms to {OUTPUT_FILE}")
+
+
+if __name__ == "__main__":
+    main()

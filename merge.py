@@ -4,22 +4,83 @@
 
 import csv
 
+# -------- VERBS --------
 header = None
-new_file = []
-for f in ('data/dict/csvs/verbs.csv', 'new_types/Verbs2_202604300832.csv'):
+verbs_merged = []
+
+for f in ('data/pos/core_pos/verbs.csv', 'new_types/Verbs2_202604300832.csv'):
     with open(f, newline='') as csv_file:
         reader = csv.reader(csv_file)
         if not header:
-            new_file.append(next(reader))
+            verbs_merged.append(next(reader))
             header = True
         else:
             next(reader)
         for row in reader:
-            new_file.append(row)
+            verbs_merged.append(row)
 
 with open('verbs.csv', 'w', newline='') as csv_out:
     writer = csv.writer(csv_out)
-    writer.writerows(new_file)
+    writer.writerows(verbs_merged)
+
+
+# -------- NOUNS --------
+header = None
+nouns_merged = []
+
+for f in ('data/pos/core_pos/nouns.csv', 'data/dict/intermediate_data/nouns2.csv'):
+    with open(f, newline='') as csv_file:
+        reader = csv.reader(csv_file)
+        if not header:
+            nouns_merged.append(next(reader))
+            header = True
+        else:
+            next(reader)
+        for row in reader:
+            nouns_merged.append(row)
+
+with open('nouns.csv', 'w', newline='') as csv_out:
+    writer = csv.writer(csv_out)
+    writer.writerows(nouns_merged)
+
+
+# -------- ADVERBS --------
+header = None
+adverbs_merged = []
+
+for f in ('data/pos/core_pos/adverbs.csv', 'data/dict/intermediate_data/Adverbs2_202604300831.csv'):
+    with open(f, newline='') as csv_file:
+        reader = csv.reader(csv_file)
+        if not header:
+            adverbs_merged.append(next(reader))
+            header = True
+        else:
+            next(reader)
+        for row in reader:
+            adverbs_merged.append(row)
+
+with open('adverbs.csv', 'w', newline='') as csv_out:
+    writer = csv.writer(csv_out)
+    writer.writerows(adverbs_merged)
+
+# -------- ADJECTIVES --------
+header = None
+adverbs_merged = []
+
+for f in ('data/pos/core_pos/adjectives.csv', 'data/dict/intermediate_data/Adjectives2_202604300830.csv'):
+    with open(f, newline='') as csv_file:
+        reader = csv.reader(csv_file)
+        if not header:
+            adverbs_merged.append(next(reader))
+            header = True
+        else:
+            next(reader)
+        for row in reader:
+            adverbs_merged.append(row)
+
+with open('adjectives.csv', 'w', newline='') as csv_out:
+    writer = csv.writer(csv_out)
+    writer.writerows(adverbs_merged)
 
 
 #cat csv_new_file.csv
