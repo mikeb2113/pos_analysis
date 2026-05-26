@@ -3,7 +3,7 @@ import re
 from collections import defaultdict
 import sys
 # Load reviews
-reviews = pd.read_csv("data/dict/working_set/text.csv")
+reviews = pd.read_csv("data/dict/working_set/reviews.csv")
 def load_word_set(path):
     return set(
         pd.read_csv(path)["word"]
@@ -83,12 +83,12 @@ def tokenize(text):
     
     return text.split()
 
-print("Starting text processing...", flush=True)
+print("Starting review processing...", flush=True)
 
 total_reviews = len(reviews)
 
 for i, (_, row) in enumerate(reviews.iterrows(), start=1):
-    text = row["Text"]
+    text = row["Review_Text"]
     sentiment = row["Sentiment_Polarity"]
 
     words = tokenize(text)

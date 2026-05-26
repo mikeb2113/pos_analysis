@@ -1,5 +1,7 @@
 import pandas as pd
-from pathlib import Path
+
+
+reviews = pd.read_csv('data/dict/intermediate_data/The_ Generative_AI_Ecosystem_50k_User_Reviews_2026.csv')
 
 # Load the POS CSVs
 df1 = pd.read_csv('data/dict/working_set/open_class/adjectives.csv')
@@ -21,21 +23,21 @@ class data:
         self.pos = pos
 
 #Before loading, drop the review columns that we don't need
-#try:
-#    reviews = reviews.drop('Thumbs_Up_Count', axis=1)
-#except KeyError:
-#    pass
-#try:
-#    reviews = reviews.drop('Review_Date', axis=1)
-#except KeyError:
-#    pass
-#try:
-#    reviews = reviews.drop('App_Version', axis=1)
-#except KeyError:
-#    pass
-#try:
-#    reviews = reviews.drop('Review_Theme', axis=1)
-#except KeyError:
-#    pass
+try:
+    reviews = reviews.drop('Thumbs_Up_Count', axis=1)
+except KeyError:
+    pass
+try:
+    reviews = reviews.drop('Review_Date', axis=1)
+except KeyError:
+    pass
+try:
+    reviews = reviews.drop('App_Version', axis=1)
+except KeyError:
+    pass
+try:
+    reviews = reviews.drop('Review_Theme', axis=1)
+except KeyError:
+    pass
 
 pos=parts_of_speech(df1,df2,df3,df4)

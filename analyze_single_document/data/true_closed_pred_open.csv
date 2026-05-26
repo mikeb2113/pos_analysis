@@ -1,0 +1,2 @@
+word,actual,predicted,prob_open,prob_closed,frequency,double_log_freq,word_length,participation_score,avg_sentiment,is_short,has_apostrophe,is_alpha,vowel_count,unique_char_ratio
+unless,closed,open,0.5226772404857516,0.1408882066857307,154,0.707667164688214,6,0.0666666666666666,0.0546194805194805,False,False,True,2,0.8333333333333334
