@@ -49,31 +49,11 @@ with open('./pdfs_as_csvs/more_sources.csv','a',newline='') as file:
     writer = csv.writer(file,escapechar='"')
     writer.writerow(newrow)
 
-for file in files:
-    #text, word_count, length_chars, polarity, source
-    for sentence in file.sentences:
-        #print(f"source: {sentence.source_name}")
-        out = "./pdfs_as_csvs/" + sentence.source_name + ".csv"
-        newrow = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.source,sentence.source_name,sentence.subject,sentence.star_rating]
-        if len(sentence.text)>0:
-            with open(out,'a',newline='') as file:
-                writer = csv.writer(file,escapechar='"')
-                writer.writerow(newrow)
-        #d = {
-        #    "sentence":sentence.text,
-        #    "word_count":sentence.word_count,
-        #    "length_chars":sentence.length_chars,
-        #    "polarity":sentence.polarity,
-        #    "source":sentence.source,
-        #    "subject":sentence.subject,
-        #    "rating":sentence.star_rating
-        #    }
-
-        #data = pd.DataFrame(columns=columns)
-        #df = pd.concat([df,data])
-
-
-#data = [
-#    columns,
-#]
-#sdf.to_csv("./pdfs_as_csvs/more_sources.csv",index=False)
+#for file in files:
+#    for sentence in file.sentences:
+#        out = "./pdfs_as_csvs/" + sentence.source_name + ".csv"
+##        newrow = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.source,sentence.source_name,sentence.subject,sentence.star_rating]
+#        if len(sentence.text)>0:
+#            with open(out,'a',newline='') as file:
+#                writer = csv.writer(file,escapechar='"')
+#                writer.writerow(newrow)

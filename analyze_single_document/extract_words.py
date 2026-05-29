@@ -89,11 +89,14 @@ total_reviews = len(reviews)
 
 for i, (_, row) in enumerate(reviews.iterrows(), start=1):
     text = row["Review_Text"]
+    print("Sentiment:")
+    print(row["Sentiment_Polarity"])
     sentiment = row["Sentiment_Polarity"]
 
     words = tokenize(text)
 
     for word in words:
+        print(f"Word is: {word}")
         word_stats[word]["frequency"] += 1
         word_stats[word]["sentiment_sum"] += sentiment
 

@@ -6,11 +6,12 @@ from deep_translator import GoogleTranslator
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from pathlib import Path
 from aggregate import file_mapping, files
-
+import csv
+import re
 #This takes a long time to complete! Rest assured it is not broken. You might want to do something else as this works!
 analyzer = SentimentIntensityAnalyzer()
 DetectorFactory.seed = 0
-
+paths = []
 def clean_text(text):
     if pd.isna(text):
         return ""
@@ -19,6 +20,21 @@ def clean_text(text):
     text = text.encode("ascii", "ignore").decode("ascii")
     return text
 
+def is_number(input_string):
+    regex_string=r'^\d+$'
+    temp=re.sub(r"\s","",input_string)
+    #print(temp)
+    if re.match(regex_string,temp):
+        return True
+    else:
+        return False
+    
+def is_empty(input_string):
+    regex_string=r'^$'
+    if re.match(regex_string,input_string):
+        return True
+    else:
+        return False
 
 def detect_language_status(text):
     try:
@@ -44,40 +60,48 @@ def detect_language_status(text):
         return "unknown", None
 
 for file in files:#go to the original files: take each file individually
+    header = ["Original_Text","Word_Count","Char_Count","Sentiment_Polarity","Translated_Text","Source_Id","Source_Name"]
+    rows = []
     for sentence in file.sentences:
-        print(sentence.text)
-        path = file_mapping.get(file)
-        print(f"Source: {file.source_name}")
-        path = "data/dict/working_set/pdfs_as_csvs/" + file.source_name + ".csv" #Output to this address as a csv
-        # preserve original text
-        file["Original_Review_Text"] = sentence.text #Save the original text in case of a translation being required
+        #print(sentence.text)
+        if(is_number(sentence.text)) or is_empty(sentence.text):
+             continue
+        else:
+            path = file_mapping.get(file)
+            #print(f"Source: {file.source_name}")
+            path = "data/dict/working_set/pdfs_as_csvs/" + file.source_name + ".csv" #Output to this address as a csv
+            # preserve original text
+            #sentence.text #Save the original text in case of a translation being required
+            paths.append([path,file.source_name])
+            #for idx, value in sentence.text.items():#attempt to translate each sentence
+            status, confidence = detect_language_status(sentence.text) #Attempt to translate to see if english & confidence
 
-        for idx, value in sentence.text.items():#attempt to translate each sentence
-            status, confidence = detect_language_status(value)
-
-            file.at[idx, "Language_Status"] = status
-            file.at[idx, "Language_Confidence"] = confidence
-
-            cleaned_original = clean_text(value)
+            #Then, save all the aggregated data into a row.
+            cleaned_original = clean_text(sentence.text)
 
             try:
-                # SAFER: only translate when confidently non-English
+                    # SAFER: only translate when confidently non-English
                 if status == "confident_non_english":
-                    translated = GoogleTranslator(source="auto", target="en").translate(str(value))
-                    cleaned = clean_text(translated)
-                    file.at[idx, "Was_Translated"] = 1
-                    file.at[idx, "Translated_Text"] = cleaned
+                        translated = GoogleTranslator(source="auto", target="en").translate(str(sentence.text))
+                        cleaned = clean_text(translated)
+                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,1,cleaned]
                 else:
-                    cleaned = cleaned_original
-                    file.at[idx, "Was_Translated"] = 0
-                    file.at[idx, "Translated_Text"] = ""
+                        cleaned = cleaned_original
+                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,cleaned]
 
             except Exception:
-                cleaned = cleaned_original
-                file.at[idx, "Was_Translated"] = 0
-                file.at[idx, "Translated_Text"] = ""
-
-            file.at[idx, "Review_Text"] = cleaned
-            file.at[idx, "Sentiment_Polarity"] = analyzer.polarity_scores(cleaned)["compound"]
-
-        file.to_csv(path, index=False)
+                    cleaned = cleaned_original
+                    row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,""]
+            rows.append(row)
+            #print("row(clean_data):")
+            #print(row)
+            with open(path, "w", newline="") as csvfile:
+                writer = csv.writer(csvfile,escapechar="\\")
+                writer.writerow(header)
+                for row in rows:
+                    writer.writerow(row)
+#for path in paths:
+#     print(f"path: {path}")
+#path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv
+#path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv
+#path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv

@@ -1,0 +1,116 @@
+Original_Text,Word_Count,Char_Count,Sentiment_Polarity,Translated_Text,Source_Id,Source_Name
+Riemann Sums Study Guide Problems in parentheses are for extra practice,10,70,-0.4019,Riemann Sums Study Guide Problems in parentheses are for extra practice,3,RiemannSums,english,0.9999944485585518,0,Riemann Sums Study Guide Problems in parentheses are for extra practice
+ Basic Idea A Riemann sum is a way of approximating an integral by summing the areas of vertical rectangles,19,106,0.0, Basic Idea A Riemann sum is a way of approximating an integral by summing the areas of vertical rectangles,3,RiemannSums,english,0.9999973644498727,0, Basic Idea A Riemann sum is a way of approximating an integral by summing the areas of vertical rectangles
+ A Riemann sum approximation has the form Z b a f(x) dx ≈ f(x1) ∆x + f(x2) ∆x + · · · + f(xn) ∆x Here ∆x represents the width of each rectangle,33,142,-0.6124, A Riemann sum approximation has the form Z b a f(x) dx ≈ f(x1) ∆x + f(x2) ∆x + · · · + f(xn) ∆x Here ∆x represents the width of each rectangle,3,RiemannSums,english,0.9999968008520008,0, A Riemann sum approximation has the form Z b a f(x) dx  f(x1) x + f(x2) x +    + f(xn) x Here x represents the width of each rectangle
+ This is given by the formula ∆x = b − a n where n is the number of rectangles,19,77,0.0772, This is given by the formula ∆x = b − a n where n is the number of rectangles,3,RiemannSums,english,0.9999947837053851,0, This is given by the formula x = b  a n where n is the number of rectangles
+" The x-values x1, x2, ",5,21,0.0," The x-values x1, x2, ",3,RiemannSums,maybe_english,0.7142850344467923,0," The x-values x1, x2, "
+ ,1,0,0.0, ,3,RiemannSums,empty,,0, 
+ ,1,0,0.0, ,3,RiemannSums,empty,,0, 
+" , xn are chosen from the rectangles according to some rule",11,58,0.0," , xn are chosen from the rectangles according to some rule",3,RiemannSums,english,0.9999973895225581,0," , xn are chosen from the rectangles according to some rule"
+ The three most common rules are: 1,7,34,0.0, The three most common rules are: 1,3,RiemannSums,english,0.9999963807398944,0, The three most common rules are: 1
+ Use the right endpoint of each recangle,7,39,0.0, Use the right endpoint of each recangle,3,RiemannSums,english,0.9999977242846314,0, Use the right endpoint of each recangle
+ Use the left endpoint of each rectangle,7,39,0.0, Use the left endpoint of each rectangle,3,RiemannSums,english,0.9999936419573889,0, Use the left endpoint of each rectangle
+ Use the midpoint of each rectangle,6,34,0.0, Use the midpoint of each rectangle,3,RiemannSums,english,0.9999959847965579,0, Use the midpoint of each rectangle
+" You can find the x-values for one of these rules by partitioning the interval [a, b] into subintervals of width ∆ x and then choosing the x-values",27,146,0.0," You can find the x-values for one of these rules by partitioning the interval [a, b] into subintervals of width ∆ x and then choosing the x-values",3,RiemannSums,english,0.9999981368367106,0," You can find the x-values for one of these rules by partitioning the interval [a, b] into subintervals of width  x and then choosing the x-values"
+" For example, if [ a, b] = [1 , 3] and n = 4 then ∆x = (3 − 1)/4 = 0",22,67,0.0," For example, if [ a, b] = [1 , 3] and n = 4 then ∆x = (3 − 1)/4 = 0",3,RiemannSums,english,0.9999958672092817,0," For example, if [ a, b] = [1 , 3] and n = 4 then x = (3  1)/4 = 0"
+"5, so the subintervals would be [1, 1",7,36,0.0,"5, so the subintervals would be [1, 1",3,RiemannSums,english,0.9999967730833372,0,"5, so the subintervals would be [1, 1"
+"5], [1",1,5,0.0,"5], [1",3,RiemannSums,unknown,,0,"5], [1"
+"5, 2], [2, 2",3,11,0.0,"5, 2], [2, 2",3,RiemannSums,unknown,,0,"5, 2], [2, 2"
+"5], and [2 ",3,10,0.0,"5], and [2 ",3,RiemannSums,english,0.9999963477288014,0,"5], and [2 "
+"5, 3]",1,4,0.0,"5, 3]",3,RiemannSums,unknown,,0,"5, 3]"
+ In this case: 1,4,15,0.0, In this case: 1,3,RiemannSums,english,0.999997729117919,0, In this case: 1
+ The right endpoint rule would give f(1,7,38,0.0, The right endpoint rule would give f(1,3,RiemannSums,english,0.9999958165267624,0, The right endpoint rule would give f(1
+5) · 0,2,5,0.0,5) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,5)  0
+5 + f(2) · 0,4,11,0.0,5 + f(2) · 0,3,RiemannSums,uncertain_non_english,0.7514372260998651,0,5 + f(2)  0
+5 + f(2,2,6,0.0,5 + f(2,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(2
+5) · 0,2,5,0.0,5) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,5)  0
+5 + f(3) · 0,4,11,0.0,5 + f(3) · 0,3,RiemannSums,uncertain_non_english,0.7514372260998651,0,5 + f(3)  0
+"5, 2",1,3,0.0,"5, 2",3,RiemannSums,unknown,,0,"5, 2"
+ The left endpoint rule would give f(1) · 0,9,42,0.0, The left endpoint rule would give f(1) · 0,3,RiemannSums,english,0.9999953823698833,0, The left endpoint rule would give f(1)  0
+5 + f(1,2,6,0.0,5 + f(1,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(1
+5) · 0,2,5,0.0,5) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,5)  0
+5 + f(2) · 0,4,11,0.0,5 + f(2) · 0,3,RiemannSums,uncertain_non_english,0.7514372260998651,0,5 + f(2)  0
+5 + f(2,2,6,0.0,5 + f(2,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(2
+5) · 0,2,5,0.0,5) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,5)  0
+"5, and 3",2,7,0.0,"5, and 3",3,RiemannSums,english,0.9999963477288014,0,"5, and 3"
+ The midpoint rule would give f(1,6,32,0.0, The midpoint rule would give f(1,3,RiemannSums,english,0.9999945352078986,0, The midpoint rule would give f(1
+25) · 0,2,6,0.0,25) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,25)  0
+5 + f(1,2,6,0.0,5 + f(1,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(1
+75) · 0,2,6,0.0,75) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,75)  0
+5 + f(2,2,6,0.0,5 + f(2,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(2
+25) · 0,2,6,0.0,25) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,25)  0
+5 + f(2,2,6,0.0,5 + f(2,3,RiemannSums,uncertain_non_english,0.8571383688091445,0,5 + f(2
+75) · 0,2,6,0.0,75) · 0,3,RiemannSums,confident_non_english,0.9999977152375499,1,75)  0
+ It is usually easy to tell from the graph whether left endpoints or right endpoints give an over- estimate or underestimate of the true integral,25,144,0.5423, It is usually easy to tell from the graph whether left endpoints or right endpoints give an over- estimate or underestimate of the true integral,3,RiemannSums,english,0.9999977439003682,0, It is usually easy to tell from the graph whether left endpoints or right endpoints give an over- estimate or underestimate of the true integral
+ In particular:  If f(x) is increasing then the left endpoint rule gives an underestimate and the right endpoint rule gives an overestimate,23,139,-0.296, In particular:  If f(x) is increasing then the left endpoint rule gives an underestimate and the right endpoint rule gives an overestimate,3,RiemannSums,english,0.9999974923593001,0, In particular:  If f(x) is increasing then the left endpoint rule gives an underestimate and the right endpoint rule gives an overestimate
+  If f(x) is decreasing then the left endpoint rule gives an overestimate and the right endpoint rule gives an underestimate,21,124,-0.296,  If f(x) is decreasing then the left endpoint rule gives an overestimate and the right endpoint rule gives an underestimate,3,RiemannSums,english,0.9999963714188915,0,  If f(x) is decreasing then the left endpoint rule gives an overestimate and the right endpoint rule gives an underestimate
+" Problems: 1–8 odd, (1–8 even)",5,29,-0.6124," Problems: 1–8 odd, (1–8 even)",3,RiemannSums,confident_non_english,0.9999951718245331,1,"Problems: 18 odd, (18 even)"
+ Summations Summation notation lets us describe large sums by giving a formula for each term,15,91,0.34, Summations Summation notation lets us describe large sums by giving a formula for each term,3,RiemannSums,english,0.9999973226373887,0, Summations Summation notation lets us describe large sums by giving a formula for each term
+" For example, 10X k=1 k2 means 1 2 + 22 + 32 + 42 + 52 + 62 + 72 + 82 + 92 + 102",26,79,0.0," For example, 10X k=1 k2 means 1 2 + 22 + 32 + 42 + 52 + 62 + 72 + 82 + 92 + 102",3,RiemannSums,english,0.857139585340057,0," For example, 10X k=1 k2 means 1 2 + 22 + 32 + 42 + 52 + 62 + 72 + 82 + 92 + 102"
+ The idea is that the variable k takes all of the values between 1 and 10,16,72,0.4019, The idea is that the variable k takes all of the values between 1 and 10,3,RiemannSums,english,0.9999973909074408,0, The idea is that the variable k takes all of the values between 1 and 10
+ For each k we compute k2 and then add the values together,12,57,0.4019, For each k we compute k2 and then add the values together,3,RiemannSums,english,0.9999978731676568,0, For each k we compute k2 and then add the values together
+ We can write summations for a Riemann sum using each of the three rules: Right endpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n k  b − a n Left endpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n (k − 1)  b − a n Midpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n   k − 1 2  b − a n Taking the limit of Riemann sums as the number of rectangles goes to infinity yields the actual value of the integral,115,411,-0.8834, We can write summations for a Riemann sum using each of the three rules: Right endpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n k  b − a n Left endpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n (k − 1)  b − a n Midpoint rule Z b a f(x) dx ≈ nX k=1 f  a + b − a n   k − 1 2  b − a n Taking the limit of Riemann sums as the number of rectangles goes to infinity yields the actual value of the integral,3,RiemannSums,english,0.9999961943027562,0, We can write summations for a Riemann sum using each of the three rules: Right endpoint rule Z b a f(x) dx  nX k=1 f  a + b  a n k  b  a n Left endpoint rule Z b a f(x) dx  nX k=1 f  a + b  a n (k  1)  b  a n Midpoint rule Z b a f(x) dx  nX k=1 f  a + b  a n   k  1 2  b  a n Taking the limit of Riemann sums as the number of rectangles goes to infinity yields the actual value of the integral
+ The simplest case is to use right endpoints: Z b a f(x) dx = lim n→∞ nX k=1 f  x + b − a n k  b − a n This is called the limit definition of the integral ,42,156,-0.6124, The simplest case is to use right endpoints: Z b a f(x) dx = lim n→∞ nX k=1 f  x + b − a n k  b − a n This is called the limit definition of the integral ,3,RiemannSums,english,0.9999945724176134,0, The simplest case is to use right endpoints: Z b a f(x) dx = lim n nX k=1 f  x + b  a n k  b  a n This is called the limit definition of the integral 
+" Problems: 9–14 odd, (9–14 even)",5,31,-0.6124," Problems: 9–14 odd, (9–14 even)",3,RiemannSums,confident_non_english,0.9999951718245331,1,"Problems: 914 odd, (914 even)"
+Exercises: Riemann Sums 1,3,24,0.0,Exercises: Riemann Sums 1,3,RiemannSums,uncertain_non_english,0.5503219712717367,0,Exercises: Riemann Sums 1
+ The following figure shows the graph of a function f (x),11,56,0.0, The following figure shows the graph of a function f (x),3,RiemannSums,english,0.9999985185987408,0, The following figure shows the graph of a function f (x)
+ 2 4 6 8 5 10 15 20 25 30 35 0 x y Estimate the value of Z 10 0 f (x) dx using five rectangles and left endpoints,30,112,-0.3818, 2 4 6 8 5 10 15 20 25 30 35 0 x y Estimate the value of Z 10 0 f (x) dx using five rectangles and left endpoints,3,RiemannSums,english,0.9999979334051396,0, 2 4 6 8 5 10 15 20 25 30 35 0 x y Estimate the value of Z 10 0 f (x) dx using five rectangles and left endpoints
+ The following graph shows the speed of a racecar for the first ten seconds of a race,17,84,0.0, The following graph shows the speed of a racecar for the first ten seconds of a race,3,RiemannSums,english,0.9999985914926215,0, The following graph shows the speed of a racecar for the first ten seconds of a race
+ 0 2 4 6 8 10 20 40 60 80 100 0 Time HsL Speed HmsL (a) Estimate the distance traveled by the racecar using five rectangles and right endpoints,30,143,0.0, 0 2 4 6 8 10 20 40 60 80 100 0 Time HsL Speed HmsL (a) Estimate the distance traveled by the racecar using five rectangles and right endpoints,3,RiemannSums,english,0.999997659261222,0, 0 2 4 6 8 10 20 40 60 80 100 0 Time HsL Speed HmsL (a) Estimate the distance traveled by the racecar using five rectangles and right endpoints
+ (b) Is your estimate in part (a) an underestimate or overestimate,11,65,-0.296, (b) Is your estimate in part (a) an underestimate or overestimate,3,RiemannSums,english,0.9999959345604954,0, (b) Is your estimate in part (a) an underestimate or overestimate
+ 3–4 Approximate the given integral using the given number of rectangles and the indicated rule,15,94,0.0772, 3–4 Approximate the given integral using the given number of rectangles and the indicated rule,3,RiemannSums,english,0.9999979531219666,0, 34 Approximate the given integral using the given number of rectangles and the indicated rule
+ Z 2 0 x2 dx; four rectangles; right endpoints 4,10,47,0.0, Z 2 0 x2 dx; four rectangles; right endpoints 4,3,RiemannSums,confident_non_english,0.9999954773038349,1,Z 2 0 x2 dx; four rectangles; right endpoints 4
+ Z π 0 sin2x dx; three rectangles; midpoints 5,9,45,0.0, Z π 0 sin2x dx; three rectangles; midpoints 5,3,RiemannSums,english,0.9999960126620704,0, Z  0 sin2x dx; three rectangles; midpoints 5
+ Suppose we approximate the integral Z 5 1 √x dx using 100 rectangles and right endpoints,16,88,-0.6124, Suppose we approximate the integral Z 5 1 √x dx using 100 rectangles and right endpoints,3,RiemannSums,english,0.9999946273120962,0, Suppose we approximate the integral Z 5 1 x dx using 100 rectangles and right endpoints
+ (a) What is the area of the first rectangle,9,43,0.0, (a) What is the area of the first rectangle,3,RiemannSums,english,0.9999976907461011,0, (a) What is the area of the first rectangle
+ (b) What is the area of the last rectangle,9,42,0.0, (b) What is the area of the last rectangle,3,RiemannSums,english,0.999997178786107,0, (b) What is the area of the last rectangle
+ (c) Will the approximation be an overestimate or an underestimate,10,65,-0.296, (c) Will the approximation be an overestimate or an underestimate,3,RiemannSums,english,0.9999972843182905,0, (c) Will the approximation be an overestimate or an underestimate
+ Explain,1,7,0.0, Explain,3,RiemannSums,uncertain_non_english,0.8571386738951201,0, Explain
+ The following table shows some data for a function f (x),11,56,0.0, The following table shows some data for a function f (x),3,RiemannSums,english,0.9999944991304102,0, The following table shows some data for a function f (x)
+ x 0,2,3,0.0, x 0,3,RiemannSums,confident_non_english,0.9999993334588949,1,x 0
+5 f (x) 3,3,8,0.0,5 f (x) 3,3,RiemannSums,confident_non_english,0.9999991902138308,1,5 f (x) 3
+6 (a) Estimate Z 0,4,17,0.0,6 (a) Estimate Z 0,3,RiemannSums,confident_non_english,0.9999963648758381,1,6 (a) Estimate Z 0
+5 0 f (x) dx using five rectangles and right endpoints,10,53,-0.6124,5 0 f (x) dx using five rectangles and right endpoints,3,RiemannSums,english,0.9999962191368772,0,5 0 f (x) dx using five rectangles and right endpoints
+ (b) Would you expect that your estimate from part (a) is an overestimate or an underestimate,16,92,-0.296, (b) Would you expect that your estimate from part (a) is an overestimate or an underestimate,3,RiemannSums,english,0.9999971254235802,0, (b) Would you expect that your estimate from part (a) is an overestimate or an underestimate
+ Explain,1,7,0.0, Explain,3,RiemannSums,uncertain_non_english,0.8571386738951201,0, Explain
+ 7–8 Write an integral that can be approximated using the given Riemann sum,13,74,0.0, 7–8 Write an integral that can be approximated using the given Riemann sum,3,RiemannSums,english,0.9999964763686241,0, 78 Write an integral that can be approximated using the given Riemann sum
+ (5,1,2,0.0, (5,3,RiemannSums,unknown,,0, (5
+01)3(0,0,5,0.0,01)3(0,3,RiemannSums,unknown,,0,01)3(0
+02) + (5,2,7,0.0,02) + (5,3,RiemannSums,unknown,,0,02) + (5
+03)3(0,0,5,0.0,03)3(0,3,RiemannSums,unknown,,0,03)3(0
+02) + · · ·+ (5,5,14,0.0,02) + · · ·+ (5,3,RiemannSums,confident_non_english,0.999998330594754,1,02) +   + (5
+99)3(0,0,5,0.0,99)3(0,3,RiemannSums,unknown,,0,99)3(0
+02) 8,1,4,0.0,02) 8,3,RiemannSums,unknown,,0,02) 8
+ √ 3,2,3,0.0, √ 3,3,RiemannSums,unknown,,0,  3
+01 (0,1,4,0.0,01 (0,3,RiemannSums,unknown,,0,01 (0
+01) + √ 3,3,8,0.0,01) + √ 3,3,RiemannSums,unknown,,0,01) +  3
+02 (0,1,4,0.0,02 (0,3,RiemannSums,unknown,,0,02 (0
+01) + · · ·+ √ 7,6,15,0.0,01) + · · ·+ √ 7,3,RiemannSums,confident_non_english,0.999998330594754,1,01) +   +  7
+00 (0,1,4,0.0,00 (0,3,RiemannSums,unknown,,0,00 (0
+01) 9,1,4,0.0,01) 9,3,RiemannSums,unknown,,0,01) 9
+ Evaluate 4 ∑ k=1 (k2 + 2k),7,26,0.0, Evaluate 4 ∑ k=1 (k2 + 2k),3,RiemannSums,confident_non_english,0.9999958818535049,1,Evaluate 4  k=1 (k2 + 2k)
+ Write the sum 1 · 4 + 2 · 5 + 3 · 6 + 4 · 7 + 5 · 8 + 6 · 9 as a summation,29,74,0.0, Write the sum 1 · 4 + 2 · 5 + 3 · 6 + 4 · 7 + 5 · 8 + 6 · 9 as a summation,3,RiemannSums,english,0.9999941889343806,0, Write the sum 1  4 + 2  5 + 3  6 + 4  7 + 5  8 + 6  9 as a summation
+ Write a summation that approximates the integral Z 3 1 sin x dx using 50 rectangles and right endpoints,19,103,-0.8225, Write a summation that approximates the integral Z 3 1 sin x dx using 50 rectangles and right endpoints,3,RiemannSums,english,0.9999965424771755,0, Write a summation that approximates the integral Z 3 1 sin x dx using 50 rectangles and right endpoints
+ Write an integral that is approximated by the following Riemann sum: 200 ∑ k=1 (3 + 0,17,85,0.0, Write an integral that is approximated by the following Riemann sum: 200 ∑ k=1 (3 + 0,3,RiemannSums,english,0.9999948291539875,0, Write an integral that is approximated by the following Riemann sum: 200  k=1 (3 + 0
+02k)3(0,0,6,0.0,02k)3(0,3,RiemannSums,confident_non_english,0.99999428919313,1,02k)3(0
+02),0,2,0.0,02),3,RiemannSums,unknown,,0,02)
+ Use the limit definition of the integral to write the integral Z 6 2 x5 dx as the limit of a summation,22,102,-0.6124, Use the limit definition of the integral to write the integral Z 6 2 x5 dx as the limit of a summation,3,RiemannSums,english,0.9999970388354734,0, Use the limit definition of the integral to write the integral Z 6 2 x5 dx as the limit of a summation
+ Write the limit limn→∞ n ∑ k=1 ln  1 + 2k n  2 n as an integral,19,65,0.0, Write the limit limn→∞ n ∑ k=1 ln  1 + 2k n  2 n as an integral,3,RiemannSums,uncertain_non_english,0.5714281941678945,0, Write the limit limn n  k=1 ln  1 + 2k n  2 n as an integral
+Answers to the Exercises 1,4,25,0.0,Answers to the Exercises 1,3,RiemannSums,english,0.9999985256761761,0,Answers to the Exercises 1
+ (a) roughly 660 m (b) overestimate 3,7,36,0.0, (a) roughly 660 m (b) overestimate 3,3,RiemannSums,english,0.9999959444437245,0, (a) roughly 660 m (b) overestimate 3
+ 15 4 = 3,4,8,0.0, 15 4 = 3,3,RiemannSums,unknown,,0, 15 4 = 3
+ π 2 5,3,5,0.0, π 2 5,3,RiemannSums,confident_non_english,0.99999996046454,1,p 2 5
+ (a) √ 1,3,7,0.0, (a) √ 1,3,RiemannSums,confident_non_english,0.9999954150773764,1,(a)  1
+04 (0,1,4,0.0,04 (0,3,RiemannSums,unknown,,0,04 (0
+04) (b) √ 5 (0,4,13,0.0,04) (b) √ 5 (0,3,RiemannSums,confident_non_english,0.9999936598545316,1,04) (b)  5 (0
+"04) (c) overestimate, since √x is increasing on [1 , 5] 6",11,56,0.0,"04) (c) overestimate, since √x is increasing on [1 , 5] 6",3,RiemannSums,english,0.999995687015522,0,"04) (c) overestimate, since x is increasing on [1 , 5] 6"
+ (a) 0 ,3,6,0.0, (a) 0 ,3,RiemannSums,confident_non_english,0.9999954150773764,1,(a) 0
+"7 (b) underestimate, since f (x) appears to be decreasing on [0 , 0",13,66,-0.296,"7 (b) underestimate, since f (x) appears to be decreasing on [0 , 0",3,RiemannSums,english,0.9999959617781915,0,"7 (b) underestimate, since f (x) appears to be decreasing on [0 , 0"
+5] 7,1,3,0.0,5] 7,3,RiemannSums,unknown,,0,5] 7
+ Z 6 5 x3 dx 8,6,13,-0.6124, Z 6 5 x3 dx 8,3,RiemannSums,confident_non_english,0.9999969402320292,1,Z 6 5 x3 dx 8
+ Z 7 3 √x dx 9,6,13,-0.6124, Z 7 3 √x dx 9,3,RiemannSums,confident_non_english,0.9999950215987183,1,Z 7 3 x dx 9
+ 6X k=1 k(k + 3) 11,6,18,0.0, 6X k=1 k(k + 3) 11,3,RiemannSums,uncertain_non_english,0.8571391126857311,0, 6X k=1 k(k + 3) 11
+ 50X k=1 sin  1 + k 25  1 25 12,12,32,-0.5574, 50X k=1 sin  1 + k 25  1 25 12,3,RiemannSums,uncertain_non_english,0.7142837464034506,0, 50X k=1 sin  1 + k 25  1 25 12
+ Z 7 3 x3 dx 13,6,14,-0.6124, Z 7 3 x3 dx 13,3,RiemannSums,confident_non_english,0.9999969402320292,1,Z 7 3 x3 dx 13
+ lim n→∞ nX k=1  2 + 4k n 2 4 n 14,13,35,0.0, lim n→∞ nX k=1  2 + 4k n 2 4 n 14,3,RiemannSums,uncertain_non_english,0.8571398122263181,0, lim n nX k=1  2 + 4k n 2 4 n 14
+ Z 3 1 ln x dx,6,13,-0.6124, Z 3 1 ln x dx,3,RiemannSums,confident_non_english,0.9999964352797617,1,Z 3 1 ln x dx

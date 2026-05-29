@@ -73,6 +73,7 @@ class csvable: #This iterates through each pdf and aquires stats
 
         #Then, we'll initialize an array to save sentences to later!
         self.sentences = []
+        self.source_name = source_name
         #for file in directory.iterdir():
             #if file.is_file():
                 #path = "./pdfs/"+file.name
