@@ -17,35 +17,35 @@ Original_Text,Word_Count,Char_Count,Sentiment_Polarity,Translated_Text,Source_Id
 " Therefore, from a practice point of view, there is still a critical need in conducting a system- atic study on the schemes that can ﬁnd and handle overlapping regions for the real-world data sets",34,195,-0.3182," Therefore, from a practice point of view, there is still a critical need in conducting a system- atic study on the schemes that can ﬁnd and handle overlapping regions for the real-world data sets",1,ClassOverlapping,english,0.9999963672785336,0," Therefore, from a practice point of view, there is still a critical need in conducting a system- atic study on the schemes that can find and handle overlapping regions for the real-world data sets"
  Our work in this paper aims to ﬁll this crucial void,11,52,0.0, Our work in this paper aims to ﬁll this crucial void,1,ClassOverlapping,english,0.999995771078745,0, Our work in this paper aims to fill this crucial void
 " Speciﬁcally, we have three major contributions as fol- 491© Atlantis Press, 2010",12,80,0.0," Speciﬁcally, we have three major contributions as fol- 491© Atlantis Press, 2010",1,ClassOverlapping,english,0.9999961744742187,0," Specifically, we have three major contributions as fol- 491 Atlantis Press, 2010"
-lows,0,3,-0.2023,lows,1,ClassOverlapping,confident_non_english,0.9999970772527661,0,
+lows,0,3,-0.2023,lows,1,ClassOverlapping,confident_non_english,0.9999970772527661,1,lows
 " First, we use the one-class classiﬁcation algorithm Support Vec- tor Data Description (SVDD) [4] cre- atively to capture the overlapping re- gions in real-world data sets",26,170,0.4019," First, we use the one-class classiﬁcation algorithm Support Vec- tor Data Description (SVDD) [4] cre- atively to capture the overlapping re- gions in real-world data sets",1,ClassOverlapping,english,0.999994744033019,0," First, we use the one-class classification algorithm Support Vec- tor Data Description (SVDD) [4] cre- atively to capture the overlapping re- gions in real-world data sets"
 " Sec- ond, we present three simple schemes, namely the discarding, merging and separating schemes, to model the data sets with the presence of class over- lapping",26,161,-0.1779," Sec- ond, we present three simple schemes, namely the discarding, merging and separating schemes, to model the data sets with the presence of class over- lapping",1,ClassOverlapping,english,0.999996832276318,0," Sec- ond, we present three simple schemes, namely the discarding, merging and separating schemes, to model the data sets with the presence of class over- lapping"
 " These schemes were mainly borrowed from the handwriting recog- nition [1, 5] and multi-label classiﬁca- tion [6, 7] studies, although they found overlapping samples by the given la- bels only",30,191,0.0," These schemes were mainly borrowed from the handwriting recog- nition [1, 5] and multi-label classiﬁca- tion [6, 7] studies, although they found overlapping samples by the given la- bels only",1,ClassOverlapping,english,0.9999970051765286,0," These schemes were mainly borrowed from the handwriting recog- nition [1, 5] and multi-label classifica- tion [6, 7] studies, although they found overlapping samples by the given la- bels only"
 " Finally, we study the inter- relationships between the best separat- ing scheme and ﬁve popular classiﬁers, with and without the impact of class imbalance [8, 9]",26,161,0.7906," Finally, we study the inter- relationships between the best separat- ing scheme and ﬁve popular classiﬁers, with and without the impact of class imbalance [8, 9]",1,ClassOverlapping,english,0.9999971325932965,0," Finally, we study the inter- relationships between the best separat- ing scheme and five popular classifiers, with and without the impact of class imbalance [8, 9]"
- Methodology 2,2,13,0.0, Methodology 2,1,ClassOverlapping,confident_non_english,0.9999962647865716,0,
+ Methodology 2,2,13,0.0, Methodology 2,1,ClassOverlapping,confident_non_english,0.9999962647865716,1,Methodology 2
  Schemes for ﬁnding overlapping regions The objective of Support Vector Data Description (SVDD) is to ﬁnd a sphere or domain with minimum volume con- taining all or most of the data [4],32,184,0.4019, Schemes for ﬁnding overlapping regions The objective of Support Vector Data Description (SVDD) is to ﬁnd a sphere or domain with minimum volume con- taining all or most of the data [4],1,ClassOverlapping,english,0.999998401857199,0, Schemes for finding overlapping regions The objective of Support Vector Data Description (SVDD) is to find a sphere or domain with minimum volume con- taining all or most of the data [4]
-" LetX={x i, i=1",3,14,0.0," LetX={x i, i=1",1,ClassOverlapping,confident_non_english,0.9999930762844857,0,
+" LetX={x i, i=1",3,14,0.0," LetX={x i, i=1",1,ClassOverlapping,confident_non_english,0.9999930762844857,1,"LetX={x i, i=1"
  ,1,0,0.0, ,1,ClassOverlapping,empty,,0, 
  ,1,0,0.0, ,1,ClassOverlapping,empty,,0, 
 l}b et h eg i v e n training data set of l points,13,48,0.4588,l}b et h eg i v e n training data set of l points,1,ClassOverlapping,uncertain_non_english,0.571424892879185,0,l}b et h eg i v e n training data set of l points
 " In or- der to ﬁnd the domain with minimum volume, we should minimize the ra- dius of sphere with the constraint that the distance between a center and data is smaller than the radius",34,182,0.0," In or- der to ﬁnd the domain with minimum volume, we should minimize the ra- dius of sphere with the constraint that the distance between a center and data is smaller than the radius",1,ClassOverlapping,english,0.9999968886159776,0," In or- der to find the domain with minimum volume, we should minimize the ra- dius of sphere with the constraint that the distance between a center and data is smaller than the radius"
 " Suppose that a andR denote center and radius respectively, the following function is minimized: min R,ξ q(R,ξ)= R2 + C l∑ i=1 ξi s",24,130,0.34," Suppose that a andR denote center and radius respectively, the following function is minimized: min R,ξ q(R,ξ)= R2 + C l∑ i=1 ξi s",1,ClassOverlapping,english,0.9999967822867637,0," Suppose that a andR denote center and radius respectively, the following function is minimized: min R, q(R,)= R2 + C l i=1 i s"
-t,0,0,0.0,t,1,ClassOverlapping,confident_non_english,0.9999951093873287,0,
+t,0,0,0.0,t,1,ClassOverlapping,confident_non_english,0.9999951093873287,1,t
 " ||Φ(xi) − a||2 ≤ R2 + ξi, ξi ≥ 0,i =1 ",12,38,0.0," ||Φ(xi) − a||2 ≤ R2 + ξi, ξi ≥ 0,i =1 ",1,ClassOverlapping,uncertain_non_english,0.8571401542261461,0," ||(xi)  a||2  R2 + i, i  0,i =1 "
-l,0,0,0.4588,l,1,ClassOverlapping,confident_non_english,0.9999939000748108,0,
+l,0,0,0.4588,l,1,ClassOverlapping,confident_non_english,0.9999939000748108,1,l
 " (1) where the parameter C gives the trade- oﬀ between the volume of sphere and the number of error, and slack variables ξincorporates soft constrains",25,149,-0.34," (1) where the parameter C gives the trade- oﬀ between the volume of sphere and the number of error, and slack variables ξincorporates soft constrains",1,ClassOverlapping,english,0.9999971342645751,0," (1) where the parameter C gives the trade- off between the volume of sphere and the number of error, and slack variables incorporates soft constrains"
  To solve the Eq,4,15,0.2023, To solve the Eq,1,ClassOverlapping,english,0.9999963428975908,0, To solve the Eq
 " (1), the Lagrangian is intro- duced",6,35,0.0," (1), the Lagrangian is intro- duced",1,ClassOverlapping,english,0.9999968462038236,0," (1), the Lagrangian is intro- duced"
 " For minimizing the Lagrangian function L, setting the derivative of L to zero with respect to R, a and ξ,r e - spectively, leads to: l∑ i=1 αi =1 , a = l∑ i=1 αiΦ(xi), αi = 1 lν − βi",41,182,0.7804," For minimizing the Lagrangian function L, setting the derivative of L to zero with respect to R, a and ξ,r e - spectively, leads to: l∑ i=1 αi =1 , a = l∑ i=1 αiΦ(xi), αi = 1 lν − βi",1,ClassOverlapping,english,0.9999964642028909,0," For minimizing the Lagrangian function L, setting the derivative of L to zero with respect to R, a and ,r e - spectively, leads to: l i=1 i =1 , a = l i=1 i(xi), i = 1 l  i"
 " (2) According to the Karush-Kuhn-Tucker (KKT) optimality conditions, we have: ||Φ(xi) − a||2 <R 2 ⇒ αi =0 ",19,106,0.4404," (2) According to the Karush-Kuhn-Tucker (KKT) optimality conditions, we have: ||Φ(xi) − a||2 <R 2 ⇒ αi =0 ",1,ClassOverlapping,english,0.9999969045431999,0," (2) According to the Karush-Kuhn-Tucker (KKT) optimality conditions, we have: ||(xi)  a||2 <R 2  i =0 "
  (3) ||Φ(xi)−a||2 = R2 ⇒ 0 <α i <C ,10,34,0.0, (3) ||Φ(xi)−a||2 = R2 ⇒ 0 <α i <C ,1,ClassOverlapping,uncertain_non_english,0.8571398741975428,0, (3) ||(xi)a||2 = R2  0 < i <C 
- (4) ||Φ(xi) − a||2 >R 2 ⇒ αi = C,10,32,0.0, (4) ||Φ(xi) − a||2 >R 2 ⇒ αi = C,1,ClassOverlapping,confident_non_english,0.9999958766547967,0,
+ (4) ||Φ(xi) − a||2 >R 2 ⇒ αi = C,10,32,0.0, (4) ||Φ(xi) − a||2 >R 2 ⇒ αi = C,1,ClassOverlapping,confident_non_english,0.9999958766547967,1,(4) ||(xi)  a||2 >R 2  i = C
 " (5) From the above results, the domain de- scription is represented in terms of only support vectors whose Lagrange multi- pliers satisfy 0 <α i <C ",27,148,0.6908," (5) From the above results, the domain de- scription is represented in terms of only support vectors whose Lagrange multi- pliers satisfy 0 <α i <C ",1,ClassOverlapping,english,0.9999963122827162,0," (5) From the above results, the domain de- scription is represented in terms of only support vectors whose Lagrange multi- pliers satisfy 0 < i <C "
  Support vectors deﬁne the boundary of training data,8,51,0.4019, Support vectors deﬁne the boundary of training data,1,ClassOverlapping,english,0.9999977247762087,0, Support vectors define the boundary of training data
 " So, SVDD can be used to ﬁnd overlapping region, as shown in Fig",13,63,0.0," So, SVDD can be used to ﬁnd overlapping region, as shown in Fig",1,ClassOverlapping,english,0.999996471494738,0," So, SVDD can be used to find overlapping region, as shown in Fig"
  Red dotted and blue dashed line are the boundaries of the two classes,13,69,0.0, Red dotted and blue dashed line are the boundaries of the two classes,1,ClassOverlapping,english,0.9999972037875997,0, Red dotted and blue dashed line are the boundaries of the two classes
  The data dropped in both two spheres can be thought as the overlapping data which is close to or overlaps with each other,23,121,0.0, The data dropped in both two spheres can be thought as the overlapping data which is close to or overlaps with each other,1,ClassOverlapping,english,0.9999979592817585,0, The data dropped in both two spheres can be thought as the overlapping data which is close to or overlaps with each other
- Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
+ Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,1,Fig
  1: Boundaries described by SVDD,5,31,0.0, 1: Boundaries described by SVDD,1,ClassOverlapping,english,0.9999972763704954,0, 1: Boundaries described by SVDD
  Schemes for dealing with class overlapping problem The research on this topic mainly fo- cuses on schemes for dealing with class 492 The 2010 International Conference on E-Business Intelligence ,30,194,0.1027, Schemes for dealing with class overlapping problem The research on this topic mainly fo- cuses on schemes for dealing with class 492 The 2010 International Conference on E-Business Intelligence ,1,ClassOverlapping,english,0.9999977799515863,0, Schemes for dealing with class overlapping problem The research on this topic mainly fo- cuses on schemes for dealing with class 492 The 2010 International Conference on E-Business Intelligence 
 "overlapping problem, which can be di- vided into two strategies",9,62,-0.4019,"overlapping problem, which can be di- vided into two strategies",1,ClassOverlapping,english,0.9999971447718204,0,"overlapping problem, which can be di- vided into two strategies"
@@ -71,9 +71,9 @@ l,0,0,0.4588,l,1,ClassOverlapping,confident_non_english,0.9999939000748108,0,
  Table 1 summarizes the data sets,6,32,0.0, Table 1 summarizes the data sets,1,ClassOverlapping,english,0.9999982906561857,0, Table 1 summarizes the data sets
 " For each data set, it shows the number of examples (#E), number of attributes (#A) and the ratio of over- lapping(ratio)",21,120,0.1531," For each data set, it shows the number of examples (#E), number of attributes (#A) and the ratio of over- lapping(ratio)",1,ClassOverlapping,english,0.9999959945956395,0," For each data set, it shows the number of examples (#E), number of attributes (#A) and the ratio of over- lapping(ratio)"
  Experiments are di- Data Set  Source  #E  #A  ratio Inosphere  UCI  351  34  41,22,79,0.0, Experiments are di- Data Set  Source  #E  #A  ratio Inosphere  UCI  351  34  41,1,ClassOverlapping,english,0.9999976608256703,0, Experiments are di- Data Set  Source  #E  #A  ratio Inosphere  UCI  351  34  41
-3% Sonar  UCI  208  60  20,9,25,0.0,3% Sonar  UCI  208  60  20,1,ClassOverlapping,confident_non_english,0.9999941301612787,0,
-2% Splice  LIBSVM  1000  60  12,9,30,0.0,2% Splice  LIBSVM  1000  60  12,1,ClassOverlapping,confident_non_english,0.9999942326719198,0,
-6% Diabetes  UCI  768  8  7,9,26,0.0,6% Diabetes  UCI  768  8  7,1,ClassOverlapping,confident_non_english,0.9999955617203536,0,
+3% Sonar  UCI  208  60  20,9,25,0.0,3% Sonar  UCI  208  60  20,1,ClassOverlapping,confident_non_english,0.9999941301612787,1,3% Sonar UCI 208 60 20
+2% Splice  LIBSVM  1000  60  12,9,30,0.0,2% Splice  LIBSVM  1000  60  12,1,ClassOverlapping,confident_non_english,0.9999942326719198,1,2% Splice  LIBSVM  1000  60  12
+6% Diabetes  UCI  768  8  7,9,26,0.0,6% Diabetes  UCI  768  8  7,1,ClassOverlapping,confident_non_english,0.9999955617203536,1,6% Diabetes ICU 768 8 7
 9% German  LIBSVM  1000  24  5,9,29,0.0,9% German  LIBSVM  1000  24  5,1,ClassOverlapping,uncertain_non_english,0.8571412509440053,0,9% German  LIBSVM  1000  24  5
 7% Table 1: Characteristics of Data Sets,6,39,0.0,7% Table 1: Characteristics of Data Sets,1,ClassOverlapping,english,0.9999957047243077,0,7% Table 1: Characteristics of Data Sets
  vided into three scenarios,4,26,0.0, vided into three scenarios,1,ClassOverlapping,english,0.9999962455557646,0, vided into three scenarios
@@ -103,7 +103,7 @@ l,0,0,0.4588,l,1,ClassOverlapping,confident_non_english,0.9999939000748108,0,
  Experiment 2 The separating scheme that deals with class overlapping problem performs best is also compared to the scheme without dealing with class overlapping problem called the original scheme (o) here,31,204,0.2732, Experiment 2 The separating scheme that deals with class overlapping problem performs best is also compared to the scheme without dealing with class overlapping problem called the original scheme (o) here,1,ClassOverlapping,english,0.9999977294239842,0, Experiment 2 The separating scheme that deals with class overlapping problem performs best is also compared to the scheme without dealing with class overlapping problem called the original scheme (o) here
  The second experiment is de- signed to ﬁnd out what may aﬀect the performance of overlapping-class mod- eling schemes,19,117,0.0, The second experiment is de- signed to ﬁnd out what may aﬀect the performance of overlapping-class mod- eling schemes,1,ClassOverlapping,english,0.9999967620415633,0, The second experiment is de- signed to find out what may affect the performance of overlapping-class mod- eling schemes
  Data sets and classiﬁers used in this experiment are the same as those in pervious experiment,16,93,0.0, Data sets and classiﬁers used in this experiment are the same as those in pervious experiment,1,ClassOverlapping,english,0.9999969722604236,0, Data sets and classifiers used in this experiment are the same as those in pervious experiment
- Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
+ Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,1,Fig
 " 2, in which F1 and F2 means F-measure for class 1 and class 2, shows the comparing results of the sep- arating and original schemes",25,131,0.3182," 2, in which F1 and F2 means F-measure for class 1 and class 2, shows the comparing results of the sep- arating and original schemes",1,ClassOverlapping,english,0.9999959179238358,0," 2, in which F1 and F2 means F-measure for class 1 and class 2, shows the comparing results of the sep- arating and original schemes"
  Data sets from left to right are sorted by the overlapping ratio in ascending or- der,16,85,0.0, Data sets from left to right are sorted by the overlapping ratio in ascending or- der,1,ClassOverlapping,english,0.9999943643158483,0, Data sets from left to right are sorted by the overlapping ratio in ascending or- der
 " One observation is that, for all data sets and classiﬁers, the separat- ing scheme performs better than the original scheme or has almost the same results as the original scheme",30,177,0.7579," One observation is that, for all data sets and classiﬁers, the separat- ing scheme performs better than the original scheme or has almost the same results as the original scheme",1,ClassOverlapping,english,0.9999969301710634,0," One observation is that, for all data sets and classifiers, the separat- ing scheme performs better than the original scheme or has almost the same results as the original scheme"
@@ -113,30 +113,30 @@ l,0,0,0.4588,l,1,ClassOverlapping,confident_non_english,0.9999939000748108,0,
 " In addition, we also investigate how the classiﬁers aﬀect the performance",11,73,0.0," In addition, we also investigate how the classiﬁers aﬀect the performance",1,ClassOverlapping,english,0.9999974462669949,0," In addition, we also investigate how the classifiers affect the performance"
  494 The 2010 International Conference on E-Business Intelligence ,9,65,0.4767, 494 The 2010 International Conference on E-Business Intelligence ,1,ClassOverlapping,english,0.9999955135617984,0, 494 The 2010 International Conference on E-Business Intelligence 
 Data sets  F-measure(class 1)  F-measure(class 2) d  m  s  d  m  s Inosphere C4,20,78,0.0,Data sets  F-measure(class 1)  F-measure(class 2) d  m  s  d  m  s Inosphere C4,1,ClassOverlapping,english,0.8571388084456404,0,Data sets  F-measure(class 1)  F-measure(class 2) d  m  s  d  m  s Inosphere C4
-925 NB  0,3,8,0.0,925 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,0,
-914 k-NN  0,3,10,0.0,914 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,0,
-910 SVMs  0,3,10,0.0,910 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,0,
-905 RIPPER  0,3,12,0.0,905 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,0,
+925 NB  0,3,8,0.0,925 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,1,925 NB  0
+914 k-NN  0,3,10,0.0,914 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,1,914 k-NN 0
+910 SVMs  0,3,10,0.0,910 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,1,910 SVMs  0
+905 RIPPER  0,3,12,0.0,905 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,1,905 RIPPER  0
 918 Sonar C4,2,11,0.0,918 Sonar C4,1,ClassOverlapping,maybe_english,0.5714259740068655,0,918 Sonar C4
-701 NB  0,3,8,0.0,701 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,0,
-663 k-NN  0,3,10,0.0,663 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,0,
-645 SVMs  0,3,10,0.0,645 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,0,
-719 RIPPER  0,3,12,0.0,719 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,0,
-640 Splice C4,2,12,0.0,640 Splice C4,1,ClassOverlapping,confident_non_english,0.999994270158679,0,
-930 NB  0,3,8,0.0,930 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,0,
-837 k-NN  0,3,10,0.0,837 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,0,
-726 SVMs  0,3,10,0.0,726 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,0,
-794 RIPPER  0,3,12,0.0,794 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,0,
-943 Diabetes C4,2,14,0.0,943 Diabetes C4,1,ClassOverlapping,confident_non_english,0.9999932759159729,0,
-795 NB  0,3,8,0.0,795 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,0,
-832 k-NN  0,3,10,0.0,832 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,0,
-809 SVMs  0,3,10,0.0,809 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,0,
-832 RIPPER  0,3,12,0.0,832 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,0,
+701 NB  0,3,8,0.0,701 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,1,701 NB  0
+663 k-NN  0,3,10,0.0,663 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,1,663 k-NN 0
+645 SVMs  0,3,10,0.0,645 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,1,645 SVMs  0
+719 RIPPER  0,3,12,0.0,719 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,1,719 RIPPER  0
+640 Splice C4,2,12,0.0,640 Splice C4,1,ClassOverlapping,confident_non_english,0.999994270158679,1,640 Splice C4
+930 NB  0,3,8,0.0,930 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,1,930 NB  0
+837 k-NN  0,3,10,0.0,837 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,1,837 k-NN 0
+726 SVMs  0,3,10,0.0,726 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,1,726 SVMs  0
+794 RIPPER  0,3,12,0.0,794 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,1,794 RIPPER  0
+943 Diabetes C4,2,14,0.0,943 Diabetes C4,1,ClassOverlapping,confident_non_english,0.9999932759159729,1,943 Diabetes C4
+795 NB  0,3,8,0.0,795 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,1,795 NB  0
+832 k-NN  0,3,10,0.0,832 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,1,832 k-NN 0
+809 SVMs  0,3,10,0.0,809 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,1,809 SVMs  0
+832 RIPPER  0,3,12,0.0,832 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,1,832 RIPPER  0
 816 German C4,2,12,0.0,816 German C4,1,ClassOverlapping,uncertain_non_english,0.8545081733921995,0,816 German C4
-822 NB  0,3,8,0.0,822 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,0,
-830 k-NN  0,3,10,0.0,830 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,0,
-801 SVMs  0,3,10,0.0,801 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,0,
-832 RIPPER  0,3,12,0.0,832 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,0,
+822 NB  0,3,8,0.0,822 NB  0,1,ClassOverlapping,confident_non_english,0.999994884886885,1,822 NB  0
+830 k-NN  0,3,10,0.0,830 k-NN  0,1,ClassOverlapping,confident_non_english,0.9999935937921803,1,830 k-NN 0
+801 SVMs  0,3,10,0.0,801 SVMs  0,1,ClassOverlapping,confident_non_english,0.9999938862987751,1,801 SVMs  0
+832 RIPPER  0,3,12,0.0,832 RIPPER  0,1,ClassOverlapping,confident_non_english,0.9999923703108748,1,832 RIPPER  0
 830 Table 2: Classiﬁcation Results by Three Schemes and Five Classiﬁers,10,70,0.0,830 Table 2: Classiﬁcation Results by Three Schemes and Five Classiﬁers,1,ClassOverlapping,english,0.9999967760078305,0,830 Table 2: Classification Results by Three Schemes and Five Classifiers
  Five classiﬁers can be divided into two types,8,45,0.0, Five classiﬁers can be divided into two types,1,ClassOverlapping,english,0.9999964736890556,0, Five classifiers can be divided into two types
  C4,1,2,0.0, C4,1,ClassOverlapping,uncertain_non_english,0.8561005287716587,0, C4
@@ -158,9 +158,9 @@ Data sets  F-measure(class 1)  F-measure(class 2) d  m  s  d  m  s Inosphere C4,
 "2, 0",1,3,0.0,"2, 0",1,ClassOverlapping,unknown,,0,"2, 0"
 "4, 0",1,3,0.0,"4, 0",1,ClassOverlapping,unknown,,0,"4, 0"
 "6, 0",1,3,0.0,"6, 0",1,ClassOverlapping,unknown,,0,"6, 0"
- Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
+ Fig,1,3,0.0, Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,1,Fig
  3 shows the classiﬁcation results 495 The 2010 International Conference on E-Business Intelligence ,14,99,0.4767, 3 shows the classiﬁcation results 495 The 2010 International Conference on E-Business Intelligence ,1,ClassOverlapping,english,0.9999966976623378,0, 3 shows the classification results 495 The 2010 International Conference on E-Business Intelligence 
-Fig,0,2,0.0,Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
+Fig,0,2,0.0,Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,1,Fig
  2: Performances of the separating and original schemes,8,54,0.3182, 2: Performances of the separating and original schemes,1,ClassOverlapping,english,0.9999984695893898,0, 2: Performances of the separating and original schemes
  of the two schemes on these samples,7,35,0.0, of the two schemes on these samples,1,ClassOverlapping,english,0.9999971123691083,0, of the two schemes on these samples
 " As can be seen, on data sets which have high overlapping ratios, the F-measure values of the separating scheme are consistently higher than the original scheme, no matter what the sampling ratios are",33,199,0.6028," As can be seen, on data sets which have high overlapping ratios, the F-measure values of the separating scheme are consistently higher than the original scheme, no matter what the sampling ratios are",1,ClassOverlapping,english,0.9999970697602731,0," As can be seen, on data sets which have high overlapping ratios, the F-measure values of the separating scheme are consistently higher than the original scheme, no matter what the sampling ratios are"
@@ -177,72 +177,72 @@ Fig,0,2,0.0,Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
 " 70901002, 90924020, and the PhD Program Foun- dation of Education Ministry of China under Contrac t Nos",17,103,0.0," 70901002, 90924020, and the PhD Program Foun- dation of Education Ministry of China under Contrac t Nos",1,ClassOverlapping,english,0.9999963485430184,0," 70901002, 90924020, and the PhD Program Foun- dation of Education Ministry of China under Contrac t Nos"
 " 200800060005, 20091102120014",2,28,0.0," 200800060005, 20091102120014",1,ClassOverlapping,unknown,,0," 200800060005, 20091102120014"
  496 The 2010 International Conference on E-Business Intelligence ,9,65,0.4767, 496 The 2010 International Conference on E-Business Intelligence ,1,ClassOverlapping,english,0.9999955135617984,0, 496 The 2010 International Conference on E-Business Intelligence 
-Fig,0,2,0.0,Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,0,
+Fig,0,2,0.0,Fig,1,ClassOverlapping,confident_non_english,0.9999927253144927,1,Fig
  3: The eﬀect of class imbalance on the separating and original schemes,12,70,0.3182, 3: The eﬀect of class imbalance on the separating and original schemes,1,ClassOverlapping,english,0.9999951819649716,0, 3: The effect of class imbalance on the separating and original schemes
  References [1] C,3,16,0.0, References [1] C,1,ClassOverlapping,maybe_english,0.6424519121078571,0, References [1] C
-L,0,0,0.4588,L,1,ClassOverlapping,confident_non_english,0.9999946210313643,0,
- Liu,1,3,0.0, Liu,1,ClassOverlapping,confident_non_english,0.9999954704590168,0,
+L,0,0,0.4588,L,1,ClassOverlapping,confident_non_english,0.9999946210313643,1,L
+ Liu,1,3,0.0, Liu,1,ClassOverlapping,confident_non_english,0.9999954704590168,1,Liu
  Partial discriminative training for classiﬁcation of over- lapping classes in document anal- ysis,13,97,0.0, Partial discriminative training for classiﬁcation of over- lapping classes in document anal- ysis,1,ClassOverlapping,english,0.9999959058097374,0, Partial discriminative training for classification of over- lapping classes in document anal- ysis
-" ĲOC , 11(2):53–65, 2008",4,23,0.0," ĲOC , 11(2):53–65, 2008",1,ClassOverlapping,confident_non_english,0.9999942713618597,0,
- [2] V,2,5,0.0, [2] V,1,ClassOverlapping,confident_non_english,0.9999822480836085,0,
-" García, R",2,9,0.0," García, R",1,ClassOverlapping,confident_non_english,0.9999959555887075,0,
-" Alejo, J",2,8,0.0," Alejo, J",1,ClassOverlapping,confident_non_english,0.999993628897946,0,
- S,1,1,0.0, S,1,ClassOverlapping,confident_non_english,0.9999956361674904,0,
+" ĲOC , 11(2):53–65, 2008",4,23,0.0," ĲOC , 11(2):53–65, 2008",1,ClassOverlapping,confident_non_english,0.9999942713618597,1,"IJOC , 11(2):5365, 2008"
+ [2] V,2,5,0.0, [2] V,1,ClassOverlapping,confident_non_english,0.9999822480836085,1,[2] V
+" García, R",2,9,0.0," García, R",1,ClassOverlapping,confident_non_english,0.9999959555887075,1,"Garcia, R."
+" Alejo, J",2,8,0.0," Alejo, J",1,ClassOverlapping,confident_non_english,0.999993628897946,1,"Alejo, J."
+ S,1,1,0.0, S,1,ClassOverlapping,confident_non_english,0.9999956361674904,1,S
 " Sánchez, J",2,10,0.0," Sánchez, J",1,ClassOverlapping,uncertain_non_english,0.8571394713946395,0," Sanchez, J"
- M,1,1,0.0, M,1,ClassOverlapping,confident_non_english,0.9999943136974961,0,
+ M,1,1,0.0, M,1,ClassOverlapping,confident_non_english,0.9999943136974961,1,M
 " Sotoca, and R",3,13,0.0," Sotoca, and R",1,ClassOverlapping,english,0.9999976163598803,0," Sotoca, and R"
- A,1,1,0.0, A,1,ClassOverlapping,confident_non_english,0.9997709097807372,0,
- Mollineda,1,9,0.0, Mollineda,1,ClassOverlapping,confident_non_english,0.9999953274879096,0,
+ A,1,1,0.0, A,1,ClassOverlapping,confident_non_english,0.9997709097807372,1,A
+ Mollineda,1,9,0.0, Mollineda,1,ClassOverlapping,confident_non_english,0.9999953274879096,1,Mollineda
  Combined eﬀects of class imbalance and class overlap on instance-based classiﬁcation,11,84,0.0, Combined eﬀects of class imbalance and class overlap on instance-based classiﬁcation,1,ClassOverlapping,english,0.9999961804372022,0, Combined effects of class imbalance and class overlap on instance-based classification
 " In IDEAL, pages 371–378, 2006",5,29,0.6289," In IDEAL, pages 371–378, 2006",1,ClassOverlapping,uncertain_non_english,0.7142840850304502,0," In IDEAL, pages 371378, 2006"
- [3] R,2,5,0.0, [3] R,1,ClassOverlapping,confident_non_english,0.999992865862403,0,
+ [3] R,2,5,0.0, [3] R,1,ClassOverlapping,confident_non_english,0.999992865862403,1,[3] R
 C,0,0,0.0,C,1,ClassOverlapping,english,0.9999906913057575,0,C
 " Prati, Batista G",3,16,0.0," Prati, Batista G",1,ClassOverlapping,uncertain_non_english,0.7142826227067928,0," Prati, Batista G"
-E,0,0,0.0,E,1,ClassOverlapping,confident_non_english,0.9999916439545962,0,
+E,0,0,0.0,E,1,ClassOverlapping,confident_non_english,0.9999916439545962,1,E
 ", and M",2,6,0.0,", and M",1,ClassOverlapping,english,0.9999957883535795,0,", and M"
 C,0,0,0.0,C,1,ClassOverlapping,english,0.9999906913057575,0,C
- Monard,1,6,0.0, Monard,1,ClassOverlapping,confident_non_english,0.9999912358068654,0,
+ Monard,1,6,0.0, Monard,1,ClassOverlapping,confident_non_english,0.9999912358068654,1,Monard
  Class imbalance versus class overlapping: an analysis of a learning system behavior,12,83,0.0, Class imbalance versus class overlapping: an analysis of a learning system behavior,1,ClassOverlapping,english,0.9999969825321107,0, Class imbalance versus class overlapping: an analysis of a learning system behavior
 " In MI- CAI, pages 312–321, 2005",6,31,0.0," In MI- CAI, pages 312–321, 2005",1,ClassOverlapping,uncertain_non_english,0.5714265143029653,0," In MI- CAI, pages 312321, 2005"
- [4] D,2,5,0.0, [4] D,1,ClassOverlapping,confident_non_english,0.9999916195303037,0,
+ [4] D,2,5,0.0, [4] D,1,ClassOverlapping,confident_non_english,0.9999916195303037,1,[4] D
  Tax and R,3,9,0.0, Tax and R,1,ClassOverlapping,maybe_english,0.5714280116520329,0, Tax and R
- Duin,1,4,0.0, Duin,1,ClassOverlapping,confident_non_english,0.9999915897674776,0,
+ Duin,1,4,0.0, Duin,1,ClassOverlapping,confident_non_english,0.9999915897674776,1,decent
  Support vector data description,4,31,0.4019, Support vector data description,1,ClassOverlapping,uncertain_non_english,0.5714282946407323,0, Support vector data description
 " Machine Learning, 54(1):45–66, 2004",4,35,0.0," Machine Learning, 54(1):45–66, 2004",1,ClassOverlapping,english,0.9999954517229303,0," Machine Learning, 54(1):4566, 2004"
- [5] I,2,5,0.0, [5] I,1,ClassOverlapping,confident_non_english,0.9999928203522054,0,
-T,0,0,0.0,T,1,ClassOverlapping,confident_non_english,0.99999391742656,0,
- Podolak,1,7,0.0, Podolak,1,ClassOverlapping,confident_non_english,0.9999950656194914,0,
+ [5] I,2,5,0.0, [5] I,1,ClassOverlapping,confident_non_english,0.9999928203522054,1,[5] I
+T,0,0,0.0,T,1,ClassOverlapping,confident_non_english,0.99999391742656,1,T
+ Podolak,1,7,0.0, Podolak,1,ClassOverlapping,confident_non_english,0.9999950656194914,1,pods
  Hierarchical classi- ﬁer with overlapping class groups,7,54,0.0, Hierarchical classi- ﬁer with overlapping class groups,1,ClassOverlapping,english,0.999997031565625,0, Hierarchical classi- fier with overlapping class groups
  Expert Syst,2,11,0.0, Expert Syst,1,ClassOverlapping,uncertain_non_english,0.8571373816222003,0, Expert Syst
  Appl,1,4,0.0, Appl,1,ClassOverlapping,english,0.9999952722350653,0, Appl
 " , 34(1):673–682, 2008",3,21,0.0," , 34(1):673–682, 2008",1,ClassOverlapping,unknown,,0," , 34(1):673682, 2008"
- [6] M,2,5,0.0, [6] M,1,ClassOverlapping,confident_non_english,0.9999943136974961,0,
-R,0,0,0.0,R,1,ClassOverlapping,confident_non_english,0.999992865862403,0,
+ [6] M,2,5,0.0, [6] M,1,ClassOverlapping,confident_non_english,0.9999943136974961,1,[6] M
+R,0,0,0.0,R,1,ClassOverlapping,confident_non_english,0.999992865862403,1,R
 " Boutell, J",2,10,0.0," Boutell, J",1,ClassOverlapping,uncertain_non_english,0.8571394951035968,0," Boutell, J"
-" Luo, X",2,6,0.0," Luo, X",1,ClassOverlapping,confident_non_english,0.9999953616616394,0,
+" Luo, X",2,6,0.0," Luo, X",1,ClassOverlapping,confident_non_english,0.9999953616616394,1,"Luo,X"
 " Shen, and C",3,11,0.0," Shen, and C",1,ClassOverlapping,english,0.9999939933908636,0," Shen, and C"
-M,0,0,0.0,M,1,ClassOverlapping,confident_non_english,0.9999943136974961,0,
- Browm,1,5,0.0, Browm,1,ClassOverlapping,confident_non_english,0.9999949202501868,0,
+M,0,0,0.0,M,1,ClassOverlapping,confident_non_english,0.9999943136974961,1,M
+ Browm,1,5,0.0, Browm,1,ClassOverlapping,confident_non_english,0.9999949202501868,1,Brom
  Learning multilabel scene classiﬁcation,4,39,0.0, Learning multilabel scene classiﬁcation,1,ClassOverlapping,english,0.9999942549941376,0, Learning multilabel scene classification
  Pattern Recog- nit,3,18,0.0, Pattern Recog- nit,1,ClassOverlapping,english,0.856075044505378,0, Pattern Recog- nit
 ", 37(9):1757–1771, 2004",2,22,0.0,", 37(9):1757–1771, 2004",1,ClassOverlapping,unknown,,0,", 37(9):17571771, 2004"
- [7] G,2,5,0.0, [7] G,1,ClassOverlapping,confident_non_english,0.9999935208347116,0,
- Tsoumakas and I,3,15,0.0, Tsoumakas and I,1,ClassOverlapping,confident_non_english,0.9999957376338573,0,
- Katakis,1,7,0.0, Katakis,1,ClassOverlapping,confident_non_english,0.9999938963028001,0,
+ [7] G,2,5,0.0, [7] G,1,ClassOverlapping,confident_non_english,0.9999935208347116,1,[7] G
+ Tsoumakas and I,3,15,0.0, Tsoumakas and I,1,ClassOverlapping,confident_non_english,0.9999957376338573,1,Tsoumakas and I
+ Katakis,1,7,0.0, Katakis,1,ClassOverlapping,confident_non_english,0.9999938963028001,1,Katakis
  Multi–label classiﬁcation: an overview,4,38,0.0, Multi–label classiﬁcation: an overview,1,ClassOverlapping,maybe_english,0.7142822930615174,0, Multilabel classification: an overview
- Int,1,3,0.0, Int,1,ClassOverlapping,confident_non_english,0.9999963005414915,0,
- J,1,1,0.0, J,1,ClassOverlapping,confident_non_english,0.9999918119863221,0,
+ Int,1,3,0.0, Int,1,ClassOverlapping,confident_non_english,0.9999963005414915,1,Int
+ J,1,1,0.0, J,1,ClassOverlapping,confident_non_english,0.9999918119863221,1,J
  Data Warehous- ing Min,4,22,0.0, Data Warehous- ing Min,1,ClassOverlapping,english,0.8571388365447747,0, Data Warehous- ing Min
 ", 3(3):1–13, 2007",2,16,0.0,", 3(3):1–13, 2007",1,ClassOverlapping,unknown,,0,", 3(3):113, 2007"
- [8] T,2,5,0.0, [8] T,1,ClassOverlapping,confident_non_english,0.99999391742656,0,
+ [8] T,2,5,0.0, [8] T,1,ClassOverlapping,confident_non_english,0.99999391742656,1,[8] T
  Jo and N,3,8,0.0, Jo and N,1,ClassOverlapping,english,0.9999983479745793,0, Jo and N
- Japkowicz,1,9,0.0, Japkowicz,1,ClassOverlapping,confident_non_english,0.9999979304813367,0,
+ Japkowicz,1,9,0.0, Japkowicz,1,ClassOverlapping,confident_non_english,0.9999979304813367,1,Japkowicz
  Class imbalances versus small disjuncts,5,39,0.0, Class imbalances versus small disjuncts,1,ClassOverlapping,uncertain_non_english,0.7142824290513208,0, Class imbalances versus small disjuncts
 " ACM SIGKDD Explorations Newsletter, 6(1):40–49, 2004",6,52,0.0772," ACM SIGKDD Explorations Newsletter, 6(1):40–49, 2004",1,ClassOverlapping,english,0.9999968288172869,0," ACM SIGKDD Explorations Newsletter, 6(1):4049, 2004"
- [9] J,2,5,0.0, [9] J,1,ClassOverlapping,confident_non_english,0.9999918119863221,0,
-" Wu, H",2,5,0.0," Wu, H",1,ClassOverlapping,confident_non_english,0.9999945470950986,0,
+ [9] J,2,5,0.0, [9] J,1,ClassOverlapping,confident_non_english,0.9999918119863221,1,[9] J
+" Wu, H",2,5,0.0," Wu, H",1,ClassOverlapping,confident_non_english,0.9999945470950986,1,"Wu, H"
 " Xiong, and J",3,12,0.0," Xiong, and J",1,ClassOverlapping,maybe_english,0.5714286895356352,0," Xiong, and J"
  Chen,1,4,0.0, Chen,1,ClassOverlapping,uncertain_non_english,0.714283415635701,0, Chen
  Cog: local decomposition for rare class analysis,7,48,0.0, Cog: local decomposition for rare class analysis,1,ClassOverlapping,english,0.9999964410113301,0, Cog: local decomposition for rare class analysis
-" DMKD, 20(2):1384–5810, 2010",3,27,0.0," DMKD, 20(2):1384–5810, 2010",1,ClassOverlapping,confident_non_english,0.9999919088894598,0,
+" DMKD, 20(2):1384–5810, 2010",3,27,0.0," DMKD, 20(2):1384–5810, 2010",1,ClassOverlapping,confident_non_english,0.9999919088894598,1,"DMKD, 20(2):13845810, 2010"
  497 The 2010 International Conference on E-Business Intelligence ,9,65,0.4767, 497 The 2010 International Conference on E-Business Intelligence ,1,ClassOverlapping,english,0.9999955135617984,0, 497 The 2010 International Conference on E-Business Intelligence 

@@ -58,11 +58,11 @@ TEST_SENTENCES = {
 json_output = "skeleton_list.json"
 
 pdf = unstick_library_prefixes(pdf_to_text("csir/ColdWar.pdf"))
-y = Skeletons(pdf)
-with open(json_output, 'w') as outfile:
-    for sentence in y.sentences:
-        json.dump(sentence, outfile)
-        outfile.write("\n")
+y = Skeletons(pdf,"./traversable_text/sentence_mapping.csv")
+#with open(json_output, 'w') as outfile:
+#    for sentence in y.sentences:
+#        json.dump(sentence, outfile)
+#        outfile.write("\n")
 
 # Make sure to fix the split function to account for numbers with decimals! ex: 1.1, 3.45, etc
 

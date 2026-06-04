@@ -5,6 +5,11 @@ from aggregate import file_mapping
 from clean_data import paths
 from pathlib import Path
 import sys
+from csir.document import Document
+from csir.skeletons import Skeletons
+from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
+import csir.skeletons
+import json
 
 def load_word_set(path):
     return set(
@@ -95,8 +100,15 @@ for path in paths:
     pathing.add(path[1])
 #for path in pathing:
 #    print(f"pathing: {path}")
-for path in pathing:
-    print(f"path: {path}")
+for index, path in enumerate(pathing):
+    print(f"path (extract_words): {path}")
+    output_file2 = "data/dict/working_set/traversable_text/" + path + "_traversable.csv"#Output to the path as a CSV with connections present
+    #y = Skeletons(pdf,"./traversable_text/sentence_mapping.csv")
+    pdf_path = "pdfs/" + path + ".pdf"
+
+    pdf = unstick_library_prefixes(pdf_to_text(pdf_path))
+    y = Skeletons(pdf,output_file2)
+    print(f"Document id at {index}: {y.document}")
     file = "data/dict/working_set/pdfs_as_csvs/" + path + ".csv"
     word_stats = defaultdict(lambda: {
         "frequency": 0,

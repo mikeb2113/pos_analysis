@@ -2,13 +2,18 @@ import pandas as pd
 import numpy as np
 from scipy.special import lambertw
 from extract_words import pathing
+from csir.document import Document
+from csir.skeletons import Skeletons
+from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
+import csir.skeletons
+import json
 
 for path in pathing:
     print(f"path: {path}")
     #data/dict/working_set/stats/ClassOverlapping_stats.csv
     input_file = "data/dict/working_set/stats/" + path + "_stats" + ".csv"
     #data/dict/working_set/stats_with_features
-    output_file = "data/dict/working_set/stats_with_features" + path + ".csv"
+    output_file1 = "data/dict/working_set/stats_with_features" + path + ".csv"
 
     # Python code
     def inverse_ackermann(n):
@@ -68,6 +73,6 @@ for path in pathing:
 
     df["participation_score"] = df[pos_columns].sum(axis=1)/15
 
-    df.to_csv(output_file, index=False)
+    df.to_csv(output_file1, index=False)
 
-    print(f"Saved updated CSV to {output_file}")
+    print(f"Saved updated CSV to {output_file1}")
