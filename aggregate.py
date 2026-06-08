@@ -44,10 +44,10 @@ df = pd.DataFrame(columns=columns)
 #for file in file_mapping:
 #    print(file_mapping.get(file)[0])
 
-with open('./pdfs_as_csvs/more_sources.csv','a',newline='') as file:
-    newrow = ["Text","Word_Count","Length_Chars","Sentiment_Polarity","Source","Source_Name","Subject","Star_Rating"]
-    writer = csv.writer(file,escapechar='"')
-    writer.writerow(newrow)
+#with open('./data/dict/working_set/pdfs_as_csvs/more_sources.csv','a',newline='') as file:
+#    newrow = ["Text","Word_Count","Length_Chars","Sentiment_Polarity","Source","Source_Name","Subject","Star_Rating"]
+#    writer = csv.writer(file,escapechar='"')
+#    writer.writerow(newrow)
 
 #for file in files:
 #    for sentence in file.sentences:

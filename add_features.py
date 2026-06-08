@@ -7,7 +7,9 @@ from csir.skeletons import Skeletons
 from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
 import csir.skeletons
 import json
-
+paths = pathing
+print("=====ADD_FEATURES=====")
+print(paths)
 for path in pathing:
     print(f"path: {path}")
     #data/dict/working_set/stats/ClassOverlapping_stats.csv
@@ -76,3 +78,4 @@ for path in pathing:
     df.to_csv(output_file1, index=False)
 
     print(f"Saved updated CSV to {output_file1}")
+    print("=====END OF ADD_FEATURES=====")

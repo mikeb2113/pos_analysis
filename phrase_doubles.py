@@ -58,7 +58,7 @@ TEST_SENTENCES = {
 json_output = "skeleton_list.json"
 
 pdf = unstick_library_prefixes(pdf_to_text("csir/ColdWar.pdf"))
-y = Skeletons(pdf,"./traversable_text/sentence_mapping.csv")
+y = Skeletons(pdf,"sentence_mapping.csv")
 #with open(json_output, 'w') as outfile:
 #    for sentence in y.sentences:
 #        json.dump(sentence, outfile)

@@ -9,9 +9,14 @@ from aggregate import file_mapping, files
 import csv
 import re
 #This takes a long time to complete! Rest assured it is not broken. You might want to do something else as this works!
+print("=====CLEAN_DATA=====")
 analyzer = SentimentIntensityAnalyzer()
 DetectorFactory.seed = 0
 paths = []
+#with open('paths.csv','a',newline='') as file:
+#    newrow = ["path"]
+#    writer = csv.writer(file,escapechar='"')
+#    writer.writerow(newrow)
 def clean_text(text):
     if pd.isna(text):
         return ""
@@ -73,6 +78,7 @@ for file in files:#go to the original files: take each file individually
             # preserve original text
             #sentence.text #Save the original text in case of a translation being required
             paths.append([path,file.source_name])
+            paths_file = "paths.csv"
             #for idx, value in sentence.text.items():#attempt to translate each sentence
             status, confidence = detect_language_status(sentence.text) #Attempt to translate to see if english & confidence
 
@@ -105,3 +111,19 @@ for file in files:#go to the original files: take each file individually
 #path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv
 #path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv
 #path: data/dict/working_set/pdfs_as_csvs/CRISPR_paper.csv
+pathing = set()
+for path in paths:
+    pathing.add(path[1])
+print("End result (pathing):")
+print(pathing)
+print("Looping test:")
+for path in pathing:
+    print(path)
+columns = ["path"]
+df = pd.DataFrame(pathing,columns=columns)
+df.to_csv("paths.csv",index=False)
+#with open(paths_file, "a", newline="") as csvfile:
+#    writer = csv.writer(csvfile,escapechar="\\")
+#    for path in pathing:
+#        writer.writerow(path)
+print("=====END OF CLEAN_DATA=====")
