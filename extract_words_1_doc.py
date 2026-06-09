@@ -1,6 +1,6 @@
 import pandas as pd
 import re
-from collections import defaultdict
+#from collections import defaultdict
 #from clean_data import paths
 from pathlib import Path
 import sys
@@ -116,16 +116,12 @@ def extraction(input_file):
             #print()
 
     file = "data/dict/working_set/pdfs_as_csvs/" + input_file + ".csv"
+    from collections import defaultdict
     word_stats = defaultdict(lambda: {
                 "frequency": 0,
                 "sentiment_sum": 0.0,
                 "review_count": 0
             })
-            #name = path[1]
-            ##print(name)
-            #path = Path(path[0])
-            ##print(f"Name: {str(path[1])}")
-            # Load reviews
     text = pd.read_csv(file)
     print("text (as of read csv) (extract words):")
     print(text)

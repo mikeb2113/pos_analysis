@@ -1,4 +1,4 @@
-from extract_words import pathing
+from extract_words_1_doc import pathing
 import pandas as pd
 import numpy as np
 
