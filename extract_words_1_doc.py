@@ -100,16 +100,10 @@ def extraction(input_file):
     #    reader = csv.reader(file)
     #    next(reader)
     #input_file = "ColdWar"
-    pdf_path = "pdfs/" + input_file + ".pdf"
-    pdf = unstick_library_prefixes(pdf_to_text(pdf_path))
-    print("pdf text (extract text):")
-    print(pdf)
-    print()
-    output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
-    y = Skeletons(pdf,output_file2)
-    print("extractecd y document information (extract words):")
-    print(y.document.text)
-    print()
+
+    #print("extractecd y document information (extract words):")
+    #print(y.document.text)
+    #print()
     #for row in reader:
             #file_name = row[0]
             #print(f"path (extract_words): {file_name}")
@@ -123,9 +117,9 @@ def extraction(input_file):
                 "review_count": 0
             })
     text = pd.read_csv(file)
-    print("text (as of read csv) (extract words):")
-    print(text)
-    print()
+    #print("text (as of read csv) (extract words):")
+    #print(text)
+    #print()
 
             ##print("Starting text processing...", flush=True)
 
@@ -142,15 +136,10 @@ def extraction(input_file):
             #incoming data is valid: something here is iterating incorrectly? 
             #or maybe it has been incorrectly transformed
     for i, (_, row1) in enumerate(text.iterrows(), start=1):
-                #print(f"=====ROW IN {_}=====")
-                #print("row(extract_data):")
-                #print(_)
                 text = _[idx["Original_Text"]]
-                print("Original text (iterrows) (extract words):")
-                print(text)
-                print()
-                ##print("Sentiment:")
-                ##print(_[idx["Sentiment_Polarity"]])
+                #print("Original text (iterrows) (extract words):")
+                #print(text)
+                #print()
                 sentiment = _[idx["Sentiment_Polarity"]]
 
 
@@ -209,9 +198,9 @@ def extraction(input_file):
                 #    #print(f"Built {i}/{total_words} word rows", flush=True)
 
     word_df = pd.DataFrame(rows)
-    print("word df (extract text):")
-    print(word_df)
-    print()
+    #print(f"word df -> {input_file}:")
+    #print(word_df)
+    #print()
 
     POS_COLUMNS = [
                 "noun", "verb", "adjective", "adverb",
@@ -484,9 +473,17 @@ def extraction(input_file):
 
 
             # Save final updated stats file AFTER confidence changes
+    pdf_path = "pdfs/" + input_file + ".pdf"
+    pdf_transform = pdf_to_text(pdf_path)
+    #print(f"source -> {input_file} pdf: {pdf_transform}")
+    pdf = unstick_library_prefixes(pdf_to_text(pdf_path))
+
+    output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
+    y = Skeletons(pdf,output_file2)
+
     out = "data/dict/working_set/stats/" + input_file + "_stats.csv"
     word_df.to_csv(out, index=False)
-            #print("Saved updated stats", flush=True)
+
     true_unknowns = true_unknowns.sort_values(
                 by="frequency",
                 ascending=False
@@ -502,4 +499,5 @@ def extraction(input_file):
     elapsed = time.time() - start
             #print(f"Done. Saved {len(suggestions)} suggestions to data/typo_suggestions.csv")
             #print(f"Total typo pass time: {elapsed:.1f}s")
+    #del word_stats
     print("=====END OF EXTRACT_WORDS=====")
