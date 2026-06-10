@@ -13,6 +13,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 import re
 import chardet
 from chardet.universaldetector import UniversalDetector
+from csir.pdf_extract import pdf_to_text
 
 analyzer = SentimentIntensityAnalyzer()
 
