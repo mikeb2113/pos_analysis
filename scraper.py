@@ -68,9 +68,9 @@ class csvable: #This iterates through each pdf and aquires stats
         #print("checking:")
         #print(input_text[-4:])
         if(input_text[-4:]==".pdf"):
-            #print("Read as pdf!")
-            pdf_reader = PdfReader(input_text)
-        #directory = Path('./pdfs')
+            print("Read as pdf!")
+            pdf_reader = pdf_to_text(input_text)
+            #pdf_reader = PdfReader(input_text)
 
         #Then, we'll initialize an array to save sentences to later!
         self.sentences = []
@@ -83,10 +83,10 @@ class csvable: #This iterates through each pdf and aquires stats
         builder = []
 
         text = ""
-        for idx,page in enumerate(pdf_reader.pages):#looks for each page in a pdf
-            content[idx] = page.extract_text().replace("\n"," ") #get the text
-            split = re.split(r'[.?!]',str(content[idx])) #save the text, split by sentence ending punctuation
-            builder.append(split) #save split text
+        #for idx,page in enumerate(pdf_reader):#looks for each page in a pdf
+        #content[idx] = page#get the text
+        split = re.split(r'[.?!]',pdf_reader)#str(content[idx])) #save the text, split by sentence ending punctuation
+        builder.append(split) #save split text
         for i in builder:
                     ##print(i)
                     ##print()

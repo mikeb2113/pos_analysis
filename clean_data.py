@@ -2,15 +2,12 @@ import pandas as pd
 from langdetect import detect_langs, DetectorFactory
 from langdetect.lang_detect_exception import LangDetectException
 import unicodedata
-from deep_translator import GoogleTranslator
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from pathlib import Path
 from aggregate import file_mapping, files
 import csv
 import re
 #This takes a long time to complete! Rest assured it is not broken. You might want to do something else as this works!
 print("=====CLEAN_DATA=====")
-analyzer = SentimentIntensityAnalyzer()
 DetectorFactory.seed = 0
 paths = []
 #with open('paths.csv','a',newline='') as file:
