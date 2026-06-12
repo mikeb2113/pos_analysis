@@ -13,13 +13,16 @@ def get_dict(dataframe):
     #Dictionary can now be used to automatically get the index of a given column!
     return dictionary
 
+#df = pd.DataFrame
+
 def generate_mapping(file):
     trav = f"data/dict/working_set/traversable_text/{file}_traversable.csv"
     output = f"data/dict/working_set/mapped/{file}_mapped.csv"
-    with open(output,"a",newline="") as file:
-        header = ["word","sentence_id","location_in_sentence","bundle_id"]
-        writer = csv.writer(file,escapechar='"')
-        writer.writerow(header)
+    dataset = []
+    #with open(output,"a",newline="") as file:
+    #    header = ["word","sentence_id","location_in_sentence","bundle_id"]
+    #    writer = csv.writer(file,escapechar='"')
+    #    writer.writerow(header)
     #word,source,sentence_id,bundle_id
     #stats = f"data/dict/working_set/stats/{file}_stats.csv"
 
@@ -28,25 +31,35 @@ def generate_mapping(file):
 
     trav_dict = get_dict(df_trav)
     #stats_dict = get_dict(df_stats)
-    with open(output,"a",newline="") as file:
-        writer = csv.writer(file,escapechar='"')
-        idx = 0
-        for index,row in df_trav.iterrows():
-            phrase = row[trav_dict.get("phrase")]
-            cleaned = phrase.replace('[',"")
-            cleaned = cleaned.replace(']',"")
-            cleaned = cleaned.replace('\'',"")
-            items = cleaned.split(", ")
-            sent_id = row["sentence_id"]
-            bund_id = row["bundle_id"]
-            for item in items:
-                if item != "":
-                    newline = [item,sent_id,idx,bund_id]
-                    writer.writerow(newline)
-                    idx = idx+1
+    #with open(output,"a",newline="") as file:
+        #writer = csv.writer(file,escapechar='"')
+    idx = 0
+    for index,row in df_trav.iterrows():
+        phrase = row[trav_dict.get("phrase")]
+        cleaned = phrase.replace('[',"")
+        cleaned = cleaned.replace(']',"")
+        cleaned = cleaned.replace('\'',"")
+        items = cleaned.split(", ")
+        sent_id = row["sentence_id"]
+        bund_id = row["bundle_id"]
+        for item in items:
+            if item != "":
+                newline = [item,sent_id,idx,bund_id]
+                dataset.append(newline)
+                idx = idx+1
                     #print(f"{item}, {sent_id}, {bund_id}")
+    #print(unsorted_list)
+    dataset.sort()
+    with open(output,"a",newline="") as file:
+        header = ["word","sentence_id","location_in_sentence","bundle_id"]
+        writer = csv.writer(file,escapechar='"')
+        writer.writerow(header)
+        for item in dataset:
+            row = [item[0],item[1],item[2],item[3]]
+            writer.writerow(row)
+    #print(dataset)
 generate_mapping("ClassOverlapping")
-
+#pdfs/TheKingInYellow.pdf
 #for index,row in df_stats.iterrows():
 #    word = row[stats_dict.get("word")]
 #    print(word)
