@@ -34,6 +34,7 @@ def generate_mapping(file):
     #with open(output,"a",newline="") as file:
         #writer = csv.writer(file,escapechar='"')
     idx = 0
+    last_num = 0
     for index,row in df_trav.iterrows():
         phrase = row[trav_dict.get("phrase")]
         cleaned = phrase.replace('[',"")
@@ -44,11 +45,14 @@ def generate_mapping(file):
         bund_id = row["bundle_id"]
         for item in items:
             if item != "":
+                if last_num != sent_id:
+                    idx = 0
+                    last_num = sent_id
                 newline = [item,sent_id,idx,bund_id]
+                    #last_num=item[2]
                 dataset.append(newline)
                 idx = idx+1
                     #print(f"{item}, {sent_id}, {bund_id}")
-    #print(unsorted_list)
     dataset.sort()
     with open(output,"a",newline="") as file:
         header = ["word","sentence_id","location_in_sentence","bundle_id"]
