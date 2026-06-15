@@ -277,15 +277,20 @@ def search(word,document):
         rows = list(reader)
     for row in rows:
         word_list.append(row[1])
-    print(bisect.bisect_left(word_list,word))
-    print(bisect.bisect_right(word_list,word))
-        #row_count = len(list(reader))
-        #print(row_count)
+    left = bisect.bisect_left(word_list,word) #These bisects find the location that a given word would be inserted, if applicable
+    if word_list[left]!=word:
+        return [-1,-1] #if the proposed location does not match the word, the word must not be present. Throw -1s to indicate this
+    right = bisect.bisect_right(word_list,word)
+    #print(word_list[left])
+    support = right - left
+    return [left,support] #This returns an array. Index 0 shows the locaiton that the word was found at, if applicable
+    #Index 1 shows the number of times that the word is present in the document
 
-word = "experiemnt"
+word = "experiment"
+document = "ClassOverlapping"
 #print(word_to_idx_mapping("ClassOverlapping"))
 #word_to_location_mapping("ClassOverlapping")
-search(word,"ClassOverlapping")
+print(search(word,document))
 
 #pdfs/TheKingInYellow.pdf
 #for index,row in df_stats.iterrows():
