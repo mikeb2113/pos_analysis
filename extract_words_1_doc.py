@@ -481,7 +481,9 @@ def extraction(input_file):
     output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
     y = Skeletons(pdf,output_file2)
 
-    out = "data/dict/working_set/stats/" + input_file + "_stats.csv"
+    out = "data/dict/working_set/stats/" + input_file + "_stats.csv" #outputs the base stats of the words
+    #print(word_df)
+    word_df.sort_values("word")
     word_df.to_csv(out, index=False)
 
     true_unknowns = true_unknowns.sort_values(
