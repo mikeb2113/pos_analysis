@@ -268,31 +268,80 @@ def word_to_idx_mapping(file):
             #The middle should be h (int=8)
             #So begin by immedietaly jumping to the middle, and go up or down depending on it's location relative to h
 
-def search(word,document):
+def search_for_target_word(word,document,index=-1,index_list=[]):
+    if index<0:
+        input = f"data/dict/working_set/mapped/{document}_mapped.csv"
+        word_list = []
+        with open(input,'r') as file:
+            reader = csv.reader(file)
+            next(reader)
+            rows = list(reader)
+        for row in rows:
+            #print(row)
+            #print(row[1])
+            word_list.append(row[1])
+        left = bisect.bisect_left(word_list,word) #These bisects find the location that a given word would be inserted, if applicable
+        if word_list[left]!=word:
+            print("Word absent")
+            return [-1,-1] #if the proposed location does not match the word, the word must not be present. Throw -1s to indicate this
+        right = bisect.bisect_right(word_list,word)
+        support = right - left
+        return [left,support] #This returns an array. Index 0 shows the locaiton that the word was found at, if applicable
+        #Index 1 shows the number of times that the word is present in the document
+    else:
+        print(len(index_list))
+        print(len(word_list))
+
+def search_for_previous_word(index,document):
     input = f"data/dict/working_set/mapped/{document}_mapped.csv"
-    word_list = []
     with open(input,'r') as file:
-        reader = csv.reader(file)
-        next(reader)
-        rows = list(reader)
-    for row in rows:
-        word_list.append(row[1])
-    left = bisect.bisect_left(word_list,word) #These bisects find the location that a given word would be inserted, if applicable
-    if word_list[left]!=word:
-        return [-1,-1] #if the proposed location does not match the word, the word must not be present. Throw -1s to indicate this
-    right = bisect.bisect_right(word_list,word)
-    #print(word_list[left])
-    support = right - left
-    return [left,support] #This returns an array. Index 0 shows the locaiton that the word was found at, if applicable
-    #Index 1 shows the number of times that the word is present in the document
+        rows = list(csv.reader(file))
+        prev_row = rows[index]
+    return prev_row
 
-word = "experiment"
+def find_word_and_prev_word_info(document,word):
+    locaiton_info = search_for_target_word(word,document) #First, find the index and number of occurances of the word
+    prev_word = search_for_previous_word(locaiton_info[0],document) #Then, find the row location of the previous word
+    prev_word_info = search_for_target_word(prev_word[1],document) #Finally, given the row information, find the previous word's occuances and index
+    return [locaiton_info,prev_word_info]
+
+def get_word_from_index(document,index):
+    input = f"data/dict/working_set/mapped/{document}_mapped.csv"
+    with open(input,'r') as file:
+        rows = list(csv.reader(file))
+        row_info = rows[index+1]
+        word = row_info[1]
+        return word
+
+def split_words(word,prev_word):
+    result = word.split(prev_word)
+    return [prev_word,result[1]]
+
+def should_split(document,prev_word,word):
+#now, establish some boolean conditions to predict when a larger word is likely to be combined with another word
+    x = get_word_from_index(document,word[0]) #String value of word
+    y = get_word_from_index(document,prev_word[0]) #String value opf previous word
+    prev_word_support = prev_word[1] #Support of previous word
+    previous_word_is_frequent = prev_word_support>=3 #Does the previous word appear at least 3 times?
+    previous_word_is_longer_than_3_characters = len(x)>3 #Is it longer than most common words which may be common prefixes?
+    substring_found = y in x #Is the previous word a substrign of the current word?
+    word_is_in_any_known_library = x in DET or x in PREP or x in CONJ or x in COMP or x in MOD or x in AUX or x in EXISTENTIAL_DET or x in UNIVERSAL_DET or x in NEGATIVE_QUANT or x in OPEN or x in THE_WHITELIST or x in WITH_WHITELIST or x in OVER_WHITELIST or x in UNDER_WHITELIST or x in IN_WHITELIST or x in PREFIX_WHITELIST
+    if previous_word_is_frequent and previous_word_is_longer_than_3_characters and substring_found and not word_is_in_any_known_library:
+        print(split_words(x,y))
+        return True
+    else:
+        return False
+
 document = "ClassOverlapping"
-#print(word_to_idx_mapping("ClassOverlapping"))
-#word_to_location_mapping("ClassOverlapping")
-print(search(word,document))
+word = "willbe"
 
-#pdfs/TheKingInYellow.pdf
-#for index,row in df_stats.iterrows():
-#    word = row[stats_dict.get("word")]
-#    print(word)
+word_and_prev_word = find_word_and_prev_word_info(document,word)#gather info for the word and prev word
+
+word = word_and_prev_word[0] #word index and frequency
+prev_word = word_and_prev_word[1] #previous word index and frequency
+prev_word_support = prev_word[1] #The number of times that the previous word was used in the document
+word_support = word[1]
+#print(prev_word_support)
+#print(f"word: {word}")
+#print(f"prev word: {prev_word}")
+print(f"verdict: {should_split(document,prev_word,word)}")
