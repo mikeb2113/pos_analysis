@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 import numpy as np
 import bisect
+import re
 from itertools import islice
 
 DET = {"the", "a", "an", "this", "that", "these", "those",}
@@ -321,27 +322,52 @@ def should_split(document,prev_word,word):
 #now, establish some boolean conditions to predict when a larger word is likely to be combined with another word
     x = get_word_from_index(document,word[0]) #String value of word
     y = get_word_from_index(document,prev_word[0]) #String value opf previous word
+
+    #Note that a violation must begin with a letter. "violations" that begin with a number are often metadata
+    #or mathematical expressions - which may offer key insights for certain document types later in the pipeline
+    bracket_dash = r"/({\{-\}}/)" #Some regex rules to define common splitting criteria
+    square_bracket_dash = r"[/\[-\]/]"
+    colon = r"[/^/:-;/]"
+    char = r"[A-Za-z]+"
+    rules = [bracket_dash,square_bracket_dash,colon]
+    for rule in rules:
+        if re.match(rule,x) and re.match(char,x):
+            return True
+
     prev_word_support = prev_word[1] #Support of previous word
     previous_word_is_frequent = prev_word_support>=3 #Does the previous word appear at least 3 times?
-    previous_word_is_longer_than_3_characters = len(x)>3 #Is it longer than most common words which may be common prefixes?
+    previous_word_is_longer_than_3_characters = len(y)>3 #Is it longer than most common words which may be common prefixes?
     substring_found = y in x #Is the previous word a substrign of the current word?
+    word_occures_often = word[1]<5
+    possible_plural = x[-1:]=="s" or x[-1:]=="i" or x[-2:]=="es" or x[-2:]=="ly" or x[-2:]=="es" or x[-2:]=="ed" or x[-2:]=="er" or x[-2:]=="is" or x[-3:]=="ies" or x[-3:]=="ves" or x[-3:]=="ing" or x[-3:]=="ous" or x[-3:]=="tal" or x[-5:]=="ation"
     word_is_in_any_known_library = x in DET or x in PREP or x in CONJ or x in COMP or x in MOD or x in AUX or x in EXISTENTIAL_DET or x in UNIVERSAL_DET or x in NEGATIVE_QUANT or x in OPEN or x in THE_WHITELIST or x in WITH_WHITELIST or x in OVER_WHITELIST or x in UNDER_WHITELIST or x in IN_WHITELIST or x in PREFIX_WHITELIST
-    if previous_word_is_frequent and previous_word_is_longer_than_3_characters and substring_found and not word_is_in_any_known_library:
-        print(split_words(x,y))
+    if previous_word_is_frequent and word_occures_often and previous_word_is_longer_than_3_characters and substring_found and not word_is_in_any_known_library and not possible_plural:
+        #print(split_words(x,y))
         return True
     else:
         return False
 
+
 document = "ClassOverlapping"
-word = "willbe"
+input = f"data/dict/working_set/mapped/{document}_mapped.csv"
+with open(input,'r') as file:
+    rows = list(csv.reader(file))
+    split_list = []
+    split_count=0
+    for row in rows:
+        word = row[1]
+        word_and_prev_word = find_word_and_prev_word_info(document,word)#gather info for the word and prev word
 
-word_and_prev_word = find_word_and_prev_word_info(document,word)#gather info for the word and prev word
-
-word = word_and_prev_word[0] #word index and frequency
-prev_word = word_and_prev_word[1] #previous word index and frequency
-prev_word_support = prev_word[1] #The number of times that the previous word was used in the document
-word_support = word[1]
-#print(prev_word_support)
-#print(f"word: {word}")
-#print(f"prev word: {prev_word}")
-print(f"verdict: {should_split(document,prev_word,word)}")
+        word = word_and_prev_word[0] #word index and frequency
+        prev_word = word_and_prev_word[1] #previous word index and frequency
+        prev_word_support = prev_word[1] #The number of times that the previous word was used in the document
+        word_support = word[1]
+        #print(prev_word_support)
+        #print(f"word: {word}")
+        #print(f"prev word: {prev_word}")
+        #print(f"verdict: {should_split(document,prev_word,word)}")
+        if should_split(document,prev_word,word):
+            split_count = split_count+1
+            split_list.append([word,get_word_from_index(document,word[0])])
+for word in split_list:
+    print(word)
