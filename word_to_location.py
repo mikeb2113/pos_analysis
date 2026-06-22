@@ -236,7 +236,7 @@ def word_to_location_mapping(file):
                     #print(f"{item}, {sent_id}, {bund_id}")
     dataset.sort()
     with open(output,"w",newline="") as file:
-        header = ["index","word","sentence_id","location_in_sentence","bundle_id"]
+        header = ["mapped_id","word","sentence_id","location_in_sentence","bundle_id"]
         writer = csv.writer(file,escapechar='"')
         writer.writerow(header)
         for idx,item in enumerate(dataset):

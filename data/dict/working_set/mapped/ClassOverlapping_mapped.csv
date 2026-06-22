@@ -1,4 +1,4 @@
-index,word,sentence_id,location_in_sentence,bundle_id
+mapped_id,word,sentence_id,location_in_sentence,bundle_id
 0,#a,73,7,0
 1,#e,73,6,0
 2,(,54,3,1
