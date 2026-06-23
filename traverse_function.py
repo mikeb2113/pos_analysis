@@ -39,14 +39,6 @@ def traverse(document,mapping_location,ending_index):
             i = i+1 #iterate
         return instances #Return each row from mapped where the word occurs :D (Assuming the pdf split properly - no split/combined instances)
     
-index = search_for_target_word("classifiers","ClassOverlapping")
-print("validation:")
-print(index)
-input = "ClassOverlapping"
-#mapping_index = 900
-instances = traverse(input,index[0],index[1])
-for instance in instances:
-    print(instance)
 #This will print each row in the mapping that contains the specified word
 #This will appear in the form: (mapped_id,word,sentence_id,location_in_sentence,bundle_id)
 #So we can bring this back to the traverable by looking at indexes 1 and 4 in the traversable and 2 and 4 in mapped. so (trav1)->(map2) and (trav4)->(map4)

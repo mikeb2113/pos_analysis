@@ -45,6 +45,15 @@ def traverse(name):
         for row in cursor:
             print(row)
 
+def search(name,sentence_id,bundle_id):
+    with sqlite3.connect(f"{name}.db") as connection:
+        cursor = connection.cursor()
+        print(f"Name (sqlite): {name}")
+        print(f"id (sqlite): {sentence_id}")
+        cursor.execute(f"SELECT * FROM {name} WHERE sentence_id = {sentence_id} AND phrase IS NOT '[]'")
+        for row in cursor:
+            print(row)
+
 def initialize(name):
     create_table(name)
     import_contents(name)
