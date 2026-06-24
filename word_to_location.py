@@ -349,6 +349,7 @@ def should_split(document,prev_word,word):
 
 
 document = "ClassOverlapping"
+word_to_location_mapping(document)
 input = f"data/dict/working_set/mapped/{document}_mapped.csv"
 with open(input,'r') as file:
     rows = list(csv.reader(file))

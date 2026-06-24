@@ -270,28 +270,26 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,12,"['ussr', 'nato']",NP,2,-1,3
 7,12,"['eastern', 'europe']",NP,2,-1,3
 8,12,['1'],NP,2,-1,3
-0,13,[],NP,0,-1,1
-1,13,in,PREP,1,-1,2
-2,13,"['tr', 'oduction']",NP,1,-1,2
-3,13,[],NP,1,-1,2
-4,13,the,DET,2,-1,3
-5,13,"['cold', 'war']",NP,2,-1,3
-6,13,['originated'],NP,2,-1,3
-7,13,from,PREP,3,-1,4
-8,13,[],NP,3,-1,4
-9,13,the,DET,4,-1,5
-10,13,"['yalta', 'conference']",NP,4,-1,5
+0,13,['introduction'],NP,0,-1,1
+1,13,[],NP,0,-1,1
+2,13,the,DET,1,-1,2
+3,13,"['cold', 'war']",NP,1,-1,2
+4,13,['originated'],NP,1,-1,2
+5,13,from,PREP,2,-1,3
+6,13,[],NP,2,-1,3
+7,13,the,DET,3,-1,4
+8,13,"['yalta', 'conference']",NP,3,-1,4
+9,13,[],NP,3,-1,4
+10,13,at,PREP,4,-1,5
 11,13,[],NP,4,-1,5
-12,13,at,PREP,5,-1,6
-13,13,[],NP,5,-1,6
-14,13,the,DET,6,-1,7
-15,13,['end'],NP,6,-1,7
+12,13,the,DET,5,-1,6
+13,13,['end'],NP,5,-1,6
+14,13,[],NP,5,-1,6
+15,13,of,PREP,6,-1,7
 16,13,[],NP,6,-1,7
-17,13,of,PREP,7,-1,8
-18,13,[],NP,7,-1,8
-19,13,the,DET,8,-1,9
-20,13,"['second', 'world']",NP,8,-1,9
-21,13,['war'],NP,8,-1,9
+17,13,the,DET,7,-1,8
+18,13,"['second', 'world']",NP,7,-1,8
+19,13,['war'],NP,7,-1,8
 0,14,['after'],NP,0,-1,1
 1,14,[],NP,0,-1,1
 2,14,the,DET,1,-1,2
@@ -364,7 +362,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 28,16,[],NP,7,-1,8
 29,16,the,DET,8,-1,9
 30,16,"['cold', 'war']",NP,8,-1,9
-0,17,['during'],NP,0,-1,1
+0,17,['\u200cduring'],NP,0,-1,1
 1,17,[],NP,0,-1,1
 2,17,the,DET,1,-1,2
 3,17,"['cold', 'war']",NP,1,-1,2
@@ -412,36 +410,35 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 22,18,"['global', 'security']",NP,4,-1,5
 23,18,"['situation', 'remains']",NP,4,-1,5
 24,18,"['unprecedentedly', 'grave']",NP,4,-1,5
-0,19,[],NP,0,-1,1
-1,19,the,DET,1,-1,2
-2,19,"['cold', 'war']",NP,1,-1,2
-3,19,['ended'],NP,1,-1,2
-4,19,with,PREP,2,-1,3
-5,19,[],NP,2,-1,3
-6,19,the,DET,3,-1,4
-7,19,"['economic', 'collapse']",NP,3,-1,4
-8,19,[],NP,3,-1,4
-9,19,of,PREP,4,-1,5
-10,19,[],NP,4,-1,5
-11,19,the,DET,5,-1,6
-12,19,['ussr'],NP,5,-1,6
-13,19,[],NP,5,-1,6
-14,19,the,DET,6,-1,7
-15,19,['dissolution'],NP,6,-1,7
-16,19,[],NP,6,-1,7
-17,19,of,PREP,7,-1,8
-18,19,[],NP,7,-1,8
-19,19,the,DET,8,-1,9
-20,19,['state'],NP,8,-1,9
-21,19,and,CONJ,8,-1,9
-22,19,[],NP,8,-1,9
-23,19,the,DET,9,-1,10
-24,19,['dissolution'],NP,9,-1,10
-25,19,[],NP,9,-1,10
-26,19,of,PREP,10,-1,11
-27,19,[],NP,10,-1,11
-28,19,the,DET,11,-1,12
-29,19,"['warsaw', 'pact']",NP,11,-1,12
+0,19,"['\u200cthe', 'cold']",NP,0,-1,1
+1,19,"['war', 'ended']",NP,0,-1,1
+2,19,[],NP,0,-1,1
+3,19,with,PREP,1,-1,2
+4,19,[],NP,1,-1,2
+5,19,the,DET,2,-1,3
+6,19,"['economic', 'collapse']",NP,2,-1,3
+7,19,[],NP,2,-1,3
+8,19,of,PREP,3,-1,4
+9,19,[],NP,3,-1,4
+10,19,the,DET,4,-1,5
+11,19,['ussr'],NP,4,-1,5
+12,19,[],NP,4,-1,5
+13,19,the,DET,5,-1,6
+14,19,['dissolution'],NP,5,-1,6
+15,19,[],NP,5,-1,6
+16,19,of,PREP,6,-1,7
+17,19,[],NP,6,-1,7
+18,19,the,DET,7,-1,8
+19,19,['state'],NP,7,-1,8
+20,19,and,CONJ,7,-1,8
+21,19,[],NP,7,-1,8
+22,19,the,DET,8,-1,9
+23,19,['dissolution'],NP,8,-1,9
+24,19,[],NP,8,-1,9
+25,19,of,PREP,9,-1,10
+26,19,[],NP,9,-1,10
+27,19,the,DET,10,-1,11
+28,19,"['warsaw', 'pact']",NP,10,-1,11
 0,20,[],NP,0,-1,1
 1,20,in,PREP,1,-1,2
 2,20,[],NP,1,-1,2
@@ -476,32 +473,30 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 31,20,and,CONJ,10,-1,11
 32,20,['economic'],NP,10,-1,11
 33,20,['political'],NP,10,-1,11
-0,21,[],NP,0,-1,1
-1,21,the,DET,1,-1,2
-2,21,"['tension', 'between']",NP,1,-1,2
-3,21,[],NP,1,-1,2
-4,21,the,DET,2,-1,3
-5,21,['ussr'],NP,2,-1,3
-6,21,and,CONJ,2,-1,3
-7,21,[],NP,2,-1,3
-8,21,the,DET,3,-1,4
-9,21,"['us', 'kept']",NP,3,-1,4
-10,21,[],NP,3,-1,4
-11,21,the,DET,4,-1,5
-12,21,['world'],NP,4,-1,5
+0,21,"['\u200cthe', 'tension']",NP,0,-1,1
+1,21,['between'],NP,0,-1,1
+2,21,the,DET,1,-1,2
+3,21,['ussr'],NP,1,-1,2
+4,21,and,CONJ,1,-1,2
+5,21,[],NP,1,-1,2
+6,21,the,DET,2,-1,3
+7,21,"['us', 'kept']",NP,2,-1,3
+8,21,[],NP,2,-1,3
+9,21,the,DET,3,-1,4
+10,21,['world'],NP,3,-1,4
+11,21,[],NP,3,-1,4
+12,21,in,PREP,4,-1,5
 13,21,[],NP,4,-1,5
-14,21,in,PREP,5,-1,6
-15,21,[],NP,5,-1,6
-16,21,an,DET,6,-1,7
-17,21,"['uneasy', 'state']",NP,6,-1,7
+14,21,an,DET,5,-1,6
+15,21,"['uneasy', 'state']",NP,5,-1,6
+16,21,[],NP,5,-1,6
+17,21,for,PREP,6,-1,7
 18,21,[],NP,6,-1,7
-19,21,for,PREP,7,-1,8
-20,21,[],NP,7,-1,8
-21,21,a,DET,8,-1,9
-22,21,"['long', 'time']",NP,8,-1,9
-23,21,['following'],NP,8,-1,9
-24,21,the,DET,9,-1,10
-25,21,"['cold', 'war']",NP,9,-1,10
+19,21,a,DET,7,-1,8
+20,21,"['long', 'time']",NP,7,-1,8
+21,21,['following'],NP,7,-1,8
+22,21,the,DET,8,-1,9
+23,21,"['cold', 'war']",NP,8,-1,9
 0,22,[],NP,0,-1,1
 1,22,this,DET,1,-1,2
 2,22,['tension'],NP,1,-1,2
@@ -543,7 +538,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 22,23,['so'],NP,6,-1,7
 23,23,[],NP,6,-1,7
 24,23,on,PREP,7,-1,8
-0,24,['although'],NP,0,-1,1
+0,24,"['\u200c', '\u200calthough']",NP,0,-1,1
 1,24,[],NP,0,-1,1
 2,24,the,DET,1,-1,2
 3,24,['us'],NP,1,-1,2
@@ -569,49 +564,48 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 23,24,"['vietnam', 'war']",NP,5,-1,6
 24,24,"['still', 'broke']",NP,5,-1,6
 25,24,['out'],NP,5,-1,6
-0,25,[],NP,0,-1,1
-1,25,in,PREP,1,-1,2
-2,25,[],NP,1,-1,2
-3,25,the,DET,2,-1,3
-4,25,"['general', 'environment']",NP,2,-1,3
-5,25,[],NP,2,-1,3
-6,25,of,PREP,3,-1,4
-7,25,[],NP,3,-1,4
-8,25,the,DET,4,-1,5
-9,25,"['cold', 'war']",NP,4,-1,5
-10,25,[],NP,4,-1,5
-11,25,the,DET,5,-1,6
-12,25,['us'],NP,5,-1,6
-13,25,and,CONJ,5,-1,6
-14,25,[],NP,5,-1,6
-15,25,the,DET,6,-1,7
-16,25,['ussr'],NP,6,-1,7
-17,25,were,AUX,6,-1,7
-18,25,"['evenly', 'matched']",NP,6,-1,7
-19,25,['avoided'],NP,6,-1,7
-20,25,[],NP,6,-1,7
-21,25,the,DET,7,-1,8
-22,25,['outbreak'],NP,7,-1,8
-23,25,[],NP,7,-1,8
-24,25,of,PREP,8,-1,9
-25,25,[],NP,8,-1,9
-26,25,a,DET,9,-1,10
-27,25,"['new', 'world']",NP,9,-1,10
-28,25,['war'],NP,9,-1,10
-29,25,in,PREP,10,-1,11
-30,25,"['nearly', 'half']",NP,10,-1,11
-31,25,[],NP,10,-1,11
-32,25,a,DET,11,-1,12
-33,25,"['century', 'countries']",NP,11,-1,12
-34,25,[],NP,11,-1,12
-35,25,with,PREP,12,-1,13
-36,25,"['different', 'social']",NP,12,-1,13
-37,25,"['systems', 'coexisted']",NP,12,-1,13
-38,25,[],NP,12,-1,13
-39,25,for,PREP,13,-1,14
-40,25,[],NP,13,-1,14
-41,25,a,DET,14,-1,15
-42,25,"['long', 'time']",NP,14,-1,15
+0,25,"['\u200c', '\u200cin']",NP,0,-1,1
+1,25,[],NP,0,-1,1
+2,25,the,DET,1,-1,2
+3,25,"['general', 'environment']",NP,1,-1,2
+4,25,[],NP,1,-1,2
+5,25,of,PREP,2,-1,3
+6,25,[],NP,2,-1,3
+7,25,the,DET,3,-1,4
+8,25,"['cold', 'war']",NP,3,-1,4
+9,25,[],NP,3,-1,4
+10,25,the,DET,4,-1,5
+11,25,['us'],NP,4,-1,5
+12,25,and,CONJ,4,-1,5
+13,25,[],NP,4,-1,5
+14,25,the,DET,5,-1,6
+15,25,['ussr'],NP,5,-1,6
+16,25,were,AUX,5,-1,6
+17,25,"['evenly', 'matched']",NP,5,-1,6
+18,25,['avoided'],NP,5,-1,6
+19,25,[],NP,5,-1,6
+20,25,the,DET,6,-1,7
+21,25,['outbreak'],NP,6,-1,7
+22,25,[],NP,6,-1,7
+23,25,of,PREP,7,-1,8
+24,25,[],NP,7,-1,8
+25,25,a,DET,8,-1,9
+26,25,"['new', 'world']",NP,8,-1,9
+27,25,['war'],NP,8,-1,9
+28,25,in,PREP,9,-1,10
+29,25,"['nearly', 'half']",NP,9,-1,10
+30,25,[],NP,9,-1,10
+31,25,a,DET,10,-1,11
+32,25,"['century', '\u200c']",NP,10,-1,11
+33,25,['countries'],NP,10,-1,11
+34,25,with,PREP,11,-1,12
+35,25,"['different', 'social']",NP,11,-1,12
+36,25,"['systems', 'coexisted']",NP,11,-1,12
+37,25,[],NP,11,-1,12
+38,25,for,PREP,12,-1,13
+39,25,[],NP,12,-1,13
+40,25,a,DET,13,-1,14
+41,25,"['long', 'time']",NP,13,-1,14
 0,26,"['they', 'learned']",NP,0,-1,1
 1,26,[],NP,0,-1,1
 2,26,from,PREP,1,-1,2
@@ -632,23 +626,24 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,26,[],NP,4,-1,5
 18,26,the,DET,5,-1,6
 19,26,['world'],NP,5,-1,6
-0,27,[],NP,0,-1,1
-1,27,the,DET,1,-1,2
-2,27,"['developing', 'countries']",NP,1,-1,2
-3,27,[],NP,1,-1,2
-4,27,in,PREP,2,-1,3
-5,27,"['asia', 'africa']",NP,2,-1,3
-6,27,and,CONJ,2,-1,3
-7,27,"['latin', 'america']",NP,2,-1,3
-8,27,"['sprang', 'up']",NP,2,-1,3
-9,27,and,CONJ,2,-1,3
-10,27,"['grew', 'stronger']",NP,2,-1,3
-11,27,and,CONJ,2,-1,3
-12,27,[],NP,2,-1,3
-13,27,the,DET,3,-1,4
-14,27,"['third', 'world']",NP,3,-1,4
-15,27,"['rose', 'accordingly']",NP,3,-1,4
-0,28,['during'],NP,0,-1,1
+0,27,['\u200c'],NP,0,-1,1
+1,27,[],NP,0,-1,1
+2,27,the,DET,1,-1,2
+3,27,"['developing', 'countries']",NP,1,-1,2
+4,27,[],NP,1,-1,2
+5,27,in,PREP,2,-1,3
+6,27,"['asia', 'africa']",NP,2,-1,3
+7,27,and,CONJ,2,-1,3
+8,27,"['latin', 'america']",NP,2,-1,3
+9,27,"['sprang', 'up']",NP,2,-1,3
+10,27,and,CONJ,2,-1,3
+11,27,"['grew', 'stronger']",NP,2,-1,3
+12,27,and,CONJ,2,-1,3
+13,27,[],NP,2,-1,3
+14,27,the,DET,3,-1,4
+15,27,"['third', 'world']",NP,3,-1,4
+16,27,"['rose', 'accordingly']",NP,3,-1,4
+0,28,"['\u200c', '\u200cduring']",NP,0,-1,1
 1,28,[],NP,0,-1,1
 2,28,the,DET,1,-1,2
 3,28,"['cold', 'war']",NP,1,-1,2
@@ -692,9 +687,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 41,28,"['information', 'technology']",NP,12,-1,13
 42,28,and,CONJ,12,-1,13
 43,28,"['new', 'energy']",NP,12,-1,13
-44,28,"['technology', 'copyright:']",NP,12,-1,13
-45,28,"['©', '2025']",NP,12,-1,13
-46,28,[],NP,12,-1,13
+44,28,"['technology', '\u200c']",NP,12,-1,13
+45,28,"['copyright:', '©']",NP,12,-1,13
+46,28,['2025'],NP,12,-1,13
 47,28,by,PREP,13,-1,14
 48,28,[],NP,13,-1,14
 49,28,the,DET,14,-1,15
@@ -724,12 +719,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,30,by,PREP,1,-1,2
 3,30,['4'],NP,1,-1,2
 0,31,"['0', ')']",NP,0,-1,1
-0,32,"['26', '26']",NP,0,-1,1
-1,32,"['|', 'advances']",NP,0,-1,1
-2,32,[],NP,0,-1,1
-3,32,in,PREP,1,-1,2
-4,32,"['humanities', 'research']",NP,1,-1,2
-5,32,"['|', 'vol']",NP,1,-1,2
+0,32,"['26', '|']",NP,0,-1,1
+1,32,['advances'],NP,0,-1,1
+2,32,in,PREP,1,-1,2
+3,32,"['humanities', 'research']",NP,1,-1,2
+4,32,"['|', 'vol']",NP,1,-1,2
 0,33,"['12', '|']",NP,0,-1,1
 1,33,"['issue', '6']",NP,0,-1,1
 2,33,['after'],NP,0,-1,1
@@ -1132,8 +1126,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 56,48,the,DET,16,-1,17
 57,48,"['international', 'community']",NP,16,-1,17
 0,49,['2'],NP,0,-1,1
-0,50,"['literatur', 'e']",NP,0,-1,1
-1,50,"['review', '2']",NP,0,-1,1
+0,50,"['literature', 'review']",NP,0,-1,1
+1,50,['2'],NP,0,-1,1
 0,51,['1'],NP,0,-1,1
 0,52,['origins'],NP,0,-1,1
 1,52,[],NP,0,-1,1
@@ -1173,7 +1167,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,53,"['countries', '2']",NP,3,-1,4
 15,53,"['billion', 'people']",NP,3,-1,4
 16,53,were,AUX,3,-1,4
-17,53,['involved'],NP,3,-1,4
+17,53,"['involved', '\u200c']",NP,3,-1,4
 0,54,['wwii'],NP,0,-1,1
 1,54,was,AUX,0,-1,1
 2,54,"['fought', 'against']",NP,0,-1,1
@@ -1237,88 +1231,86 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,55,[],NP,5,-1,6
 15,55,the,DET,6,-1,7
 16,55,['pacific'],NP,6,-1,7
-0,56,[],NP,0,-1,1
-1,56,the,DET,1,-1,2
-2,56,['result'],NP,1,-1,2
-3,56,[],NP,1,-1,2
-4,56,of,PREP,2,-1,3
-5,56,"['world', 'war']",NP,2,-1,3
-6,56,was,AUX,2,-1,3
-7,56,['ii'],NP,2,-1,3
-8,56,the,DET,3,-1,4
-9,56,['defeat'],NP,3,-1,4
+0,56,"['\u200cthe', 'result']",NP,0,-1,1
+1,56,[],NP,0,-1,1
+2,56,of,PREP,1,-1,2
+3,56,"['world', 'war']",NP,1,-1,2
+4,56,was,AUX,1,-1,2
+5,56,['ii'],NP,1,-1,2
+6,56,the,DET,2,-1,3
+7,56,['defeat'],NP,2,-1,3
+8,56,[],NP,2,-1,3
+9,56,of,PREP,3,-1,4
 10,56,[],NP,3,-1,4
-11,56,of,PREP,4,-1,5
-12,56,[],NP,4,-1,5
-13,56,the,DET,5,-1,6
-14,56,"['fascist', 'states']",NP,5,-1,6
-15,56,[],NP,5,-1,6
-16,56,in,PREP,6,-1,7
-17,56,"['germany', 'italy']",NP,6,-1,7
-18,56,and,CONJ,6,-1,7
-19,56,['japan'],NP,6,-1,7
-20,56,and,CONJ,6,-1,7
-21,56,[],NP,6,-1,7
-22,56,the,DET,7,-1,8
-23,56,['victory'],NP,7,-1,8
+11,56,the,DET,4,-1,5
+12,56,"['fascist', 'states']",NP,4,-1,5
+13,56,[],NP,4,-1,5
+14,56,in,PREP,5,-1,6
+15,56,"['germany', 'italy']",NP,5,-1,6
+16,56,and,CONJ,5,-1,6
+17,56,['japan'],NP,5,-1,6
+18,56,and,CONJ,5,-1,6
+19,56,[],NP,5,-1,6
+20,56,the,DET,6,-1,7
+21,56,['victory'],NP,6,-1,7
+22,56,[],NP,6,-1,7
+23,56,of,PREP,7,-1,8
 24,56,[],NP,7,-1,8
-25,56,of,PREP,8,-1,9
-26,56,[],NP,8,-1,9
-27,56,the,DET,9,-1,10
-28,56,"['anti', 'fascist']",NP,9,-1,10
-29,56,['caused'],NP,9,-1,10
-30,56,['alliance'],NP,9,-1,10
-31,56,the,DET,10,-1,11
-32,56,['decline'],NP,10,-1,11
-33,56,[],NP,10,-1,11
-34,56,of,PREP,11,-1,12
-35,56,['europe'],NP,11,-1,12
-36,56,and,CONJ,11,-1,12
-37,56,[],NP,11,-1,12
-38,56,the,DET,12,-1,13
-39,56,['rise'],NP,12,-1,13
+25,56,the,DET,8,-1,9
+26,56,"['anti', 'fascist']",NP,8,-1,9
+27,56,['caused'],NP,8,-1,9
+28,56,['alliance'],NP,8,-1,9
+29,56,the,DET,9,-1,10
+30,56,['decline'],NP,9,-1,10
+31,56,[],NP,9,-1,10
+32,56,of,PREP,10,-1,11
+33,56,['europe'],NP,10,-1,11
+34,56,and,CONJ,10,-1,11
+35,56,[],NP,10,-1,11
+36,56,the,DET,11,-1,12
+37,56,['rise'],NP,11,-1,12
+38,56,[],NP,11,-1,12
+39,56,of,PREP,12,-1,13
 40,56,[],NP,12,-1,13
-41,56,of,PREP,13,-1,14
-42,56,[],NP,13,-1,14
-43,56,the,DET,14,-1,15
-44,56,['us'],NP,14,-1,15
-45,56,and,CONJ,14,-1,15
-46,56,[],NP,14,-1,15
-47,56,the,DET,15,-1,16
-48,56,['ussr'],NP,15,-1,16
-49,56,and,CONJ,15,-1,16
-50,56,['became'],NP,15,-1,16
-51,56,[],NP,15,-1,16
-52,56,a,DET,16,-1,17
-53,56,"['real', 'turning']",NP,16,-1,17
-54,56,['point'],NP,16,-1,17
-55,56,in,PREP,17,-1,18
-56,56,[],NP,17,-1,18
-57,56,the,DET,18,-1,19
-58,56,"['international', 'pattern']",NP,18,-1,19
+41,56,the,DET,13,-1,14
+42,56,['us'],NP,13,-1,14
+43,56,and,CONJ,13,-1,14
+44,56,[],NP,13,-1,14
+45,56,the,DET,14,-1,15
+46,56,['ussr'],NP,14,-1,15
+47,56,and,CONJ,14,-1,15
+48,56,['became'],NP,14,-1,15
+49,56,[],NP,14,-1,15
+50,56,a,DET,15,-1,16
+51,56,"['real', 'turning']",NP,15,-1,16
+52,56,['point'],NP,15,-1,16
+53,56,in,PREP,16,-1,17
+54,56,[],NP,16,-1,17
+55,56,the,DET,17,-1,18
+56,56,"['international', 'pattern']",NP,17,-1,18
+57,56,[],NP,17,-1,18
+58,56,from,PREP,18,-1,19
 59,56,[],NP,18,-1,19
-60,56,from,PREP,19,-1,20
-61,56,[],NP,19,-1,20
-62,56,the,DET,20,-1,21
-63,56,['center'],NP,20,-1,21
-64,56,[],NP,20,-1,21
-65,56,of,PREP,21,-1,22
-66,56,['europe'],NP,21,-1,22
+60,56,the,DET,19,-1,20
+61,56,['center'],NP,19,-1,20
+62,56,[],NP,19,-1,20
+63,56,of,PREP,20,-1,21
+64,56,['europe'],NP,20,-1,21
+65,56,[],NP,20,-1,21
+66,56,to,PREP,21,-1,22
 67,56,[],NP,21,-1,22
-68,56,to,PREP,22,-1,23
-69,56,[],NP,22,-1,23
-70,56,the,DET,23,-1,24
-71,56,"['bipolar', 'pattern']",NP,23,-1,24
-72,56,[],NP,23,-1,24
-73,56,of,PREP,24,-1,25
-74,56,"['confrontation', 'between']",NP,24,-1,25
-75,56,[],NP,24,-1,25
-76,56,the,DET,25,-1,26
-77,56,['us'],NP,25,-1,26
-78,56,and,CONJ,25,-1,26
-79,56,[],NP,25,-1,26
-80,56,the,DET,26,-1,27
-81,56,['ussr'],NP,26,-1,27
+68,56,the,DET,22,-1,23
+69,56,"['bipolar', 'pattern']",NP,22,-1,23
+70,56,[],NP,22,-1,23
+71,56,of,PREP,23,-1,24
+72,56,"['confrontation', 'between']",NP,23,-1,24
+73,56,[],NP,23,-1,24
+74,56,the,DET,24,-1,25
+75,56,['us'],NP,24,-1,25
+76,56,and,CONJ,24,-1,25
+77,56,[],NP,24,-1,25
+78,56,the,DET,25,-1,26
+79,56,['ussr'],NP,25,-1,26
 0,57,[],NP,0,-1,1
 1,57,at,PREP,1,-1,2
 2,57,[],NP,1,-1,2
@@ -1683,14 +1675,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,76,"['12', '|']",NP,0,-1,1
 1,76,"['issue', '6']",NP,0,-1,1
 2,76,"['|', '27']",NP,0,-1,1
-3,76,"['27', 'us']",NP,0,-1,1
-4,76,['promoted'],NP,0,-1,1
-5,76,[],NP,0,-1,1
-6,76,the,DET,1,-1,2
-7,76,['establishment'],NP,1,-1,2
-8,76,[],NP,1,-1,2
-9,76,of,PREP,2,-1,3
-10,76,['nato'],NP,2,-1,3
+3,76,"['us', 'promoted']",NP,0,-1,1
+4,76,[],NP,0,-1,1
+5,76,the,DET,1,-1,2
+6,76,['establishment'],NP,1,-1,2
+7,76,[],NP,1,-1,2
+8,76,of,PREP,2,-1,3
+9,76,['nato'],NP,2,-1,3
 0,77,"['its', 'main']",NP,0,-1,1
 1,77,was,AUX,0,-1,1
 2,77,['purpose'],NP,0,-1,1
@@ -2703,12 +2694,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 36,112,['ideology'],NP,12,-1,13
 0,113,"['its', 'main']",NP,0,-1,1
 1,113,"['contents', 'include:']",NP,0,-1,1
-2,113,"['28', '28']",NP,0,-1,1
-3,113,"['|', 'advances']",NP,0,-1,1
-4,113,[],NP,0,-1,1
-5,113,in,PREP,1,-1,2
-6,113,"['humanities', 'research']",NP,1,-1,2
-7,113,"['|', 'vol']",NP,1,-1,2
+2,113,"['28', '|']",NP,0,-1,1
+3,113,['advances'],NP,0,-1,1
+4,113,in,PREP,1,-1,2
+5,113,"['humanities', 'research']",NP,1,-1,2
+6,113,"['|', 'vol']",NP,1,-1,2
 0,114,"['12', '|']",NP,0,-1,1
 1,114,"['issue', '6']",NP,0,-1,1
 2,114,['declare'],NP,0,-1,1
@@ -3613,29 +3603,28 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,155,"['12', '|']",NP,0,-1,1
 1,155,"['issue', '6']",NP,0,-1,1
 2,155,"['|', '29']",NP,0,-1,1
-3,155,"['29', 'progress']",NP,0,-1,1
-4,155,[],NP,0,-1,1
-5,155,of,PREP,1,-1,2
-6,155,"['society', 'through']",NP,1,-1,2
-7,155,"['class', 'struggle']",NP,1,-1,2
-8,155,[],NP,1,-1,2
-9,155,the,DET,2,-1,3
-10,155,"['socialist', 'system']",NP,2,-1,3
-11,155,is,AUX,2,-1,3
-12,155,[],NP,2,-1,3
-13,155,in,PREP,3,-1,4
-14,155,"['comparably', 'superior']",NP,3,-1,4
-15,155,and,CONJ,3,-1,4
-16,155,will,MOD,3,-1,4
-17,155,"['eventually', 'replace']",NP,3,-1,4
-18,155,[],NP,3,-1,4
-19,155,the,DET,4,-1,5
-20,155,"['capitalist', 'system']",NP,4,-1,5
-21,155,[],NP,4,-1,5
-22,155,on,PREP,5,-1,6
-23,155,[],NP,5,-1,6
-24,155,a,DET,6,-1,7
-25,155,"['global', 'scale']",NP,6,-1,7
+3,155,['progress'],NP,0,-1,1
+4,155,of,PREP,1,-1,2
+5,155,"['society', 'through']",NP,1,-1,2
+6,155,"['class', 'struggle']",NP,1,-1,2
+7,155,[],NP,1,-1,2
+8,155,the,DET,2,-1,3
+9,155,"['socialist', 'system']",NP,2,-1,3
+10,155,is,AUX,2,-1,3
+11,155,[],NP,2,-1,3
+12,155,in,PREP,3,-1,4
+13,155,"['comparably', 'superior']",NP,3,-1,4
+14,155,and,CONJ,3,-1,4
+15,155,will,MOD,3,-1,4
+16,155,"['eventually', 'replace']",NP,3,-1,4
+17,155,[],NP,3,-1,4
+18,155,the,DET,4,-1,5
+19,155,"['capitalist', 'system']",NP,4,-1,5
+20,155,[],NP,4,-1,5
+21,155,on,PREP,5,-1,6
+22,155,[],NP,5,-1,6
+23,155,a,DET,6,-1,7
+24,155,"['global', 'scale']",NP,6,-1,7
 0,156,['2'],NP,0,-1,1
 0,157,['4'],NP,0,-1,1
 0,158,['3'],NP,0,-1,1
@@ -4540,12 +4529,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 23,193,[],NP,5,-1,6
 24,193,of,PREP,6,-1,7
 25,193,['launches'],NP,6,-1,7
-0,194,"['30', '30']",NP,0,-1,1
-1,194,"['|', 'advances']",NP,0,-1,1
-2,194,[],NP,0,-1,1
-3,194,in,PREP,1,-1,2
-4,194,"['humanities', 'research']",NP,1,-1,2
-5,194,"['|', 'vol']",NP,1,-1,2
+0,194,"['30', '|']",NP,0,-1,1
+1,194,['advances'],NP,0,-1,1
+2,194,in,PREP,1,-1,2
+3,194,"['humanities', 'research']",NP,1,-1,2
+4,194,"['|', 'vol']",NP,1,-1,2
 0,195,"['12', '|']",NP,0,-1,1
 1,195,"['issue', '6']",NP,0,-1,1
 2,195,"['large', 'phased']",NP,0,-1,1
@@ -5487,26 +5475,25 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,229,"['12', '|']",NP,0,-1,1
 1,229,"['issue', '6']",NP,0,-1,1
 2,229,"['|', '31']",NP,0,-1,1
-3,229,"['31', 'war']",NP,0,-1,1
-4,229,['between'],NP,0,-1,1
-5,229,[],NP,0,-1,1
-6,229,the,DET,1,-1,2
-7,229,['us'],NP,1,-1,2
-8,229,and,CONJ,1,-1,2
-9,229,[],NP,1,-1,2
-10,229,the,DET,2,-1,3
-11,229,['ussr'],NP,2,-1,3
-12,229,and,CONJ,2,-1,3
-13,229,['hoped'],NP,2,-1,3
-14,229,[],NP,2,-1,3
-15,229,to,PREP,3,-1,4
-16,229,['maintain'],NP,3,-1,4
-17,229,[],NP,3,-1,4
-18,229,an,DET,4,-1,5
-19,229,"['independent', 'position']",NP,4,-1,5
-20,229,[],NP,4,-1,5
-21,229,in,PREP,5,-1,6
-22,229,"['international', 'affairs']",NP,5,-1,6
+3,229,"['war', 'between']",NP,0,-1,1
+4,229,[],NP,0,-1,1
+5,229,the,DET,1,-1,2
+6,229,['us'],NP,1,-1,2
+7,229,and,CONJ,1,-1,2
+8,229,[],NP,1,-1,2
+9,229,the,DET,2,-1,3
+10,229,['ussr'],NP,2,-1,3
+11,229,and,CONJ,2,-1,3
+12,229,['hoped'],NP,2,-1,3
+13,229,[],NP,2,-1,3
+14,229,to,PREP,3,-1,4
+15,229,['maintain'],NP,3,-1,4
+16,229,[],NP,3,-1,4
+17,229,an,DET,4,-1,5
+18,229,"['independent', 'position']",NP,4,-1,5
+19,229,[],NP,4,-1,5
+20,229,in,PREP,5,-1,6
+21,229,"['international', 'affairs']",NP,5,-1,6
 0,230,"['yugoslav', 'president']",NP,0,-1,1
 1,230,"['tito', 'egyptian']",NP,0,-1,1
 2,230,"['president', 'nasser']",NP,0,-1,1
@@ -6477,12 +6464,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 23,257,[],NP,5,-1,6
 24,257,the,DET,6,-1,7
 25,257,"['arms', 'race']",NP,6,-1,7
-0,258,"['32', '32']",NP,0,-1,1
-1,258,"['|', 'advances']",NP,0,-1,1
-2,258,[],NP,0,-1,1
-3,258,in,PREP,1,-1,2
-4,258,"['humanities', 'research']",NP,1,-1,2
-5,258,"['|', 'vol']",NP,1,-1,2
+0,258,"['32', '|']",NP,0,-1,1
+1,258,['advances'],NP,0,-1,1
+2,258,in,PREP,1,-1,2
+3,258,"['humanities', 'research']",NP,1,-1,2
+4,258,"['|', 'vol']",NP,1,-1,2
 0,259,"['12', '|']",NP,0,-1,1
 1,259,"['issue', '6']",NP,0,-1,1
 2,259,[],NP,0,-1,1
@@ -7315,7 +7301,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,302,"['12', '|']",NP,0,-1,1
 1,302,"['issue', '6']",NP,0,-1,1
 2,302,"['|', '33']",NP,0,-1,1
-3,302,['33'],NP,0,-1,1
+3,302,[],NP,0,-1,1
 4,302,the,DET,1,-1,2
 5,302,"['cuban', 'missile']",NP,1,-1,2
 6,302,"['crisis', 'made']",NP,1,-1,2
@@ -8252,12 +8238,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,360,and,CONJ,3,-1,4
 11,360,[],NP,3,-1,4
 12,360,the,DET,4,-1,5
-13,360,"['34', '34']",NP,4,-1,5
-14,360,"['|', 'advances']",NP,4,-1,5
-15,360,[],NP,4,-1,5
-16,360,in,PREP,5,-1,6
-17,360,"['humanities', 'research']",NP,5,-1,6
-18,360,"['|', 'vol']",NP,5,-1,6
+13,360,"['34', '|']",NP,4,-1,5
+14,360,['advances'],NP,4,-1,5
+15,360,in,PREP,5,-1,6
+16,360,"['humanities', 'research']",NP,5,-1,6
+17,360,"['|', 'vol']",NP,5,-1,6
 0,361,"['12', '|']",NP,0,-1,1
 1,361,"['issue', '6']",NP,0,-1,1
 2,361,"['combined', 'fleet']",NP,0,-1,1
@@ -9204,8 +9189,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,403,"['12', '|']",NP,0,-1,1
 1,403,"['issue', '6']",NP,0,-1,1
 2,403,"['|', '35']",NP,0,-1,1
-3,403,"['35', 'its']",NP,0,-1,1
-4,403,"['foreign', 'intervention']",NP,0,-1,1
+3,403,"['its', 'foreign']",NP,0,-1,1
+4,403,['intervention'],NP,0,-1,1
 0,404,[],NP,0,-1,1
 1,404,under,PREP,1,-1,2
 2,404,[],NP,1,-1,2
@@ -10206,12 +10191,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,445,the,DET,3,-1,4
 10,445,"['two', 'countries']",NP,3,-1,4
 11,445,has,AUX,3,-1,4
-12,445,"['36', '36']",NP,3,-1,4
-13,445,"['|', 'advances']",NP,3,-1,4
-14,445,[],NP,3,-1,4
-15,445,in,PREP,4,-1,5
-16,445,"['humanities', 'research']",NP,4,-1,5
-17,445,"['|', 'vol']",NP,4,-1,5
+12,445,"['36', '|']",NP,3,-1,4
+13,445,['advances'],NP,3,-1,4
+14,445,in,PREP,4,-1,5
+15,445,"['humanities', 'research']",NP,4,-1,5
+16,445,"['|', 'vol']",NP,4,-1,5
 0,446,"['12', '|']",NP,0,-1,1
 1,446,"['issue', '6']",NP,0,-1,1
 2,446,been,AUX,0,-1,1
@@ -11063,24 +11047,23 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,493,"['12', '|']",NP,0,-1,1
 1,493,"['issue', '6']",NP,0,-1,1
 2,493,"['|', '37']",NP,0,-1,1
-3,493,"['37', 'reagan']",NP,0,-1,1
-4,493,['as'],NP,0,-1,1
-5,493,[],NP,0,-1,1
-6,493,a,DET,1,-1,2
-7,493,"['typical', 'representative']",NP,1,-1,2
-8,493,[],NP,1,-1,2
-9,493,of,PREP,2,-1,3
-10,493,[],NP,2,-1,3
-11,493,the,DET,3,-1,4
-12,493,"['american', 'neoconservatives']",NP,3,-1,4
-13,493,was,AUX,3,-1,4
-14,493,['strongly'],NP,3,-1,4
-15,493,[],NP,3,-1,4
-16,493,in,PREP,4,-1,5
-17,493,['fluenced'],NP,4,-1,5
-18,493,[],NP,4,-1,5
-19,493,by,PREP,5,-1,6
-20,493,"['neoconservative', 'ideas']",NP,5,-1,6
+3,493,"['reagan', 'as']",NP,0,-1,1
+4,493,[],NP,0,-1,1
+5,493,a,DET,1,-1,2
+6,493,"['typical', 'representative']",NP,1,-1,2
+7,493,[],NP,1,-1,2
+8,493,of,PREP,2,-1,3
+9,493,[],NP,2,-1,3
+10,493,the,DET,3,-1,4
+11,493,"['american', 'neoconservatives']",NP,3,-1,4
+12,493,was,AUX,3,-1,4
+13,493,['strongly'],NP,3,-1,4
+14,493,[],NP,3,-1,4
+15,493,in,PREP,4,-1,5
+16,493,['fluenced'],NP,4,-1,5
+17,493,[],NP,4,-1,5
+18,493,by,PREP,5,-1,6
+19,493,"['neoconservative', 'ideas']",NP,5,-1,6
 0,494,[],NP,0,-1,1
 1,494,the,DET,1,-1,2
 2,494,"['se', 'ideas']",NP,1,-1,2
@@ -12058,12 +12041,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,526,[],NP,5,-1,6
 14,526,the,DET,6,-1,7
 15,526,"['ussr', '[11]']",NP,6,-1,7
-0,527,"['38', '38']",NP,0,-1,1
-1,527,"['|', 'advances']",NP,0,-1,1
-2,527,[],NP,0,-1,1
-3,527,in,PREP,1,-1,2
-4,527,"['humanities', 'research']",NP,1,-1,2
-5,527,"['|', 'vol']",NP,1,-1,2
+0,527,"['38', '|']",NP,0,-1,1
+1,527,['advances'],NP,0,-1,1
+2,527,in,PREP,1,-1,2
+3,527,"['humanities', 'research']",NP,1,-1,2
+4,527,"['|', 'vol']",NP,1,-1,2
 0,528,"['12', '|']",NP,0,-1,1
 1,528,"['issue', '6']",NP,0,-1,1
 2,528,['3'],NP,0,-1,1
@@ -13017,7 +12999,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,569,"['12', '|']",NP,0,-1,1
 1,569,"['issue', '6']",NP,0,-1,1
 2,569,"['|', '39']",NP,0,-1,1
-3,569,['39'],NP,0,-1,1
+3,569,[],NP,0,-1,1
 4,569,the,DET,1,-1,2
 5,569,"['communist', 'parties']",NP,1,-1,2
 6,569,[],NP,1,-1,2
@@ -13930,8 +13912,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 26,612,of,PREP,8,-1,9
 27,612,"['various', 'us']",NP,8,-1,9
 28,612,"['countries', '40']",NP,8,-1,9
-29,612,"['40', '|']",NP,8,-1,9
-30,612,['advances'],NP,8,-1,9
+29,612,"['|', 'advances']",NP,8,-1,9
+30,612,[],NP,8,-1,9
 31,612,in,PREP,9,-1,10
 32,612,"['humanities', 'research']",NP,9,-1,10
 33,612,"['|', 'vol']",NP,9,-1,10
@@ -14659,8 +14641,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 37,644,"[""people's"", 'livelihood']",NP,13,-1,14
 38,644,and,CONJ,13,-1,14
 39,644,"['social', 'contradictions']",NP,13,-1,14
-0,645,"['refer', 'ences']",NP,0,-1,1
-1,645,"['[1]', 'baidu']",NP,0,-1,1
+0,645,"['references', '[1]']",NP,0,-1,1
+1,645,['baidu'],NP,0,-1,1
 0,646,['(2023'],NP,0,-1,1
 1,646,may,MOD,0,-1,1
 2,646,['9)'],NP,0,-1,1
@@ -14682,8 +14664,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,647,the,DET,5,-1,6
 16,647,"['international', 'situation']",NP,5,-1,6
 17,647,is,AUX,5,-1,6
-18,647,"['still', 'af']",NP,5,-1,6
-19,647,['fected'],NP,5,-1,6
+18,647,"['still', 'affected']",NP,5,-1,6
+19,647,[],NP,5,-1,6
 20,647,by,PREP,6,-1,7
 21,647,['it'],NP,6,-1,7
 0,648,['baidu'],NP,0,-1,1
@@ -14693,9 +14675,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,652,['baidu'],NP,0,-1,1
 0,653,"['com', 'r']",NP,0,-1,1
 1,653,"['1qyiohb9fqg?f=cp&', 'rs=468303374&']",NP,0,-1,1
-2,653,"['ruk=rl4uynugvbgrvzh1', '1hbpmw&']",NP,0,-1,1
-3,653,"['u=f5a03582e727908e', '[2]']",NP,0,-1,1
-4,653,"['churchill', 'w']",NP,0,-1,1
+2,653,"['ruk=rl4uynugvbgrvzh11hbpmw&', 'u=f5a03582e727908e']",NP,0,-1,1
+3,653,"['[2]', 'churchill']",NP,0,-1,1
+4,653,['w'],NP,0,-1,1
 0,654,"['(1946', 'march']",NP,0,-1,1
 1,654,['5)'],NP,0,-1,1
 0,655,"['“iron', 'curtain”']",NP,0,-1,1
@@ -14746,8 +14728,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,669,"['12', '|']",NP,0,-1,1
 1,669,"['issue', '6']",NP,0,-1,1
 2,669,"['|', '41']",NP,0,-1,1
-3,669,"['41', '[4]']",NP,0,-1,1
-4,669,"['huang', 'h']",NP,0,-1,1
+3,669,"['[4]', 'huang']",NP,0,-1,1
+4,669,['h'],NP,0,-1,1
 0,670,"['&', 'zhang']",NP,0,-1,1
 1,670,['y'],NP,0,-1,1
 0,671,"['(2022', 'april']",NP,0,-1,1
@@ -14799,8 +14781,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,679,['relations'],NP,6,-1,7
 0,680,['shangqing'],NP,0,-1,1
 0,681,"['https:', 'doi']",NP,0,-1,1
-0,682,or,CONJ,0,-1,1
-1,682,"['g', '10']",NP,0,-1,1
+0,682,"['org', '10']",NP,0,-1,1
 0,683,"['3969', 'j']",NP,0,-1,1
 0,684,['issn'],NP,0,-1,1
 0,685,"['1673', '4041']",NP,0,-1,1
@@ -14820,34 +14801,30 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,691,in,PREP,1,-1,2
 6,691,"['anthropological', 'retrospective]']",NP,1,-1,2
 0,692,"['antropologicheskij', 'forum']",NP,0,-1,1
-1,692,"['14(37)', '1']",NP,0,-1,1
-2,692,['1–19'],NP,0,-1,1
+1,692,"['14(37)', '11–19']",NP,0,-1,1
 0,693,"['https:', 'doi']",NP,0,-1,1
-0,694,or,CONJ,0,-1,1
-1,694,"['g', '10']",NP,0,-1,1
+0,694,"['org', '10']",NP,0,-1,1
 0,695,"['31250', '1815']",NP,0,-1,1
 1,695,"['8870', '2018']",NP,0,-1,1
 2,695,"['14', '37']",NP,0,-1,1
-3,695,"['1', '1']",NP,0,-1,1
-4,695,"['19', '[7]']",NP,0,-1,1
-5,695,"['hoey', 'f']",NP,0,-1,1
+3,695,"['11', '19']",NP,0,-1,1
+4,695,"['[7]', 'hoey']",NP,0,-1,1
+5,695,['f'],NP,0,-1,1
 0,696,['(2015)'],NP,0,-1,1
 0,697,[],NP,0,-1,1
 1,697,the,DET,1,-1,2
 2,697,"['nixon', 'doctrine']",NP,1,-1,2
 3,697,and,CONJ,1,-1,2
-4,697,"['japan’', 's']",NP,1,-1,2
-5,697,"['defence', 'policy']",NP,1,-1,2
-6,697,['1969–1971'],NP,1,-1,2
+4,697,"['japan’s', 'defence']",NP,1,-1,2
+5,697,"['policy', '1969–1971']",NP,1,-1,2
 0,698,"['palgrave', 'macmillan']",NP,0,-1,1
 1,698,"['uk', 'ebooks']",NP,0,-1,1
 2,698,['119–137'],NP,0,-1,1
 0,699,"['https:', 'doi']",NP,0,-1,1
-0,700,or,CONJ,0,-1,1
-1,700,"['g', '10']",NP,0,-1,1
-0,701,"['1057', '9781']",NP,0,-1,1
-1,701,"['137457639_7', '[8]']",NP,0,-1,1
-2,701,"['yu', 'w']",NP,0,-1,1
+0,700,"['org', '10']",NP,0,-1,1
+0,701,"['1057', '9781137457639_7']",NP,0,-1,1
+1,701,"['[8]', 'yu']",NP,0,-1,1
+2,701,['w'],NP,0,-1,1
 0,702,['(2009)'],NP,0,-1,1
 0,703,[],NP,0,-1,1
 1,703,an,DET,1,-1,2
@@ -14872,11 +14849,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,704,"['shanxi', 'normal']",NP,1,-1,2
 4,704,"['university(social', 'science']",NP,1,-1,2
 5,704,"['edition)', '36(6)']",NP,1,-1,2
-6,704,"['1', '15–1']",NP,1,-1,2
-7,704,['18'],NP,1,-1,2
+6,704,['115–118'],NP,1,-1,2
 0,705,"['https:', 'doi']",NP,0,-1,1
-0,706,or,CONJ,0,-1,1
-1,706,"['g', '10']",NP,0,-1,1
+0,706,"['org', '10']",NP,0,-1,1
 0,707,"['3969', 'j']",NP,0,-1,1
 0,708,['issn'],NP,0,-1,1
 0,709,"['1001', '5957']",NP,0,-1,1
@@ -14899,21 +14874,19 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,717,[],NP,0,-1,1
 1,717,in,PREP,1,-1,2
 2,717,"['baker', 'institute']",NP,1,-1,2
-0,718,"['rice', 'university’']",NP,0,-1,1
-1,718,"['s', 'baker']",NP,0,-1,1
-2,718,['institute'],NP,0,-1,1
-3,718,[],NP,0,-1,1
-4,718,for,PREP,1,-1,2
-5,718,"['public', 'policy']",NP,1,-1,2
+0,718,"['rice', 'university’s']",NP,0,-1,1
+1,718,"['baker', 'institute']",NP,0,-1,1
+2,718,[],NP,0,-1,1
+3,718,for,PREP,1,-1,2
+4,718,"['public', 'policy']",NP,1,-1,2
 0,719,"['https:', 'www']",NP,0,-1,1
 0,720,['bakerinstitute'],NP,0,-1,1
-0,721,or,CONJ,0,-1,1
-1,721,"['g', 'sites']",NP,0,-1,1
-2,721,"['default', 'files']",NP,0,-1,1
-3,721,"['2018', '02']",NP,0,-1,1
-4,721,"['import', 'ces']",NP,0,-1,1
-5,721,"['pub', 'seasia']",NP,0,-1,1
-6,721,"['carter', '071917']",NP,0,-1,1
+0,721,"['org', 'sites']",NP,0,-1,1
+1,721,"['default', 'files']",NP,0,-1,1
+2,721,"['2018', '02']",NP,0,-1,1
+3,721,"['import', 'ces']",NP,0,-1,1
+4,721,"['pub', 'seasia']",NP,0,-1,1
+5,721,"['carter', '071917']",NP,0,-1,1
 0,722,"['pdf', '[10]']",NP,0,-1,1
 1,722,"['liu', 'c']",NP,0,-1,1
 0,723,['(2009)'],NP,0,-1,1
@@ -14924,24 +14897,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,724,of,PREP,2,-1,3
 5,724,[],NP,2,-1,3
 6,724,the,DET,3,-1,4
-7,724,"['reagan', 'administration’']",NP,3,-1,4
-8,724,"['s', '“low']",NP,3,-1,4
-9,724,"['intensity', 'war”']",NP,3,-1,4
-10,724,['strategy'],NP,3,-1,4
+7,724,"['reagan', 'administration’s']",NP,3,-1,4
+8,724,"['“low', 'intensity']",NP,3,-1,4
+9,724,"['war”', 'strategy']",NP,3,-1,4
 0,725,['cnki'],NP,0,-1,1
 0,726,['cgl'],NP,0,-1,1
-0,727,or,CONJ,0,-1,1
-1,727,['g'],NP,0,-1,1
+0,727,['org'],NP,0,-1,1
 0,728,['cn'],NP,0,-1,1
 0,729,"['http:', 'cnki']",NP,0,-1,1
 0,730,['cgl'],NP,0,-1,1
-0,731,or,CONJ,0,-1,1
-1,731,['g'],NP,0,-1,1
+0,731,['org'],NP,0,-1,1
 0,732,"['cn', 'kcms']",NP,0,-1,1
 1,732,"['detail', 'detail']",NP,0,-1,1
 0,733,"['aspx?dbcode=cmfd&', 'filename=2009258492']",NP,0,-1,1
-0,734,"['nh', '[11]lu']",NP,0,-1,1
-1,734,['n'],NP,0,-1,1
+0,734,"['nh', '[11]']",NP,0,-1,1
+1,734,"['lu', 'n']",NP,0,-1,1
 0,735,['(2022)'],NP,0,-1,1
 0,736,[],NP,0,-1,1
 1,736,a,DET,1,-1,2
@@ -14968,8 +14938,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 22,736,"['october', 'revolution']",NP,8,-1,9
 23,736,[],NP,8,-1,9
 24,736,to,PREP,9,-1,10
-25,736,"['lenin’', 's']",NP,9,-1,10
-26,736,['time'],NP,9,-1,10
+25,736,"['lenin’s', 'time']",NP,9,-1,10
 0,737,['journal'],NP,0,-1,1
 1,737,[],NP,0,-1,1
 2,737,of,PREP,1,-1,2
@@ -14997,16 +14966,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,741,[],NP,4,-1,5
 14,741,on,PREP,5,-1,6
 15,741,"['armed', 'conflict']",NP,5,-1,6
-0,742,"['lectur', 'e']",NP,0,-1,1
-1,742,['notes'],NP,0,-1,1
+0,742,"['lecture', 'notes']",NP,0,-1,1
+1,742,[],NP,0,-1,1
 2,742,in,PREP,1,-1,2
 3,742,"['education', 'psychology']",NP,1,-1,2
 4,742,and,CONJ,1,-1,2
 5,742,"['public', 'media']",NP,1,-1,2
 6,742,"['23(1)', '29–32']",NP,1,-1,2
 0,743,"['https:', 'doi']",NP,0,-1,1
-0,744,or,CONJ,0,-1,1
-1,744,"['g', '10']",NP,0,-1,1
+0,744,"['org', '10']",NP,0,-1,1
 0,745,"['54254', '2753']",NP,0,-1,1
 1,745,"['7048', '23']",NP,0,-1,1
 2,745,['20230355'],NP,0,-1,1

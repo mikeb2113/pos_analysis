@@ -15,8 +15,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,0,"['gene', 'therapy']",NP,3,-1,4
 14,0,"['research', 'yuanyuan']",NP,3,-1,4
 15,0,"['xu', 'zhanjun']",NP,3,-1,4
-16,0,"['li⇑', 'key']",NP,3,-1,4
-17,0,['laboratory'],NP,3,-1,4
+16,0,"['li', '⇑']",NP,3,-1,4
+17,0,"['key', 'laboratory']",NP,3,-1,4
 18,0,[],NP,3,-1,4
 19,0,of,PREP,4,-1,5
 20,0,"['zoonosis', 'research']",NP,4,-1,5
@@ -28,71 +28,86 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 26,0,"['animal', 'science']",NP,6,-1,7
 27,0,"['jilin', 'university']",NP,6,-1,7
 28,0,"['changchun', '130062']",NP,6,-1,7
-29,0,"['china', 'article']",NP,6,-1,7
-30,0,"['info', 'article']",NP,6,-1,7
-31,0,"['history:', 'received']",NP,6,-1,7
-32,0,"['10', 'march']",NP,6,-1,7
-33,0,['2020received'],NP,6,-1,7
-34,0,in,PREP,7,-1,8
-35,0,"['revised', 'form']",NP,7,-1,8
-36,0,"['31', 'august']",NP,7,-1,8
-37,0,"['2020accepted', '31']",NP,7,-1,8
-38,0,"['august', '2020available']",NP,7,-1,8
-39,0,"['online', '8']",NP,7,-1,8
-40,0,"['september', '2020']",NP,7,-1,8
-41,0,"['keywords:', 'crisprcas9']",NP,7,-1,8
-42,0,"['genome', 'editing']",NP,7,-1,8
-43,0,"['human', 'disease']",NP,7,-1,8
-44,0,['modelsrabbitgene'],NP,7,-1,8
-45,0,the,DET,8,-1,9
-46,0,"['rapyoff', 'target']",NP,8,-1,9
-47,0,"['effectsabstract', 'genome']",NP,8,-1,9
-48,0,['editing'],NP,8,-1,9
-49,0,is,AUX,8,-1,9
-50,0,[],NP,8,-1,9
-51,0,the,DET,9,-1,10
-52,0,['modification'],NP,9,-1,10
-53,0,[],NP,9,-1,10
-54,0,of,PREP,10,-1,11
-55,0,"['genomic', 'dna']",NP,10,-1,11
-56,0,[],NP,10,-1,11
-57,0,at,PREP,11,-1,12
-58,0,[],NP,11,-1,12
-59,0,a,DET,12,-1,13
-60,0,"['specific', 'target']",NP,12,-1,13
-61,0,['site'],NP,12,-1,13
-62,0,in,PREP,13,-1,14
-63,0,[],NP,13,-1,14
-64,0,a,DET,14,-1,15
-65,0,"['wide', 'variety']",NP,14,-1,15
-66,0,[],NP,14,-1,15
-67,0,of,PREP,15,-1,16
-68,0,"['cell', 'types']",NP,15,-1,16
-69,0,and,CONJ,15,-1,16
-70,0,"['organisms', 'including']",NP,15,-1,16
-71,0,"['insertion', 'deletion']",NP,15,-1,16
-72,0,and,CONJ,15,-1,16
-73,0,['replacement'],NP,15,-1,16
-74,0,[],NP,15,-1,16
-75,0,of,PREP,16,-1,17
-76,0,"['dna', 'resulting']",NP,16,-1,17
-77,0,[],NP,16,-1,17
-78,0,in,PREP,17,-1,18
-79,0,[],NP,17,-1,18
-80,0,in,PREP,18,-1,19
-81,0,['activation'],NP,18,-1,19
-82,0,[],NP,18,-1,19
-83,0,of,PREP,19,-1,20
-84,0,"['target', 'genes']",NP,19,-1,20
-85,0,['acquisition'],NP,19,-1,20
-86,0,of,PREP,20,-1,21
-87,0,"['novel', 'genetic']",NP,20,-1,21
-88,0,and,CONJ,20,-1,21
-89,0,['correction'],NP,20,-1,21
-90,0,['traits'],NP,20,-1,21
-91,0,of,PREP,21,-1,22
-92,0,"['pathogenic', 'gene']",NP,21,-1,22
-93,0,['mutations'],NP,21,-1,22
+29,0,['china'],NP,6,-1,7
+30,0,a,DET,7,-1,8
+31,0,"['r', 't']",NP,7,-1,8
+32,0,"['i', 'c']",NP,7,-1,8
+33,0,"['l', 'e']",NP,7,-1,8
+34,0,"['i', 'n']",NP,7,-1,8
+35,0,"['f', 'o']",NP,7,-1,8
+36,0,"['article', 'history:']",NP,7,-1,8
+37,0,"['received', '10']",NP,7,-1,8
+38,0,"['march', '2020']",NP,7,-1,8
+39,0,['received'],NP,7,-1,8
+40,0,[],NP,7,-1,8
+41,0,in,PREP,8,-1,9
+42,0,"['revised', 'form']",NP,8,-1,9
+43,0,"['31', 'august']",NP,8,-1,9
+44,0,"['2020', 'accepted']",NP,8,-1,9
+45,0,"['31', 'august']",NP,8,-1,9
+46,0,"['2020', 'available']",NP,8,-1,9
+47,0,"['online', '8']",NP,8,-1,9
+48,0,"['september', '2020']",NP,8,-1,9
+49,0,"['keywords:', 'crispr']",NP,8,-1,9
+50,0,"['cas9', 'genome']",NP,8,-1,9
+51,0,"['editing', 'human']",NP,8,-1,9
+52,0,"['disease', 'models']",NP,8,-1,9
+53,0,"['rabbit', 'gene']",NP,8,-1,9
+54,0,"['therapy', 'off']",NP,8,-1,9
+55,0,"['target', 'effects']",NP,8,-1,9
+56,0,[],NP,8,-1,9
+57,0,a,DET,9,-1,10
+58,0,"['b', 's']",NP,9,-1,10
+59,0,"['t', 'r']",NP,9,-1,10
+60,0,[],NP,9,-1,10
+61,0,a,DET,10,-1,11
+62,0,"['c', 't']",NP,10,-1,11
+63,0,"['genome', 'editing']",NP,10,-1,11
+64,0,is,AUX,10,-1,11
+65,0,[],NP,10,-1,11
+66,0,the,DET,11,-1,12
+67,0,['modification'],NP,11,-1,12
+68,0,[],NP,11,-1,12
+69,0,of,PREP,12,-1,13
+70,0,"['genomic', 'dna']",NP,12,-1,13
+71,0,[],NP,12,-1,13
+72,0,at,PREP,13,-1,14
+73,0,[],NP,13,-1,14
+74,0,a,DET,14,-1,15
+75,0,"['specific', 'target']",NP,14,-1,15
+76,0,['site'],NP,14,-1,15
+77,0,in,PREP,15,-1,16
+78,0,[],NP,15,-1,16
+79,0,a,DET,16,-1,17
+80,0,"['wide', 'variety']",NP,16,-1,17
+81,0,[],NP,16,-1,17
+82,0,of,PREP,17,-1,18
+83,0,"['cell', 'types']",NP,17,-1,18
+84,0,and,CONJ,17,-1,18
+85,0,"['organisms', 'including']",NP,17,-1,18
+86,0,"['insertion', 'deletion']",NP,17,-1,18
+87,0,and,CONJ,17,-1,18
+88,0,['replacement'],NP,17,-1,18
+89,0,[],NP,17,-1,18
+90,0,of,PREP,18,-1,19
+91,0,"['dna', 'resulting']",NP,18,-1,19
+92,0,[],NP,18,-1,19
+93,0,in,PREP,19,-1,20
+94,0,[],NP,19,-1,20
+95,0,in,PREP,20,-1,21
+96,0,['activation'],NP,20,-1,21
+97,0,[],NP,20,-1,21
+98,0,of,PREP,21,-1,22
+99,0,"['target', 'genes']",NP,21,-1,22
+100,0,['acquisition'],NP,21,-1,22
+101,0,of,PREP,22,-1,23
+102,0,"['novel', 'genetic']",NP,22,-1,23
+103,0,and,CONJ,22,-1,23
+104,0,['correction'],NP,22,-1,23
+105,0,['traits'],NP,22,-1,23
+106,0,of,PREP,23,-1,24
+107,0,"['pathogenic', 'gene']",NP,23,-1,24
+108,0,['mutations'],NP,23,-1,24
 0,1,['due'],NP,0,-1,1
 1,1,[],NP,0,-1,1
 2,1,to,PREP,1,-1,2
@@ -143,41 +158,42 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 16,2,be,AUX,6,-1,7
 17,2,['systems'],NP,6,-1,7
 18,2,in,PREP,7,-1,8
-19,2,['troduced'],NP,7,-1,8
+19,2,"['troduced', 'including']",NP,7,-1,8
 20,2,[],NP,7,-1,8
-21,2,in,PREP,8,-1,9
-22,2,['cludingthe'],NP,8,-1,9
-23,2,[],NP,8,-1,9
-24,2,in,PREP,9,-1,10
-25,2,['novations'],NP,9,-1,10
-26,2,[],NP,9,-1,10
-27,2,the,DET,10,-1,11
-28,2,['applications'],NP,10,-1,11
-29,2,[],NP,10,-1,11
-30,2,in,PREP,11,-1,12
-31,2,"['human', 'disease']",NP,11,-1,12
-32,2,and,CONJ,11,-1,12
-33,2,"['gene', 'therapy']",NP,11,-1,12
-34,2,"['research', 'as']",NP,11,-1,12
-35,2,"['well', 'as']",NP,11,-1,12
-36,2,[],NP,11,-1,12
-37,2,the,DET,12,-1,13
-38,2,"['challengesand', 'opportunities']",NP,12,-1,13
-39,2,[],NP,12,-1,13
-40,2,that,COMP,12,-1,13
-41,2,will,MOD,12,-1,13
-42,2,be,AUX,12,-1,13
-43,2,['faced'],NP,12,-1,13
-44,2,[],NP,12,-1,13
-45,2,in,PREP,13,-1,14
-46,2,[],NP,13,-1,14
-47,2,the,DET,14,-1,15
-48,2,"['practical', 'application']",NP,14,-1,15
-49,2,[],NP,14,-1,15
-50,2,of,PREP,15,-1,16
-51,2,"['crispr', 'cas']",NP,15,-1,16
-52,2,['systems'],NP,15,-1,16
-0,3,['c2112020'],NP,0,-1,1
+21,2,the,DET,8,-1,9
+22,2,[],NP,8,-1,9
+23,2,in,PREP,9,-1,10
+24,2,['novations'],NP,9,-1,10
+25,2,[],NP,9,-1,10
+26,2,the,DET,10,-1,11
+27,2,['applications'],NP,10,-1,11
+28,2,[],NP,10,-1,11
+29,2,in,PREP,11,-1,12
+30,2,"['human', 'disease']",NP,11,-1,12
+31,2,and,CONJ,11,-1,12
+32,2,"['gene', 'therapy']",NP,11,-1,12
+33,2,"['research', 'as']",NP,11,-1,12
+34,2,"['well', 'as']",NP,11,-1,12
+35,2,[],NP,11,-1,12
+36,2,the,DET,12,-1,13
+37,2,['challenges'],NP,12,-1,13
+38,2,and,CONJ,12,-1,13
+39,2,['opportunities'],NP,12,-1,13
+40,2,[],NP,12,-1,13
+41,2,that,COMP,12,-1,13
+42,2,will,MOD,12,-1,13
+43,2,be,AUX,12,-1,13
+44,2,['faced'],NP,12,-1,13
+45,2,[],NP,12,-1,13
+46,2,in,PREP,13,-1,14
+47,2,[],NP,13,-1,14
+48,2,the,DET,14,-1,15
+49,2,"['practical', 'application']",NP,14,-1,15
+50,2,[],NP,14,-1,15
+51,2,of,PREP,15,-1,16
+52,2,"['crispr', 'cas']",NP,15,-1,16
+53,2,['systems'],NP,15,-1,16
+0,3,"['\x01', '2020']",NP,0,-1,1
 1,3,[],NP,0,-1,1
 2,3,the,DET,1,-1,2
 3,3,['author(s)'],NP,1,-1,2
@@ -210,8 +226,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,7,['cc'],NP,4,-1,5
 11,7,[],NP,4,-1,5
 12,7,by,PREP,5,-1,6
-13,7,"['license', '(']",NP,5,-1,6
-14,7,"['http:', 'creativecommons']",NP,5,-1,6
+13,7,"['license', '(http:']",NP,5,-1,6
+14,7,['creativecommons'],NP,5,-1,6
 0,8,"['org', 'licenses']",NP,0,-1,1
 1,8,[],NP,0,-1,1
 2,8,by,PREP,1,-1,2
@@ -340,10 +356,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,69,['2020'],NP,0,-1,1
 0,70,['08'],NP,0,-1,1
 0,71,"['031', '2001']",NP,0,-1,1
-1,71,"['0370', 'c2112020']",NP,0,-1,1
-2,71,[],NP,0,-1,1
-3,71,the,DET,1,-1,2
-4,71,['author(s)'],NP,1,-1,2
+1,71,"['0370', '\x01']",NP,0,-1,1
+2,71,['2020'],NP,0,-1,1
+3,71,[],NP,0,-1,1
+4,71,the,DET,1,-1,2
+5,71,['author(s)'],NP,1,-1,2
 0,72,['published'],NP,0,-1,1
 1,72,[],NP,0,-1,1
 2,72,by,PREP,1,-1,2
@@ -373,8 +390,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,75,['cc'],NP,4,-1,5
 11,75,[],NP,4,-1,5
 12,75,by,PREP,5,-1,6
-13,75,"['license', '(']",NP,5,-1,6
-14,75,"['http:', 'creativecommons']",NP,5,-1,6
+13,75,"['license', '(http:']",NP,5,-1,6
+14,75,['creativecommons'],NP,5,-1,6
 0,76,"['org', 'licenses']",NP,0,-1,1
 1,76,[],NP,0,-1,1
 2,76,by,PREP,1,-1,2
@@ -391,13 +408,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,83,"['structural', 'biotechnology']",NP,0,-1,1
 3,83,"['journal', '18']",NP,0,-1,1
 4,83,"['(2020)', '2401–2415']",NP,0,-1,1
-5,83,"['journal', 'homepag']",NP,0,-1,1
-6,83,"['e:', 'www']",NP,0,-1,1
+5,83,"['journal', 'homepage:']",NP,0,-1,1
+6,83,['www'],NP,0,-1,1
 0,84,['elsevier'],NP,0,-1,1
-0,85,"['c', 'om']",NP,0,-1,1
-1,85,"['locate', 'csbj']",NP,0,-1,1
-2,85,"['credit', 'authorship']",NP,0,-1,1
-3,85,"['contribution', 'statement']",NP,0,-1,1
+0,85,"['com', 'locate']",NP,0,-1,1
+1,85,"['csbj', 'credit']",NP,0,-1,1
+2,85,"['authorship', 'contribution']",NP,0,-1,1
+3,85,['statement'],NP,0,-1,1
 0,86,"['2411', 'declaration']",NP,0,-1,1
 1,86,[],NP,0,-1,1
 2,86,of,PREP,1,-1,2
@@ -511,14 +528,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,92,['(talens)'],NP,3,-1,4
 18,92,the,DET,4,-1,5
 19,92,"['rna', 'guided']",NP,4,-1,5
-20,92,"['crispr', '(clusteredregularly']",NP,4,-1,5
-21,92,[],NP,4,-1,5
-22,92,in,PREP,5,-1,6
-23,92,"['terspaced', 'short']",NP,5,-1,6
-24,92,"['palindromic', 'repeats)']",NP,5,-1,6
-25,92,"['cas', '(crispr']",NP,5,-1,6
-26,92,"['associated)', 'nucleases']",NP,5,-1,6
-27,92,"['systems', '[8–10]']",NP,5,-1,6
+20,92,"['crispr', '(clustered']",NP,4,-1,5
+21,92,['regularly'],NP,4,-1,5
+22,92,[],NP,4,-1,5
+23,92,in,PREP,5,-1,6
+24,92,"['terspaced', 'short']",NP,5,-1,6
+25,92,"['palindromic', 'repeats)']",NP,5,-1,6
+26,92,"['cas', '(crispr']",NP,5,-1,6
+27,92,"['associated)', 'nucleases']",NP,5,-1,6
+28,92,"['systems', '[8–10]']",NP,5,-1,6
 0,93,['due'],NP,0,-1,1
 1,93,[],NP,0,-1,1
 2,93,to,PREP,1,-1,2
@@ -722,8 +740,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 16,99,[],NP,4,-1,5
 17,99,the,DET,5,-1,6
 18,99,"['foreign', 'dna']",NP,5,-1,6
-19,99,"['guidescas', 'protein']",NP,5,-1,6
-20,99,[],NP,5,-1,6
+19,99,"['guides', 'cas']",NP,5,-1,6
+20,99,['protein'],NP,5,-1,6
 21,99,to,PREP,6,-1,7
 22,99,"['cleave', 'target']",NP,6,-1,7
 23,99,['sequences'],NP,6,-1,7
@@ -797,23 +815,22 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,102,[],NP,0,-1,1
 4,102,from,PREP,1,-1,2
 5,102,"['streptococcus', 'pyo']",NP,1,-1,2
-6,102,"['gene', 's']",NP,1,-1,2
-7,102,['(spcas9)'],NP,1,-1,2
-8,102,is,AUX,1,-1,2
-9,102,['one'],NP,1,-1,2
-10,102,[],NP,1,-1,2
-11,102,of,PREP,2,-1,3
-12,102,[],NP,2,-1,3
-13,102,the,DET,3,-1,4
-14,102,"['best', 'characterized']",NP,3,-1,4
-15,102,and,CONJ,3,-1,4
-16,102,"['most', 'commonly']",NP,3,-1,4
-17,102,"['used', 'category']",NP,3,-1,4
-18,102,[],NP,3,-1,4
-19,102,in,PREP,4,-1,5
-20,102,"['numerous', 'crispr']",NP,4,-1,5
-21,102,"['cas', 'systems']",NP,4,-1,5
-22,102,"['[18', '19]']",NP,4,-1,5
+6,102,"['genes', '(spcas9)']",NP,1,-1,2
+7,102,is,AUX,1,-1,2
+8,102,['one'],NP,1,-1,2
+9,102,[],NP,1,-1,2
+10,102,of,PREP,2,-1,3
+11,102,[],NP,2,-1,3
+12,102,the,DET,3,-1,4
+13,102,"['best', 'characterized']",NP,3,-1,4
+14,102,and,CONJ,3,-1,4
+15,102,"['most', 'commonly']",NP,3,-1,4
+16,102,"['used', 'category']",NP,3,-1,4
+17,102,[],NP,3,-1,4
+18,102,in,PREP,4,-1,5
+19,102,"['numerous', 'crispr']",NP,4,-1,5
+20,102,"['cas', 'systems']",NP,4,-1,5
+21,102,"['[18', '19]']",NP,4,-1,5
 0,103,[],NP,0,-1,1
 1,103,the,DET,1,-1,2
 2,103,"['main', 'components']",NP,1,-1,2
@@ -1023,7 +1040,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 16,111,"['repair', 'template']",NP,4,-1,5
 17,111,"['[28', '29]']",NP,4,-1,5
 18,111,['(fig'],NP,4,-1,5
-0,112,"['1', ')']",NP,0,-1,1
+0,112,['1)'],NP,0,-1,1
 0,113,"['furthermore', 'large']",NP,0,-1,1
 1,113,"['fragment', 'dele']",NP,0,-1,1
 2,113,['tions'],NP,0,-1,1
@@ -1076,75 +1093,81 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 25,115,['fused'],NP,3,-1,4
 26,115,to,PREP,4,-1,5
 27,115,"['cas10', 'no']",NP,4,-1,5
-28,115,"['–1', 'iv']",NP,4,-1,5
-29,115,[],NP,4,-1,5
-30,115,a,DET,5,-1,6
-31,115,"['b', 'cascade']",NP,5,-1,6
-32,115,"['dsdna', 'unknown']",NP,5,-1,6
-33,115,"['no', '–']",NP,5,-1,6
-34,115,"['2', '(single']",NP,5,-1,6
-35,115,"['cas', 'protein)']",NP,5,-1,6
-36,115,['ii'],NP,5,-1,6
-37,115,a,DET,6,-1,7
-38,115,"['spcas9', 'dsdna']",NP,6,-1,7
-39,115,"['ruvc', 'hnh']",NP,6,-1,7
-40,115,"['yes', 'ngg']",NP,6,-1,7
-41,115,"['2', 'ii']",NP,6,-1,7
-42,115,[],NP,6,-1,7
-43,115,a,DET,7,-1,8
-44,115,"['sacas9', 'dsdna']",NP,7,-1,8
-45,115,"['ruvc', 'hnh']",NP,7,-1,8
-46,115,"['yes', 'nngrrt']",NP,7,-1,8
-47,115,"['2', 'ii']",NP,7,-1,8
-48,115,"['b', 'fncas9']",NP,7,-1,8
-49,115,"['dsdna', 'ssrna']",NP,7,-1,8
-50,115,"['ruvc', 'hnh']",NP,7,-1,8
-51,115,"['yes', 'ngg']",NP,7,-1,8
-52,115,"['2', 'ii']",NP,7,-1,8
-53,115,"['c', 'nmcas9']",NP,7,-1,8
-54,115,"['dsdna', 'ruvc']",NP,7,-1,8
-55,115,"['hnh', 'yes']",NP,7,-1,8
-56,115,"['nnnngatt', '2']",NP,7,-1,8
-57,115,['v'],NP,7,-1,8
-58,115,a,DET,8,-1,9
-59,115,"['cas12a', '(cpf1)']",NP,8,-1,9
-60,115,"['dsdna', 'ruvc']",NP,8,-1,9
-61,115,"['nuc', 'no']",NP,8,-1,9
-62,115,"['5', '0at']",NP,8,-1,9
-63,115,"['rich', 'pam']",NP,8,-1,9
-64,115,"['2', 'v']",NP,8,-1,9
-65,115,"['b', 'cas12b']",NP,8,-1,9
-66,115,"['(c2c1)', 'dsdna']",NP,8,-1,9
-67,115,"['ruvc', 'yes']",NP,8,-1,9
-68,115,"['50at', 'rich']",NP,8,-1,9
-69,115,"['pam', '2']",NP,8,-1,9
-70,115,"['v', 'c']",NP,8,-1,9
-71,115,"['cas12c', '(c2c3)']",NP,8,-1,9
-72,115,"['dsdna', 'ruvc']",NP,8,-1,9
-73,115,"['yes', '50at']",NP,8,-1,9
-74,115,"['rich', 'pam']",NP,8,-1,9
-75,115,"['2', 'vi']",NP,8,-1,9
-76,115,[],NP,8,-1,9
-77,115,a,DET,9,-1,10
-78,115,"['cas13a', '(c2c2)']",NP,9,-1,10
-79,115,"['ssrna', '2xhepn']",NP,9,-1,10
-80,115,"['no', '30pfs:']",NP,9,-1,10
-81,115,"['non', 'g']",NP,9,-1,10
-82,115,"['2', 'vi']",NP,9,-1,10
-83,115,"['b', 'cas13b']",NP,9,-1,10
-84,115,"['(c2c4)', 'ssrna']",NP,9,-1,10
-85,115,"['2xhepn', 'no']",NP,9,-1,10
-86,115,"['50pfs:', 'non']",NP,9,-1,10
-87,115,"['c;', '30pfs:nan']",NP,9,-1,10
-88,115,"['nna', '2']",NP,9,-1,10
-89,115,"['vi', 'c']",NP,9,-1,10
-90,115,"['cas13c', '(c2c7)']",NP,9,-1,10
-91,115,"['ssrna', '2xhepn']",NP,9,-1,10
-92,115,"['no', '–2']",NP,9,-1,10
-93,115,"['vi', 'd']",NP,9,-1,10
-94,115,"['cas13d', 'ssrna']",NP,9,-1,10
-95,115,"['2xhepn', 'no']",NP,9,-1,10
-96,115,['–y'],NP,9,-1,10
+28,115,"['–', '1']",NP,4,-1,5
+29,115,['iv'],NP,4,-1,5
+30,115,[],NP,4,-1,5
+31,115,a,DET,5,-1,6
+32,115,"['b', 'cascade']",NP,5,-1,6
+33,115,"['dsdna', 'unknown']",NP,5,-1,6
+34,115,"['no', '–']",NP,5,-1,6
+35,115,"['2', '(single']",NP,5,-1,6
+36,115,"['cas', 'protein)']",NP,5,-1,6
+37,115,['ii'],NP,5,-1,6
+38,115,a,DET,6,-1,7
+39,115,"['spcas9', 'dsdna']",NP,6,-1,7
+40,115,"['ruvc', 'hnh']",NP,6,-1,7
+41,115,"['yes', 'ngg']",NP,6,-1,7
+42,115,"['2', 'ii']",NP,6,-1,7
+43,115,[],NP,6,-1,7
+44,115,a,DET,7,-1,8
+45,115,"['sacas9', 'dsdna']",NP,7,-1,8
+46,115,"['ruvc', 'hnh']",NP,7,-1,8
+47,115,"['yes', 'nngrrt']",NP,7,-1,8
+48,115,"['2', 'ii']",NP,7,-1,8
+49,115,"['b', 'fncas9']",NP,7,-1,8
+50,115,"['dsdna', 'ssrna']",NP,7,-1,8
+51,115,"['ruvc', 'hnh']",NP,7,-1,8
+52,115,"['yes', 'ngg']",NP,7,-1,8
+53,115,"['2', 'ii']",NP,7,-1,8
+54,115,"['c', 'nmcas9']",NP,7,-1,8
+55,115,"['dsdna', 'ruvc']",NP,7,-1,8
+56,115,"['hnh', 'yes']",NP,7,-1,8
+57,115,"['nnnngatt', '2']",NP,7,-1,8
+58,115,['v'],NP,7,-1,8
+59,115,a,DET,8,-1,9
+60,115,"['cas12a', '(cpf1)']",NP,8,-1,9
+61,115,"['dsdna', 'ruvc']",NP,8,-1,9
+62,115,"['nuc', 'no']",NP,8,-1,9
+63,115,['50'],NP,8,-1,9
+64,115,at,PREP,9,-1,10
+65,115,"['rich', 'pam']",NP,9,-1,10
+66,115,"['2', 'v']",NP,9,-1,10
+67,115,"['b', 'cas12b']",NP,9,-1,10
+68,115,"['(c2c1)', 'dsdna']",NP,9,-1,10
+69,115,"['ruvc', 'yes']",NP,9,-1,10
+70,115,['50'],NP,9,-1,10
+71,115,at,PREP,10,-1,11
+72,115,"['rich', 'pam']",NP,10,-1,11
+73,115,"['2', 'v']",NP,10,-1,11
+74,115,"['c', 'cas12c']",NP,10,-1,11
+75,115,"['(c2c3)', 'dsdna']",NP,10,-1,11
+76,115,"['ruvc', 'yes']",NP,10,-1,11
+77,115,['50'],NP,10,-1,11
+78,115,at,PREP,11,-1,12
+79,115,"['rich', 'pam']",NP,11,-1,12
+80,115,"['2', 'vi']",NP,11,-1,12
+81,115,[],NP,11,-1,12
+82,115,a,DET,12,-1,13
+83,115,"['cas13a', '(c2c2)']",NP,12,-1,13
+84,115,"['ssrna', '2xhepn']",NP,12,-1,13
+85,115,"['no', '30pfs:']",NP,12,-1,13
+86,115,"['non', 'g']",NP,12,-1,13
+87,115,"['2', 'vi']",NP,12,-1,13
+88,115,"['b', 'cas13b']",NP,12,-1,13
+89,115,"['(c2c4)', 'ssrna']",NP,12,-1,13
+90,115,"['2xhepn', 'no']",NP,12,-1,13
+91,115,"['50pfs:', 'non']",NP,12,-1,13
+92,115,"['c;', '30pfs:nan']",NP,12,-1,13
+93,115,"['nna', '2']",NP,12,-1,13
+94,115,"['vi', 'c']",NP,12,-1,13
+95,115,"['cas13c', '(c2c7)']",NP,12,-1,13
+96,115,"['ssrna', '2xhepn']",NP,12,-1,13
+97,115,"['no', '–']",NP,12,-1,13
+98,115,"['2', 'vi']",NP,12,-1,13
+99,115,"['d', 'cas13d']",NP,12,-1,13
+100,115,"['ssrna', '2xhepn']",NP,12,-1,13
+101,115,"['no', '–']",NP,12,-1,13
+102,115,['y'],NP,12,-1,13
 0,116,"['xu', 'z']",NP,0,-1,1
 0,117,"['li', 'computational']",NP,0,-1,1
 1,117,and,CONJ,0,-1,1
@@ -1226,7 +1249,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,120,"['scope', 'restricted']",NP,2,-1,3
 16,120,[],NP,2,-1,3
 17,120,by,PREP,3,-1,4
-18,120,['pamsequences'],NP,3,-1,4
+18,120,"['pam', 'sequences']",NP,3,-1,4
 19,120,and,CONJ,3,-1,4
 20,120,"['low', 'efficiency']",NP,3,-1,4
 21,120,and,CONJ,3,-1,4
@@ -1381,25 +1404,29 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 32,131,['42]'],NP,6,-1,7
 0,132,['it'],NP,0,-1,1
 1,132,can,MOD,0,-1,1
-2,132,"['introduce', 'c']",NP,0,-1,1
-3,132,"['c1gt', 'ot']",NP,0,-1,1
-4,132,"['c1ao', 'ra']",NP,0,-1,1
-5,132,"['c1tt', 'og']",NP,0,-1,1
-6,132,"['c1c', 'point']",NP,0,-1,1
-7,132,['mutations'],NP,0,-1,1
-8,132,into,PREP,1,-1,2
-9,132,[],NP,1,-1,2
-10,132,the,DET,2,-1,3
-11,132,"['editing', 'window']",NP,2,-1,3
-12,132,[],NP,2,-1,3
-13,132,of,PREP,3,-1,4
-14,132,[],NP,3,-1,4
-15,132,the,DET,4,-1,5
-16,132,"['sgrna', 'target']",NP,4,-1,5
-17,132,"['sites', 'without']",NP,4,-1,5
-18,132,"['double', 'stranded']",NP,4,-1,5
-19,132,"['dna', 'cleavage']",NP,4,-1,5
-20,132,"['[41', '42]']",NP,4,-1,5
+2,132,"['introduce', 'c\x02g']",NP,0,-1,1
+3,132,[],NP,0,-1,1
+4,132,to,PREP,1,-1,2
+5,132,['t\x02a'],NP,1,-1,2
+6,132,or,CONJ,1,-1,2
+7,132,['a\x02t'],NP,1,-1,2
+8,132,[],NP,1,-1,2
+9,132,to,PREP,2,-1,3
+10,132,"['g\x02c', 'point']",NP,2,-1,3
+11,132,['mutations'],NP,2,-1,3
+12,132,into,PREP,3,-1,4
+13,132,[],NP,3,-1,4
+14,132,the,DET,4,-1,5
+15,132,"['editing', 'window']",NP,4,-1,5
+16,132,[],NP,4,-1,5
+17,132,of,PREP,5,-1,6
+18,132,[],NP,5,-1,6
+19,132,the,DET,6,-1,7
+20,132,"['sgrna', 'target']",NP,6,-1,7
+21,132,"['sites', 'without']",NP,6,-1,7
+22,132,"['double', 'stranded']",NP,6,-1,7
+23,132,"['dna', 'cleavage']",NP,6,-1,7
+24,132,"['[41', '42]']",NP,6,-1,7
 0,133,"['since', 'base']",NP,0,-1,1
 1,133,"['editing', 'systems']",NP,0,-1,1
 2,133,['avoid'],NP,0,-1,1
@@ -1504,11 +1531,12 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,137,may,MOD,3,-1,4
 19,137,have,AUX,3,-1,4
 20,137,"['broad', 'application']",NP,3,-1,4
-21,137,"['prospectsin', 'basic']",NP,3,-1,4
-22,137,"['research', 'biotechnology']",NP,3,-1,4
-23,137,and,CONJ,3,-1,4
-24,137,"['gene', 'therapy']",NP,3,-1,4
-25,137,['[45–47]'],NP,3,-1,4
+21,137,['prospects'],NP,3,-1,4
+22,137,in,PREP,4,-1,5
+23,137,"['basic', 'research']",NP,4,-1,5
+24,137,and,CONJ,4,-1,5
+25,137,"['gene', 'therapy']",NP,4,-1,5
+26,137,"['biotechnology', '[45–47]']",NP,4,-1,5
 0,138,[],NP,0,-1,1
 1,138,in,PREP,1,-1,2
 2,138,[],NP,1,-1,2
@@ -1543,7 +1571,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,141,at,PREP,2,-1,3
 6,141,[],NP,2,-1,3
 7,141,the,DET,3,-1,4
-8,141,"['3', '0end']",NP,3,-1,4
+8,141,"['30', 'end']",NP,3,-1,4
 9,141,[],NP,3,-1,4
 10,141,of,PREP,4,-1,5
 11,141,[],NP,4,-1,5
@@ -1667,9 +1695,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,152,"['end', 'joining']",NP,2,-1,3
 13,152,['(nhej)'],NP,2,-1,3
 14,152,or,CONJ,2,-1,3
-15,152,"['homology', 'direc']",NP,2,-1,3
-16,152,"['ted', 'repair']",NP,2,-1,3
-17,152,"['(hdr)', 'pathways']",NP,2,-1,3
+15,152,"['homology', 'directed']",NP,2,-1,3
+16,152,"['repair', '(hdr)']",NP,2,-1,3
+17,152,['pathways'],NP,2,-1,3
 0,153,['nhej'],NP,0,-1,1
 1,153,can,MOD,0,-1,1
 2,153,"['introduce', 'random']",NP,0,-1,1
@@ -2475,8 +2503,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 19,203,"['(sum', 'marized']",NP,3,-1,4
 20,203,[],NP,3,-1,4
 21,203,in,PREP,4,-1,5
-22,203,"['table', '2']",NP,4,-1,5
-23,203,[')[97–114]'],NP,4,-1,5
+22,203,"['table', '2)']",NP,4,-1,5
+23,203,['[97–114]'],NP,4,-1,5
 0,204,['take'],NP,0,-1,1
 1,204,[],NP,0,-1,1
 2,204,the,DET,1,-1,2
@@ -2622,7 +2650,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,211,"['research', '[124]']",NP,3,-1,4
 0,212,"['nowadays', 'researchers']",NP,0,-1,1
 1,212,have,AUX,0,-1,1
-2,212,['generatedy'],NP,0,-1,1
+2,212,"['generated', 'y']",NP,0,-1,1
 0,213,"['xu', 'z']",NP,0,-1,1
 0,214,"['li', 'computational']",NP,0,-1,1
 1,214,and,CONJ,0,-1,1
@@ -2682,74 +2710,76 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 43,215,and,CONJ,2,-1,3
 44,215,"['50utr', '(dual']",NP,2,-1,3
 45,215,"['sgrna);', 'tyr']",NP,2,-1,3
-46,215,"['exon', '1crispr']",NP,2,-1,3
-47,215,"['cas9', 'knockout;']",NP,2,-1,3
-48,215,"['crispr', 'cas9']",NP,2,-1,3
-49,215,"['knockout;', 'be3']",NP,2,-1,3
-50,215,"['point', 'mutation[103']",NP,2,-1,3
-51,215,"['104', '113]']",NP,2,-1,3
-52,215,"['7', 'diabetes']",NP,2,-1,3
-53,215,"['mellitus', 'pax4']",NP,2,-1,3
-54,215,"['exon', '3–5']",NP,2,-1,3
-55,215,"['crispr', 'cas9']",NP,2,-1,3
-56,215,"['knockout', '[105]']",NP,2,-1,3
-57,215,"['8', 'marfanoid']",NP,2,-1,3
-58,215,"['progeroid', 'lipodystrophy']",NP,2,-1,3
-59,215,"['(mpl)', 'syndromefbn1']",NP,2,-1,3
-60,215,"['exon', '65']",NP,2,-1,3
-61,215,"['crispr', 'cas9']",NP,2,-1,3
-62,215,"['knockout', '[106]']",NP,2,-1,3
-63,215,"['9', 'pure']",NP,2,-1,3
-64,215,['hair'],NP,2,-1,3
-65,215,and,CONJ,2,-1,3
-66,215,"['nail', 'ectodermal']",NP,2,-1,3
-67,215,"['dysplasia', '9']",NP,2,-1,3
-68,215,"['(ectd', '9)hoxc13']",NP,2,-1,3
-69,215,"['exon', '1']",NP,2,-1,3
-70,215,"['crispr', 'cas9']",NP,2,-1,3
-71,215,"['knockout', '[107]']",NP,2,-1,3
-72,215,"['10', 'duchenne']",NP,2,-1,3
-73,215,"['muscular', 'dystrophy']",NP,2,-1,3
-74,215,"['(dmd)', 'dmd']",NP,2,-1,3
-75,215,"['exon', '51']",NP,2,-1,3
-76,215,"['crispr', 'cas9']",NP,2,-1,3
-77,215,"['knockout', '[108]']",NP,2,-1,3
-78,215,"['11', 'muscular']",NP,2,-1,3
-79,215,"['dystrophy', 'ano5']",NP,2,-1,3
-80,215,"['exon', '12–13']",NP,2,-1,3
-81,215,"['crispr', 'cas9']",NP,2,-1,3
-82,215,"['knockout', '[109]']",NP,2,-1,3
-83,215,"['12', 'premature']",NP,2,-1,3
-84,215,"['aging', 'syndrome']",NP,2,-1,3
-85,215,"['lmna', 'exon']",NP,2,-1,3
-86,215,"['3', 'crispr']",NP,2,-1,3
-87,215,"['cas9', 'knockout']",NP,2,-1,3
-88,215,"['[110]', '13']",NP,2,-1,3
-89,215,"['autosomal', 'recessive']",NP,2,-1,3
-90,215,['form'],NP,2,-1,3
-91,215,[],NP,2,-1,3
-92,215,of,PREP,3,-1,4
-93,215,"['hypophosphatemic', 'rickets']",NP,3,-1,4
-94,215,"['(arhr)dmp1', 'exon']",NP,3,-1,4
-95,215,"['1–2', 'crispr']",NP,3,-1,4
-96,215,"['cas9', 'knockout']",NP,3,-1,4
-97,215,"['[111]', '14']",NP,3,-1,4
-98,215,"['cleft', 'lip']",NP,3,-1,4
-99,215,"['gadd45g', 'exon']",NP,3,-1,4
-100,215,"['2–3', 'crispr']",NP,3,-1,4
-101,215,"['cas9', 'knockout']",NP,3,-1,4
-102,215,"['[112]', '15']",NP,3,-1,4
-103,215,"['hutchinson', 'gilford']",NP,3,-1,4
-104,215,"['progeria', 'syndrome']",NP,3,-1,4
-105,215,"['(hgps)lmna', 'exon']",NP,3,-1,4
-106,215,"['11', 'be3']",NP,3,-1,4
-107,215,"['point', 'mutation']",NP,3,-1,4
-108,215,"['[113]', '16']",NP,3,-1,4
-109,215,"['x', 'linked']",NP,3,-1,4
-110,215,"['dilated', 'cardiomyopathy']",NP,3,-1,4
-111,215,"['(xlcm)', 'dmd']",NP,3,-1,4
-112,215,"['exon', '9']",NP,3,-1,4
-113,215,['abe7'],NP,3,-1,4
+46,215,"['exon', '1']",NP,2,-1,3
+47,215,"['crispr', 'cas9']",NP,2,-1,3
+48,215,"['knockout;', 'crispr']",NP,2,-1,3
+49,215,"['cas9', 'knockout;']",NP,2,-1,3
+50,215,"['be3', 'point']",NP,2,-1,3
+51,215,"['mutation', '[103']",NP,2,-1,3
+52,215,"['104', '113]']",NP,2,-1,3
+53,215,"['7', 'diabetes']",NP,2,-1,3
+54,215,"['mellitus', 'pax4']",NP,2,-1,3
+55,215,"['exon', '3–5']",NP,2,-1,3
+56,215,"['crispr', 'cas9']",NP,2,-1,3
+57,215,"['knockout', '[105]']",NP,2,-1,3
+58,215,"['8', 'marfanoid']",NP,2,-1,3
+59,215,"['progeroid', 'lipodystrophy']",NP,2,-1,3
+60,215,"['(mpl)', 'syndrome']",NP,2,-1,3
+61,215,"['fbn1', 'exon']",NP,2,-1,3
+62,215,"['65', 'crispr']",NP,2,-1,3
+63,215,"['cas9', 'knockout']",NP,2,-1,3
+64,215,"['[106]', '9']",NP,2,-1,3
+65,215,"['pure', 'hair']",NP,2,-1,3
+66,215,and,CONJ,2,-1,3
+67,215,"['nail', 'ectodermal']",NP,2,-1,3
+68,215,"['dysplasia', '9']",NP,2,-1,3
+69,215,"['(ectd', '9)']",NP,2,-1,3
+70,215,"['hoxc13', 'exon']",NP,2,-1,3
+71,215,"['1', 'crispr']",NP,2,-1,3
+72,215,"['cas9', 'knockout']",NP,2,-1,3
+73,215,"['[107]', '10']",NP,2,-1,3
+74,215,"['duchenne', 'muscular']",NP,2,-1,3
+75,215,"['dystrophy', '(dmd)']",NP,2,-1,3
+76,215,"['dmd', 'exon']",NP,2,-1,3
+77,215,"['51', 'crispr']",NP,2,-1,3
+78,215,"['cas9', 'knockout']",NP,2,-1,3
+79,215,"['[108]', '11']",NP,2,-1,3
+80,215,"['muscular', 'dystrophy']",NP,2,-1,3
+81,215,"['ano5', 'exon']",NP,2,-1,3
+82,215,"['12–13', 'crispr']",NP,2,-1,3
+83,215,"['cas9', 'knockout']",NP,2,-1,3
+84,215,"['[109]', '12']",NP,2,-1,3
+85,215,"['premature', 'aging']",NP,2,-1,3
+86,215,"['syndrome', 'lmna']",NP,2,-1,3
+87,215,"['exon', '3']",NP,2,-1,3
+88,215,"['crispr', 'cas9']",NP,2,-1,3
+89,215,"['knockout', '[110]']",NP,2,-1,3
+90,215,"['13', 'autosomal']",NP,2,-1,3
+91,215,"['recessive', 'form']",NP,2,-1,3
+92,215,[],NP,2,-1,3
+93,215,of,PREP,3,-1,4
+94,215,"['hypophosphatemic', 'rickets']",NP,3,-1,4
+95,215,"['(arhr)', 'dmp1']",NP,3,-1,4
+96,215,"['exon', '1–2']",NP,3,-1,4
+97,215,"['crispr', 'cas9']",NP,3,-1,4
+98,215,"['knockout', '[111]']",NP,3,-1,4
+99,215,"['14', 'cleft']",NP,3,-1,4
+100,215,"['lip', 'gadd45g']",NP,3,-1,4
+101,215,"['exon', '2–3']",NP,3,-1,4
+102,215,"['crispr', 'cas9']",NP,3,-1,4
+103,215,"['knockout', '[112]']",NP,3,-1,4
+104,215,"['15', 'hutchinson']",NP,3,-1,4
+105,215,"['gilford', 'progeria']",NP,3,-1,4
+106,215,"['syndrome', '(hgps)']",NP,3,-1,4
+107,215,"['lmna', 'exon']",NP,3,-1,4
+108,215,"['11', 'be3']",NP,3,-1,4
+109,215,"['point', 'mutation']",NP,3,-1,4
+110,215,"['[113]', '16']",NP,3,-1,4
+111,215,"['x', 'linked']",NP,3,-1,4
+112,215,"['dilated', 'cardiomyopathy']",NP,3,-1,4
+113,215,"['(xlcm)', 'dmd']",NP,3,-1,4
+114,215,"['exon', '9']",NP,3,-1,4
+115,215,['abe7'],NP,3,-1,4
 0,216,"['10', 'point']",NP,0,-1,1
 1,216,"['mutation', '[113]']",NP,0,-1,1
 2,216,"['17', 'multiple']",NP,0,-1,1
@@ -2802,11 +2832,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,220,[],NP,3,-1,4
 18,220,in,PREP,4,-1,5
 19,220,"['green;', 'protospacer']",NP,4,-1,5
-20,220,"['adjacen', 't']",NP,4,-1,5
-21,220,"['motif', '(pam)']",NP,4,-1,5
+20,220,"['adjacent', 'motif']",NP,4,-1,5
+21,220,"['(pam)', 'sequence']",NP,4,-1,5
 22,220,is,AUX,4,-1,5
 23,220,['highlighted'],NP,4,-1,5
-24,220,['sequence'],NP,4,-1,5
+24,220,[],NP,4,-1,5
 25,220,in,PREP,5,-1,6
 26,220,['red'],NP,5,-1,6
 0,221,"['primers', 'f']",NP,0,-1,1
@@ -2831,7 +2861,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,223,of,PREP,2,-1,3
 6,223,"['cas9', 'mrna']",NP,2,-1,3
 7,223,and,CONJ,2,-1,3
-8,223,"['s', 'grna']",NP,2,-1,3
+8,223,['sgrna'],NP,2,-1,3
 9,223,is,AUX,2,-1,3
 10,223,['microinjected'],NP,2,-1,3
 11,223,[],NP,2,-1,3
@@ -2864,8 +2894,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,224,['oviduct'],NP,4,-1,5
 13,224,[],NP,4,-1,5
 14,224,of,PREP,5,-1,6
-15,224,"['recipient', 'rabbi']",NP,5,-1,6
-16,224,['ts'],NP,5,-1,6
+15,224,"['recipient', 'rabbits']",NP,5,-1,6
 0,225,"['after', '30']",NP,0,-1,1
 1,225,"['days', 'gestation']",NP,0,-1,1
 2,225,"['pax4', 'ko']",NP,0,-1,1
@@ -2915,21 +2944,25 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,227,['system'],NP,3,-1,4
 0,228,"['recipients', 'sgrna']",NP,0,-1,1
 1,228,"['cas9', 'mrna']",NP,0,-1,1
-2,228,"['(ng', 'll)embryos']",NP,0,-1,1
-3,228,"['transferredpregnancy', 'pups']",NP,0,-1,1
-4,228,"['obtained', '(%']",NP,0,-1,1
-5,228,['transferred)pups'],NP,0,-1,1
-6,228,with,PREP,1,-1,2
-7,228,"['mutations', '(%']",NP,1,-1,2
-8,228,"['pups)bi', 'allelic']",NP,1,-1,2
-9,228,"['modified', '(%']",NP,1,-1,2
-10,228,['pups)pups'],NP,1,-1,2
-11,228,with,PREP,2,-1,3
-12,228,"['hyperglycemia', '(%']",NP,2,-1,3
-13,228,"['pups)', '1']",NP,2,-1,3
-14,228,"['40', '200']",NP,2,-1,3
-15,228,"['56', 'yes']",NP,2,-1,3
-16,228,"['8', '(14']",NP,2,-1,3
+2,228,"['(ng', 'll)']",NP,0,-1,1
+3,228,"['embryos', 'transferred']",NP,0,-1,1
+4,228,"['pregnancy', 'pups']",NP,0,-1,1
+5,228,"['obtained', '(%']",NP,0,-1,1
+6,228,"['transferred)', 'pups']",NP,0,-1,1
+7,228,[],NP,0,-1,1
+8,228,with,PREP,1,-1,2
+9,228,"['mutations', '(%']",NP,1,-1,2
+10,228,"['pups)', 'bi']",NP,1,-1,2
+11,228,"['allelic', 'modified']",NP,1,-1,2
+12,228,"['(%', 'pups)']",NP,1,-1,2
+13,228,['pups'],NP,1,-1,2
+14,228,[],NP,1,-1,2
+15,228,with,PREP,2,-1,3
+16,228,"['hyperglycemia', '(%']",NP,2,-1,3
+17,228,"['pups)', '1']",NP,2,-1,3
+18,228,"['40', '200']",NP,2,-1,3
+19,228,"['56', 'yes']",NP,2,-1,3
+20,228,"['8', '(14']",NP,2,-1,3
 0,229,"['2%)', '8']",NP,0,-1,1
 1,229,"['(100%)', '8']",NP,0,-1,1
 2,229,"['(100%)', '8']",NP,0,-1,1
@@ -2953,16 +2986,17 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,232,"['50', 'yes']",NP,0,-1,1
 5,232,"['1', '(2%)']",NP,0,-1,1
 6,232,"['1', '(100%)']",NP,0,-1,1
-7,232,"['0', '0total']",NP,0,-1,1
-8,232,"['210', '100%']",NP,0,-1,1
-9,232,"['22', '(13']",NP,0,-1,1
+7,232,"['0', '0']",NP,0,-1,1
+8,232,"['total', '210']",NP,0,-1,1
+9,232,"['100%', '22']",NP,0,-1,1
+10,232,['(13'],NP,0,-1,1
 0,233,"['9%)', '19']",NP,0,-1,1
 1,233,['(86'],NP,0,-1,1
 0,234,"['4%)', '15']",NP,0,-1,1
 1,234,['(68'],NP,0,-1,1
 0,235,"['2%)', '15']",NP,0,-1,1
 1,235,['(68'],NP,0,-1,1
-0,236,['2%)y'],NP,0,-1,1
+0,236,"['2%)', 'y']",NP,0,-1,1
 0,237,"['xu', 'z']",NP,0,-1,1
 0,238,"['li', 'computational']",NP,0,-1,1
 1,238,and,CONJ,0,-1,1
@@ -3284,8 +3318,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,255,['activity'],NP,1,-1,2
 9,255,of,PREP,2,-1,3
 10,255,"['nearby', 'non']",NP,2,-1,3
-11,255,"['target', 'rnasafter']",NP,2,-1,3
-12,255,['cleavage'],NP,2,-1,3
+11,255,"['target', 'rnas']",NP,2,-1,3
+12,255,"['after', 'cleavage']",NP,2,-1,3
 13,255,[],NP,2,-1,3
 14,255,of,PREP,3,-1,4
 15,255,"['target', 'sequence']",NP,3,-1,4
@@ -3555,7 +3589,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,274,"['functional', 'genomic']",NP,4,-1,5
 19,274,['screen'],NP,4,-1,5
 20,274,in,PREP,5,-1,6
-21,274,['g[145]'],NP,5,-1,6
+21,274,"['g', '[145]']",NP,5,-1,6
 0,275,[],NP,0,-1,1
 1,275,the,DET,1,-1,2
 2,275,"['high', 'efficiency']",NP,1,-1,2
@@ -3917,15 +3951,16 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,295,"['rare', 'diseases']",NP,2,-1,3
 8,295,['lacking'],NP,2,-1,3
 9,295,of,PREP,3,-1,4
-10,295,"['effectivetable', '4']",NP,3,-1,4
-11,295,['summary'],NP,3,-1,4
-12,295,of,PREP,4,-1,5
-13,295,"['clinical', 'trials']",NP,4,-1,5
-14,295,[],NP,4,-1,5
-15,295,of,PREP,5,-1,6
-16,295,"['gene', 'therapy']",NP,5,-1,6
-17,295,"['using', 'genome']",NP,5,-1,6
-18,295,"['editing', 'technology']",NP,5,-1,6
+10,295,"['effective', 'table']",NP,3,-1,4
+11,295,"['4', 'summary']",NP,3,-1,4
+12,295,[],NP,3,-1,4
+13,295,of,PREP,4,-1,5
+14,295,"['clinical', 'trials']",NP,4,-1,5
+15,295,[],NP,4,-1,5
+16,295,of,PREP,5,-1,6
+17,295,"['gene', 'therapy']",NP,5,-1,6
+18,295,"['using', 'genome']",NP,5,-1,6
+19,295,"['editing', 'technology']",NP,5,-1,6
 0,296,"['number', 'disease']",NP,0,-1,1
 1,296,"['intervention', 'treatment']",NP,0,-1,1
 2,296,"['nuclease', 'company']",NP,0,-1,1
@@ -3951,111 +3986,117 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,297,in,PREP,3,-1,4
 18,297,"['fusion', '3']",NP,3,-1,4
 19,297,"['days', 'following']",NP,3,-1,4
-20,297,"['busulfan', 'conditioningzfn']",NP,3,-1,4
-21,297,['sangamo'],NP,3,-1,4
-22,297,the,DET,4,-1,5
-23,297,"['rapeutics', 'usa']",NP,4,-1,5
-24,297,"['2015', 'nct02500849']",NP,4,-1,5
-25,297,"['3', 'hiv']",NP,4,-1,5
-26,297,"['drug:', 'zfn']",NP,4,-1,5
-27,297,"['modified', 'cd4']",NP,4,-1,5
-28,297,"['+', 't']",NP,4,-1,5
-29,297,"['cells', 'zfn']",NP,4,-1,5
-30,297,"['national', 'institute']",NP,4,-1,5
-31,297,[],NP,4,-1,5
-32,297,of,PREP,5,-1,6
-33,297,['allergy'],NP,5,-1,6
-34,297,and,CONJ,5,-1,6
-35,297,"['infectious', 'diseases']",NP,5,-1,6
-36,297,"['(niaid)usa', '2015']",NP,5,-1,6
-37,297,"['nct02388594', '4']",NP,5,-1,6
-38,297,"['human', 'papillomavirus']",NP,5,-1,6
-39,297,"['related', 'malignant']",NP,5,-1,6
-40,297,"['neoplasmbiological:', 'zfn']",NP,5,-1,6
-41,297,['603'],NP,5,-1,6
-42,297,and,CONJ,5,-1,6
-43,297,"['zfn', '758']",NP,5,-1,6
-44,297,"['zfn', 'huazhong']",NP,5,-1,6
-45,297,['university'],NP,5,-1,6
-46,297,[],NP,5,-1,6
-47,297,of,PREP,6,-1,7
-48,297,['science'],NP,6,-1,7
-49,297,and,CONJ,6,-1,7
-50,297,"['technologychina', '2016']",NP,6,-1,7
-51,297,"['nct02800369', '5']",NP,6,-1,7
-52,297,"['hemophilia', 'b']",NP,6,-1,7
-53,297,"['biological:', 'sb']",NP,6,-1,7
-54,297,"['fix', 'zfn']",NP,6,-1,7
-55,297,['sangamo'],NP,6,-1,7
-56,297,the,DET,7,-1,8
-57,297,"['rapeutics', 'usa']",NP,7,-1,8
-58,297,"['2016', 'nct02695160']",NP,7,-1,8
-59,297,"['6', 'mucopolysaccharidosis']",NP,7,-1,8
-60,297,"['i', 'biological:']",NP,7,-1,8
-61,297,"['sb', '318']",NP,7,-1,8
-62,297,"['zfn', 'sangamo']",NP,7,-1,8
-63,297,[],NP,7,-1,8
-64,297,the,DET,8,-1,9
-65,297,"['rapeutics', 'usa']",NP,8,-1,9
-66,297,"['2016', 'nct027021157']",NP,8,-1,9
-67,297,"['mucopolysaccharidosis', 'ii']",NP,8,-1,9
-68,297,"['biological:', 'sb']",NP,8,-1,9
-69,297,"['913', 'zfn']",NP,8,-1,9
-70,297,['sangamo'],NP,8,-1,9
-71,297,the,DET,9,-1,10
-72,297,"['rapeutics', 'usa']",NP,9,-1,10
-73,297,"['2017', 'nct030413248']",NP,9,-1,10
-74,297,"['hiv', 'biological:']",NP,9,-1,10
-75,297,"['cd4', 'car']",NP,9,-1,10
-76,297,"['+ccr5', 'zfn']",NP,9,-1,10
-77,297,"['t', 'cells']",NP,9,-1,10
-78,297,"['zfn', 'university']",NP,9,-1,10
-79,297,[],NP,9,-1,10
-80,297,of,PREP,10,-1,11
-81,297,"['pennsylvania', 'usa']",NP,10,-1,11
-82,297,"['2018', 'nct03617198']",NP,10,-1,11
-83,297,"['9', 'transfusion']",NP,10,-1,11
-84,297,"['dependent', 'beta']",NP,10,-1,11
-85,297,"['thalassemiagenetic:', 'st']",NP,10,-1,11
-86,297,['400'],NP,10,-1,11
-87,297,in,PREP,11,-1,12
-88,297,"['vestigational', 'product']",NP,11,-1,12
-89,297,"['zfn', 'sangamo']",NP,11,-1,12
-90,297,[],NP,11,-1,12
-91,297,the,DET,12,-1,13
-92,297,"['rapeutics', 'usa']",NP,12,-1,13
-93,297,"['2018', 'nct03432364']",NP,12,-1,13
-94,297,"['10', 'acute']",NP,12,-1,13
-95,297,"['myeloid', 'leukemia']",NP,12,-1,13
-96,297,"['biological:', 'ucart123']",NP,12,-1,13
-97,297,"['talen', 'cellectis']",NP,12,-1,13
-98,297,['s'],NP,12,-1,13
+20,297,"['busulfan', 'conditioning']",NP,3,-1,4
+21,297,"['zfn', 'sangamo']",NP,3,-1,4
+22,297,[],NP,3,-1,4
+23,297,the,DET,4,-1,5
+24,297,"['rapeutics', 'usa']",NP,4,-1,5
+25,297,"['2015', 'nct02500849']",NP,4,-1,5
+26,297,"['3', 'hiv']",NP,4,-1,5
+27,297,"['drug:', 'zfn']",NP,4,-1,5
+28,297,"['modified', 'cd4']",NP,4,-1,5
+29,297,"['+', 't']",NP,4,-1,5
+30,297,"['cells', 'zfn']",NP,4,-1,5
+31,297,"['national', 'institute']",NP,4,-1,5
+32,297,[],NP,4,-1,5
+33,297,of,PREP,5,-1,6
+34,297,['allergy'],NP,5,-1,6
+35,297,and,CONJ,5,-1,6
+36,297,"['infectious', 'diseases']",NP,5,-1,6
+37,297,"['(niaid)', 'usa']",NP,5,-1,6
+38,297,"['2015', 'nct02388594']",NP,5,-1,6
+39,297,"['4', 'human']",NP,5,-1,6
+40,297,"['papillomavirus', 'related']",NP,5,-1,6
+41,297,"['malignant', 'neoplasm']",NP,5,-1,6
+42,297,"['biological:', 'zfn']",NP,5,-1,6
+43,297,and,CONJ,5,-1,6
+44,297,"['zfn', '758']",NP,5,-1,6
+45,297,"['603', 'zfn']",NP,5,-1,6
+46,297,"['huazhong', 'university']",NP,5,-1,6
+47,297,[],NP,5,-1,6
+48,297,of,PREP,6,-1,7
+49,297,['science'],NP,6,-1,7
+50,297,and,CONJ,6,-1,7
+51,297,"['technology', 'china']",NP,6,-1,7
+52,297,"['2016', 'nct02800369']",NP,6,-1,7
+53,297,"['5', 'hemophilia']",NP,6,-1,7
+54,297,"['b', 'biological:']",NP,6,-1,7
+55,297,"['sb', 'fix']",NP,6,-1,7
+56,297,"['zfn', 'sangamo']",NP,6,-1,7
+57,297,[],NP,6,-1,7
+58,297,the,DET,7,-1,8
+59,297,"['rapeutics', 'usa']",NP,7,-1,8
+60,297,"['2016', 'nct02695160']",NP,7,-1,8
+61,297,"['6', 'mucopolysaccharidosis']",NP,7,-1,8
+62,297,"['i', 'biological:']",NP,7,-1,8
+63,297,"['sb', '318']",NP,7,-1,8
+64,297,"['zfn', 'sangamo']",NP,7,-1,8
+65,297,[],NP,7,-1,8
+66,297,the,DET,8,-1,9
+67,297,"['rapeutics', 'usa']",NP,8,-1,9
+68,297,"['2016', 'nct02702115']",NP,8,-1,9
+69,297,"['7', 'mucopolysaccharidosis']",NP,8,-1,9
+70,297,"['ii', 'biological:']",NP,8,-1,9
+71,297,"['sb', '913']",NP,8,-1,9
+72,297,"['zfn', 'sangamo']",NP,8,-1,9
+73,297,[],NP,8,-1,9
+74,297,the,DET,9,-1,10
+75,297,"['rapeutics', 'usa']",NP,9,-1,10
+76,297,"['2017', 'nct03041324']",NP,9,-1,10
+77,297,"['8', 'hiv']",NP,9,-1,10
+78,297,"['biological:', 'cd4']",NP,9,-1,10
+79,297,"['car+ccr5', 'zfn']",NP,9,-1,10
+80,297,"['t', 'cells']",NP,9,-1,10
+81,297,"['zfn', 'university']",NP,9,-1,10
+82,297,[],NP,9,-1,10
+83,297,of,PREP,10,-1,11
+84,297,"['pennsylvania', 'usa']",NP,10,-1,11
+85,297,"['2018', 'nct03617198']",NP,10,-1,11
+86,297,"['9', 'transfusion']",NP,10,-1,11
+87,297,"['dependent', 'beta']",NP,10,-1,11
+88,297,"['thalassemia', 'genetic:']",NP,10,-1,11
+89,297,"['st', '400']",NP,10,-1,11
+90,297,[],NP,10,-1,11
+91,297,in,PREP,11,-1,12
+92,297,"['vestigational', 'product']",NP,11,-1,12
+93,297,"['zfn', 'sangamo']",NP,11,-1,12
+94,297,[],NP,11,-1,12
+95,297,the,DET,12,-1,13
+96,297,"['rapeutics', 'usa']",NP,12,-1,13
+97,297,"['2018', 'nct03432364']",NP,12,-1,13
+98,297,"['10', 'acute']",NP,12,-1,13
+99,297,"['myeloid', 'leukemia']",NP,12,-1,13
+100,297,"['biological:', 'ucart123']",NP,12,-1,13
+101,297,"['talen', 'cellectis']",NP,12,-1,13
+102,297,['s'],NP,12,-1,13
 0,298,[],NP,0,-1,1
 1,298,a,DET,1,-1,2
 0,299,"['usa', '2017']",NP,0,-1,1
 1,299,"['nct03190278', '11']",NP,0,-1,1
 2,299,"['human', 'papillomavirus']",NP,0,-1,1
-3,299,"['related', 'malignantneoplasmbiological:']",NP,0,-1,1
-4,299,"['talen', 'biological:']",NP,0,-1,1
-5,299,"['crispr', 'castalen']",NP,0,-1,1
-6,299,"['first', 'affiliated']",NP,0,-1,1
-7,299,"['hospital', 'sun']",NP,0,-1,1
-8,299,"['yat', 'sen']",NP,0,-1,1
-9,299,"['universitychina', '2017']",NP,0,-1,1
-10,299,"['nct03057912', '12']",NP,0,-1,1
-11,299,"['multiple', 'myeloma']",NP,0,-1,1
-12,299,"['biological:', 'ucartcs1a']",NP,0,-1,1
-13,299,"['talen', 'cellectis']",NP,0,-1,1
-14,299,['s'],NP,0,-1,1
+3,299,"['related', 'malignant']",NP,0,-1,1
+4,299,"['neoplasm', 'biological:']",NP,0,-1,1
+5,299,"['talen', 'biological:']",NP,0,-1,1
+6,299,"['crispr', 'cas']",NP,0,-1,1
+7,299,"['talen', 'first']",NP,0,-1,1
+8,299,"['affiliated', 'hospital']",NP,0,-1,1
+9,299,"['sun', 'yat']",NP,0,-1,1
+10,299,"['sen', 'university']",NP,0,-1,1
+11,299,"['china', '2017']",NP,0,-1,1
+12,299,"['nct03057912', '12']",NP,0,-1,1
+13,299,"['multiple', 'myeloma']",NP,0,-1,1
+14,299,"['biological:', 'ucartcs1a']",NP,0,-1,1
+15,299,"['talen', 'cellectis']",NP,0,-1,1
+16,299,['s'],NP,0,-1,1
 0,300,[],NP,0,-1,1
 1,300,a,DET,1,-1,2
 0,301,"['usa', '2019']",NP,0,-1,1
 1,301,"['nct04142619', '13']",NP,0,-1,1
 2,301,"['b', 'cell']",NP,0,-1,1
 3,301,"['acute', 'lymphoblastic']",NP,0,-1,1
-4,301,"['leukemiabiological:', 'ucart22']",NP,0,-1,1
-5,301,"['talen', 'cellectis']",NP,0,-1,1
-6,301,['s'],NP,0,-1,1
+4,301,"['leukemia', 'biological:']",NP,0,-1,1
+5,301,"['ucart22', 'talen']",NP,0,-1,1
+6,301,"['cellectis', 's']",NP,0,-1,1
 0,302,[],NP,0,-1,1
 1,302,a,DET,1,-1,2
 0,303,"['usa', '2019']",NP,0,-1,1
@@ -4070,12 +4111,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,304,"['nct04106076', '15']",NP,1,-1,2
 4,304,"['metastatic', 'non']",NP,1,-1,2
 5,304,"['small', 'cell']",NP,1,-1,2
-6,304,"['lung', 'cancerother:']",NP,1,-1,2
-7,304,"['pd', '1']",NP,1,-1,2
-8,304,"['knockout', 't']",NP,1,-1,2
-9,304,"['cells', 'crispr']",NP,1,-1,2
-10,304,"['cas9chengdu', 'medgencell']",NP,1,-1,2
-11,304,['co'],NP,1,-1,2
+6,304,"['lung', 'cancer']",NP,1,-1,2
+7,304,"['other:', 'pd']",NP,1,-1,2
+8,304,"['1', 'knockout']",NP,1,-1,2
+9,304,"['t', 'cells']",NP,1,-1,2
+10,304,"['crispr', 'cas9']",NP,1,-1,2
+11,304,"['chengdu', 'medgencell']",NP,1,-1,2
+12,304,['co'],NP,1,-1,2
 0,305,['ltd'],NP,0,-1,1
 0,306,"['china', '2016']",NP,0,-1,1
 1,306,"['nct02793856', '16']",NP,0,-1,1
@@ -4083,196 +4125,218 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,306,"['infection', 'genetic:']",NP,0,-1,1
 4,306,"['ccr5', 'gene']",NP,0,-1,1
 5,306,"['modification', 'crispr']",NP,0,-1,1
-6,306,"['cas9affiliated', 'hospital']",NP,0,-1,1
-7,306,[],NP,0,-1,1
+6,306,"['cas9', 'affiliated']",NP,0,-1,1
+7,306,['hospital'],NP,0,-1,1
 8,306,of,PREP,1,-1,2
 9,306,['academy'],NP,1,-1,2
 10,306,[],NP,1,-1,2
 11,306,to,PREP,2,-1,3
 12,306,"['military', 'medical']",NP,2,-1,3
-13,306,"['scienceschina', '2017']",NP,2,-1,3
-14,306,"['nct03164135', '17']",NP,2,-1,3
-15,306,"['b', 'cell']",NP,2,-1,3
-16,306,"['leukemia', 'b']",NP,2,-1,3
-17,306,"['cell', 'lymphomabiological:']",NP,2,-1,3
-18,306,"['ucart019', 'crispr']",NP,2,-1,3
-19,306,"['cas9chinese', 'pla']",NP,2,-1,3
-20,306,"['general', 'hospital']",NP,2,-1,3
-21,306,"['china', '2017']",NP,2,-1,3
-22,306,"['nct03166878', '18']",NP,2,-1,3
-23,306,"['ebv', 'positive']",NP,2,-1,3
-24,306,"['advanced', 'stage']",NP,2,-1,3
-25,306,"['malignanciespd', '1']",NP,2,-1,3
-26,306,"['knockout', 't']",NP,2,-1,3
-27,306,['cells'],NP,2,-1,3
-28,306,from,PREP,3,-1,4
-29,306,"['autologous', 'origincrispr']",NP,3,-1,4
-30,306,"['cas9the', 'affiliated']",NP,3,-1,4
-31,306,"['nanjing', 'drum']",NP,3,-1,4
-32,306,"['tower', 'hospital']",NP,3,-1,4
+13,306,"['sciences', 'china']",NP,2,-1,3
+14,306,"['2017', 'nct03164135']",NP,2,-1,3
+15,306,"['17', 'b']",NP,2,-1,3
+16,306,"['cell', 'leukemia']",NP,2,-1,3
+17,306,"['b', 'cell']",NP,2,-1,3
+18,306,"['lymphoma', 'biological:']",NP,2,-1,3
+19,306,"['ucart019', 'crispr']",NP,2,-1,3
+20,306,"['cas9', 'chinese']",NP,2,-1,3
+21,306,"['pla', 'general']",NP,2,-1,3
+22,306,"['hospital', 'china']",NP,2,-1,3
+23,306,"['2017', 'nct03166878']",NP,2,-1,3
+24,306,"['18', 'ebv']",NP,2,-1,3
+25,306,"['positive', 'advanced']",NP,2,-1,3
+26,306,"['stage', 'malignancies']",NP,2,-1,3
+27,306,"['pd', '1']",NP,2,-1,3
+28,306,"['knockout', 't']",NP,2,-1,3
+29,306,['cells'],NP,2,-1,3
+30,306,from,PREP,3,-1,4
+31,306,"['autologous', 'origin']",NP,3,-1,4
+32,306,"['crispr', 'cas9']",NP,3,-1,4
 33,306,[],NP,3,-1,4
-34,306,of,PREP,4,-1,5
-35,306,"['nanjing', 'university']",NP,4,-1,5
-36,306,"['medical', 'schoolchina']",NP,4,-1,5
-37,306,"['2017', 'nct03044743']",NP,4,-1,5
-38,306,"['19', 'esophageal']",NP,4,-1,5
-39,306,"['cancer', 'other:']",NP,4,-1,5
-40,306,"['pd', '1']",NP,4,-1,5
-41,306,"['knockout', 't']",NP,4,-1,5
-42,306,"['cells', 'crispr']",NP,4,-1,5
-43,306,"['cas9anhui', 'kedgene']",NP,4,-1,5
-44,306,"['biotechnology', 'co']",NP,4,-1,5
-0,307,"['ltdchina', '2017']",NP,0,-1,1
-1,307,"['nct03081715', '20']",NP,0,-1,1
-2,307,"['t', 'cell']",NP,0,-1,1
-3,307,"['malignancy', 'genetic:']",NP,0,-1,1
-4,307,['cd7'],NP,0,-1,1
+34,306,the,DET,4,-1,5
+35,306,"['affiliated', 'nanjing']",NP,4,-1,5
+36,306,"['drum', 'tower']",NP,4,-1,5
+37,306,['hospital'],NP,4,-1,5
+38,306,[],NP,4,-1,5
+39,306,of,PREP,5,-1,6
+40,306,"['nanjing', 'university']",NP,5,-1,6
+41,306,"['medical', 'school']",NP,5,-1,6
+42,306,"['china', '2017']",NP,5,-1,6
+43,306,"['nct03044743', '19']",NP,5,-1,6
+44,306,"['esophageal', 'cancer']",NP,5,-1,6
+45,306,"['other:', 'pd']",NP,5,-1,6
+46,306,"['1', 'knockout']",NP,5,-1,6
+47,306,"['t', 'cells']",NP,5,-1,6
+48,306,"['crispr', 'cas9']",NP,5,-1,6
+49,306,"['anhui', 'kedgene']",NP,5,-1,6
+50,306,"['biotechnology', 'co']",NP,5,-1,6
+0,307,"['ltd', 'china']",NP,0,-1,1
+1,307,"['2017', 'nct03081715']",NP,0,-1,1
+2,307,"['20', 't']",NP,0,-1,1
+3,307,"['cell', 'malignancy']",NP,0,-1,1
+4,307,"['genetic:', 'cd7']",NP,0,-1,1
 0,308,"['car', '28zeta']",NP,0,-1,1
 1,308,"['car', 't']",NP,0,-1,1
 2,308,"['cells', 'crispr']",NP,0,-1,1
-3,308,"['cas9baylor', 'college']",NP,0,-1,1
-4,308,[],NP,0,-1,1
-5,308,of,PREP,1,-1,2
-6,308,"['medicine', 'usa']",NP,1,-1,2
-7,308,"['2018', 'nct03690011']",NP,1,-1,2
-8,308,"['21', 'sickle']",NP,1,-1,2
-9,308,"['cell', 'disease']",NP,1,-1,2
-10,308,"['biological:', 'ctx001']",NP,1,-1,2
-11,308,"['crispr', 'cas9crispr']",NP,1,-1,2
-12,308,[],NP,1,-1,2
-13,308,the,DET,2,-1,3
-14,308,"['rapeutics', 'usa']",NP,2,-1,3
-15,308,"['2018', 'nct03745287']",NP,2,-1,3
-16,308,"['22', 'thalassemia']",NP,2,-1,3
-17,308,"['biological:', 'ihscs']",NP,2,-1,3
-18,308,"['treatment', 'crispr']",NP,2,-1,3
-19,308,"['cas9allife', 'medical']",NP,2,-1,3
-20,308,['science'],NP,2,-1,3
-21,308,and,CONJ,2,-1,3
-22,308,"['technologyusa', '2018']",NP,2,-1,3
-23,308,"['nct03728322', '23']",NP,2,-1,3
-24,308,"['b', 'thalassemia']",NP,2,-1,3
-25,308,"['biological:', 'ctx001']",NP,2,-1,3
-26,308,"['crispr', 'cas9crispr']",NP,2,-1,3
-27,308,[],NP,2,-1,3
-28,308,the,DET,3,-1,4
-29,308,"['rapeutics', 'usa']",NP,3,-1,4
-30,308,"['2018', 'nct03655678']",NP,3,-1,4
-31,308,"['24', 'solid']",NP,3,-1,4
-32,308,"['tumor', 'biological:']",NP,3,-1,4
-33,308,"['mesothelin', 'directed']",NP,3,-1,4
-34,308,"['car', 't']",NP,3,-1,4
-35,308,"['cellscrispr', 'cas9chinese']",NP,3,-1,4
-36,308,"['pla', 'general']",NP,3,-1,4
-37,308,"['hospital', 'china']",NP,3,-1,4
-38,308,"['2018', 'nct03747965']",NP,3,-1,4
-39,308,"['25', 'b']",NP,3,-1,4
-40,308,"['cell', 'leukemia']",NP,3,-1,4
-41,308,"['b', 'cell']",NP,3,-1,4
-42,308,"['lymphomabiological:', 'universal']",NP,3,-1,4
-43,308,"['dual', 'specificity']",NP,3,-1,4
-44,308,and,CONJ,3,-1,4
-45,308,['cd20'],NP,3,-1,4
-46,308,or,CONJ,3,-1,4
-47,308,"['cd22', 'car']",NP,3,-1,4
-48,308,"['cd19', 't']",NP,3,-1,4
-49,308,"['cellscrispr', 'cas9chinese']",NP,3,-1,4
-50,308,"['pla', 'general']",NP,3,-1,4
-51,308,"['hospital', 'china']",NP,3,-1,4
-52,308,"['2018', 'nct03398967']",NP,3,-1,4
-53,308,"['26', 'multiple']",NP,3,-1,4
-54,308,"['myeloma', 'melanoma']",NP,3,-1,4
-55,308,"['synovialsarcoma', 'liposarcomabiological:']",NP,3,-1,4
-56,308,"['ny', 'eso']",NP,3,-1,4
-57,308,"['1', 'redirected']",NP,3,-1,4
-58,308,"['autologous', 't']",NP,3,-1,4
-59,308,['cells'],NP,3,-1,4
-60,308,[],NP,3,-1,4
-61,308,with,PREP,4,-1,5
-62,308,"['crispr', 'editedendogenous']",NP,4,-1,5
-63,308,and,CONJ,4,-1,5
-64,308,"['pd', '1crispr']",NP,4,-1,5
-65,308,"['tcr', 'cas9parker']",NP,4,-1,5
-66,308,['institute'],NP,4,-1,5
-67,308,[],NP,4,-1,5
-68,308,for,PREP,5,-1,6
-69,308,"['cancer', 'immunotherapyusa']",NP,5,-1,6
-70,308,"['2018', 'nct03399448']",NP,5,-1,6
-71,308,"['27', 'solid']",NP,5,-1,6
-72,308,"['tumor', 'biological:']",NP,5,-1,6
-73,308,"['anti', 'mesothelin']",NP,5,-1,6
-74,308,"['car', 't']",NP,5,-1,6
-75,308,"['cells', 'crispr']",NP,5,-1,6
-76,308,"['cas9chinese', 'pla']",NP,5,-1,6
-77,308,"['general', 'hospital']",NP,5,-1,6
-78,308,"['china', '2018']",NP,5,-1,6
-79,308,"['nct03545815', '28']",NP,5,-1,6
-80,308,"['thalassemia', 'major']",NP,5,-1,6
-81,308,"['biological:', 'c']",NP,5,-1,6
-82,308,"['globin', 'reactivated']",NP,5,-1,6
-83,308,"['autologous', 'hematopoietic']",NP,5,-1,6
-84,308,"['stem', 'cellscrispr']",NP,5,-1,6
-85,308,"['cas9shanghai', 'bioray']",NP,5,-1,6
-86,308,['laboratory'],NP,5,-1,6
-87,308,in,PREP,6,-1,7
-88,308,['c'],NP,6,-1,7
+3,308,"['cas9', 'baylor']",NP,0,-1,1
+4,308,['college'],NP,0,-1,1
+5,308,[],NP,0,-1,1
+6,308,of,PREP,1,-1,2
+7,308,"['medicine', 'usa']",NP,1,-1,2
+8,308,"['2018', 'nct03690011']",NP,1,-1,2
+9,308,"['21', 'sickle']",NP,1,-1,2
+10,308,"['cell', 'disease']",NP,1,-1,2
+11,308,"['biological:', 'ctx001']",NP,1,-1,2
+12,308,"['crispr', 'cas9']",NP,1,-1,2
+13,308,['crispr'],NP,1,-1,2
+14,308,[],NP,1,-1,2
+15,308,the,DET,2,-1,3
+16,308,"['rapeutics', 'usa']",NP,2,-1,3
+17,308,"['2018', 'nct03745287']",NP,2,-1,3
+18,308,"['22', 'thalassemia']",NP,2,-1,3
+19,308,"['biological:', 'ihscs']",NP,2,-1,3
+20,308,"['treatment', 'crispr']",NP,2,-1,3
+21,308,"['cas9', 'allife']",NP,2,-1,3
+22,308,"['medical', 'science']",NP,2,-1,3
+23,308,and,CONJ,2,-1,3
+24,308,"['technology', 'usa']",NP,2,-1,3
+25,308,"['2018', 'nct03728322']",NP,2,-1,3
+26,308,"['23', 'b']",NP,2,-1,3
+27,308,"['thalassemia', 'biological:']",NP,2,-1,3
+28,308,"['ctx001', 'crispr']",NP,2,-1,3
+29,308,"['cas9', 'crispr']",NP,2,-1,3
+30,308,[],NP,2,-1,3
+31,308,the,DET,3,-1,4
+32,308,"['rapeutics', 'usa']",NP,3,-1,4
+33,308,"['2018', 'nct03655678']",NP,3,-1,4
+34,308,"['24', 'solid']",NP,3,-1,4
+35,308,"['tumor', 'biological:']",NP,3,-1,4
+36,308,"['mesothelin', 'directed']",NP,3,-1,4
+37,308,"['car', 't']",NP,3,-1,4
+38,308,"['cells', 'crispr']",NP,3,-1,4
+39,308,"['cas9', 'chinese']",NP,3,-1,4
+40,308,"['pla', 'general']",NP,3,-1,4
+41,308,"['hospital', 'china']",NP,3,-1,4
+42,308,"['2018', 'nct03747965']",NP,3,-1,4
+43,308,"['25', 'b']",NP,3,-1,4
+44,308,"['cell', 'leukemia']",NP,3,-1,4
+45,308,"['b', 'cell']",NP,3,-1,4
+46,308,"['lymphoma', 'biological:']",NP,3,-1,4
+47,308,"['universal', 'dual']",NP,3,-1,4
+48,308,"['specificity', 'cd19']",NP,3,-1,4
+49,308,and,CONJ,3,-1,4
+50,308,['cd20'],NP,3,-1,4
+51,308,or,CONJ,3,-1,4
+52,308,"['cd22', 'car']",NP,3,-1,4
+53,308,"['t', 'cells']",NP,3,-1,4
+54,308,"['crispr', 'cas9']",NP,3,-1,4
+55,308,"['chinese', 'pla']",NP,3,-1,4
+56,308,"['general', 'hospital']",NP,3,-1,4
+57,308,"['china', '2018']",NP,3,-1,4
+58,308,"['nct03398967', '26']",NP,3,-1,4
+59,308,"['multiple', 'myeloma']",NP,3,-1,4
+60,308,"['melanoma', 'synovial']",NP,3,-1,4
+61,308,"['sarcoma', 'liposarcoma']",NP,3,-1,4
+62,308,"['biological:', 'ny']",NP,3,-1,4
+63,308,"['eso', '1']",NP,3,-1,4
+64,308,"['redirected', 'autologous']",NP,3,-1,4
+65,308,"['t', 'cells']",NP,3,-1,4
+66,308,[],NP,3,-1,4
+67,308,with,PREP,4,-1,5
+68,308,"['crispr', 'edited']",NP,4,-1,5
+69,308,"['endogenous', 'tcr']",NP,4,-1,5
+70,308,and,CONJ,4,-1,5
+71,308,"['pd', '1']",NP,4,-1,5
+72,308,"['crispr', 'cas9']",NP,4,-1,5
+73,308,"['parker', 'institute']",NP,4,-1,5
+74,308,[],NP,4,-1,5
+75,308,for,PREP,5,-1,6
+76,308,"['cancer', 'immunotherapy']",NP,5,-1,6
+77,308,"['usa', '2018']",NP,5,-1,6
+78,308,"['nct03399448', '27']",NP,5,-1,6
+79,308,"['solid', 'tumor']",NP,5,-1,6
+80,308,"['biological:', 'anti']",NP,5,-1,6
+81,308,"['mesothelin', 'car']",NP,5,-1,6
+82,308,"['t', 'cells']",NP,5,-1,6
+83,308,"['crispr', 'cas9']",NP,5,-1,6
+84,308,"['chinese', 'pla']",NP,5,-1,6
+85,308,"['general', 'hospital']",NP,5,-1,6
+86,308,"['china', '2018']",NP,5,-1,6
+87,308,"['nct03545815', '28']",NP,5,-1,6
+88,308,"['thalassemia', 'major']",NP,5,-1,6
+89,308,"['biological:', 'c']",NP,5,-1,6
+90,308,"['globin', 'reactivated']",NP,5,-1,6
+91,308,"['autologous', 'hematopoietic']",NP,5,-1,6
+92,308,"['stem', 'cells']",NP,5,-1,6
+93,308,"['crispr', 'cas9']",NP,5,-1,6
+94,308,"['shanghai', 'bioray']",NP,5,-1,6
+95,308,['laboratory'],NP,5,-1,6
+96,308,in,PREP,6,-1,7
+97,308,['c'],NP,6,-1,7
 0,309,"['china', '2019']",NP,0,-1,1
 1,309,"['nct04211480', '29']",NP,0,-1,1
 2,309,"['b', 'cell']",NP,0,-1,1
 3,309,"['malignancies', 'biological:']",NP,0,-1,1
 4,309,"['ctx110', 'crispr']",NP,0,-1,1
-5,309,['cas9crispr'],NP,0,-1,1
-6,309,the,DET,1,-1,2
-7,309,"['rapeutics', 'ag']",NP,1,-1,2
-8,309,"['usa', '2019']",NP,1,-1,2
-9,309,"['nct04035434', '30']",NP,1,-1,2
-10,309,"['b', 'thalassemia']",NP,1,-1,2
-11,309,"['major', 'biological:']",NP,1,-1,2
-12,309,"['b', 'globin']",NP,1,-1,2
-13,309,"['restored', 'autologous']",NP,1,-1,2
-14,309,"['hsccrispr', 'cas9shanghai']",NP,1,-1,2
-15,309,"['bioray', 'laboratory']",NP,1,-1,2
-16,309,[],NP,1,-1,2
-17,309,in,PREP,2,-1,3
-18,309,['c'],NP,2,-1,3
+5,309,"['cas9', 'crispr']",NP,0,-1,1
+6,309,[],NP,0,-1,1
+7,309,the,DET,1,-1,2
+8,309,"['rapeutics', 'ag']",NP,1,-1,2
+9,309,"['usa', '2019']",NP,1,-1,2
+10,309,"['nct04035434', '30']",NP,1,-1,2
+11,309,"['b', 'thalassemia']",NP,1,-1,2
+12,309,"['major', 'biological:']",NP,1,-1,2
+13,309,"['b', 'globin']",NP,1,-1,2
+14,309,"['restored', 'autologous']",NP,1,-1,2
+15,309,"['hsc', 'crispr']",NP,1,-1,2
+16,309,"['cas9', 'shanghai']",NP,1,-1,2
+17,309,"['bioray', 'laboratory']",NP,1,-1,2
+18,309,[],NP,1,-1,2
+19,309,in,PREP,2,-1,3
+20,309,['c'],NP,2,-1,3
 0,310,"['china', '2019']",NP,0,-1,1
 1,310,"['nct04205435', '31']",NP,0,-1,1
 2,310,"['leber', 'congenital']",NP,0,-1,1
 3,310,"['amaurosis', '10']",NP,0,-1,1
-4,310,"['(lac10)drug:', 'agn']",NP,0,-1,1
-5,310,"['151587', 'crispr']",NP,0,-1,1
-6,310,"['cas9editas', 'medicine']",NP,0,-1,1
-7,310,[],NP,0,-1,1
-8,310,in,PREP,1,-1,2
-9,310,['c'],NP,1,-1,2
+4,310,"['(lac10)', 'drug:']",NP,0,-1,1
+5,310,"['agn', '151587']",NP,0,-1,1
+6,310,"['crispr', 'cas9']",NP,0,-1,1
+7,310,"['editas', 'medicine']",NP,0,-1,1
+8,310,[],NP,0,-1,1
+9,310,in,PREP,1,-1,2
+10,310,['c'],NP,1,-1,2
 0,311,"['usa', '2019']",NP,0,-1,1
 1,311,"['nct03872479', '32']",NP,0,-1,1
-2,311,['cd19+leukemia'],NP,0,-1,1
+2,311,"['cd19+', 'leukemia']",NP,0,-1,1
 3,311,or,CONJ,0,-1,1
-4,311,"['lymphomagenetic:', 'xyf19']",NP,0,-1,1
-5,311,"['car', 't']",NP,0,-1,1
-6,311,"['cell', 'crispr']",NP,0,-1,1
-7,311,"['cas9xi’an', 'yufan']",NP,0,-1,1
-8,311,"['biotechnology', 'co']",NP,0,-1,1
-0,312,"['ltdchina', '2019']",NP,0,-1,1
-1,312,"['nct04037566', '33']",NP,0,-1,1
-2,312,"['gastro', 'intestinal']",NP,0,-1,1
-3,312,"['(gi)', 'cancerbiological:']",NP,0,-1,1
-4,312,['tumor'],NP,0,-1,1
-5,312,[],NP,0,-1,1
+4,311,"['lymphoma', 'genetic:']",NP,0,-1,1
+5,311,"['xyf19', 'car']",NP,0,-1,1
+6,311,"['t', 'cell']",NP,0,-1,1
+7,311,"['crispr', 'cas9']",NP,0,-1,1
+8,311,"['xi’an', 'yufan']",NP,0,-1,1
+9,311,"['biotechnology', 'co']",NP,0,-1,1
+0,312,"['ltd', 'china']",NP,0,-1,1
+1,312,"['2019', 'nct04037566']",NP,0,-1,1
+2,312,"['33', 'gastro']",NP,0,-1,1
+3,312,"['intestinal', '(gi)']",NP,0,-1,1
+4,312,"['cancer', 'biological:']",NP,0,-1,1
+5,312,['tumor'],NP,0,-1,1
 6,312,in,PREP,1,-1,2
 7,312,"['filtrating', 'lymphocytes']",NP,1,-1,2
-8,312,"['(til)crispr', 'cas9in']",NP,1,-1,2
-9,312,"['tima', 'bioscience']",NP,1,-1,2
+8,312,"['(til)', 'crispr']",NP,1,-1,2
+9,312,['cas9'],NP,1,-1,2
 10,312,[],NP,1,-1,2
 11,312,in,PREP,2,-1,3
-12,312,['c'],NP,2,-1,3
+12,312,"['tima', 'bioscience']",NP,2,-1,3
+13,312,[],NP,2,-1,3
+14,312,in,PREP,3,-1,4
+15,312,['c'],NP,3,-1,4
 0,313,"['usa', '2020']",NP,0,-1,1
 1,313,"['nct04426669', '34']",NP,0,-1,1
 2,313,"['multiple', 'myeloma']",NP,0,-1,1
 3,313,"['biological:', 'ctx120']",NP,0,-1,1
-4,313,"['crispr', 'cas9crispr']",NP,0,-1,1
-5,313,[],NP,0,-1,1
+4,313,"['crispr', 'cas9']",NP,0,-1,1
+5,313,['crispr'],NP,0,-1,1
 6,313,the,DET,1,-1,2
 7,313,"['rapeutics', 'ag']",NP,1,-1,2
 8,313,"['usa', '2020']",NP,1,-1,2
@@ -4280,20 +4344,22 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,313,"['renal', 'cell']",NP,1,-1,2
 11,313,"['carcinoma', 'biological:']",NP,1,-1,2
 12,313,"['ctx130', 'crispr']",NP,1,-1,2
-13,313,['cas9crispr'],NP,1,-1,2
+13,313,"['cas9', 'crispr']",NP,1,-1,2
 14,313,[],NP,1,-1,2
 15,313,the,DET,2,-1,3
 16,313,"['rapeutics', 'ag']",NP,2,-1,3
 17,313,"['australia', '2020']",NP,2,-1,3
 18,313,"['nct04438083', '36']",NP,2,-1,3
 19,313,"['advanced', 'hepatocellular']",NP,2,-1,3
-20,313,"['carcinomabiological:', 'pd']",NP,2,-1,3
-21,313,"['1', 'knockout']",NP,2,-1,3
-22,313,"['engineered', 't']",NP,2,-1,3
-23,313,"['cellscrispr', 'cas9central']",NP,2,-1,3
-24,313,"['south', 'university']",NP,2,-1,3
-25,313,"['china', '2020']",NP,2,-1,3
-26,313,['nct04417764y'],NP,2,-1,3
+20,313,"['carcinoma', 'biological:']",NP,2,-1,3
+21,313,"['pd', '1']",NP,2,-1,3
+22,313,"['knockout', 'engineered']",NP,2,-1,3
+23,313,"['t', 'cells']",NP,2,-1,3
+24,313,"['crispr', 'cas9']",NP,2,-1,3
+25,313,"['central', 'south']",NP,2,-1,3
+26,313,"['university', 'china']",NP,2,-1,3
+27,313,"['2020', 'nct04417764']",NP,2,-1,3
+28,313,['y'],NP,2,-1,3
 0,314,"['xu', 'z']",NP,0,-1,1
 0,315,"['li', 'computational']",NP,0,-1,1
 1,315,and,CONJ,0,-1,1
@@ -4354,30 +4420,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,318,[],NP,4,-1,5
 18,318,the,DET,5,-1,6
 19,318,['world'],NP,5,-1,6
-0,319,['it'],NP,0,-1,1
-1,319,is,AUX,0,-1,1
-2,319,"['characteri', 'zed']",NP,0,-1,1
-3,319,[],NP,0,-1,1
-4,319,by,PREP,1,-1,2
-5,319,['mutations'],NP,1,-1,2
-6,319,[],NP,1,-1,2
-7,319,in,PREP,2,-1,3
-8,319,[],NP,2,-1,3
-9,319,the,DET,3,-1,4
-10,319,"['b', 'globin']",NP,3,-1,4
-11,319,"['(hbb)', 'gene']",NP,3,-1,4
-12,319,['lead'],NP,3,-1,4
-13,319,[],NP,3,-1,4
-14,319,in,PREP,4,-1,5
-15,319,['g'],NP,4,-1,5
-16,319,[],NP,4,-1,5
-17,319,to,PREP,5,-1,6
-18,319,"['severe', 'anemia']",NP,5,-1,6
-19,319,['caused'],NP,5,-1,6
-20,319,by,PREP,6,-1,7
-21,319,"['decreased', 'hemoglobin']",NP,6,-1,7
-22,319,"['(hb)', 'level']",NP,6,-1,7
-23,319,['[161]'],NP,6,-1,7
+0,319,"['itischaracterizedbymutationsintheb', 'globin(hbb)gene']",NP,0,-1,1
+1,319,['lead'],NP,0,-1,1
+2,319,in,PREP,1,-1,2
+3,319,['g'],NP,1,-1,2
+4,319,[],NP,1,-1,2
+5,319,to,PREP,2,-1,3
+6,319,"['severe', 'anemia']",NP,2,-1,3
+7,319,['caused'],NP,2,-1,3
+8,319,by,PREP,3,-1,4
+9,319,"['decreased', 'hemoglobin']",NP,3,-1,4
+10,319,"['(hb)', 'level']",NP,3,-1,4
+11,319,['[161]'],NP,3,-1,4
 0,320,[],NP,0,-1,1
 1,320,for,PREP,1,-1,2
 2,320,[],NP,1,-1,2
@@ -4409,98 +4463,90 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,322,for,PREP,1,-1,2
 3,322,"['example', 'blood']",NP,1,-1,2
 4,322,can,MOD,1,-1,2
-5,322,['transfusion'],NP,1,-1,2
-6,322,on,PREP,2,-1,3
-7,322,"['ly', 'sustain']",NP,2,-1,3
-8,322,[],NP,2,-1,3
-9,322,the,DET,3,-1,4
-10,322,['life'],NP,3,-1,4
-11,322,[],NP,3,-1,4
-12,322,of,PREP,4,-1,5
-13,322,['patients'],NP,4,-1,5
-14,322,but,CONJ,4,-1,5
-15,322,"['can’t', 'cure']",NP,4,-1,5
-16,322,[],NP,4,-1,5
-17,322,the,DET,5,-1,6
-18,322,"['disease', '[161]']",NP,5,-1,6
+5,322,"['only', 'sustain']",NP,1,-1,2
+6,322,['transfusion'],NP,1,-1,2
+7,322,the,DET,2,-1,3
+8,322,['life'],NP,2,-1,3
+9,322,[],NP,2,-1,3
+10,322,of,PREP,3,-1,4
+11,322,['patients'],NP,3,-1,4
+12,322,but,CONJ,3,-1,4
+13,322,"['can’t', 'cure']",NP,3,-1,4
+14,322,[],NP,3,-1,4
+15,322,the,DET,4,-1,5
+16,322,"['disease', '[161]']",NP,4,-1,5
 0,323,[],NP,0,-1,1
 1,323,to,PREP,1,-1,2
 2,323,"['better', 'treat']",NP,1,-1,2
 3,323,"['b', 'thalassemia']",NP,1,-1,2
-4,323,['researchers'],NP,1,-1,2
-5,323,have,AUX,1,-1,2
-6,323,"['turned', 'their']",NP,1,-1,2
-7,323,['attention'],NP,1,-1,2
-8,323,to,PREP,2,-1,3
-9,323,"['gene', 'therapy']",NP,2,-1,3
-0,324,[],NP,0,-1,1
-1,324,a,DET,1,-1,2
-2,324,"['major', 'technical']",NP,1,-1,2
-3,324,is,AUX,1,-1,2
-4,324,['idea'],NP,1,-1,2
-5,324,to,PREP,2,-1,3
-6,324,['repair'],NP,2,-1,3
-7,324,[],NP,2,-1,3
-8,324,the,DET,3,-1,4
-9,324,"['defective', 'b']",NP,3,-1,4
-10,324,"['globin', 'gene']",NP,3,-1,4
-11,324,[],NP,3,-1,4
-12,324,of,PREP,4,-1,5
-13,324,['ipscs'],NP,4,-1,5
-14,324,[],NP,4,-1,5
-15,324,from,PREP,5,-1,6
-16,324,['patients'],NP,5,-1,6
-17,324,[],NP,5,-1,6
-18,324,with,PREP,6,-1,7
-19,324,"['b', 'thalassemia']",NP,6,-1,7
-20,324,[],NP,6,-1,7
-21,324,by,PREP,7,-1,8
-22,324,"['crispr', 'cas9']",NP,7,-1,8
-23,324,"['technology', 'then']",NP,7,-1,8
-24,324,"['red', 'blood']",NP,7,-1,8
-25,324,can,MOD,7,-1,8
-26,324,be,AUX,7,-1,8
-27,324,"['produced', 'normally']",NP,7,-1,8
-28,324,and,CONJ,7,-1,8
-29,324,['cells'],NP,7,-1,8
-30,324,the,DET,8,-1,9
-31,324,['disease'],NP,8,-1,9
-32,324,could,MOD,8,-1,9
-33,324,be,AUX,8,-1,9
-34,324,"['cured', '[163']",NP,8,-1,9
-35,324,['164]'],NP,8,-1,9
-0,325,"['b', 'e']",NP,0,-1,1
-1,325,"['s', 'i']",NP,0,-1,1
-2,325,"['d', 'e']",NP,0,-1,1
-3,325,"['s', 'reactivating']",NP,0,-1,1
-4,325,"['fetal', 'hemoglobin']",NP,0,-1,1
-5,325,"['(hbf)', 'expression']",NP,0,-1,1
-6,325,has,AUX,0,-1,1
-7,325,['also'],NP,0,-1,1
-8,325,been,AUX,0,-1,1
-9,325,['proposed'],NP,0,-1,1
-10,325,[],NP,0,-1,1
-11,325,to,PREP,1,-1,2
-12,325,be,AUX,1,-1,2
-13,325,[],NP,1,-1,2
-14,325,an,DET,2,-1,3
-15,325,"['effective', 'method']",NP,2,-1,3
-16,325,[],NP,2,-1,3
-17,325,to,PREP,3,-1,4
-18,325,"['treat', 'b']",NP,3,-1,4
-19,325,"['thalassemia', 'through']",NP,3,-1,4
-20,325,['knockout'],NP,3,-1,4
-21,325,[],NP,3,-1,4
-22,325,of,PREP,4,-1,5
-23,325,"['bcl11a', 'gene']",NP,4,-1,5
-24,325,['suppresses'],NP,4,-1,5
-25,325,[],NP,4,-1,5
-26,325,the,DET,5,-1,6
-27,325,"['e', 'xpression']",NP,5,-1,6
-28,325,[],NP,5,-1,6
-29,325,of,PREP,6,-1,7
-30,325,"['fetal', 'hemoglobin']",NP,6,-1,7
-31,325,"['[165', '166]']",NP,6,-1,7
+4,323,"['researchers', 'haveturned']",NP,1,-1,2
+5,323,"['their', 'attention']",NP,1,-1,2
+6,323,[],NP,1,-1,2
+7,323,to,PREP,2,-1,3
+8,323,['genetherapy'],NP,2,-1,3
+0,324,"['amajor', 'technical']",NP,0,-1,1
+1,324,is,AUX,0,-1,1
+2,324,['idea'],NP,0,-1,1
+3,324,to,PREP,1,-1,2
+4,324,['repair'],NP,1,-1,2
+5,324,[],NP,1,-1,2
+6,324,the,DET,2,-1,3
+7,324,"['defective', 'b']",NP,2,-1,3
+8,324,"['globin', 'gene']",NP,2,-1,3
+9,324,[],NP,2,-1,3
+10,324,of,PREP,3,-1,4
+11,324,['ipscs'],NP,3,-1,4
+12,324,[],NP,3,-1,4
+13,324,from,PREP,4,-1,5
+14,324,['patients'],NP,4,-1,5
+15,324,[],NP,4,-1,5
+16,324,with,PREP,5,-1,6
+17,324,"['b', 'thalassemia']",NP,5,-1,6
+18,324,[],NP,5,-1,6
+19,324,by,PREP,6,-1,7
+20,324,"['crispr', 'cas9']",NP,6,-1,7
+21,324,"['technology', 'then']",NP,6,-1,7
+22,324,"['red', 'blood']",NP,6,-1,7
+23,324,can,MOD,6,-1,7
+24,324,be,AUX,6,-1,7
+25,324,"['produced', 'normally']",NP,6,-1,7
+26,324,and,CONJ,6,-1,7
+27,324,['cells'],NP,6,-1,7
+28,324,the,DET,7,-1,8
+29,324,['disease'],NP,7,-1,8
+30,324,could,MOD,7,-1,8
+31,324,be,AUX,7,-1,8
+32,324,"['cured', '[163']",NP,7,-1,8
+33,324,['164]'],NP,7,-1,8
+0,325,"['besides', 'reactivating']",NP,0,-1,1
+1,325,"['fetal', 'hemoglobin']",NP,0,-1,1
+2,325,"['(hbf)', 'expression']",NP,0,-1,1
+3,325,has,AUX,0,-1,1
+4,325,['also'],NP,0,-1,1
+5,325,been,AUX,0,-1,1
+6,325,['proposed'],NP,0,-1,1
+7,325,[],NP,0,-1,1
+8,325,to,PREP,1,-1,2
+9,325,be,AUX,1,-1,2
+10,325,[],NP,1,-1,2
+11,325,an,DET,2,-1,3
+12,325,"['effective', 'method']",NP,2,-1,3
+13,325,[],NP,2,-1,3
+14,325,to,PREP,3,-1,4
+15,325,"['treat', 'b']",NP,3,-1,4
+16,325,"['thalassemia', 'through']",NP,3,-1,4
+17,325,['knockout'],NP,3,-1,4
+18,325,[],NP,3,-1,4
+19,325,of,PREP,4,-1,5
+20,325,"['bcl11a', 'gene']",NP,4,-1,5
+21,325,['suppresses'],NP,4,-1,5
+22,325,[],NP,4,-1,5
+23,325,the,DET,5,-1,6
+24,325,['expression'],NP,5,-1,6
+25,325,[],NP,5,-1,6
+26,325,of,PREP,6,-1,7
+27,325,"['fetal', 'hemoglobin']",NP,6,-1,7
+28,325,"['[165', '166]']",NP,6,-1,7
 0,326,"['additionally', 'crispr']",NP,0,-1,1
 1,326,"['cas', 'systems']",NP,0,-1,1
 2,326,have,AUX,0,-1,1
@@ -5082,9 +5128,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 26,356,of,PREP,7,-1,8
 27,356,"['hgps', 'mice']",NP,7,-1,8
 28,356,"['[189', '190]']",NP,7,-1,8
-0,357,"['i', 'n']",NP,0,-1,1
-1,357,"['addition', 'suzuki']",NP,0,-1,1
-2,357,"['et', 'al']",NP,0,-1,1
+0,357,[],NP,0,-1,1
+1,357,in,PREP,1,-1,2
+2,357,"['addition', 'suzuki']",NP,1,-1,2
+3,357,"['et', 'al']",NP,1,-1,2
 0,358,"['repaired', 'g609g']",NP,0,-1,1
 1,358,['mutation'],NP,0,-1,1
 2,358,in,PREP,1,-1,2
@@ -5348,7 +5395,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,371,['hiv'],NP,2,-1,3
 8,371,[],NP,2,-1,3
 9,371,the,DET,3,-1,4
-10,371,['viralsequences'],NP,3,-1,4
+10,371,"['viral', 'sequences']",NP,3,-1,4
 11,371,can,MOD,3,-1,4
 12,371,be,AUX,3,-1,4
 13,371,['integrated'],NP,3,-1,4
@@ -5406,7 +5453,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,374,"['system', 'terminal']",NP,0,-1,1
 4,374,"['repeat', '(ltr)']",NP,0,-1,1
 5,374,and,CONJ,0,-1,1
-6,374,['destructy'],NP,0,-1,1
+6,374,"['destruct', 'y']",NP,0,-1,1
 0,375,"['xu', 'z']",NP,0,-1,1
 0,376,"['li', 'computational']",NP,0,-1,1
 1,376,and,CONJ,0,-1,1
@@ -5896,43 +5943,46 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,398,['[223]'],NP,1,-1,2
 0,399,"['off', 'target']",NP,0,-1,1
 1,399,"['effects', 'seriously']",NP,0,-1,1
-2,399,"['restrictthe', 'widespread']",NP,0,-1,1
-3,399,['application'],NP,0,-1,1
-4,399,of,PREP,1,-1,2
-5,399,"['crispr', 'cas']",NP,1,-1,2
-6,399,"['mediated', 'genome']",NP,1,-1,2
-7,399,['edit'],NP,1,-1,2
-8,399,[],NP,1,-1,2
-9,399,in,PREP,2,-1,3
-10,399,['g'],NP,2,-1,3
+2,399,['restrict'],NP,0,-1,1
+3,399,[],NP,0,-1,1
+4,399,the,DET,1,-1,2
+5,399,"['widespread', 'application']",NP,1,-1,2
+6,399,[],NP,1,-1,2
+7,399,of,PREP,2,-1,3
+8,399,"['crispr', 'cas']",NP,2,-1,3
+9,399,"['mediated', 'genome']",NP,2,-1,3
+10,399,['edit'],NP,2,-1,3
 11,399,[],NP,2,-1,3
 12,399,in,PREP,3,-1,4
-13,399,"['gene', 'therapy']",NP,3,-1,4
+13,399,['g'],NP,3,-1,4
 14,399,[],NP,3,-1,4
-15,399,for,PREP,4,-1,5
-16,399,['it'],NP,4,-1,5
-17,399,might,MOD,4,-1,5
-18,399,['lead'],NP,4,-1,5
-19,399,[],NP,4,-1,5
-20,399,to,PREP,5,-1,6
-21,399,"['genomic', 'instability']",NP,5,-1,6
-22,399,and,CONJ,5,-1,6
-23,399,['increase'],NP,5,-1,6
-24,399,[],NP,5,-1,6
-25,399,the,DET,6,-1,7
-26,399,['risk'],NP,6,-1,7
+15,399,in,PREP,4,-1,5
+16,399,"['gene', 'therapy']",NP,4,-1,5
+17,399,[],NP,4,-1,5
+18,399,for,PREP,5,-1,6
+19,399,['it'],NP,5,-1,6
+20,399,might,MOD,5,-1,6
+21,399,['lead'],NP,5,-1,6
+22,399,[],NP,5,-1,6
+23,399,to,PREP,6,-1,7
+24,399,"['genomic', 'instability']",NP,6,-1,7
+25,399,and,CONJ,6,-1,7
+26,399,['increase'],NP,6,-1,7
 27,399,[],NP,6,-1,7
-28,399,of,PREP,7,-1,8
-29,399,"['certain', 'diseases']",NP,7,-1,8
+28,399,the,DET,7,-1,8
+29,399,['risk'],NP,7,-1,8
 30,399,[],NP,7,-1,8
-31,399,by,PREP,8,-1,9
-32,399,[],NP,8,-1,9
-33,399,in,PREP,9,-1,10
-34,399,"['troducing', 'unwanted']",NP,9,-1,10
-35,399,['mutations'],NP,9,-1,10
-36,399,at,PREP,10,-1,11
-37,399,"['off', 'target']",NP,10,-1,11
-38,399,"['sites', '[224]']",NP,10,-1,11
+31,399,of,PREP,8,-1,9
+32,399,"['certain', 'diseases']",NP,8,-1,9
+33,399,[],NP,8,-1,9
+34,399,by,PREP,9,-1,10
+35,399,[],NP,9,-1,10
+36,399,in,PREP,10,-1,11
+37,399,"['troducing', 'unwanted']",NP,10,-1,11
+38,399,['mutations'],NP,10,-1,11
+39,399,at,PREP,11,-1,12
+40,399,"['off', 'target']",NP,11,-1,12
+41,399,"['sites', '[224]']",NP,11,-1,12
 0,400,[],NP,0,-1,1
 1,400,at,PREP,1,-1,2
 2,400,"['present', 'several']",NP,1,-1,2
@@ -6574,32 +6624,33 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 19,436,in,PREP,4,-1,5
 20,436,"['vitro', 'experiments']",NP,4,-1,5
 21,436,"['[243', '244]']",NP,4,-1,5
-0,437,"['i', 'n']",NP,0,-1,1
-1,437,"['addition', 'viral']",NP,0,-1,1
-2,437,"['vectors', 'such']",NP,0,-1,1
-3,437,"['as', 'adenovirus']",NP,0,-1,1
-4,437,"['adeno', 'associated']",NP,0,-1,1
-5,437,"['virus', '(aav)']",NP,0,-1,1
-6,437,and,CONJ,0,-1,1
-7,437,"['lentivirus', 'viral']",NP,0,-1,1
-8,437,are,AUX,0,-1,1
-9,437,being,AUX,0,-1,1
-10,437,"['widely', 'used']",NP,0,-1,1
-11,437,['vectors'],NP,0,-1,1
-12,437,for,PREP,1,-1,2
-13,437,['both'],NP,1,-1,2
-14,437,[],NP,1,-1,2
-15,437,in,PREP,2,-1,3
-16,437,"['vitro', 'ex']",NP,2,-1,3
-17,437,and,CONJ,2,-1,3
-18,437,['vivo'],NP,2,-1,3
-19,437,in,PREP,3,-1,4
-20,437,"['vivo', 'delivery']",NP,3,-1,4
-21,437,['due'],NP,3,-1,4
-22,437,to,PREP,4,-1,5
-23,437,"['their', 'high']",NP,4,-1,5
-24,437,"['delivery', 'effi']",NP,4,-1,5
-25,437,['ciency'],NP,4,-1,5
+0,437,[],NP,0,-1,1
+1,437,in,PREP,1,-1,2
+2,437,"['addition', 'viral']",NP,1,-1,2
+3,437,"['vectors', 'such']",NP,1,-1,2
+4,437,"['as', 'adenovirus']",NP,1,-1,2
+5,437,"['adeno', 'associated']",NP,1,-1,2
+6,437,"['virus', '(aav)']",NP,1,-1,2
+7,437,and,CONJ,1,-1,2
+8,437,"['lentivirus', 'viral']",NP,1,-1,2
+9,437,are,AUX,1,-1,2
+10,437,being,AUX,1,-1,2
+11,437,"['widely', 'used']",NP,1,-1,2
+12,437,['vectors'],NP,1,-1,2
+13,437,for,PREP,2,-1,3
+14,437,['both'],NP,2,-1,3
+15,437,[],NP,2,-1,3
+16,437,in,PREP,3,-1,4
+17,437,"['vitro', 'ex']",NP,3,-1,4
+18,437,and,CONJ,3,-1,4
+19,437,['vivo'],NP,3,-1,4
+20,437,in,PREP,4,-1,5
+21,437,"['vivo', 'delivery']",NP,4,-1,5
+22,437,['due'],NP,4,-1,5
+23,437,to,PREP,5,-1,6
+24,437,"['their', 'high']",NP,5,-1,6
+25,437,"['delivery', 'effi']",NP,5,-1,6
+26,437,['ciency'],NP,5,-1,6
 0,438,['they'],NP,0,-1,1
 1,438,are,AUX,0,-1,1
 2,438,"['commonly', 'used']",NP,0,-1,1
@@ -7455,9 +7506,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,485,and,CONJ,5,-1,6
 19,485,"['health', 'guangdong']",NP,5,-1,6
 20,485,"['medicine', 'laboratory(2018gzr110104004)']",NP,5,-1,6
-0,486,"['references', '[1]charpentier']",NP,0,-1,1
-1,486,"['e', 'marraffini']",NP,0,-1,1
-2,486,['la'],NP,0,-1,1
+0,486,"['references', '[1]']",NP,0,-1,1
+1,486,"['charpentier', 'e']",NP,0,-1,1
+2,486,"['marraffini', 'la']",NP,0,-1,1
 0,487,"['harnessing', 'crispr']",NP,0,-1,1
 1,487,"['cas9', 'immunity']",NP,0,-1,1
 2,487,[],NP,0,-1,1
@@ -7465,9 +7516,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,487,"['genetic', 'engineering']",NP,1,-1,2
 0,488,"['curr', 'opin']",NP,0,-1,1
 1,488,"['microbiol', '2014;19:114–9']",NP,0,-1,1
-0,489,"['[2]hsu', 'pd']",NP,0,-1,1
-1,489,"['lander', 'es']",NP,0,-1,1
-2,489,"['zhang', 'f']",NP,0,-1,1
+0,489,"['[2]', 'hsu']",NP,0,-1,1
+1,489,"['pd', 'lander']",NP,0,-1,1
+2,489,"['es', 'zhang']",NP,0,-1,1
+3,489,['f'],NP,0,-1,1
 0,490,['development'],NP,0,-1,1
 1,490,and,CONJ,0,-1,1
 2,490,['applications'],NP,0,-1,1
@@ -7478,8 +7530,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,490,for,PREP,2,-1,3
 8,490,"['genome', 'engineering']",NP,2,-1,3
 0,491,"['cell', '2014;157:1262–78']",NP,0,-1,1
-0,492,"['[3]knott', 'gj']",NP,0,-1,1
-1,492,"['doudna', 'ja']",NP,0,-1,1
+0,492,"['[3]', 'knott']",NP,0,-1,1
+1,492,"['gj', 'doudna']",NP,0,-1,1
+2,492,['ja'],NP,0,-1,1
 0,493,"['crispr', 'cas']",NP,0,-1,1
 1,493,['guides'],NP,0,-1,1
 2,493,the,DET,1,-1,2
@@ -7488,9 +7541,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,493,of,PREP,2,-1,3
 6,493,"['genetic', 'engineering']",NP,2,-1,3
 0,494,"['science', '2018;361:866–9']",NP,0,-1,1
-0,495,"['[4]cox', 'db']",NP,0,-1,1
-1,495,"['platt', 'rj']",NP,0,-1,1
-2,495,"['zhang', 'f']",NP,0,-1,1
+0,495,"['[4]', 'cox']",NP,0,-1,1
+1,495,"['db', 'platt']",NP,0,-1,1
+2,495,"['rj', 'zhang']",NP,0,-1,1
+3,495,['f'],NP,0,-1,1
 0,496,[],NP,0,-1,1
 1,496,the,DET,1,-1,2
 2,496,"['rapeutic', 'genome']",NP,1,-1,2
@@ -7499,10 +7553,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,496,['challenges'],NP,1,-1,2
 0,497,"['nat', 'med']",NP,0,-1,1
 1,497,['2015;21:121–31'],NP,0,-1,1
-0,498,"['[5]wang', 'h']",NP,0,-1,1
-1,498,"['la', 'russa']",NP,0,-1,1
-2,498,"['m', 'qi']",NP,0,-1,1
-3,498,['ls'],NP,0,-1,1
+0,498,"['[5]', 'wang']",NP,0,-1,1
+1,498,"['h', 'la']",NP,0,-1,1
+2,498,"['russa', 'm']",NP,0,-1,1
+3,498,"['qi', 'ls']",NP,0,-1,1
 0,499,"['crispr', 'cas9']",NP,0,-1,1
 1,499,[],NP,0,-1,1
 2,499,in,PREP,1,-1,2
@@ -7511,9 +7565,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,499,['beyond'],NP,1,-1,2
 0,500,"['annu', 'rev']",NP,0,-1,1
 1,500,"['biochem', '2016;85:227–64']",NP,0,-1,1
-0,501,"['[6]wright', 'av']",NP,0,-1,1
-1,501,"['nuñez', 'jk']",NP,0,-1,1
-2,501,"['doudna', 'ja']",NP,0,-1,1
+0,501,"['[6]', 'wright']",NP,0,-1,1
+1,501,"['av', 'nuñez']",NP,0,-1,1
+2,501,"['jk', 'doudna']",NP,0,-1,1
+3,501,['ja'],NP,0,-1,1
 0,502,['biology'],NP,0,-1,1
 1,502,and,CONJ,0,-1,1
 2,502,['applications'],NP,0,-1,1
@@ -7526,21 +7581,23 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,502,for,PREP,2,-1,3
 10,502,"['genome', 'engineering']",NP,2,-1,3
 0,503,"['cell', '2016;164:29–44']",NP,0,-1,1
-0,504,"['[7]langner', 't']",NP,0,-1,1
-1,504,"['kamoun', 's']",NP,0,-1,1
-2,504,"['belhaj', 'k']",NP,0,-1,1
+0,504,"['[7]', 'langner']",NP,0,-1,1
+1,504,"['t', 'kamoun']",NP,0,-1,1
+2,504,"['s', 'belhaj']",NP,0,-1,1
+3,504,['k'],NP,0,-1,1
 0,505,"['crispr', 'crops:']",NP,0,-1,1
 1,505,"['plant', 'genome']",NP,0,-1,1
 2,505,"['editing', 'toward']",NP,0,-1,1
 3,505,"['disease', 'resistance']",NP,0,-1,1
 0,506,"['annu', 'rev']",NP,0,-1,1
 1,506,"['phytopathol', '2018;56:479–512']",NP,0,-1,1
-0,507,"['[8]miller', 'jc']",NP,0,-1,1
-1,507,"['holmes', 'mc']",NP,0,-1,1
-2,507,"['wang', 'j']",NP,0,-1,1
-3,507,"['guschin', 'dy']",NP,0,-1,1
-4,507,"['lee', 'yl']",NP,0,-1,1
-5,507,"['et', 'al']",NP,0,-1,1
+0,507,"['[8]', 'miller']",NP,0,-1,1
+1,507,"['jc', 'holmes']",NP,0,-1,1
+2,507,"['mc', 'wang']",NP,0,-1,1
+3,507,"['j', 'guschin']",NP,0,-1,1
+4,507,"['dy', 'lee']",NP,0,-1,1
+5,507,"['yl', 'et']",NP,0,-1,1
+6,507,['al'],NP,0,-1,1
 0,508,[],NP,0,-1,1
 1,508,an,DET,1,-1,2
 2,508,"['improved', 'zinc']",NP,1,-1,2
@@ -7552,12 +7609,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,508,"['genome', 'editing']",NP,2,-1,3
 0,509,"['nat', 'biotechnol']",NP,0,-1,1
 1,509,['2007;25:778–85'],NP,0,-1,1
-0,510,"['[9]christian', 'm']",NP,0,-1,1
-1,510,"['cermak', 't']",NP,0,-1,1
-2,510,"['doyle', 'el']",NP,0,-1,1
-3,510,"['schmidt', 'c']",NP,0,-1,1
-4,510,"['zhang', 'f']",NP,0,-1,1
-5,510,"['et', 'al']",NP,0,-1,1
+0,510,"['[9]', 'christian']",NP,0,-1,1
+1,510,"['m', 'cermak']",NP,0,-1,1
+2,510,"['t', 'doyle']",NP,0,-1,1
+3,510,"['el', 'schmidt']",NP,0,-1,1
+4,510,"['c', 'zhang']",NP,0,-1,1
+5,510,"['f', 'et']",NP,0,-1,1
+6,510,['al'],NP,0,-1,1
 0,511,"['targeting', 'dna']",NP,0,-1,1
 1,511,"['double', 'strand']",NP,0,-1,1
 2,511,['breaks'],NP,0,-1,1
@@ -7597,8 +7655,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,519,"['[12]', 'hille']",NP,0,-1,1
 1,519,"['f', 'richter']",NP,0,-1,1
 2,519,"['h', 'wong']",NP,0,-1,1
-3,519,"['sp', 'bratovic']",NP,0,-1,1
-4,519,"['ˇm', 'ressel']",NP,0,-1,1
+3,519,"['sp', 'bratovicˇ']",NP,0,-1,1
+4,519,"['m', 'ressel']",NP,0,-1,1
 5,519,"['s', 'et']",NP,0,-1,1
 6,519,['al'],NP,0,-1,1
 0,520,[],NP,0,-1,1
@@ -7635,7 +7693,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,526,"['immune', 'system']",NP,1,-1,2
 4,526,[],NP,1,-1,2
 5,526,of,PREP,2,-1,3
-6,526,"['bacteria', 'andarchaea']",NP,2,-1,3
+6,526,['bacteria'],NP,2,-1,3
+7,526,and,CONJ,2,-1,3
+8,526,['archaea'],NP,2,-1,3
 0,527,"['science', '2010;327:167–70']",NP,0,-1,1
 0,528,"['[15]', 'koonin']",NP,0,-1,1
 1,528,"['ev', 'makarova']",NP,0,-1,1
@@ -7666,7 +7726,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,532,"['crispr', 'cas']",NP,2,-1,3
 8,532,['systems'],NP,2,-1,3
 0,533,"['nat', 'rev']",NP,0,-1,1
-1,533,['microbiol2011;9:467–77'],NP,0,-1,1
+1,533,"['microbiol', '2011;9:467–77']",NP,0,-1,1
 0,534,"['[17]', 'koonin']",NP,0,-1,1
 1,534,"['ev', 'makarova']",NP,0,-1,1
 2,534,"['ks', 'zhang']",NP,0,-1,1
@@ -7740,8 +7800,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,549,"['k', 'chao']",NP,0,-1,1
 5,549,"['y', 'et']",NP,0,-1,1
 6,549,['al'],NP,0,-1,1
-0,550,"['crispr', 'rnamaturation']",NP,0,-1,1
-1,550,[],NP,0,-1,1
+0,550,"['crispr', 'rna']",NP,0,-1,1
+1,550,['maturation'],NP,0,-1,1
 2,550,by,PREP,1,-1,2
 3,550,"['trans', 'encoded']",NP,1,-1,2
 4,550,"['small', 'rna']",NP,1,-1,2
@@ -7832,7 +7892,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,568,['mechanism'],NP,0,-1,1
 1,568,[],NP,0,-1,1
 2,568,of,PREP,1,-1,2
-3,568,"['eukaryotic', 'homologousrecombination']",NP,1,-1,2
+3,568,"['eukaryotic', 'homologous']",NP,1,-1,2
+4,568,['recombination'],NP,1,-1,2
 0,569,"['annu', 'rev']",NP,0,-1,1
 1,569,"['biochem', '2008;77:229–57']",NP,0,-1,1
 0,570,"['[29]', 'richardson']",NP,0,-1,1
@@ -7862,8 +7923,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,573,"['r', 'et']",NP,0,-1,1
 6,573,['al'],NP,0,-1,1
 0,574,"['multiplex', 'genome']",NP,0,-1,1
-1,574,"['engineeringusing', 'crispr']",NP,0,-1,1
-2,574,"['cas', 'systems']",NP,0,-1,1
+1,574,"['engineering', 'using']",NP,0,-1,1
+2,574,"['crispr', 'cas']",NP,0,-1,1
+3,574,['systems'],NP,0,-1,1
 0,575,"['science', '2013;339:819–23']",NP,0,-1,1
 0,576,"['[31]', 'minkenberg']",NP,0,-1,1
 1,576,"['b', 'wheatley']",NP,0,-1,1
@@ -7943,8 +8005,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,591,"['ja', 'weissman']",NP,0,-1,1
 5,591,"['js', 'et']",NP,0,-1,1
 6,591,['al'],NP,0,-1,1
-0,592,"['repurposingcrispr', 'as']",NP,0,-1,1
-1,592,[],NP,0,-1,1
+0,592,"['repurposing', 'crispr']",NP,0,-1,1
+1,592,['as'],NP,0,-1,1
 2,592,an,DET,1,-1,2
 3,592,"['rna', 'guided']",NP,1,-1,2
 4,592,['platform'],NP,1,-1,2
@@ -8015,9 +8077,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,603,"['z', 'brar']",NP,0,-1,1
 5,603,"['ga', 'et']",NP,0,-1,1
 6,603,['al'],NP,0,-1,1
-0,604,"['crispr', 'mediatedmodular']",NP,0,-1,1
-1,604,"['rna', 'guided']",NP,0,-1,1
-2,604,['regulation'],NP,0,-1,1
+0,604,"['crispr', 'mediated']",NP,0,-1,1
+1,604,"['modular', 'rna']",NP,0,-1,1
+2,604,"['guided', 'regulation']",NP,0,-1,1
 3,604,[],NP,0,-1,1
 4,604,of,PREP,1,-1,2
 5,604,['transcription'],NP,1,-1,2
@@ -8054,14 +8116,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,610,"['programmable', 'base']",NP,0,-1,1
 1,610,['editing'],NP,0,-1,1
 2,610,of,PREP,1,-1,2
-3,610,[],NP,1,-1,2
-4,610,a,DET,2,-1,3
-5,610,"['c15tt', 'og']",NP,2,-1,3
-6,610,['c15c'],NP,2,-1,3
-7,610,in,PREP,3,-1,4
-8,610,"['genomic', 'dna']",NP,3,-1,4
-9,610,"['without', 'dna']",NP,3,-1,4
-10,610,['cleavage'],NP,3,-1,4
+3,610,['a\x03t'],NP,1,-1,2
+4,610,[],NP,1,-1,2
+5,610,to,PREP,2,-1,3
+6,610,['g\x03c'],NP,2,-1,3
+7,610,[],NP,2,-1,3
+8,610,in,PREP,3,-1,4
+9,610,"['genomic', 'dna']",NP,3,-1,4
+10,610,"['without', 'dna']",NP,3,-1,4
+11,610,['cleavage'],NP,3,-1,4
 0,611,"['nature', '2017;551:464–71']",NP,0,-1,1
 0,612,"['[43]', 'kim']",NP,0,-1,1
 1,612,"['yb', 'komor']",NP,0,-1,1
@@ -8094,20 +8157,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,615,"['q', 'et']",NP,0,-1,1
 6,615,['al'],NP,0,-1,1
 0,616,"['improved', 'base']",NP,0,-1,1
-1,616,"['editor', 'forefficient']",NP,0,-1,1
-2,616,['editing'],NP,0,-1,1
-3,616,[],NP,0,-1,1
-4,616,in,PREP,1,-1,2
-5,616,"['gc', 'contexts']",NP,1,-1,2
-6,616,[],NP,1,-1,2
-7,616,in,PREP,2,-1,3
-8,616,['rabbits'],NP,2,-1,3
-9,616,[],NP,2,-1,3
-10,616,with,PREP,3,-1,4
-11,616,[],NP,3,-1,4
-12,616,an,DET,4,-1,5
-13,616,"['optimized', 'aid']",NP,4,-1,5
-14,616,"['cas9', 'fusion']",NP,4,-1,5
+1,616,['editor'],NP,0,-1,1
+2,616,for,PREP,1,-1,2
+3,616,"['efficient', 'editing']",NP,1,-1,2
+4,616,[],NP,1,-1,2
+5,616,in,PREP,2,-1,3
+6,616,"['gc', 'contexts']",NP,2,-1,3
+7,616,[],NP,2,-1,3
+8,616,in,PREP,3,-1,4
+9,616,['rabbits'],NP,3,-1,4
+10,616,[],NP,3,-1,4
+11,616,with,PREP,4,-1,5
+12,616,[],NP,4,-1,5
+13,616,an,DET,5,-1,6
+14,616,"['optimized', 'aid']",NP,5,-1,6
+15,616,"['cas9', 'fusion']",NP,5,-1,6
 0,617,"['faseb', 'j']",NP,0,-1,1
 1,617,['2019;33:9210–9'],NP,0,-1,1
 0,618,"['[45]', 'hess']",NP,0,-1,1
@@ -8168,7 +8232,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,628,"['clinically', 'relevant']",NP,3,-1,4
 9,628,['variants'],NP,3,-1,4
 0,629,"['nucl', 'acids']",NP,0,-1,1
-1,629,"['res', '2016;44:d862–8']",NP,0,-1,1
+1,629,"['res', '2016;44:']",NP,0,-1,1
+2,629,['d862–8'],NP,0,-1,1
 0,630,"['[49]', 'anders']",NP,0,-1,1
 1,630,"['c', 'niewoehner']",NP,0,-1,1
 2,630,"['o', 'duerst']",NP,0,-1,1
@@ -8195,11 +8260,12 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,633,"['l', 'et']",NP,0,-1,1
 6,633,['al'],NP,0,-1,1
 0,634,"['evolved', 'cas9']",NP,0,-1,1
-1,634,"['variantswith', 'broad']",NP,0,-1,1
-2,634,"['pam', 'compatibility']",NP,0,-1,1
-3,634,and,CONJ,0,-1,1
-4,634,"['high', 'dna']",NP,0,-1,1
-5,634,['specificity'],NP,0,-1,1
+1,634,['variants'],NP,0,-1,1
+2,634,with,PREP,1,-1,2
+3,634,"['broad', 'pam']",NP,1,-1,2
+4,634,and,CONJ,1,-1,2
+5,634,"['high', 'dna']",NP,1,-1,2
+6,634,"['compatibility', 'specificity']",NP,1,-1,2
 0,635,"['nature', '2018;556:57–63']",NP,0,-1,1
 0,636,"['[51]', 'nishimasu']",NP,0,-1,1
 1,636,"['h', 'shi']",NP,0,-1,1
@@ -8371,7 +8437,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,672,['editing'],NP,0,-1,1
 2,672,with,PREP,1,-1,2
 3,672,"['crispr', 'cas13']",NP,1,-1,2
-0,673,"['front', 'genet2018;9:134']",NP,0,-1,1
+0,673,"['front', 'genet']",NP,0,-1,1
+1,673,['2018;9:134'],NP,0,-1,1
 0,674,"['[63]', 'anzalone']",NP,0,-1,1
 1,674,"['av', 'randolph']",NP,0,-1,1
 2,674,"['pb', 'davis']",NP,0,-1,1
@@ -8395,10 +8462,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,677,"['f', 'marraffini']",NP,0,-1,1
 5,677,['la'],NP,0,-1,1
 0,678,"['rna', 'guided']",NP,0,-1,1
-1,678,"['editing', 'ofbacterial']",NP,0,-1,1
-2,678,"['genomes', 'using']",NP,0,-1,1
-3,678,"['crispr', 'cas']",NP,0,-1,1
-4,678,['systems'],NP,0,-1,1
+1,678,['editing'],NP,0,-1,1
+2,678,of,PREP,1,-1,2
+3,678,"['bacterial', 'genomes']",NP,1,-1,2
+4,678,"['using', 'crispr']",NP,1,-1,2
+5,678,"['cas', 'systems']",NP,1,-1,2
 0,679,"['nat', 'biotechnol']",NP,0,-1,1
 1,679,['2013;31:233–9'],NP,0,-1,1
 0,680,"['[65]', 'lee']",NP,0,-1,1
@@ -8519,8 +8587,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,698,"['zy', 'et']",NP,0,-1,1
 6,698,['al'],NP,0,-1,1
 0,699,"['efficient', 'rna']",NP,0,-1,1
-1,699,"['cas9', 'mediatedgenome']",NP,0,-1,1
-2,699,['editing'],NP,0,-1,1
+1,699,"['cas9', 'mediated']",NP,0,-1,1
+2,699,"['genome', 'editing']",NP,0,-1,1
 3,699,[],NP,0,-1,1
 4,699,in,PREP,1,-1,2
 5,699,"['xenopus', 'tropicalis']",NP,1,-1,2
@@ -8585,12 +8653,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,708,"['crispr', 'cas9']",NP,5,-1,6
 15,708,['leading'],NP,5,-1,6
 16,708,to,PREP,6,-1,7
-17,708,"['hyperglycemiaand', 'other']",NP,6,-1,7
-18,708,"['typical', 'features']",NP,6,-1,7
-19,708,['seen'],NP,6,-1,7
-20,708,[],NP,6,-1,7
-21,708,in,PREP,7,-1,8
-22,708,"['mody', '2']",NP,7,-1,8
+17,708,['hyperglycemia'],NP,6,-1,7
+18,708,and,CONJ,6,-1,7
+19,708,"['other', 'typical']",NP,6,-1,7
+20,708,"['features', 'seen']",NP,6,-1,7
+21,708,[],NP,6,-1,7
+22,708,in,PREP,7,-1,8
+23,708,"['mody', '2']",NP,7,-1,8
 0,709,"['cell', 'mol']",NP,0,-1,1
 1,709,"['life', 'sci']",NP,0,-1,1
 2,709,['2020;77:3265–77'],NP,0,-1,1
@@ -8630,8 +8699,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,714,['as'],NP,2,-1,3
 10,714,[],NP,2,-1,3
 11,714,the,DET,3,-1,4
-12,714,"['mammary', 'glandbioreactor']",NP,3,-1,4
-13,714,[],NP,3,-1,4
+12,714,"['mammary', 'gland']",NP,3,-1,4
+13,714,['bioreactor'],NP,3,-1,4
 14,714,to,PREP,4,-1,5
 15,714,"['produce', 'melatonin']",NP,4,-1,5
 16,714,"['enriched', 'milk']",NP,4,-1,5
@@ -8844,7 +8913,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,749,"['iijima', 's']",NP,0,-1,1
 5,749,"['tanimoto', 'y']",NP,0,-1,1
 6,749,"['et', 'al']",NP,0,-1,1
-0,750,['simplegeneration'],NP,0,-1,1
+0,750,"['simple', 'generation']",NP,0,-1,1
 1,750,[],NP,0,-1,1
 2,750,of,PREP,1,-1,2
 3,750,"['albino', 'c57bl']",NP,1,-1,2
@@ -8929,7 +8998,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,759,or,CONJ,2,-1,3
 7,759,"['enhancer', 'rescues']",NP,2,-1,3
 8,759,"['obesity', 'caused']",NP,2,-1,3
-9,759,['byhaploinsufficiency'],NP,2,-1,3
+9,759,[],NP,2,-1,3
+10,759,by,PREP,3,-1,4
+11,759,['haploinsufficiency'],NP,3,-1,4
 0,760,"['science', '2019;363']",NP,0,-1,1
 0,761,['eaau0629'],NP,0,-1,1
 0,762,"['[92]', 'yang']",NP,0,-1,1
@@ -9074,10 +9145,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,784,"['efficient', 'generation']",NP,0,-1,1
 1,784,[],NP,0,-1,1
 2,784,of,PREP,1,-1,2
-3,784,"['myostatingene', 'mutated']",NP,1,-1,2
-4,784,['rabbit'],NP,1,-1,2
-5,784,by,PREP,2,-1,3
-6,784,"['crispr', 'cas9']",NP,2,-1,3
+3,784,"['myostatin', 'gene']",NP,1,-1,2
+4,784,"['mutated', 'rabbit']",NP,1,-1,2
+5,784,[],NP,1,-1,2
+6,784,by,PREP,2,-1,3
+7,784,"['crispr', 'cas9']",NP,2,-1,3
 0,785,"['sci', 'rep']",NP,0,-1,1
 1,785,['2016;6:25029'],NP,0,-1,1
 0,786,"['[100]', 'sui']",NP,0,-1,1
@@ -9114,10 +9186,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,790,the,DET,2,-1,3
 5,790,"['xist', 'gene']",NP,2,-1,3
 6,790,is,AUX,2,-1,3
-7,790,"['required', 'forx']",NP,2,-1,3
-8,790,['chromosome'],NP,2,-1,3
-9,790,in,PREP,3,-1,4
-10,790,['activation'],NP,3,-1,4
+7,790,['required'],NP,2,-1,3
+8,790,[],NP,2,-1,3
+9,790,for,PREP,3,-1,4
+10,790,"['x', 'chromosome']",NP,3,-1,4
+11,790,[],NP,3,-1,4
+12,790,in,PREP,4,-1,5
+13,790,['activation'],NP,4,-1,5
 0,791,"['rna', 'biol']",NP,0,-1,1
 1,791,['2016;13:172–6'],NP,0,-1,1
 0,792,"['[102]', 'song']",NP,0,-1,1
@@ -9155,12 +9230,14 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,795,['al'],NP,0,-1,1
 0,796,"['crispr', 'cas9']",NP,0,-1,1
 1,796,"['mediated', 'mutation']",NP,0,-1,1
-2,796,"['oftyrosinase', '(tyr)']",NP,0,-1,1
-3,796,"['3’', 'utr']",NP,0,-1,1
-4,796,"['induce', 'graying']",NP,0,-1,1
-5,796,[],NP,0,-1,1
-6,796,in,PREP,1,-1,2
-7,796,['rabbit'],NP,1,-1,2
+2,796,[],NP,0,-1,1
+3,796,of,PREP,1,-1,2
+4,796,"['tyrosinase', '(tyr)']",NP,1,-1,2
+5,796,"['3’', 'utr']",NP,1,-1,2
+6,796,"['induce', 'graying']",NP,1,-1,2
+7,796,[],NP,1,-1,2
+8,796,in,PREP,2,-1,3
+9,796,['rabbit'],NP,2,-1,3
 0,797,"['sci', 'rep']",NP,0,-1,1
 1,797,['2017;7:1569'],NP,0,-1,1
 0,798,"['[104]', 'song']",NP,0,-1,1
@@ -9243,7 +9320,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,809,in,PREP,2,-1,3
 9,809,"['hoxc13', 'ablated']",NP,2,-1,3
 10,809,['rabbits'],NP,2,-1,3
-0,810,"['faseb', 'j2019;33:1226–34']",NP,0,-1,1
+0,810,"['faseb', 'j']",NP,0,-1,1
+1,810,['2019;33:1226–34'],NP,0,-1,1
 0,811,"['[108]', 'sui']",NP,0,-1,1
 1,811,"['t', 'lau']",NP,0,-1,1
 2,811,"['ys', 'liu']",NP,0,-1,1
@@ -9330,7 +9408,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,822,[],NP,3,-1,4
 12,822,in,PREP,4,-1,5
 13,822,"['haversian', 'canal']",NP,4,-1,5
-14,822,['osteonmicroarchitecture'],NP,4,-1,5
+14,822,"['osteon', 'microarchitecture']",NP,4,-1,5
 0,823,"['j', 'bone']",NP,0,-1,1
 1,823,"['miner', 'res']",NP,0,-1,1
 2,823,['2019;34:1115–28'],NP,0,-1,1
@@ -9466,7 +9544,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,843,"['serum', 'ldl']",NP,1,-1,2
 9,843,['c'],NP,1,-1,2
 10,843,and,CONJ,1,-1,2
-11,843,['tclevels'],NP,1,-1,2
+11,843,"['tc', 'levels']",NP,1,-1,2
 0,844,"['oncotarget', '2017;8:37751–60']",NP,0,-1,1
 0,845,"['[119]', 'fang']",NP,0,-1,1
 1,845,"['b', 'ren']",NP,0,-1,1
@@ -9495,9 +9573,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,850,[],NP,0,-1,1
 2,850,of,PREP,1,-1,2
 3,850,"['runx3', 'knockout']",NP,1,-1,2
-4,850,"['pigsusing', 'crispr']",NP,1,-1,2
-5,850,"['cas9', 'mediated']",NP,1,-1,2
-6,850,"['gene', 'targeting']",NP,1,-1,2
+4,850,"['pigs', 'using']",NP,1,-1,2
+5,850,"['crispr', 'cas9']",NP,1,-1,2
+6,850,"['mediated', 'gene']",NP,1,-1,2
+7,850,['targeting'],NP,1,-1,2
 0,851,"['reprod', 'domest']",NP,0,-1,1
 1,851,"['anim', '2016;51:970–8']",NP,0,-1,1
 0,852,"['[121]', 'chen']",NP,0,-1,1
@@ -9639,7 +9718,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,873,[],NP,1,-1,2
 5,873,in,PREP,2,-1,3
 6,873,"['cynomolgus', 'monkeys']",NP,2,-1,3
-0,874,['nature2018;560:661–5'],NP,0,-1,1
+0,874,"['nature', '2018;560:661–5']",NP,0,-1,1
 0,875,"['[128]', 'kang']",NP,0,-1,1
 1,875,"['y', 'zheng']",NP,0,-1,1
 2,875,"['b', 'shen']",NP,0,-1,1
@@ -9717,7 +9796,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,885,to,PREP,2,-1,3
 7,885,"['hepatitis', 'c']",NP,2,-1,3
 8,885,"['virus', 'internal']",NP,2,-1,3
-9,885,"['ribosomeentry', 'site']",NP,2,-1,3
+9,885,"['ribosome', 'entry']",NP,2,-1,3
+10,885,['site'],NP,2,-1,3
 0,886,"['proc', 'natl']",NP,0,-1,1
 1,886,"['acad', 'sci']",NP,0,-1,1
 2,886,"['u', 's']",NP,0,-1,1
@@ -9749,13 +9829,14 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,891,['induction'],NP,0,-1,1
 1,891,[],NP,0,-1,1
 2,891,of,PREP,1,-1,2
-3,891,"['site', 'specificchromosomal']",NP,1,-1,2
-4,891,['translocations'],NP,1,-1,2
-5,891,in,PREP,2,-1,3
-6,891,"['embryonic', 'stem']",NP,2,-1,3
-7,891,['cells'],NP,2,-1,3
-8,891,by,PREP,3,-1,4
-9,891,"['crispr', 'cas9']",NP,3,-1,4
+3,891,"['site', 'specific']",NP,1,-1,2
+4,891,"['chromosomal', 'translocations']",NP,1,-1,2
+5,891,[],NP,1,-1,2
+6,891,in,PREP,2,-1,3
+7,891,"['embryonic', 'stem']",NP,2,-1,3
+8,891,['cells'],NP,2,-1,3
+9,891,by,PREP,3,-1,4
+10,891,"['crispr', 'cas9']",NP,3,-1,4
 0,892,"['sci', 'rep']",NP,0,-1,1
 1,892,['2016;6:21918'],NP,0,-1,1
 0,893,"['[134]', 'hotta']",NP,0,-1,1
@@ -9916,7 +9997,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,924,['diagnostics'],NP,0,-1,1
 2,924,with,PREP,1,-1,2
 3,924,['crispr'],NP,1,-1,2
-0,925,['science2018;360:381–2'],NP,0,-1,1
+0,925,"['science', '2018;360:381–2']",NP,0,-1,1
 0,926,"['[145]', 'wang']",NP,0,-1,1
 1,926,"['t', 'wei']",NP,0,-1,1
 2,926,"['jj', 'sabatini']",NP,0,-1,1
@@ -9990,7 +10071,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,939,[],NP,2,-1,3
 9,939,by,PREP,3,-1,4
 10,939,['flaviviruses'],NP,3,-1,4
-0,940,['nature2016;535:164–8'],NP,0,-1,1
+0,940,"['nature', '2016;535:164–8']",NP,0,-1,1
 0,941,"['[150]', 'kurata']",NP,0,-1,1
 1,941,"['m', 'yamamoto']",NP,0,-1,1
 2,941,"['k', 'moriarity']",NP,0,-1,1
@@ -10015,13 +10096,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,945,"['high', 'throughput']",NP,0,-1,1
 1,945,['screening'],NP,0,-1,1
 2,945,of,PREP,1,-1,2
-3,945,"['acrispr', 'cas9']",NP,1,-1,2
-4,945,['library'],NP,1,-1,2
-5,945,for,PREP,2,-1,3
-6,945,"['functional', 'genomics']",NP,2,-1,3
-7,945,[],NP,2,-1,3
-8,945,in,PREP,3,-1,4
-9,945,"['human', 'cells']",NP,3,-1,4
+3,945,[],NP,1,-1,2
+4,945,a,DET,2,-1,3
+5,945,"['crispr', 'cas9']",NP,2,-1,3
+6,945,['library'],NP,2,-1,3
+7,945,for,PREP,3,-1,4
+8,945,"['functional', 'genomics']",NP,3,-1,4
+9,945,[],NP,3,-1,4
+10,945,in,PREP,4,-1,5
+11,945,"['human', 'cells']",NP,4,-1,5
 0,946,"['nature', '2014;509:487–91']",NP,0,-1,1
 0,947,"['[152]', 'shalem']",NP,0,-1,1
 1,947,"['o', 'sanjana']",NP,0,-1,1
@@ -10045,16 +10128,17 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,950,"['k', 'et']",NP,0,-1,1
 6,950,['al'],NP,0,-1,1
 0,951,"['genome', 'wide']",NP,0,-1,1
-1,951,['crisprscreen'],NP,0,-1,1
-2,951,in,PREP,1,-1,2
-3,951,[],NP,1,-1,2
-4,951,a,DET,2,-1,3
-5,951,"['mouse', 'model']",NP,2,-1,3
-6,951,[],NP,2,-1,3
-7,951,of,PREP,3,-1,4
-8,951,"['tumor', 'growth']",NP,3,-1,4
-9,951,and,CONJ,3,-1,4
-10,951,['metastasis'],NP,3,-1,4
+1,951,"['crispr', 'screen']",NP,0,-1,1
+2,951,[],NP,0,-1,1
+3,951,in,PREP,1,-1,2
+4,951,[],NP,1,-1,2
+5,951,a,DET,2,-1,3
+6,951,"['mouse', 'model']",NP,2,-1,3
+7,951,[],NP,2,-1,3
+8,951,of,PREP,3,-1,4
+9,951,"['tumor', 'growth']",NP,3,-1,4
+10,951,and,CONJ,3,-1,4
+11,951,['metastasis'],NP,3,-1,4
 0,952,"['cell', '2015;160:1246–60']",NP,0,-1,1
 0,953,"['[154]', 'naldini']",NP,0,-1,1
 1,953,['l'],NP,0,-1,1
@@ -10117,8 +10201,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,966,in,PREP,1,-1,2
 3,966,[],NP,1,-1,2
 4,966,the,DET,2,-1,3
-5,966,"['rapeutic', 'geneediting']",NP,2,-1,3
-6,966,[],NP,2,-1,3
+5,966,"['rapeutic', 'gene']",NP,2,-1,3
+6,966,['editing'],NP,2,-1,3
 7,966,for,PREP,3,-1,4
 8,966,"['monogenic', 'diseases']",NP,3,-1,4
 0,967,['mol'],NP,0,-1,1
@@ -10279,7 +10363,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,991,"['gene', 'therapy']",NP,5,-1,6
 16,991,[],NP,5,-1,6
 17,991,of,PREP,6,-1,7
-18,991,"['beta', 'thalassemiadisease']",NP,6,-1,7
+18,991,"['beta', 'thalassemia']",NP,6,-1,7
+19,991,['disease'],NP,6,-1,7
 0,992,"['eur', 'j']",NP,0,-1,1
 1,992,"['pharmacol', '2019;854:398–405']",NP,0,-1,1
 0,993,"['[167]', 'ribeil']",NP,0,-1,1
@@ -10330,9 +10415,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,1000,['production'],NP,0,-1,1
 1,1000,[],NP,0,-1,1
 2,1000,of,PREP,1,-1,2
-3,1000,"['gene', 'correctedadult']",NP,1,-1,2
-4,1000,"['beta', 'globin']",NP,1,-1,2
-5,1000,['protein'],NP,1,-1,2
+3,1000,"['gene', 'corrected']",NP,1,-1,2
+4,1000,"['adult', 'beta']",NP,1,-1,2
+5,1000,"['globin', 'protein']",NP,1,-1,2
 6,1000,[],NP,1,-1,2
 7,1000,in,PREP,2,-1,3
 8,1000,"['human', 'erythrocytes']",NP,2,-1,3
@@ -10410,18 +10495,19 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1011,"['l', 'et']",NP,0,-1,1
 6,1011,['al'],NP,0,-1,1
 0,1012,"['crispr', 'cas9']",NP,0,-1,1
-1,1012,"['mediated', 'somaticcorrection']",NP,0,-1,1
-2,1012,[],NP,0,-1,1
-3,1012,of,PREP,1,-1,2
-4,1012,[],NP,1,-1,2
-5,1012,a,DET,2,-1,3
-6,1012,"['novel', 'coagulator']",NP,2,-1,3
-7,1012,"['factor', 'ix']",NP,2,-1,3
-8,1012,"['gene', 'mutation']",NP,2,-1,3
-9,1012,"['ameliorates', 'hemophilia']",NP,2,-1,3
-10,1012,[],NP,2,-1,3
-11,1012,in,PREP,3,-1,4
-12,1012,['mouse'],NP,3,-1,4
+1,1012,"['mediated', 'somatic']",NP,0,-1,1
+2,1012,['correction'],NP,0,-1,1
+3,1012,[],NP,0,-1,1
+4,1012,of,PREP,1,-1,2
+5,1012,[],NP,1,-1,2
+6,1012,a,DET,2,-1,3
+7,1012,"['novel', 'coagulator']",NP,2,-1,3
+8,1012,"['factor', 'ix']",NP,2,-1,3
+9,1012,"['gene', 'mutation']",NP,2,-1,3
+10,1012,"['ameliorates', 'hemophilia']",NP,2,-1,3
+11,1012,[],NP,2,-1,3
+12,1012,in,PREP,3,-1,4
+13,1012,['mouse'],NP,3,-1,4
 0,1013,"['embo', 'mol']",NP,0,-1,1
 1,1013,"['med', '2016;8:477–88']",NP,0,-1,1
 0,1014,"['[174]', 'wong']",NP,0,-1,1
@@ -10450,9 +10536,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,1017,['al'],NP,0,-1,1
 0,1018,[],NP,0,-1,1
 1,1018,in,PREP,1,-1,2
-2,1018,"['vivogenome', 'editing']",NP,1,-1,2
-3,1018,"['improves', 'muscle']",NP,1,-1,2
-4,1018,['function'],NP,1,-1,2
+2,1018,"['vivo', 'genome']",NP,1,-1,2
+3,1018,"['editing', 'improves']",NP,1,-1,2
+4,1018,"['muscle', 'function']",NP,1,-1,2
 5,1018,[],NP,1,-1,2
 6,1018,in,PREP,2,-1,3
 7,1018,[],NP,2,-1,3
@@ -10533,7 +10619,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,1030,"['adenine', 'base']",NP,0,-1,1
 1,1030,['editing'],NP,0,-1,1
 2,1030,in,PREP,1,-1,2
-3,1030,['mouseembryos'],NP,1,-1,2
+3,1030,"['mouse', 'embryos']",NP,1,-1,2
 4,1030,and,CONJ,1,-1,2
 5,1030,[],NP,1,-1,2
 6,1030,an,DET,2,-1,3
@@ -10572,7 +10658,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,1036,of,PREP,4,-1,5
 13,1036,"['autosomal', 'dominant']",NP,4,-1,5
 14,1036,"['retinitis', 'pigmentosa']",NP,4,-1,5
-0,1037,['ophthalmology2018;125:1421–30'],NP,0,-1,1
+0,1037,"['ophthalmology', '2018;125:1421–30']",NP,0,-1,1
 0,1038,"['[182]', 'diakatou']",NP,0,-1,1
 1,1038,"['m', 'manes']",NP,0,-1,1
 2,1038,"['g', 'bocquet']",NP,0,-1,1
@@ -10847,17 +10933,20 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1079,"['i', 'et']",NP,0,-1,1
 6,1079,['al'],NP,0,-1,1
 0,1080,"['functional', 'repair']",NP,0,-1,1
-1,1080,['ofcftr'],NP,0,-1,1
-2,1080,by,PREP,1,-1,2
-3,1080,"['crispr', 'cas9']",NP,1,-1,2
+1,1080,[],NP,0,-1,1
+2,1080,of,PREP,1,-1,2
+3,1080,['cftr'],NP,1,-1,2
 4,1080,[],NP,1,-1,2
-5,1080,in,PREP,2,-1,3
-6,1080,"['intestinal', 'stem']",NP,2,-1,3
-7,1080,"['cell', 'organoids']",NP,2,-1,3
-8,1080,[],NP,2,-1,3
-9,1080,of,PREP,3,-1,4
-10,1080,"['cystic', 'fibrosis']",NP,3,-1,4
-11,1080,['patients'],NP,3,-1,4
+5,1080,by,PREP,2,-1,3
+6,1080,"['crispr', 'cas9']",NP,2,-1,3
+7,1080,[],NP,2,-1,3
+8,1080,in,PREP,3,-1,4
+9,1080,"['intestinal', 'stem']",NP,3,-1,4
+10,1080,"['cell', 'organoids']",NP,3,-1,4
+11,1080,[],NP,3,-1,4
+12,1080,of,PREP,4,-1,5
+13,1080,"['cystic', 'fibrosis']",NP,4,-1,5
+14,1080,['patients'],NP,4,-1,5
 0,1081,"['cell', 'stem']",NP,0,-1,1
 1,1081,"['cell', '2013;13:653–8']",NP,0,-1,1
 0,1082,"['[196]', 'firth']",NP,0,-1,1
@@ -10940,9 +11029,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,1096,"['crispr', 'cas9']",NP,1,-1,2
 3,1096,['system'],NP,1,-1,2
 4,1096,in,PREP,2,-1,3
-5,1096,"['activateslatent', 'hiv']",NP,2,-1,3
-6,1096,"['1', 'proviral']",NP,2,-1,3
-7,1096,['dna'],NP,2,-1,3
+5,1096,"['activates', 'latent']",NP,2,-1,3
+6,1096,"['hiv', '1']",NP,2,-1,3
+7,1096,"['proviral', 'dna']",NP,2,-1,3
 0,1097,"['retrovirology', '2015;12:22']",NP,0,-1,1
 0,1098,"['[201]', 'kaminski']",NP,0,-1,1
 1,1098,"['r', 'bella']",NP,0,-1,1
@@ -11038,7 +11127,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,1110,['k'],NP,0,-1,1
 0,1111,"['human', 'papillomavirus']",NP,0,-1,1
 1,1111,"['molecular', 'biology']",NP,0,-1,1
-0,1112,"['mutat', 'res2017;2017:3–12']",NP,0,-1,1
+0,1112,"['mutat', 'res']",NP,0,-1,1
+1,1112,['2017;2017:3–12'],NP,0,-1,1
 0,1113,"['[206]', 'kennedy']",NP,0,-1,1
 1,1113,"['em', 'kornepati']",NP,0,-1,1
 2,1113,"['av', 'goldstein']",NP,0,-1,1
@@ -11120,7 +11210,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,1122,"['p', 'menendez']",NP,0,-1,1
 4,1122,"['p', 'torres']",NP,0,-1,1
 5,1122,"['ruiz', 'r']",NP,0,-1,1
-6,1122,"['rodriguez', 'peraless']",NP,0,-1,1
+6,1122,"['rodriguez', 'perales']",NP,0,-1,1
+7,1122,['s'],NP,0,-1,1
 0,1123,"['crispr', 'cas9']",NP,0,-1,1
 1,1123,[],NP,0,-1,1
 2,1123,for,PREP,1,-1,2
@@ -11156,8 +11247,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,1130,"['human', 'phase']",NP,1,-1,2
 4,1130,"['1', 'crispr']",NP,1,-1,2
 5,1130,"['gene', 'editing']",NP,1,-1,2
-6,1130,"['cancer', 'trials:are']",NP,1,-1,2
-7,1130,"['we', 'ready?']",NP,1,-1,2
+6,1130,"['cancer', 'trials:']",NP,1,-1,2
+7,1130,are,AUX,1,-1,2
+8,1130,"['we', 'ready?']",NP,1,-1,2
 0,1131,"['curr', 'gene']",NP,0,-1,1
 1,1131,[],NP,0,-1,1
 2,1131,the,DET,1,-1,2
@@ -11205,8 +11297,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,1139,"['recent', 'advances']",NP,0,-1,1
 1,1139,[],NP,0,-1,1
 2,1139,in,PREP,1,-1,2
-3,1139,"['t', 'cellimmunotherapy']",NP,1,-1,2
-4,1139,[],NP,1,-1,2
+3,1139,"['t', 'cell']",NP,1,-1,2
+4,1139,['immunotherapy'],NP,1,-1,2
 5,1139,for,PREP,2,-1,3
 6,1139,"['haematological', 'malignancies']",NP,2,-1,3
 0,1140,"['br', 'j']",NP,0,-1,1
@@ -11260,8 +11352,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1150,"['x', 'et']",NP,0,-1,1
 6,1150,['al'],NP,0,-1,1
 0,1151,"['crispr', 'cas9']",NP,0,-1,1
-1,1151,"['mediatedmultiplex', 'gene']",NP,0,-1,1
-2,1151,['editing'],NP,0,-1,1
+1,1151,"['mediated', 'multiplex']",NP,0,-1,1
+2,1151,"['gene', 'editing']",NP,0,-1,1
 3,1151,[],NP,0,-1,1
 4,1151,in,PREP,1,-1,2
 5,1151,"['car', 't']",NP,1,-1,2
@@ -11382,7 +11474,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,1167,[],NP,2,-1,3
 10,1167,the,DET,3,-1,4
 11,1167,"['cas9', 'endonuclease']",NP,3,-1,4
-0,1168,"['natbiotechnol', '2014;32:677–83']",NP,0,-1,1
+0,1168,"['nat', 'biotechnol']",NP,0,-1,1
+1,1168,['2014;32:677–83'],NP,0,-1,1
 0,1169,"['[224]', 'fu']",NP,0,-1,1
 1,1169,"['y', 'foden']",NP,0,-1,1
 2,1169,"['ja', 'khayter']",NP,0,-1,1
@@ -11556,12 +11649,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1199,"['j', 'et']",NP,0,-1,1
 6,1199,['al'],NP,0,-1,1
 0,1200,"['efficient', 'genome']",NP,0,-1,1
-1,1200,"['modificationby', 'crispr']",NP,0,-1,1
-2,1200,"['cas9', 'nickase']",NP,0,-1,1
-3,1200,[],NP,0,-1,1
-4,1200,with,PREP,1,-1,2
-5,1200,"['minimal', 'off']",NP,1,-1,2
-6,1200,"['target', 'effects']",NP,1,-1,2
+1,1200,['modification'],NP,0,-1,1
+2,1200,by,PREP,1,-1,2
+3,1200,"['crispr', 'cas9']",NP,1,-1,2
+4,1200,['nickase'],NP,1,-1,2
+5,1200,with,PREP,2,-1,3
+6,1200,"['minimal', 'off']",NP,2,-1,3
+7,1200,"['target', 'effects']",NP,2,-1,3
 0,1201,"['nat', 'methods']",NP,0,-1,1
 1,1201,['2014;11:399–402'],NP,0,-1,1
 0,1202,"['[235]', 'guilinger']",NP,0,-1,1
@@ -11638,20 +11732,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,1215,['strategies'],NP,0,-1,1
 1,1215,[],NP,0,-1,1
 2,1215,to,PREP,1,-1,2
-3,1215,[],NP,1,-1,2
-4,1215,in,PREP,2,-1,3
-5,1215,"['creaseon', 'target']",NP,2,-1,3
-6,1215,and,CONJ,2,-1,3
-7,1215,"['reduce', 'off']",NP,2,-1,3
-8,1215,"['target', 'effects']",NP,2,-1,3
-9,1215,[],NP,2,-1,3
-10,1215,of,PREP,3,-1,4
-11,1215,[],NP,3,-1,4
-12,1215,the,DET,4,-1,5
-13,1215,"['crispr', 'cas9']",NP,4,-1,5
-14,1215,['system'],NP,4,-1,5
-15,1215,in,PREP,5,-1,6
-16,1215,['plants'],NP,5,-1,6
+3,1215,['increase'],NP,1,-1,2
+4,1215,[],NP,1,-1,2
+5,1215,on,PREP,2,-1,3
+6,1215,['target'],NP,2,-1,3
+7,1215,and,CONJ,2,-1,3
+8,1215,"['reduce', 'off']",NP,2,-1,3
+9,1215,"['target', 'effects']",NP,2,-1,3
+10,1215,[],NP,2,-1,3
+11,1215,of,PREP,3,-1,4
+12,1215,[],NP,3,-1,4
+13,1215,the,DET,4,-1,5
+14,1215,"['crispr', 'cas9']",NP,4,-1,5
+15,1215,['system'],NP,4,-1,5
+16,1215,in,PREP,5,-1,6
+17,1215,['plants'],NP,5,-1,6
 0,1216,[],NP,0,-1,1
 1,1216,in,PREP,1,-1,2
 2,1216,"['t', 'j']",NP,1,-1,2
@@ -11727,9 +11822,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,1231,"['viral', 'vectors']",NP,0,-1,1
 1,1231,[],NP,0,-1,1
 2,1231,for,PREP,1,-1,2
-3,1231,"['gene', 'therapy:translational']",NP,1,-1,2
+3,1231,"['gene', 'therapy:']",NP,1,-1,2
 4,1231,and,CONJ,1,-1,2
 5,1231,"['clinical', 'outlook']",NP,1,-1,2
+6,1231,['translational'],NP,1,-1,2
 0,1232,"['annu', 'rev']",NP,0,-1,1
 1,1232,"['biomed', 'eng']",NP,0,-1,1
 2,1232,['2015;17:63–89'],NP,0,-1,1
@@ -11778,13 +11874,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,1240,"['vivo', 'delivery']",NP,1,-1,2
 3,1240,[],NP,1,-1,2
 4,1240,of,PREP,2,-1,3
-5,1240,"['crispr', 'cas9for']",NP,2,-1,3
+5,1240,"['crispr', 'cas9']",NP,2,-1,3
 6,1240,[],NP,2,-1,3
-7,1240,the,DET,3,-1,4
-8,1240,"['rapeutic', 'gene']",NP,3,-1,4
-9,1240,"['editing:', 'progress']",NP,3,-1,4
-10,1240,and,CONJ,3,-1,4
-11,1240,['challenges'],NP,3,-1,4
+7,1240,for,PREP,3,-1,4
+8,1240,[],NP,3,-1,4
+9,1240,the,DET,4,-1,5
+10,1240,"['rapeutic', 'gene']",NP,4,-1,5
+11,1240,"['editing:', 'progress']",NP,4,-1,5
+12,1240,and,CONJ,4,-1,5
+13,1240,['challenges'],NP,4,-1,5
 0,1241,"['bioconjug', 'chem']",NP,0,-1,1
 1,1241,['2017;28:880–4'],NP,0,-1,1
 0,1242,"['[248]', 'yin']",NP,0,-1,1
@@ -11840,7 +11938,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1249,"['gene', 'delivery']",NP,1,-1,2
 6,1249,"['drug', 'potentials']",NP,1,-1,2
 0,1250,"['j', 'cell']",NP,0,-1,1
-1,1250,['physiol2018;234:298–319'],NP,0,-1,1
+1,1250,"['physiol', '2018;234:298–319']",NP,0,-1,1
 0,1251,"['[251]', 'bozorg']",NP,0,-1,1
 1,1251,"['qomi', 's']",NP,0,-1,1
 2,1251,['asghari'],NP,0,-1,1
@@ -11914,7 +12012,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,1262,"['lm', 'akyüz']",NP,0,-1,1
 5,1262,"['l', 'et']",NP,0,-1,1
 6,1262,['al'],NP,0,-1,1
-0,1263,['highprevalence'],NP,0,-1,1
+0,1263,"['high', 'prevalence']",NP,0,-1,1
 1,1263,[],NP,0,-1,1
 2,1263,of,PREP,1,-1,2
 3,1263,"['streptococcus', 'pyogenes']",NP,1,-1,2
@@ -11950,15 +12048,16 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,1268,"['b', 'taipale']",NP,0,-1,1
 5,1268,"['j', 'et']",NP,0,-1,1
 6,1268,['al'],NP,0,-1,1
-0,1269,"['crispr', 'cas9genome']",NP,0,-1,1
-1,1269,['editing'],NP,0,-1,1
-2,1269,in,PREP,1,-1,2
-3,1269,['duces'],NP,1,-1,2
-4,1269,[],NP,1,-1,2
-5,1269,a,DET,2,-1,3
-6,1269,"['p53', 'mediated']",NP,2,-1,3
-7,1269,"['dna', 'damage']",NP,2,-1,3
-8,1269,['response'],NP,2,-1,3
+0,1269,"['crispr', 'cas9']",NP,0,-1,1
+1,1269,"['genome', 'editing']",NP,0,-1,1
+2,1269,[],NP,0,-1,1
+3,1269,in,PREP,1,-1,2
+4,1269,['duces'],NP,1,-1,2
+5,1269,[],NP,1,-1,2
+6,1269,a,DET,2,-1,3
+7,1269,"['p53', 'mediated']",NP,2,-1,3
+8,1269,"['dna', 'damage']",NP,2,-1,3
+9,1269,['response'],NP,2,-1,3
 0,1270,"['nat', 'med']",NP,0,-1,1
 1,1270,['2018;24:927–30'],NP,0,-1,1
 0,1271,"['[257]', 'ihry']",NP,0,-1,1
@@ -12021,11 +12120,12 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,1283,"['r', 'et']",NP,0,-1,1
 6,1283,['al'],NP,0,-1,1
 0,1284,"['crispr', 'cas9']",NP,0,-1,1
-1,1284,"['mediated', 'geneediting']",NP,0,-1,1
-2,1284,[],NP,0,-1,1
-3,1284,in,PREP,1,-1,2
-4,1284,"['human', 'tripronuclear']",NP,1,-1,2
-5,1284,['zygotes'],NP,1,-1,2
+1,1284,"['mediated', 'gene']",NP,0,-1,1
+2,1284,['editing'],NP,0,-1,1
+3,1284,[],NP,0,-1,1
+4,1284,in,PREP,1,-1,2
+5,1284,"['human', 'tripronuclear']",NP,1,-1,2
+6,1284,['zygotes'],NP,1,-1,2
 0,1285,"['protein', 'cell']",NP,0,-1,1
 1,1285,['2015;6:363–72'],NP,0,-1,1
 0,1286,"['[262]', 'ormond']",NP,0,-1,1
@@ -12058,10 +12158,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,1290,['framework'],NP,2,-1,3
 7,1290,[],NP,2,-1,3
 8,1290,for,PREP,3,-1,4
-9,1290,"['crisprgermline', 'genome']",NP,3,-1,4
-10,1290,"['editing', 'ethics']",NP,3,-1,4
-11,1290,and,CONJ,3,-1,4
-12,1290,['regulation'],NP,3,-1,4
+9,1290,"['crispr', 'germline']",NP,3,-1,4
+10,1290,"['genome', 'editing']",NP,3,-1,4
+11,1290,['ethics'],NP,3,-1,4
+12,1290,and,CONJ,3,-1,4
+13,1290,['regulation'],NP,3,-1,4
 0,1291,"['perspect', 'biol']",NP,0,-1,1
 1,1291,"['med', '2020;63:44–53']",NP,0,-1,1
 0,1292,['y'],NP,0,-1,1

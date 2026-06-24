@@ -9,33 +9,35 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,0,[],NP,2,-1,3
 8,0,a,DET,3,-1,4
 9,0,"['systematic', 'study']",NP,3,-1,4
-10,0,"['haitao', 'xiong1junjie']",NP,3,-1,4
-11,0,"['wu1lu', 'liu1']",NP,3,-1,4
-12,0,['1school'],NP,3,-1,4
-13,0,of,PREP,4,-1,5
-14,0,['economics'],NP,4,-1,5
-15,0,and,CONJ,4,-1,5
-16,0,"['management', 'beihang']",NP,4,-1,5
-17,0,"['university', 'beijing']",NP,4,-1,5
-18,0,"['100191', 'china']",NP,4,-1,5
-19,0,"['abstract', 'class']",NP,4,-1,5
-20,0,[],NP,4,-1,5
-21,0,over,PREP,5,-1,6
-22,0,['lapping'],NP,5,-1,6
-23,0,has,AUX,5,-1,6
-24,0,['long'],NP,5,-1,6
-25,0,been,AUX,5,-1,6
-26,0,"['re', 'garded']",NP,5,-1,6
-27,0,"['as', 'one']",NP,5,-1,6
-28,0,[],NP,5,-1,6
-29,0,of,PREP,6,-1,7
-30,0,[],NP,6,-1,7
-31,0,the,DET,7,-1,8
-32,0,"['toughest', 'perva']",NP,7,-1,8
-33,0,"['sive', 'problems']",NP,7,-1,8
-34,0,[],NP,7,-1,8
-35,0,in,PREP,8,-1,9
-36,0,['classification'],NP,8,-1,9
+10,0,"['haitao', 'xiong1']",NP,3,-1,4
+11,0,"['junjie', 'wu1']",NP,3,-1,4
+12,0,"['lu', 'liu1']",NP,3,-1,4
+13,0,['1school'],NP,3,-1,4
+14,0,[],NP,3,-1,4
+15,0,of,PREP,4,-1,5
+16,0,['economics'],NP,4,-1,5
+17,0,and,CONJ,4,-1,5
+18,0,"['management', 'beihang']",NP,4,-1,5
+19,0,"['university', 'beijing']",NP,4,-1,5
+20,0,"['100191', 'china']",NP,4,-1,5
+21,0,"['abstract', 'class']",NP,4,-1,5
+22,0,[],NP,4,-1,5
+23,0,over,PREP,5,-1,6
+24,0,['lapping'],NP,5,-1,6
+25,0,has,AUX,5,-1,6
+26,0,['long'],NP,5,-1,6
+27,0,been,AUX,5,-1,6
+28,0,"['re', 'garded']",NP,5,-1,6
+29,0,"['as', 'one']",NP,5,-1,6
+30,0,[],NP,5,-1,6
+31,0,of,PREP,6,-1,7
+32,0,[],NP,6,-1,7
+33,0,the,DET,7,-1,8
+34,0,"['toughest', 'perva']",NP,7,-1,8
+35,0,"['sive', 'problems']",NP,7,-1,8
+36,0,[],NP,7,-1,8
+37,0,in,PREP,8,-1,9
+38,0,['classification'],NP,8,-1,9
 0,1,"['when', 'it']",NP,0,-1,1
 1,1,is,AUX,0,-1,1
 2,1,['combined'],NP,0,-1,1
@@ -115,61 +117,63 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,4,is,AUX,2,-1,3
 11,4,[],NP,2,-1,3
 12,4,the,DET,3,-1,4
-13,4,"['best', 'amongthe']",NP,3,-1,4
-14,4,"['three', 'schemes;']",NP,3,-1,4
-15,4,['(2)'],NP,3,-1,4
-16,4,[],NP,3,-1,4
-17,4,the,DET,4,-1,5
-18,4,"['distance', 'based']",NP,4,-1,5
-19,4,are,AUX,4,-1,5
-20,4,"['more', 'sensitive']",NP,4,-1,5
-21,4,"['classifiers', 'than']",NP,4,-1,5
-22,4,[],NP,4,-1,5
-23,4,the,DET,5,-1,6
-24,4,"['rule', 'based']",NP,5,-1,6
-25,4,['ones'],NP,5,-1,6
-26,4,to,PREP,6,-1,7
-27,4,[],NP,6,-1,7
-28,4,the,DET,7,-1,8
-29,4,"['class', 'overlap']",NP,7,-1,8
-30,4,"['ping', 'problem;']",NP,7,-1,8
-31,4,"['(3)', 'as']",NP,7,-1,8
-32,4,[],NP,7,-1,8
-33,4,the,DET,8,-1,9
-34,4,['increase'],NP,8,-1,9
-35,4,[],NP,8,-1,9
-36,4,of,PREP,9,-1,10
-37,4,[],NP,9,-1,10
-38,4,the,DET,10,-1,11
-39,4,"['class', 'imbalance']",NP,10,-1,11
-40,4,['ratio'],NP,10,-1,11
-41,4,the,DET,11,-1,12
-42,4,"['separating', 'scheme']",NP,11,-1,12
-43,4,"['showed', 'higher']",NP,11,-1,12
-44,4,['improvements'],NP,11,-1,12
-45,4,[],NP,11,-1,12
-46,4,to,PREP,12,-1,13
-47,4,[],NP,12,-1,13
-48,4,the,DET,13,-1,14
-49,4,"['classification', 'performance']",NP,13,-1,14
-50,4,[],NP,13,-1,14
-51,4,in,PREP,14,-1,15
-52,4,"['par', 'ticular']",NP,14,-1,15
-53,4,[],NP,14,-1,15
-54,4,for,PREP,15,-1,16
-55,4,[],NP,15,-1,16
-56,4,the,DET,16,-1,17
-57,4,"['well', 'known']",NP,16,-1,17
-58,4,['svms'],NP,16,-1,17
-0,5,"['keywords', ':']",NP,0,-1,1
-1,5,"['keywords', 'data']",NP,0,-1,1
-2,5,"['mining', 'classification;']",NP,0,-1,1
-3,5,['class'],NP,0,-1,1
+13,4,"['best', 'among']",NP,3,-1,4
+14,4,[],NP,3,-1,4
+15,4,the,DET,4,-1,5
+16,4,"['three', 'schemes;']",NP,4,-1,5
+17,4,['(2)'],NP,4,-1,5
+18,4,the,DET,5,-1,6
+19,4,"['distance', 'based']",NP,5,-1,6
+20,4,are,AUX,5,-1,6
+21,4,"['more', 'sensitive']",NP,5,-1,6
+22,4,"['classifiers', 'than']",NP,5,-1,6
+23,4,[],NP,5,-1,6
+24,4,the,DET,6,-1,7
+25,4,"['rule', 'based']",NP,6,-1,7
+26,4,['ones'],NP,6,-1,7
+27,4,to,PREP,7,-1,8
+28,4,[],NP,7,-1,8
+29,4,the,DET,8,-1,9
+30,4,"['class', 'overlap']",NP,8,-1,9
+31,4,"['ping', 'problem;']",NP,8,-1,9
+32,4,"['(3)', 'as']",NP,8,-1,9
+33,4,[],NP,8,-1,9
+34,4,the,DET,9,-1,10
+35,4,['increase'],NP,9,-1,10
+36,4,[],NP,9,-1,10
+37,4,of,PREP,10,-1,11
+38,4,[],NP,10,-1,11
+39,4,the,DET,11,-1,12
+40,4,"['class', 'imbalance']",NP,11,-1,12
+41,4,['ratio'],NP,11,-1,12
+42,4,the,DET,12,-1,13
+43,4,"['separating', 'scheme']",NP,12,-1,13
+44,4,"['showed', 'higher']",NP,12,-1,13
+45,4,['improvements'],NP,12,-1,13
+46,4,[],NP,12,-1,13
+47,4,to,PREP,13,-1,14
+48,4,[],NP,13,-1,14
+49,4,the,DET,14,-1,15
+50,4,"['classification', 'performance']",NP,14,-1,15
+51,4,[],NP,14,-1,15
+52,4,in,PREP,15,-1,16
+53,4,"['par', 'ticular']",NP,15,-1,16
+54,4,[],NP,15,-1,16
+55,4,for,PREP,16,-1,17
+56,4,[],NP,16,-1,17
+57,4,the,DET,17,-1,18
+58,4,"['well', 'known']",NP,17,-1,18
+59,4,['svms'],NP,17,-1,18
+0,5,"['keywords:', 'keywords']",NP,0,-1,1
+1,5,"['data', 'mining']",NP,0,-1,1
+2,5,"['classification;', 'class']",NP,0,-1,1
+3,5,[],NP,0,-1,1
 4,5,over,PREP,1,-1,2
 5,5,"['lapping', 'class']",NP,1,-1,2
 6,5,"['imbalance', 'support']",NP,1,-1,2
-7,5,"['vector', 'datadescription']",NP,1,-1,2
-8,5,"['(svdd)', '1']",NP,1,-1,2
+7,5,"['vector', 'data']",NP,1,-1,2
+8,5,"['description', '(svdd)']",NP,1,-1,2
+9,5,['1'],NP,1,-1,2
 0,6,"['introduction', 'when']",NP,0,-1,1
 1,6,['dealing'],NP,0,-1,1
 2,6,with,PREP,1,-1,2
@@ -190,7 +194,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,6,['case'],NP,3,-1,4
 18,6,[],NP,3,-1,4
 19,6,that,COMP,3,-1,4
-20,6,['somesamples'],NP,3,-1,4
+20,6,"['some', 'samples']",NP,3,-1,4
 21,6,[],NP,3,-1,4
 22,6,from,PREP,4,-1,5
 23,6,"['different', 'classes']",NP,4,-1,5
@@ -235,8 +239,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,8,['problems'],NP,4,-1,5
 15,8,in,PREP,5,-1,6
 16,8,"['machine', 'learning']",NP,5,-1,6
-17,8,"['anddata', 'mining']",NP,5,-1,6
-18,8,['communities'],NP,5,-1,6
+17,8,and,CONJ,5,-1,6
+18,8,"['data', 'mining']",NP,5,-1,6
+19,8,['communities'],NP,5,-1,6
 0,9,[],NP,0,-1,1
 1,9,in,PREP,1,-1,2
 2,9,"['deed', 're']",NP,1,-1,2
@@ -275,17 +280,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,10,[],NP,1,-1,2
 6,10,the,DET,2,-1,3
 7,10,"['literature', 'great']",NP,2,-1,3
-8,10,"['research', 'effortshave']",NP,2,-1,3
-9,10,been,AUX,2,-1,3
-10,10,['dedicated'],NP,2,-1,3
-11,10,[],NP,2,-1,3
-12,10,to,PREP,3,-1,4
-13,10,[],NP,3,-1,4
-14,10,the,DET,4,-1,5
-15,10,['class'],NP,4,-1,5
-16,10,[],NP,4,-1,5
-17,10,over,PREP,5,-1,6
-18,10,"['lapping', 'problem']",NP,5,-1,6
+8,10,"['research', 'efforts']",NP,2,-1,3
+9,10,have,AUX,2,-1,3
+10,10,been,AUX,2,-1,3
+11,10,['dedicated'],NP,2,-1,3
+12,10,[],NP,2,-1,3
+13,10,to,PREP,3,-1,4
+14,10,[],NP,3,-1,4
+15,10,the,DET,4,-1,5
+16,10,['class'],NP,4,-1,5
+17,10,[],NP,4,-1,5
+18,10,over,PREP,5,-1,6
+19,10,"['lapping', 'problem']",NP,5,-1,6
 0,11,"['prati', 'et']",NP,0,-1,1
 1,11,['al'],NP,0,-1,1
 0,12,"['[3]', 'devel']",NP,0,-1,1
@@ -314,7 +320,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,13,"['strong', 'correlation']",NP,3,-1,4
 13,13,[],NP,3,-1,4
 14,13,with,PREP,4,-1,5
-15,13,['classimbalance'],NP,4,-1,5
+15,13,"['class', 'imbalance']",NP,4,-1,5
 0,14,[],NP,0,-1,1
 1,14,the,DET,1,-1,2
 2,14,"['se', 'researches']",NP,1,-1,2
@@ -329,18 +335,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,14,on,PREP,3,-1,4
 12,14,[],NP,3,-1,4
 13,14,the,DET,4,-1,5
-14,14,"['effectivenessof', 'basic']",NP,4,-1,5
-15,14,['classifiers'],NP,4,-1,5
-16,14,in,PREP,5,-1,6
-17,14,[],NP,5,-1,6
-18,14,the,DET,6,-1,7
-19,14,['presence'],NP,6,-1,7
+14,14,['effectiveness'],NP,4,-1,5
+15,14,[],NP,4,-1,5
+16,14,of,PREP,5,-1,6
+17,14,"['basic', 'classifiers']",NP,5,-1,6
+18,14,[],NP,5,-1,6
+19,14,in,PREP,6,-1,7
 20,14,[],NP,6,-1,7
-21,14,of,PREP,7,-1,8
-22,14,['class'],NP,7,-1,8
+21,14,the,DET,7,-1,8
+22,14,['presence'],NP,7,-1,8
 23,14,[],NP,7,-1,8
-24,14,over,PREP,8,-1,9
-25,14,['lapping'],NP,8,-1,9
+24,14,of,PREP,8,-1,9
+25,14,['class'],NP,8,-1,9
+26,14,[],NP,8,-1,9
+27,14,over,PREP,9,-1,10
+28,14,['lapping'],NP,9,-1,10
 0,15,['therefore'],NP,0,-1,1
 1,15,[],NP,0,-1,1
 2,15,from,PREP,1,-1,2
@@ -369,16 +378,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 25,15,[],NP,8,-1,9
 26,15,that,COMP,8,-1,9
 27,15,can,MOD,8,-1,9
-28,15,"['findand', 'handle']",NP,8,-1,9
-29,15,[],NP,8,-1,9
-30,15,over,PREP,9,-1,10
-31,15,"['lapping', 'regions']",NP,9,-1,10
-32,15,[],NP,9,-1,10
-33,15,for,PREP,10,-1,11
-34,15,[],NP,10,-1,11
-35,15,the,DET,11,-1,12
-36,15,"['real', 'world']",NP,11,-1,12
-37,15,"['data', 'sets']",NP,11,-1,12
+28,15,['find'],NP,8,-1,9
+29,15,and,CONJ,8,-1,9
+30,15,['handle'],NP,8,-1,9
+31,15,[],NP,8,-1,9
+32,15,over,PREP,9,-1,10
+33,15,"['lapping', 'regions']",NP,9,-1,10
+34,15,[],NP,9,-1,10
+35,15,for,PREP,10,-1,11
+36,15,[],NP,10,-1,11
+37,15,the,DET,11,-1,12
+38,15,"['real', 'world']",NP,11,-1,12
+39,15,"['data', 'sets']",NP,11,-1,12
 0,16,"['our', 'work']",NP,0,-1,1
 1,16,[],NP,0,-1,1
 2,16,in,PREP,1,-1,2
@@ -485,7 +496,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,21,"['best', 'separat']",NP,3,-1,4
 9,21,[],NP,3,-1,4
 10,21,in,PREP,4,-1,5
-11,21,['gscheme'],NP,4,-1,5
+11,21,"['g', 'scheme']",NP,4,-1,5
 12,21,and,CONJ,4,-1,5
 13,21,"['five', 'popular']",NP,4,-1,5
 14,21,['classifiers'],NP,4,-1,5
@@ -538,16 +549,16 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 33,25,[],NP,8,-1,9
 34,25,the,DET,9,-1,10
 35,25,"['data', '[4]']",NP,9,-1,10
-0,26,"['letx={x', 'i']",NP,0,-1,1
-1,26,['i=1'],NP,0,-1,1
-0,27,"['l}b', 'et']",NP,0,-1,1
-1,27,"['h', 'eg']",NP,0,-1,1
-2,27,"['i', 'v']",NP,0,-1,1
-3,27,"['e', 'n']",NP,0,-1,1
-4,27,"['training', 'data']",NP,0,-1,1
-5,27,['set'],NP,0,-1,1
-6,27,of,PREP,1,-1,2
-7,27,['lpoints'],NP,1,-1,2
+0,26,"['letx={xi', 'i=1']",NP,0,-1,1
+0,27,['l}'],NP,0,-1,1
+1,27,be,AUX,0,-1,1
+2,27,[],NP,0,-1,1
+3,27,the,DET,1,-1,2
+4,27,"['given', 'training']",NP,1,-1,2
+5,27,"['data', 'set']",NP,1,-1,2
+6,27,[],NP,1,-1,2
+7,27,of,PREP,2,-1,3
+8,27,"['l', 'points']",NP,2,-1,3
 0,28,[],NP,0,-1,1
 1,28,in,PREP,1,-1,2
 2,28,or,CONJ,1,-1,2
@@ -560,10 +571,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,28,['domain'],NP,3,-1,4
 10,28,[],NP,3,-1,4
 11,28,with,PREP,4,-1,5
-12,28,"['minimumvolume', 'we']",NP,4,-1,5
+12,28,"['minimum', 'volume']",NP,4,-1,5
 13,28,should,MOD,4,-1,5
 14,28,['minimize'],NP,4,-1,5
-15,28,[],NP,4,-1,5
+15,28,['we'],NP,4,-1,5
 16,28,the,DET,5,-1,6
 17,28,"['ra', 'dius']",NP,5,-1,6
 18,28,[],NP,5,-1,6
@@ -589,40 +600,59 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 38,28,[],NP,10,-1,11
 39,28,the,DET,11,-1,12
 40,28,['radius'],NP,11,-1,12
-0,29,"['suppose', 'thataandrdenote']",NP,0,-1,1
-1,29,and,CONJ,0,-1,1
-2,29,"['radius', 'respectively']",NP,0,-1,1
-3,29,['center'],NP,0,-1,1
-4,29,the,DET,1,-1,2
-5,29,"['following', 'function']",NP,1,-1,2
-6,29,is,AUX,1,-1,2
-7,29,"['minimized:', 'min']",NP,1,-1,2
-8,29,"['r', 'ξq(r']",NP,1,-1,2
-9,29,"['ξ)=r2+cl', 'summationdisplay']",NP,1,-1,2
-10,29,"['i=1ξi', 's']",NP,1,-1,2
+0,29,['suppose'],NP,0,-1,1
+1,29,[],NP,0,-1,1
+2,29,that,COMP,0,-1,1
+3,29,[],NP,0,-1,1
+4,29,a,DET,1,-1,2
+5,29,"['andr', 'denote']",NP,1,-1,2
+6,29,and,CONJ,1,-1,2
+7,29,"['radius', 'respectively']",NP,1,-1,2
+8,29,['center'],NP,1,-1,2
+9,29,the,DET,2,-1,3
+10,29,"['following', 'function']",NP,2,-1,3
+11,29,is,AUX,2,-1,3
+12,29,"['minimized:', 'min']",NP,2,-1,3
+13,29,"['r', 'ξ']",NP,2,-1,3
+14,29,"['q(r', 'ξ)']",NP,2,-1,3
+15,29,"['=', 'r2']",NP,2,-1,3
+16,29,"['+', 'c']",NP,2,-1,3
+17,29,"['l', '\x0f']",NP,2,-1,3
+18,29,"['i=1', 'ξi']",NP,2,-1,3
+19,29,['s'],NP,2,-1,3
 0,30,['t'],NP,0,-1,1
-0,31,"['||φ(xi)−a||2≤r2+ξi', 'ξi≥0']",NP,0,-1,1
-1,31,['i=1'],NP,0,-1,1
+0,31,"['||φ(xi)', '−a||2']",NP,0,-1,1
+1,31,"['≤r2', '+']",NP,0,-1,1
+2,31,"['ξi', 'ξi']",NP,0,-1,1
+3,31,"['≥0', 'i']",NP,0,-1,1
+4,31,"['=', '1']",NP,0,-1,1
 0,32,['l'],NP,0,-1,1
 0,33,"['(1)', 'where']",NP,0,-1,1
 1,33,[],NP,0,-1,1
 2,33,the,DET,1,-1,2
-3,33,"['parameter', 'cgives']",NP,1,-1,2
-4,33,[],NP,1,-1,2
+3,33,"['parameter', 'c']",NP,1,-1,2
+4,33,['gives'],NP,1,-1,2
 5,33,the,DET,2,-1,3
-6,33,"['trade', 'off']",NP,2,-1,3
-7,33,['between'],NP,2,-1,3
+6,33,"['trade', 'offbetween']",NP,2,-1,3
+7,33,[],NP,2,-1,3
 8,33,the,DET,3,-1,4
 9,33,['volume'],NP,3,-1,4
 10,33,[],NP,3,-1,4
 11,33,of,PREP,4,-1,5
-12,33,"['sphere', 'andthe']",NP,4,-1,5
-13,33,['number'],NP,4,-1,5
-14,33,of,PREP,5,-1,6
-15,33,['error'],NP,5,-1,6
-16,33,and,CONJ,5,-1,6
-17,33,"['slack', 'variablesξincorporates']",NP,5,-1,6
-18,33,"['soft', 'constrains']",NP,5,-1,6
+12,33,['sphere'],NP,4,-1,5
+13,33,and,CONJ,4,-1,5
+14,33,[],NP,4,-1,5
+15,33,the,DET,5,-1,6
+16,33,['number'],NP,5,-1,6
+17,33,[],NP,5,-1,6
+18,33,of,PREP,6,-1,7
+19,33,['error'],NP,6,-1,7
+20,33,and,CONJ,6,-1,7
+21,33,"['slack', 'variables']",NP,6,-1,7
+22,33,['ξ'],NP,6,-1,7
+23,33,in,PREP,7,-1,8
+24,33,"['corporates', 'soft']",NP,7,-1,8
+25,33,['constrains'],NP,7,-1,8
 0,34,[],NP,0,-1,1
 1,34,to,PREP,1,-1,2
 2,34,['solve'],NP,1,-1,2
@@ -642,29 +672,38 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 2,36,['minimizing'],NP,1,-1,2
 3,36,[],NP,1,-1,2
 4,36,the,DET,2,-1,3
-5,36,"['lagrangianfunction', 'l']",NP,2,-1,3
-6,36,['setting'],NP,2,-1,3
-7,36,the,DET,3,-1,4
-8,36,['derivative'],NP,3,-1,4
-9,36,[],NP,3,-1,4
-10,36,of,PREP,4,-1,5
-11,36,['l'],NP,4,-1,5
-12,36,[],NP,4,-1,5
-13,36,to,PREP,5,-1,6
-14,36,['zero'],NP,5,-1,6
-15,36,[],NP,5,-1,6
-16,36,with,PREP,6,-1,7
-17,36,['respect'],NP,6,-1,7
-18,36,[],NP,6,-1,7
-19,36,to,PREP,7,-1,8
-20,36,"['r', 'aandξ']",NP,7,-1,8
-21,36,"['r', 'e']",NP,7,-1,8
-22,36,"['spectively', 'leads']",NP,7,-1,8
-23,36,"['to:', 'l']",NP,7,-1,8
-24,36,"['summationtext', 'i=1αi=1']",NP,7,-1,8
-25,36,"['a=l', 'summationtext']",NP,7,-1,8
-26,36,"['i=1αiφ(xi)', 'αi=1']",NP,7,-1,8
-27,36,['lν−βi'],NP,7,-1,8
+5,36,"['lagrangian', 'function']",NP,2,-1,3
+6,36,"['l', 'setting']",NP,2,-1,3
+7,36,[],NP,2,-1,3
+8,36,the,DET,3,-1,4
+9,36,['derivative'],NP,3,-1,4
+10,36,[],NP,3,-1,4
+11,36,of,PREP,4,-1,5
+12,36,['l'],NP,4,-1,5
+13,36,[],NP,4,-1,5
+14,36,to,PREP,5,-1,6
+15,36,['zero'],NP,5,-1,6
+16,36,[],NP,5,-1,6
+17,36,with,PREP,6,-1,7
+18,36,['respect'],NP,6,-1,7
+19,36,[],NP,6,-1,7
+20,36,to,PREP,7,-1,8
+21,36,['r'],NP,7,-1,8
+22,36,[],NP,7,-1,8
+23,36,a,DET,8,-1,9
+24,36,and,CONJ,8,-1,9
+25,36,"['ξ', 're']",NP,8,-1,9
+26,36,"['spectively', 'leads']",NP,8,-1,9
+27,36,"['to:', 'l\x16']",NP,8,-1,9
+28,36,"['i=1', 'αi']",NP,8,-1,9
+29,36,"['=', '1']",NP,8,-1,9
+30,36,[],NP,8,-1,9
+31,36,a,DET,9,-1,10
+32,36,"['=', 'l\x16']",NP,9,-1,10
+33,36,"['i=1', 'αiφ(xi)']",NP,9,-1,10
+34,36,"['αi', '=']",NP,9,-1,10
+35,36,"['1', 'lν']",NP,9,-1,10
+36,36,['−βi'],NP,9,-1,10
 0,37,"['(2)', 'according']",NP,0,-1,1
 1,37,[],NP,0,-1,1
 2,37,to,PREP,1,-1,2
@@ -674,9 +713,19 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,37,"['tucker', '(kkt)']",NP,2,-1,3
 7,37,"['optimality', 'conditions']",NP,2,-1,3
 8,37,"['we', 'have:']",NP,2,-1,3
-9,37,['||φ(xi)−a||2<r2⇒αi=0'],NP,2,-1,3
-0,38,"['(3)', '||φ(xi)−a||2=r2⇒0<αi<c']",NP,0,-1,1
-0,39,"['(4)', '||φ(xi)−a||2>r2⇒αi=c']",NP,0,-1,1
+9,37,"['||φ(xi)', '−a||2']",NP,2,-1,3
+10,37,"['<', 'r2']",NP,2,-1,3
+11,37,"['⇒αi', '=']",NP,2,-1,3
+12,37,['0'],NP,2,-1,3
+0,38,"['(3)', '||φ(xi)−a||2']",NP,0,-1,1
+1,38,"['=', 'r2']",NP,0,-1,1
+2,38,"['⇒0', '<']",NP,0,-1,1
+3,38,"['αi', '<']",NP,0,-1,1
+4,38,['c'],NP,0,-1,1
+0,39,"['(4)', '||φ(xi)']",NP,0,-1,1
+1,39,"['−a||2', '>']",NP,0,-1,1
+2,39,"['r2', '⇒αi']",NP,0,-1,1
+3,39,"['=', 'c']",NP,0,-1,1
 0,40,['(5)'],NP,0,-1,1
 1,40,[],NP,0,-1,1
 2,40,from,PREP,1,-1,2
@@ -697,25 +746,30 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,40,"['vectors', 'whose']",NP,5,-1,6
 18,40,"['lagrange', 'multi']",NP,5,-1,6
 19,40,"['pliers', 'satisfy']",NP,5,-1,6
-20,40,"['0<α', 'i<c']",NP,5,-1,6
+20,40,"['0', '<']",NP,5,-1,6
+21,40,"['αi', '<']",NP,5,-1,6
+22,40,['c'],NP,5,-1,6
 0,41,"['support', 'vectors']",NP,0,-1,1
 1,41,['define'],NP,0,-1,1
 2,41,the,DET,1,-1,2
 3,41,['boundary'],NP,1,-1,2
 4,41,[],NP,1,-1,2
 5,41,of,PREP,2,-1,3
-6,41,['trainingdata'],NP,2,-1,3
+6,41,"['training', 'data']",NP,2,-1,3
 0,42,"['so', 'svdd']",NP,0,-1,1
 1,42,can,MOD,0,-1,1
 2,42,be,AUX,0,-1,1
 3,42,['used'],NP,0,-1,1
 4,42,[],NP,0,-1,1
 5,42,to,PREP,1,-1,2
-6,42,"['findoverlapping', 'region']",NP,1,-1,2
-7,42,"['as', 'shown']",NP,1,-1,2
-8,42,[],NP,1,-1,2
-9,42,in,PREP,2,-1,3
-10,42,['fig'],NP,2,-1,3
+6,42,['find'],NP,1,-1,2
+7,42,[],NP,1,-1,2
+8,42,over,PREP,2,-1,3
+9,42,"['lapping', 'region']",NP,2,-1,3
+10,42,"['as', 'shown']",NP,2,-1,3
+11,42,[],NP,2,-1,3
+12,42,in,PREP,3,-1,4
+13,42,['fig'],NP,3,-1,4
 0,43,['1'],NP,0,-1,1
 0,44,"['red', 'dotted']",NP,0,-1,1
 1,44,and,CONJ,0,-1,1
@@ -731,7 +785,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,44,"['two', 'classes']",NP,3,-1,4
 0,45,[],NP,0,-1,1
 1,45,the,DET,1,-1,2
-2,45,['datadropped'],NP,1,-1,2
+2,45,"['data', 'dropped']",NP,1,-1,2
 3,45,[],NP,1,-1,2
 4,45,in,PREP,2,-1,3
 5,45,"['both', 'two']",NP,2,-1,3
@@ -788,24 +842,25 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 24,50,['dealing'],NP,8,-1,9
 25,50,[],NP,8,-1,9
 26,50,with,PREP,9,-1,10
-27,50,"['class', '492the']",NP,9,-1,10
-28,50,"['2010', 'international']",NP,9,-1,10
-29,50,['conference'],NP,9,-1,10
-30,50,[],NP,9,-1,10
-31,50,on,PREP,10,-1,11
-32,50,"['e', 'business']",NP,10,-1,11
-33,50,[],NP,10,-1,11
-34,50,in,PREP,11,-1,12
-35,50,['telligence'],NP,11,-1,12
-36,50,[],NP,11,-1,12
-37,50,over,PREP,12,-1,13
-38,50,"['lapping', 'problem']",NP,12,-1,13
-39,50,can,MOD,12,-1,13
-40,50,be,AUX,12,-1,13
-41,50,"['di', 'vided']",NP,12,-1,13
-42,50,[],NP,12,-1,13
-43,50,into,PREP,13,-1,14
-44,50,"['two', 'strategies']",NP,13,-1,14
+27,50,"['class', '492']",NP,9,-1,10
+28,50,[],NP,9,-1,10
+29,50,the,DET,10,-1,11
+30,50,"['2010', 'international']",NP,10,-1,11
+31,50,['conference'],NP,10,-1,11
+32,50,on,PREP,11,-1,12
+33,50,"['e', 'business']",NP,11,-1,12
+34,50,[],NP,11,-1,12
+35,50,in,PREP,12,-1,13
+36,50,['telligence'],NP,12,-1,13
+37,50,[],NP,12,-1,13
+38,50,over,PREP,13,-1,14
+39,50,"['lapping', 'problem']",NP,13,-1,14
+40,50,can,MOD,13,-1,14
+41,50,be,AUX,13,-1,14
+42,50,"['di', 'vided']",NP,13,-1,14
+43,50,[],NP,13,-1,14
+44,50,into,PREP,14,-1,15
+45,50,"['two', 'strategies']",NP,14,-1,15
 0,51,['one'],NP,0,-1,1
 1,51,is,AUX,0,-1,1
 2,51,[],NP,0,-1,1
@@ -865,93 +920,100 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,53,['different'],NP,2,-1,3
 9,53,[],NP,2,-1,3
 10,53,over,PREP,3,-1,4
-11,53,"['lapping', 'classmodeling']",NP,3,-1,4
-12,53,"['schemes', 'namely']",NP,3,-1,4
-13,53,[],NP,3,-1,4
-14,53,the,DET,4,-1,5
-15,53,['discard'],NP,4,-1,5
-16,53,[],NP,4,-1,5
-17,53,in,PREP,5,-1,6
-18,53,"['g', 'merging']",NP,5,-1,6
-19,53,"['andseparating', 'schemes']",NP,5,-1,6
-20,53,[],NP,5,-1,6
-21,53,to,PREP,6,-1,7
-22,53,"['handle', 'class']",NP,6,-1,7
-23,53,[],NP,6,-1,7
-24,53,over,PREP,7,-1,8
-25,53,"['lapping', 'problem']",NP,7,-1,8
-26,53,[],NP,7,-1,8
-27,53,for,PREP,8,-1,9
-28,53,[],NP,8,-1,9
-29,53,the,DET,9,-1,10
-30,53,"['comparative', 'study']",NP,9,-1,10
+11,53,"['lapping', 'class']",NP,3,-1,4
+12,53,"['modeling', 'schemes']",NP,3,-1,4
+13,53,['namely'],NP,3,-1,4
+14,53,[],NP,3,-1,4
+15,53,the,DET,4,-1,5
+16,53,['discard'],NP,4,-1,5
+17,53,[],NP,4,-1,5
+18,53,in,PREP,5,-1,6
+19,53,"['g', 'merging']",NP,5,-1,6
+20,53,and,CONJ,5,-1,6
+21,53,"['separating', 'schemes']",NP,5,-1,6
+22,53,[],NP,5,-1,6
+23,53,to,PREP,6,-1,7
+24,53,"['handle', 'class']",NP,6,-1,7
+25,53,[],NP,6,-1,7
+26,53,over,PREP,7,-1,8
+27,53,"['lapping', 'problem']",NP,7,-1,8
+28,53,[],NP,7,-1,8
+29,53,for,PREP,8,-1,9
+30,53,[],NP,8,-1,9
+31,53,the,DET,9,-1,10
+32,53,"['comparative', 'study']",NP,9,-1,10
 0,54,[],NP,0,-1,1
 1,54,the,DET,1,-1,2
 2,54,"['discarding', 'scheme']",NP,1,-1,2
-3,54,"['(', 'd):this']",NP,1,-1,2
-4,54,"['scheme', 'ignores']",NP,1,-1,2
-5,54,[],NP,1,-1,2
-6,54,the,DET,2,-1,3
-7,54,['data'],NP,2,-1,3
-8,54,[],NP,2,-1,3
-9,54,in,PREP,3,-1,4
-10,54,[],NP,3,-1,4
-11,54,over,PREP,4,-1,5
-12,54,['lappingregions'],NP,4,-1,5
-13,54,and,CONJ,4,-1,5
-14,54,['learns'],NP,4,-1,5
-15,54,[],NP,4,-1,5
-16,54,on,PREP,5,-1,6
-17,54,[],NP,5,-1,6
-18,54,the,DET,6,-1,7
-19,54,['data'],NP,6,-1,7
-20,54,[],NP,6,-1,7
-21,54,in,PREP,7,-1,8
-22,54,['non'],NP,7,-1,8
-23,54,[],NP,7,-1,8
-24,54,over,PREP,8,-1,9
-25,54,"['lapping', 'region']",NP,8,-1,9
+3,54,['(d):'],NP,1,-1,2
+4,54,this,DET,2,-1,3
+5,54,"['scheme', 'ignores']",NP,2,-1,3
+6,54,[],NP,2,-1,3
+7,54,the,DET,3,-1,4
+8,54,['data'],NP,3,-1,4
+9,54,[],NP,3,-1,4
+10,54,in,PREP,4,-1,5
+11,54,[],NP,4,-1,5
+12,54,over,PREP,5,-1,6
+13,54,"['lapping', 'regions']",NP,5,-1,6
+14,54,and,CONJ,5,-1,6
+15,54,['learns'],NP,5,-1,6
+16,54,[],NP,5,-1,6
+17,54,on,PREP,6,-1,7
+18,54,[],NP,6,-1,7
+19,54,the,DET,7,-1,8
+20,54,['data'],NP,7,-1,8
+21,54,[],NP,7,-1,8
+22,54,in,PREP,8,-1,9
+23,54,['non'],NP,8,-1,9
+24,54,[],NP,8,-1,9
+25,54,over,PREP,9,-1,10
+26,54,"['lapping', 'region']",NP,9,-1,10
 0,55,"['each', 'test']",NP,0,-1,1
-1,55,"['data', 'willbe']",NP,0,-1,1
-2,55,['tested'],NP,0,-1,1
-3,55,[],NP,0,-1,1
-4,55,on,PREP,1,-1,2
-5,55,[],NP,1,-1,2
-6,55,the,DET,2,-1,3
-7,55,"['model', 'learned']",NP,2,-1,3
-8,55,[],NP,2,-1,3
-9,55,by,PREP,3,-1,4
-10,55,[],NP,3,-1,4
-11,55,this,DET,4,-1,5
-12,55,['scheme'],NP,4,-1,5
+1,55,will,MOD,0,-1,1
+2,55,be,AUX,0,-1,1
+3,55,['tested'],NP,0,-1,1
+4,55,['data'],NP,0,-1,1
+5,55,on,PREP,1,-1,2
+6,55,[],NP,1,-1,2
+7,55,the,DET,2,-1,3
+8,55,"['model', 'learned']",NP,2,-1,3
+9,55,[],NP,2,-1,3
+10,55,by,PREP,3,-1,4
+11,55,[],NP,3,-1,4
+12,55,this,DET,4,-1,5
+13,55,['scheme'],NP,4,-1,5
 0,56,[],NP,0,-1,1
 1,56,the,DET,1,-1,2
 2,56,"['merging', 'scheme']",NP,1,-1,2
-3,56,"['(', 'm):this']",NP,1,-1,2
-4,56,"['scheme', 'merges']",NP,1,-1,2
-5,56,[],NP,1,-1,2
-6,56,the,DET,2,-1,3
-7,56,['data'],NP,2,-1,3
-8,56,[],NP,2,-1,3
-9,56,from,PREP,3,-1,4
-10,56,"['overlap', 'ping']",NP,3,-1,4
-11,56,"['regions', 'as']",NP,3,-1,4
-12,56,[],NP,3,-1,4
-13,56,a,DET,4,-1,5
-14,56,"['new', 'class']",NP,4,-1,5
-15,56,"['labeled', '‘over']",NP,4,-1,5
-16,56,['lapping’'],NP,4,-1,5
+3,56,['(m):'],NP,1,-1,2
+4,56,this,DET,2,-1,3
+5,56,"['scheme', 'merges']",NP,2,-1,3
+6,56,[],NP,2,-1,3
+7,56,the,DET,3,-1,4
+8,56,['data'],NP,3,-1,4
+9,56,[],NP,3,-1,4
+10,56,from,PREP,4,-1,5
+11,56,"['overlap', 'ping']",NP,4,-1,5
+12,56,"['regions', 'as']",NP,4,-1,5
+13,56,[],NP,4,-1,5
+14,56,a,DET,5,-1,6
+15,56,"['new', 'class']",NP,5,-1,6
+16,56,"['labeled', '‘over']",NP,5,-1,6
+17,56,['lapping’'],NP,5,-1,6
 0,57,['then'],NP,0,-1,1
 1,57,[],NP,0,-1,1
 2,57,the,DET,1,-1,2
-3,57,"['scheme', 'focuson']",NP,1,-1,2
+3,57,"['scheme', 'focus']",NP,1,-1,2
 4,57,[],NP,1,-1,2
-5,57,the,DET,2,-1,3
-6,57,"['whole', 'data']",NP,2,-1,3
-7,57,[],NP,2,-1,3
-8,57,with,PREP,3,-1,4
-9,57,"['‘over', 'lapping’']",NP,3,-1,4
-10,57,"['class', 'added']",NP,3,-1,4
+5,57,on,PREP,2,-1,3
+6,57,[],NP,2,-1,3
+7,57,the,DET,3,-1,4
+8,57,"['whole', 'data']",NP,3,-1,4
+9,57,[],NP,3,-1,4
+10,57,with,PREP,4,-1,5
+11,57,"['‘over', 'lapping’']",NP,4,-1,5
+12,57,"['class', 'added']",NP,4,-1,5
 0,58,['after'],NP,0,-1,1
 1,58,[],NP,0,-1,1
 2,58,that,COMP,0,-1,1
@@ -1011,7 +1073,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,61,"['each', 'test']",NP,0,-1,1
 1,61,will,MOD,0,-1,1
 2,61,be,AUX,0,-1,1
-3,61,['firstlytested'],NP,0,-1,1
+3,61,"['firstly', 'tested']",NP,0,-1,1
 4,61,['data'],NP,0,-1,1
 5,61,on,PREP,1,-1,2
 6,61,[],NP,1,-1,2
@@ -1032,25 +1094,26 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,62,"['second', 'model']",NP,2,-1,3
 13,62,[],NP,2,-1,3
 14,62,to,PREP,3,-1,4
-15,62,"['determine', 'itsoriginal']",NP,3,-1,4
-16,62,['class'],NP,3,-1,4
+15,62,"['determine', 'its']",NP,3,-1,4
+16,62,"['original', 'class']",NP,3,-1,4
 0,63,[],NP,0,-1,1
 1,63,the,DET,1,-1,2
 2,63,"['separating', 'scheme']",NP,1,-1,2
-3,63,"['(', 's):this']",NP,1,-1,2
-4,63,"['scheme', 'learns']",NP,1,-1,2
-5,63,[],NP,1,-1,2
-6,63,on,PREP,2,-1,3
-7,63,['data'],NP,2,-1,3
-8,63,[],NP,2,-1,3
-9,63,in,PREP,3,-1,4
-10,63,"['overlap', 'ping']",NP,3,-1,4
-11,63,and,CONJ,3,-1,4
-12,63,['non'],NP,3,-1,4
-13,63,[],NP,3,-1,4
-14,63,over,PREP,4,-1,5
-15,63,"['lapping', 'regions']",NP,4,-1,5
-16,63,"['sep', 'arately']",NP,4,-1,5
+3,63,['(s):'],NP,1,-1,2
+4,63,this,DET,2,-1,3
+5,63,"['scheme', 'learns']",NP,2,-1,3
+6,63,[],NP,2,-1,3
+7,63,on,PREP,3,-1,4
+8,63,['data'],NP,3,-1,4
+9,63,[],NP,3,-1,4
+10,63,in,PREP,4,-1,5
+11,63,"['overlap', 'ping']",NP,4,-1,5
+12,63,and,CONJ,4,-1,5
+13,63,['non'],NP,4,-1,5
+14,63,[],NP,4,-1,5
+15,63,over,PREP,5,-1,6
+16,63,"['lapping', 'regions']",NP,5,-1,6
+17,63,"['sep', 'arately']",NP,5,-1,6
 0,64,['it'],NP,0,-1,1
 1,64,can,MOD,0,-1,1
 2,64,"['get', 'two']",NP,0,-1,1
@@ -1089,11 +1152,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 31,65,[],NP,10,-1,11
 32,65,over,PREP,11,-1,12
 33,65,"['lapping', 'region']",NP,11,-1,12
-0,66,"['eachtest', 'data']",NP,0,-1,1
+0,66,"['each', 'test']",NP,0,-1,1
 1,66,will,MOD,0,-1,1
 2,66,be,AUX,0,-1,1
 3,66,['tested'],NP,0,-1,1
-4,66,[],NP,0,-1,1
+4,66,['data'],NP,0,-1,1
 5,66,on,PREP,1,-1,2
 6,66,[],NP,1,-1,2
 7,66,the,DET,2,-1,3
@@ -1150,25 +1213,26 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 26,68,with,PREP,8,-1,9
 27,68,"['class', 'imbalance']",NP,8,-1,9
 28,68,['problem'],NP,8,-1,9
-0,69,"['we', 'willinvestigate']",NP,0,-1,1
-1,69,"['how', 'schemes']",NP,0,-1,1
-2,69,['dealing'],NP,0,-1,1
-3,69,[],NP,0,-1,1
-4,69,with,PREP,1,-1,2
-5,69,['class'],NP,1,-1,2
-6,69,[],NP,1,-1,2
-7,69,over,PREP,2,-1,3
-8,69,"['lapping', 'problem']",NP,2,-1,3
-9,69,['affect'],NP,2,-1,3
-10,69,the,DET,3,-1,4
-11,69,['performance'],NP,3,-1,4
-12,69,[],NP,3,-1,4
-13,69,of,PREP,4,-1,5
-14,69,['learning'],NP,4,-1,5
-15,69,[],NP,4,-1,5
-16,69,in,PREP,5,-1,6
-17,69,"['such', 'condi']",NP,5,-1,6
-18,69,['tions'],NP,5,-1,6
+0,69,['we'],NP,0,-1,1
+1,69,will,MOD,0,-1,1
+2,69,"['investigate', 'how']",NP,0,-1,1
+3,69,"['schemes', 'dealing']",NP,0,-1,1
+4,69,[],NP,0,-1,1
+5,69,with,PREP,1,-1,2
+6,69,['class'],NP,1,-1,2
+7,69,[],NP,1,-1,2
+8,69,over,PREP,2,-1,3
+9,69,"['lapping', 'problem']",NP,2,-1,3
+10,69,['affect'],NP,2,-1,3
+11,69,the,DET,3,-1,4
+12,69,['performance'],NP,3,-1,4
+13,69,[],NP,3,-1,4
+14,69,of,PREP,4,-1,5
+15,69,['learning'],NP,4,-1,5
+16,69,[],NP,4,-1,5
+17,69,in,PREP,5,-1,6
+18,69,"['such', 'condi']",NP,5,-1,6
+19,69,['tions'],NP,5,-1,6
 0,70,[],NP,0,-1,1
 1,70,to,PREP,1,-1,2
 2,70,['make'],NP,1,-1,2
@@ -1179,16 +1243,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,70,"['binary', 'data']",NP,2,-1,3
 8,70,['sets'],NP,2,-1,3
 9,70,from,PREP,3,-1,4
-10,70,"['uci', 'andlibsvm']",NP,3,-1,4
-11,70,have,AUX,3,-1,4
-12,70,"['different', 'overlap']",NP,3,-1,4
-13,70,"['ping', 'ratios']",NP,3,-1,4
-14,70,['calculated'],NP,3,-1,4
-15,70,[],NP,3,-1,4
-16,70,by,PREP,4,-1,5
-17,70,['svdd'],NP,4,-1,5
-18,70,are,AUX,4,-1,5
-19,70,"['se', 'lected']",NP,4,-1,5
+10,70,['uci'],NP,3,-1,4
+11,70,and,CONJ,3,-1,4
+12,70,['libsvm'],NP,3,-1,4
+13,70,have,AUX,3,-1,4
+14,70,"['different', 'overlap']",NP,3,-1,4
+15,70,"['ping', 'ratios']",NP,3,-1,4
+16,70,['calculated'],NP,3,-1,4
+17,70,[],NP,3,-1,4
+18,70,by,PREP,4,-1,5
+19,70,['svdd'],NP,4,-1,5
+20,70,are,AUX,4,-1,5
+21,70,"['se', 'lected']",NP,4,-1,5
 0,71,"['table', '1']",NP,0,-1,1
 1,71,['summarizes'],NP,0,-1,1
 2,71,the,DET,1,-1,2
@@ -1249,28 +1315,29 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 3,79,"['three', 'scenarios']",NP,1,-1,2
 0,80,[],NP,0,-1,1
 1,80,the,DET,1,-1,2
-2,80,"['firstone', 'uses']",NP,1,-1,2
-3,80,"['three', 'different']",NP,1,-1,2
-4,80,"['schemes', 'andfive']",NP,1,-1,2
-5,80,"['distinct', 'classifiers']",NP,1,-1,2
-6,80,[],NP,1,-1,2
-7,80,to,PREP,2,-1,3
-8,80,['deal'],NP,2,-1,3
-9,80,[],NP,2,-1,3
-10,80,with,PREP,3,-1,4
-11,80,['class'],NP,3,-1,4
-12,80,[],NP,3,-1,4
-13,80,over,PREP,4,-1,5
-14,80,"['lapping', 'problem']",NP,4,-1,5
-15,80,[],NP,4,-1,5
-16,80,for,PREP,5,-1,6
-17,80,"['data', 'sets']",NP,5,-1,6
-18,80,[],NP,5,-1,6
-19,80,with,PREP,6,-1,7
-20,80,['different'],NP,6,-1,7
-21,80,[],NP,6,-1,7
-22,80,over,PREP,7,-1,8
-23,80,"['lapping', 'ratios']",NP,7,-1,8
+2,80,"['first', 'one']",NP,1,-1,2
+3,80,"['uses', 'three']",NP,1,-1,2
+4,80,"['different', 'schemes']",NP,1,-1,2
+5,80,and,CONJ,1,-1,2
+6,80,"['five', 'distinct']",NP,1,-1,2
+7,80,['classifiers'],NP,1,-1,2
+8,80,to,PREP,2,-1,3
+9,80,['deal'],NP,2,-1,3
+10,80,[],NP,2,-1,3
+11,80,with,PREP,3,-1,4
+12,80,['class'],NP,3,-1,4
+13,80,[],NP,3,-1,4
+14,80,over,PREP,4,-1,5
+15,80,"['lapping', 'problem']",NP,4,-1,5
+16,80,[],NP,4,-1,5
+17,80,for,PREP,5,-1,6
+18,80,"['data', 'sets']",NP,5,-1,6
+19,80,[],NP,5,-1,6
+20,80,with,PREP,6,-1,7
+21,80,['different'],NP,6,-1,7
+22,80,[],NP,6,-1,7
+23,80,over,PREP,7,-1,8
+24,80,"['lapping', 'ratios']",NP,7,-1,8
 0,81,[],NP,0,-1,1
 1,81,the,DET,1,-1,2
 2,81,"['sec', 'ond']",NP,1,-1,2
@@ -1323,33 +1390,38 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,84,the,DET,2,-1,3
 5,84,"['both', 'classes']",NP,2,-1,3
 6,84,is,AUX,2,-1,3
-7,84,"['used', 'tocompare']",NP,2,-1,3
+7,84,['used'],NP,2,-1,3
 8,84,[],NP,2,-1,3
-9,84,the,DET,3,-1,4
-10,84,['performance'],NP,3,-1,4
+9,84,to,PREP,3,-1,4
+10,84,['compare'],NP,3,-1,4
 11,84,[],NP,3,-1,4
-12,84,of,PREP,4,-1,5
-13,84,"['five', 'clas']",NP,4,-1,5
-14,84,"['sification', 'algorithms']",NP,4,-1,5
-15,84,[],NP,4,-1,5
-16,84,with,PREP,5,-1,6
-17,84,"['distinct', 'na']",NP,5,-1,6
-18,84,"['tures:', 'nb']",NP,5,-1,6
-19,84,"['k', 'nn']",NP,5,-1,6
-20,84,"['(k=5)', 'svms']",NP,5,-1,6
-21,84,"['(with', 'linear']",NP,5,-1,6
-22,84,"['kernel)', 'c4']",NP,5,-1,6
+12,84,the,DET,4,-1,5
+13,84,['performance'],NP,4,-1,5
+14,84,[],NP,4,-1,5
+15,84,of,PREP,5,-1,6
+16,84,"['five', 'clas']",NP,5,-1,6
+17,84,"['sification', 'algorithms']",NP,5,-1,6
+18,84,[],NP,5,-1,6
+19,84,with,PREP,6,-1,7
+20,84,"['distinct', 'na']",NP,6,-1,7
+21,84,"['tures:', 'nb']",NP,6,-1,7
+22,84,"['k', 'nn']",NP,6,-1,7
+23,84,"['(k=5)', 'svms']",NP,6,-1,7
+24,84,"['(with', 'linear']",NP,6,-1,7
+25,84,"['kernel)', 'c4']",NP,6,-1,7
 0,85,['5'],NP,0,-1,1
 1,85,and,CONJ,0,-1,1
 2,85,['ripper'],NP,0,-1,1
-0,86,"['493the', '2010']",NP,0,-1,1
-1,86,"['international', 'conference']",NP,0,-1,1
-2,86,[],NP,0,-1,1
-3,86,on,PREP,1,-1,2
-4,86,"['e', 'business']",NP,1,-1,2
-5,86,[],NP,1,-1,2
-6,86,in,PREP,2,-1,3
-7,86,"['telligence', '3']",NP,2,-1,3
+0,86,['493'],NP,0,-1,1
+1,86,[],NP,0,-1,1
+2,86,the,DET,1,-1,2
+3,86,"['2010', 'international']",NP,1,-1,2
+4,86,['conference'],NP,1,-1,2
+5,86,on,PREP,2,-1,3
+6,86,"['e', 'business']",NP,2,-1,3
+7,86,[],NP,2,-1,3
+8,86,in,PREP,3,-1,4
+9,86,"['telligence', '3']",NP,3,-1,4
 0,87,['1'],NP,0,-1,1
 0,88,"['experiment', '1']",NP,0,-1,1
 1,88,[],NP,0,-1,1
@@ -1386,19 +1458,20 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,89,by,PREP,4,-1,5
 12,89,['svdd'],NP,4,-1,5
 0,90,"['so', 'each']",NP,0,-1,1
-1,90,"['data', 'setcan']",NP,0,-1,1
-2,90,be,AUX,0,-1,1
-3,90,['divided'],NP,0,-1,1
-4,90,[],NP,0,-1,1
-5,90,into,PREP,1,-1,2
-6,90,"['two', 'parts:']",NP,1,-1,2
-7,90,['non'],NP,1,-1,2
-8,90,over,PREP,2,-1,3
-9,90,['lapping'],NP,2,-1,3
-10,90,and,CONJ,2,-1,3
-11,90,[],NP,2,-1,3
-12,90,over,PREP,3,-1,4
-13,90,['lapping'],NP,3,-1,4
+1,90,"['data', 'set']",NP,0,-1,1
+2,90,can,MOD,0,-1,1
+3,90,be,AUX,0,-1,1
+4,90,['divided'],NP,0,-1,1
+5,90,[],NP,0,-1,1
+6,90,into,PREP,1,-1,2
+7,90,"['two', 'parts:']",NP,1,-1,2
+8,90,['non'],NP,1,-1,2
+9,90,over,PREP,2,-1,3
+10,90,['lapping'],NP,2,-1,3
+11,90,and,CONJ,2,-1,3
+12,90,[],NP,2,-1,3
+13,90,over,PREP,3,-1,4
+14,90,['lapping'],NP,3,-1,4
 0,91,['after'],NP,0,-1,1
 1,91,[],NP,0,-1,1
 2,91,that,COMP,0,-1,1
@@ -1406,16 +1479,17 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 4,91,[],NP,0,-1,1
 5,91,over,PREP,1,-1,2
 6,91,"['lapping', 'class']",NP,1,-1,2
-7,91,"['modelingschemes', 'described']",NP,1,-1,2
-8,91,[],NP,1,-1,2
-9,91,in,PREP,2,-1,3
-10,91,"['previous', 'section']",NP,2,-1,3
-11,91,and,CONJ,2,-1,3
-12,91,"['five', 'distinct']",NP,2,-1,3
-13,91,will,MOD,2,-1,3
-14,91,be,AUX,2,-1,3
-15,91,['used'],NP,2,-1,3
-16,91,['classifiers'],NP,2,-1,3
+7,91,"['modeling', 'schemes']",NP,1,-1,2
+8,91,['described'],NP,1,-1,2
+9,91,[],NP,1,-1,2
+10,91,in,PREP,2,-1,3
+11,91,"['previous', 'section']",NP,2,-1,3
+12,91,and,CONJ,2,-1,3
+13,91,"['five', 'distinct']",NP,2,-1,3
+14,91,will,MOD,2,-1,3
+15,91,be,AUX,2,-1,3
+16,91,['used'],NP,2,-1,3
+17,91,['classifiers'],NP,2,-1,3
 0,92,"['f', 'measure']",NP,0,-1,1
 1,92,[],NP,0,-1,1
 2,92,of,PREP,1,-1,2
@@ -1462,21 +1536,14 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 18,94,and,CONJ,6,-1,7
 19,94,['set'],NP,6,-1,7
 20,94,the,DET,7,-1,8
-21,94,"['r', 'e']",NP,7,-1,8
-22,94,"['s', 'u']",NP,7,-1,8
-23,94,"['l', 't']",NP,7,-1,8
-24,94,"['si', 'nb']",NP,7,-1,8
-25,94,"['o', 'l']",NP,7,-1,8
-26,94,"['di', 'n']",NP,7,-1,8
-27,94,"['d', 'i']",NP,7,-1,8
-28,94,['c'],NP,7,-1,8
-29,94,a,DET,8,-1,9
-30,94,"['t', 'et']",NP,8,-1,9
-31,94,"['h', 'eb']",NP,8,-1,9
-32,94,"['e', 's']",NP,8,-1,9
-33,94,['tv'],NP,8,-1,9
-34,94,a,DET,9,-1,10
-35,94,"['l', 'ues']",NP,9,-1,10
+21,94,['results'],NP,7,-1,8
+22,94,[],NP,7,-1,8
+23,94,in,PREP,8,-1,9
+24,94,"['bold', 'indicate']",NP,8,-1,9
+25,94,[],NP,8,-1,9
+26,94,the,DET,9,-1,10
+27,94,"['best', 'val']",NP,9,-1,10
+28,94,['ues'],NP,9,-1,10
 0,95,['as'],NP,0,-1,1
 1,95,can,MOD,0,-1,1
 2,95,be,AUX,0,-1,1
@@ -1495,10 +1562,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,95,in,PREP,5,-1,6
 16,95,"['binary', 'data']",NP,5,-1,6
 17,95,are,AUX,5,-1,6
-18,95,"['always', 'higherthan']",NP,5,-1,6
-19,95,['sets'],NP,5,-1,6
-20,95,the,DET,6,-1,7
-21,95,"['merging', 'scheme']",NP,6,-1,7
+18,95,"['always', 'higher']",NP,5,-1,6
+19,95,"['sets', 'than']",NP,5,-1,6
+20,95,[],NP,5,-1,6
+21,95,the,DET,6,-1,7
+22,95,"['merging', 'scheme']",NP,6,-1,7
 0,96,[],NP,0,-1,1
 1,96,this,DET,1,-1,2
 2,96,is,AUX,1,-1,2
@@ -1515,10 +1583,11 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,96,[],NP,4,-1,5
 14,96,the,DET,5,-1,6
 15,96,"['data', 'set']",NP,5,-1,6
-16,96,['whichmakes'],NP,5,-1,6
-17,96,the,DET,6,-1,7
-18,96,"['classification', 'become']",NP,6,-1,7
-19,96,"['more', 'complicated']",NP,6,-1,7
+16,96,['makes'],NP,5,-1,6
+17,96,[],NP,5,-1,6
+18,96,the,DET,6,-1,7
+19,96,"['classification', 'become']",NP,6,-1,7
+20,96,"['more', 'complicated']",NP,6,-1,7
 0,97,"['another', 'observation']",NP,0,-1,1
 1,97,is,AUX,0,-1,1
 2,97,[],NP,0,-1,1
@@ -1594,7 +1663,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 19,99,['discard'],NP,6,-1,7
 20,99,[],NP,6,-1,7
 21,99,in,PREP,7,-1,8
-22,99,['gscheme'],NP,7,-1,8
+22,99,"['g', 'scheme']",NP,7,-1,8
 23,99,and,CONJ,7,-1,8
 24,99,[],NP,7,-1,8
 25,99,the,DET,8,-1,9
@@ -1605,16 +1674,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,100,this,DET,1,-1,2
 2,100,is,AUX,1,-1,2
 3,100,"['because', 'ignoring']",NP,1,-1,2
-4,100,may,MOD,1,-1,2
-5,100,"['lose', 'some']",NP,1,-1,2
-6,100,"['thisdata', 'important']",NP,1,-1,2
-7,100,[],NP,1,-1,2
-8,100,in,PREP,2,-1,3
-9,100,"['forma', 'tion']",NP,2,-1,3
-10,100,[],NP,2,-1,3
-11,100,of,PREP,3,-1,4
-12,100,"['each', 'two']",NP,3,-1,4
-13,100,['classes'],NP,3,-1,4
+4,100,[],NP,1,-1,2
+5,100,this,DET,2,-1,3
+6,100,['data'],NP,2,-1,3
+7,100,may,MOD,2,-1,3
+8,100,"['lose', 'some']",NP,2,-1,3
+9,100,['important'],NP,2,-1,3
+10,100,in,PREP,3,-1,4
+11,100,"['forma', 'tion']",NP,3,-1,4
+12,100,[],NP,3,-1,4
+13,100,of,PREP,4,-1,5
+14,100,"['each', 'two']",NP,4,-1,5
+15,100,['classes'],NP,4,-1,5
 0,101,['if'],NP,0,-1,1
 1,101,[],NP,0,-1,1
 2,101,the,DET,1,-1,2
@@ -1631,8 +1702,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,101,['discarded'],NP,3,-1,4
 14,101,[],NP,3,-1,4
 15,101,to,PREP,4,-1,5
-16,101,"['bring', 'lowerf']",NP,4,-1,5
-17,101,['measure'],NP,4,-1,5
+16,101,"['bring', 'lower']",NP,4,-1,5
+17,101,"['f', 'measure']",NP,4,-1,5
 0,102,[],NP,0,-1,1
 1,102,the,DET,1,-1,2
 2,102,"['se', 'observations']",NP,1,-1,2
@@ -1651,14 +1722,14 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,102,['non'],NP,4,-1,5
 16,102,[],NP,4,-1,5
 17,102,over,PREP,5,-1,6
-18,102,"['lapping', 'dataseparately']",NP,5,-1,6
+18,102,"['lapping', 'data']",NP,5,-1,6
 19,102,is,AUX,5,-1,6
-20,102,[],NP,5,-1,6
+20,102,['separately'],NP,5,-1,6
 21,102,the,DET,6,-1,7
 22,102,"['best', 'among']",NP,6,-1,7
 23,102,[],NP,6,-1,7
 24,102,the,DET,7,-1,8
-25,102,['threeschemes'],NP,7,-1,8
+25,102,"['three', 'schemes']",NP,7,-1,8
 0,103,[],NP,0,-1,1
 1,103,the,DET,1,-1,2
 2,103,"['data', 'sets']",NP,1,-1,2
@@ -1677,7 +1748,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,103,['good'],NP,4,-1,5
 16,103,[],NP,4,-1,5
 17,103,for,PREP,5,-1,6
-18,103,['preciselylearning'],NP,5,-1,6
+18,103,"['precisely', 'learning']",NP,5,-1,6
 19,103,and,CONJ,5,-1,6
 20,103,"['time', 'costing']",NP,5,-1,6
 0,104,['3'],NP,0,-1,1
@@ -1702,8 +1773,8 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 17,106,to,PREP,4,-1,5
 18,106,[],NP,4,-1,5
 19,106,the,DET,5,-1,6
-20,106,"['schemewithout', 'dealing']",NP,5,-1,6
-21,106,[],NP,5,-1,6
+20,106,"['scheme', 'without']",NP,5,-1,6
+21,106,['dealing'],NP,5,-1,6
 22,106,with,PREP,6,-1,7
 23,106,['class'],NP,6,-1,7
 24,106,[],NP,6,-1,7
@@ -1712,8 +1783,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 27,106,['called'],NP,7,-1,8
 28,106,the,DET,8,-1,9
 29,106,"['original', 'scheme']",NP,8,-1,9
-30,106,"['(', 'o)']",NP,8,-1,9
-31,106,['here'],NP,8,-1,9
+30,106,"['(o)', 'here']",NP,8,-1,9
 0,107,[],NP,0,-1,1
 1,107,the,DET,1,-1,2
 2,107,"['second', 'experiment']",NP,1,-1,2
@@ -1782,15 +1852,19 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,111,to,PREP,2,-1,3
 6,111,['right'],NP,2,-1,3
 7,111,are,AUX,2,-1,3
-8,111,"['sorted', 'bythe']",NP,2,-1,3
+8,111,['sorted'],NP,2,-1,3
 9,111,[],NP,2,-1,3
-10,111,over,PREP,3,-1,4
-11,111,"['lapping', 'ratio']",NP,3,-1,4
-12,111,[],NP,3,-1,4
-13,111,in,PREP,4,-1,5
-14,111,['ascending'],NP,4,-1,5
-15,111,or,CONJ,4,-1,5
-16,111,['der'],NP,4,-1,5
+10,111,by,PREP,3,-1,4
+11,111,[],NP,3,-1,4
+12,111,the,DET,4,-1,5
+13,111,[],NP,4,-1,5
+14,111,over,PREP,5,-1,6
+15,111,"['lapping', 'ratio']",NP,5,-1,6
+16,111,[],NP,5,-1,6
+17,111,in,PREP,6,-1,7
+18,111,['ascending'],NP,6,-1,7
+19,111,or,CONJ,6,-1,7
+20,111,['der'],NP,6,-1,7
 0,112,"['one', 'observation']",NP,0,-1,1
 1,112,is,AUX,0,-1,1
 2,112,[],NP,0,-1,1
@@ -1805,20 +1879,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,112,['separat'],NP,2,-1,3
 12,112,[],NP,2,-1,3
 13,112,in,PREP,3,-1,4
-14,112,"['gscheme', 'performs']",NP,3,-1,4
-15,112,"['better', 'than']",NP,3,-1,4
-16,112,[],NP,3,-1,4
-17,112,the,DET,4,-1,5
-18,112,"['original', 'scheme']",NP,4,-1,5
-19,112,or,CONJ,4,-1,5
-20,112,has,AUX,4,-1,5
-21,112,['almost'],NP,4,-1,5
-22,112,[],NP,4,-1,5
-23,112,the,DET,5,-1,6
-24,112,"['same', 'results']",NP,5,-1,6
-25,112,['as'],NP,5,-1,6
-26,112,the,DET,6,-1,7
-27,112,"['original', 'scheme']",NP,6,-1,7
+14,112,"['g', 'scheme']",NP,3,-1,4
+15,112,"['performs', 'better']",NP,3,-1,4
+16,112,['than'],NP,3,-1,4
+17,112,[],NP,3,-1,4
+18,112,the,DET,4,-1,5
+19,112,"['original', 'scheme']",NP,4,-1,5
+20,112,or,CONJ,4,-1,5
+21,112,has,AUX,4,-1,5
+22,112,['almost'],NP,4,-1,5
+23,112,[],NP,4,-1,5
+24,112,the,DET,5,-1,6
+25,112,"['same', 'results']",NP,5,-1,6
+26,112,['as'],NP,5,-1,6
+27,112,the,DET,6,-1,7
+28,112,"['original', 'scheme']",NP,6,-1,7
 0,113,[],NP,0,-1,1
 1,113,an,DET,1,-1,2
 2,113,"['other', 'observation']",NP,1,-1,2
@@ -1834,27 +1909,36 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,113,['creases'],NP,3,-1,4
 13,113,[],NP,3,-1,4
 14,113,the,DET,4,-1,5
-15,113,"['gap', 'betweentheseparating']",NP,4,-1,5
-16,113,and,CONJ,4,-1,5
-17,113,"['original', 'schemes']",NP,4,-1,5
-18,113,is,AUX,4,-1,5
-19,113,['more'],NP,4,-1,5
-20,113,and,CONJ,4,-1,5
-21,113,"['more', 'obvious']",NP,4,-1,5
-22,113,"['except', 'forthose']",NP,4,-1,5
-23,113,"['high', 'f']",NP,4,-1,5
-24,113,"['measure', 'values']",NP,4,-1,5
-0,114,"['thisis', 'reasonable']",NP,0,-1,1
-1,114,[],NP,0,-1,1
-2,114,for,PREP,1,-1,2
-3,114,[],NP,1,-1,2
-4,114,that,COMP,1,-1,2
-5,114,"['high', 'f']",NP,1,-1,2
-6,114,can,MOD,1,-1,2
-7,114,['difficultly'],NP,1,-1,2
-8,114,be,AUX,1,-1,2
-9,114,['improved'],NP,1,-1,2
-10,114,['measure'],NP,1,-1,2
+15,113,"['gap', 'between']",NP,4,-1,5
+16,113,[],NP,4,-1,5
+17,113,the,DET,5,-1,6
+18,113,['separating'],NP,5,-1,6
+19,113,and,CONJ,5,-1,6
+20,113,"['original', 'schemes']",NP,5,-1,6
+21,113,is,AUX,5,-1,6
+22,113,['more'],NP,5,-1,6
+23,113,and,CONJ,5,-1,6
+24,113,"['more', 'obvious']",NP,5,-1,6
+25,113,['except'],NP,5,-1,6
+26,113,for,PREP,6,-1,7
+27,113,[],NP,6,-1,7
+28,113,those,DET,7,-1,8
+29,113,"['high', 'f']",NP,7,-1,8
+30,113,"['measure', 'values']",NP,7,-1,8
+0,114,[],NP,0,-1,1
+1,114,this,DET,1,-1,2
+2,114,is,AUX,1,-1,2
+3,114,['reasonable'],NP,1,-1,2
+4,114,[],NP,1,-1,2
+5,114,for,PREP,2,-1,3
+6,114,[],NP,2,-1,3
+7,114,that,COMP,2,-1,3
+8,114,"['high', 'f']",NP,2,-1,3
+9,114,can,MOD,2,-1,3
+10,114,['difficultly'],NP,2,-1,3
+11,114,be,AUX,2,-1,3
+12,114,['improved'],NP,2,-1,3
+13,114,['measure'],NP,2,-1,3
 0,115,and,CONJ,0,-1,1
 1,115,be,AUX,0,-1,1
 2,115,"['cause', 'low']",NP,0,-1,1
@@ -1891,23 +1975,25 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,116,[],NP,2,-1,3
 9,116,the,DET,3,-1,4
 10,116,['performance'],NP,3,-1,4
-0,117,"['494the', '2010']",NP,0,-1,1
-1,117,"['international', 'conference']",NP,0,-1,1
-2,117,[],NP,0,-1,1
-3,117,on,PREP,1,-1,2
-4,117,"['e', 'business']",NP,1,-1,2
-5,117,[],NP,1,-1,2
-6,117,in,PREP,2,-1,3
-7,117,"['telligence', 'data']",NP,2,-1,3
-8,117,"['sets', 'f']",NP,2,-1,3
-9,117,"['measure(class', '1)']",NP,2,-1,3
-10,117,"['f', 'measure(class']",NP,2,-1,3
-11,117,"['2)', 'd']",NP,2,-1,3
-12,117,"['m', 's']",NP,2,-1,3
-13,117,"['d', 'm']",NP,2,-1,3
-14,117,['s'],NP,2,-1,3
-15,117,in,PREP,3,-1,4
-16,117,"['osphere', 'c4']",NP,3,-1,4
+0,117,['494'],NP,0,-1,1
+1,117,[],NP,0,-1,1
+2,117,the,DET,1,-1,2
+3,117,"['2010', 'international']",NP,1,-1,2
+4,117,['conference'],NP,1,-1,2
+5,117,on,PREP,2,-1,3
+6,117,"['e', 'business']",NP,2,-1,3
+7,117,[],NP,2,-1,3
+8,117,in,PREP,3,-1,4
+9,117,"['telligence', 'data']",NP,3,-1,4
+10,117,"['sets', 'f']",NP,3,-1,4
+11,117,"['measure(class', '1)']",NP,3,-1,4
+12,117,"['f', 'measure(class']",NP,3,-1,4
+13,117,"['2)', 'd']",NP,3,-1,4
+14,117,"['m', 's']",NP,3,-1,4
+15,117,"['d', 'm']",NP,3,-1,4
+16,117,['s'],NP,3,-1,4
+17,117,in,PREP,4,-1,5
+18,117,"['osphere', 'c4']",NP,4,-1,5
 0,118,"['5', '0']",NP,0,-1,1
 0,119,"['766', '0']",NP,0,-1,1
 0,120,"['809', '0']",NP,0,-1,1
@@ -2117,35 +2203,39 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,277,[],NP,0,-1,1
 1,277,the,DET,1,-1,2
 2,277,['c4'],NP,1,-1,2
-0,278,"['5algorithm', 'employs']",NP,0,-1,1
-1,278,[],NP,0,-1,1
+0,278,"['5', 'algorithm']",NP,0,-1,1
+1,278,['employs'],NP,0,-1,1
 2,278,a,DET,1,-1,2
-3,278,"['greedy', 'techniqueto']",NP,1,-1,2
-4,278,"['induce', 'decision']",NP,1,-1,2
-5,278,['trees'],NP,1,-1,2
-6,278,[],NP,1,-1,2
-7,278,for,PREP,2,-1,3
-8,278,"['classifi', 'cation']",NP,2,-1,3
-9,278,is,AUX,2,-1,3
-10,278,[],NP,2,-1,3
-11,278,a,DET,3,-1,4
-12,278,"['locally', 'classifica']",NP,3,-1,4
-13,278,"['tion', 'algorithm']",NP,3,-1,4
+3,278,"['greedy', 'technique']",NP,1,-1,2
+4,278,[],NP,1,-1,2
+5,278,to,PREP,2,-1,3
+6,278,"['induce', 'decision']",NP,2,-1,3
+7,278,['trees'],NP,2,-1,3
+8,278,for,PREP,3,-1,4
+9,278,"['classifi', 'cation']",NP,3,-1,4
+10,278,is,AUX,3,-1,4
+11,278,[],NP,3,-1,4
+12,278,a,DET,4,-1,5
+13,278,"['locally', 'classifica']",NP,4,-1,5
+14,278,"['tion', 'algorithm']",NP,4,-1,5
 0,279,['so'],NP,0,-1,1
 1,279,[],NP,0,-1,1
 2,279,the,DET,1,-1,2
-3,279,"['scheme', 'fordealing']",NP,1,-1,2
+3,279,['scheme'],NP,1,-1,2
 4,279,[],NP,1,-1,2
-5,279,with,PREP,2,-1,3
-6,279,['class'],NP,2,-1,3
+5,279,for,PREP,2,-1,3
+6,279,['dealing'],NP,2,-1,3
 7,279,[],NP,2,-1,3
-8,279,over,PREP,3,-1,4
-9,279,"['lapping', 'problem']",NP,3,-1,4
-10,279,can,MOD,3,-1,4
-11,279,"['hardly', 'work']",NP,3,-1,4
-12,279,['well'],NP,3,-1,4
-13,279,in,PREP,4,-1,5
-14,279,['c4'],NP,4,-1,5
+8,279,with,PREP,3,-1,4
+9,279,['class'],NP,3,-1,4
+10,279,[],NP,3,-1,4
+11,279,over,PREP,4,-1,5
+12,279,"['lapping', 'problem']",NP,4,-1,5
+13,279,can,MOD,4,-1,5
+14,279,"['hardly', 'work']",NP,4,-1,5
+15,279,['well'],NP,4,-1,5
+16,279,in,PREP,5,-1,6
+17,279,['c4'],NP,5,-1,6
 0,280,['5'],NP,0,-1,1
 0,281,[],NP,0,-1,1
 1,281,for,PREP,1,-1,2
@@ -2164,7 +2254,10 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,281,over,PREP,4,-1,5
 15,281,"['lapping', 'problem']",NP,4,-1,5
 16,281,is,AUX,4,-1,5
-17,281,"['useful', 'forclassification']",NP,4,-1,5
+17,281,['useful'],NP,4,-1,5
+18,281,[],NP,4,-1,5
+19,281,for,PREP,5,-1,6
+20,281,['classification'],NP,5,-1,6
 0,282,but,CONJ,0,-1,1
 1,282,['there'],NP,0,-1,1
 2,282,is,AUX,0,-1,1
@@ -2199,23 +2292,22 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 23,283,on,PREP,5,-1,6
 24,283,"['data', 'set']",NP,5,-1,6
 25,283,['sonar'],NP,5,-1,6
-0,284,"['t', 'h']",NP,0,-1,1
-1,284,"['e', 's']",NP,0,-1,1
-2,284,['e'],NP,0,-1,1
-3,284,[],NP,0,-1,1
-4,284,a,DET,1,-1,2
-5,284,"['r', 'e']",NP,1,-1,2
-6,284,['converse'],NP,1,-1,2
-7,284,to,PREP,2,-1,3
-8,284,[],NP,2,-1,3
-9,284,the,DET,3,-1,4
-10,284,['results'],NP,3,-1,4
-11,284,[],NP,3,-1,4
-12,284,of,PREP,4,-1,5
-13,284,"['nb', 'k']",NP,4,-1,5
-14,284,and,CONJ,4,-1,5
-15,284,['svms'],NP,4,-1,5
-16,284,['nn'],NP,4,-1,5
+0,284,[],NP,0,-1,1
+1,284,the,DET,1,-1,2
+2,284,['se'],NP,1,-1,2
+3,284,are,AUX,1,-1,2
+4,284,['converse'],NP,1,-1,2
+5,284,[],NP,1,-1,2
+6,284,to,PREP,2,-1,3
+7,284,[],NP,2,-1,3
+8,284,the,DET,3,-1,4
+9,284,['results'],NP,3,-1,4
+10,284,[],NP,3,-1,4
+11,284,of,PREP,4,-1,5
+12,284,"['nb', 'k']",NP,4,-1,5
+13,284,and,CONJ,4,-1,5
+14,284,['svms'],NP,4,-1,5
+15,284,['nn'],NP,4,-1,5
 0,285,[],NP,0,-1,1
 1,285,the,DET,1,-1,2
 2,285,['reason'],NP,1,-1,2
@@ -2229,7 +2321,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,285,for,PREP,2,-1,3
 11,285,[],NP,2,-1,3
 12,285,the,DET,3,-1,4
-13,285,['smallestclass'],NP,3,-1,4
+13,285,"['smallest', 'class']",NP,3,-1,4
 14,285,and,CONJ,3,-1,4
 15,285,will,MOD,3,-1,4
 16,285,"['not', 'build']",NP,3,-1,4
@@ -2275,7 +2367,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 16,287,['class'],NP,5,-1,6
 17,287,[],NP,5,-1,6
 18,287,over,PREP,6,-1,7
-19,287,['lappingproblem'],NP,6,-1,7
+19,287,"['lapping', 'problem']",NP,6,-1,7
 0,288,['3'],NP,0,-1,1
 0,289,['3'],NP,0,-1,1
 0,290,"['experiment', '3']",NP,0,-1,1
@@ -2340,21 +2432,23 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,298,[],NP,0,-1,1
 2,298,the,DET,1,-1,2
 3,298,"['classification', 'results']",NP,1,-1,2
-4,298,"['495the', '2010']",NP,1,-1,2
-5,298,"['international', 'conference']",NP,1,-1,2
-6,298,[],NP,1,-1,2
-7,298,on,PREP,2,-1,3
-8,298,"['e', 'business']",NP,2,-1,3
-9,298,[],NP,2,-1,3
-10,298,in,PREP,3,-1,4
-11,298,"['telligence', 'fig']",NP,3,-1,4
+4,298,['495'],NP,1,-1,2
+5,298,the,DET,2,-1,3
+6,298,"['2010', 'international']",NP,2,-1,3
+7,298,['conference'],NP,2,-1,3
+8,298,on,PREP,3,-1,4
+9,298,"['e', 'business']",NP,3,-1,4
+10,298,[],NP,3,-1,4
+11,298,in,PREP,4,-1,5
+12,298,"['telligence', 'fig']",NP,4,-1,5
 0,299,"['2:', 'performances']",NP,0,-1,1
 1,299,[],NP,0,-1,1
 2,299,of,PREP,1,-1,2
 3,299,[],NP,1,-1,2
 4,299,the,DET,2,-1,3
-5,299,"['separating', 'andoriginal']",NP,2,-1,3
-6,299,['schemes'],NP,2,-1,3
+5,299,['separating'],NP,2,-1,3
+6,299,and,CONJ,2,-1,3
+7,299,"['original', 'schemes']",NP,2,-1,3
 0,300,[],NP,0,-1,1
 1,300,of,PREP,1,-1,2
 2,300,[],NP,1,-1,2
@@ -2394,7 +2488,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 26,301,['what'],NP,6,-1,7
 27,301,[],NP,6,-1,7
 28,301,the,DET,7,-1,8
-29,301,['samplingratios'],NP,7,-1,8
+29,301,"['sampling', 'ratios']",NP,7,-1,8
 30,301,are,AUX,7,-1,8
 0,302,['moreover'],NP,0,-1,1
 1,302,[],NP,0,-1,1
@@ -2415,7 +2509,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 16,302,the,DET,4,-1,5
 17,302,[],NP,4,-1,5
 18,302,over,PREP,5,-1,6
-19,302,['lappingratio'],NP,5,-1,6
+19,302,"['lapping', 'ratio']",NP,5,-1,6
 20,302,is,AUX,5,-1,6
 21,302,"['relatively', 'high']",NP,5,-1,6
 0,303,['as'],NP,0,-1,1
@@ -2470,17 +2564,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,305,the,DET,6,-1,7
 16,305,"['separating', 'scheme']",NP,6,-1,7
 17,305,"['showed', 'higher']",NP,6,-1,7
-18,305,"['improvements', 'tothe']",NP,6,-1,7
-19,305,"['classification', 'performance']",NP,6,-1,7
-20,305,[],NP,6,-1,7
-21,305,in,PREP,7,-1,8
-22,305,"['par', 'ticular']",NP,7,-1,8
-23,305,[],NP,7,-1,8
-24,305,for,PREP,8,-1,9
-25,305,[],NP,8,-1,9
-26,305,the,DET,9,-1,10
-27,305,"['well', 'known']",NP,9,-1,10
-28,305,['svms'],NP,9,-1,10
+18,305,['improvements'],NP,6,-1,7
+19,305,[],NP,6,-1,7
+20,305,to,PREP,7,-1,8
+21,305,[],NP,7,-1,8
+22,305,the,DET,8,-1,9
+23,305,"['classification', 'performance']",NP,8,-1,9
+24,305,[],NP,8,-1,9
+25,305,in,PREP,9,-1,10
+26,305,"['par', 'ticular']",NP,9,-1,10
+27,305,[],NP,9,-1,10
+28,305,for,PREP,10,-1,11
+29,305,[],NP,10,-1,11
+30,305,the,DET,11,-1,12
+31,305,"['well', 'known']",NP,11,-1,12
+32,305,['svms'],NP,11,-1,12
 0,306,['4'],NP,0,-1,1
 0,307,['conclusion'],NP,0,-1,1
 1,307,[],NP,0,-1,1
@@ -2506,18 +2604,20 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 21,307,[],NP,6,-1,7
 22,307,over,PREP,7,-1,8
 23,307,"['lapping', 'problem']",NP,7,-1,8
-0,308,"['svdd', 'wasfirst']",NP,0,-1,1
-1,308,['employed'],NP,0,-1,1
-2,308,to,PREP,1,-1,2
-3,308,['find'],NP,1,-1,2
-4,308,[],NP,1,-1,2
-5,308,over,PREP,2,-1,3
-6,308,"['lapping', 're']",NP,2,-1,3
-7,308,['gions'],NP,2,-1,3
-8,308,in,PREP,3,-1,4
-9,308,[],NP,3,-1,4
-10,308,the,DET,4,-1,5
-11,308,['data'],NP,4,-1,5
+0,308,['svdd'],NP,0,-1,1
+1,308,was,AUX,0,-1,1
+2,308,"['first', 'employed']",NP,0,-1,1
+3,308,[],NP,0,-1,1
+4,308,to,PREP,1,-1,2
+5,308,['find'],NP,1,-1,2
+6,308,[],NP,1,-1,2
+7,308,over,PREP,2,-1,3
+8,308,"['lapping', 're']",NP,2,-1,3
+9,308,['gions'],NP,2,-1,3
+10,308,in,PREP,3,-1,4
+11,308,[],NP,3,-1,4
+12,308,the,DET,4,-1,5
+13,308,['data'],NP,4,-1,5
 0,309,"['we', 'found']",NP,0,-1,1
 1,309,[],NP,0,-1,1
 2,309,that,COMP,0,-1,1
@@ -2563,9 +2663,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,310,"['as', 'svms']",NP,3,-1,4
 16,310,and,CONJ,3,-1,4
 17,310,"['k', 'nn']",NP,3,-1,4
-18,310,"['weremore', 'sensitive']",NP,3,-1,4
-19,310,['than'],NP,3,-1,4
-20,310,[],NP,3,-1,4
+18,310,were,AUX,3,-1,4
+19,310,"['more', 'sensitive']",NP,3,-1,4
+20,310,['than'],NP,3,-1,4
 21,310,the,DET,4,-1,5
 22,310,"['rule', 'based']",NP,4,-1,5
 23,310,['ones'],NP,4,-1,5
@@ -2642,8 +2742,7 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,312,['china'],NP,4,-1,5
 16,312,[],NP,4,-1,5
 17,312,under,PREP,5,-1,6
-18,312,"['g', 'rant']",NP,5,-1,6
-19,312,['nos'],NP,5,-1,6
+18,312,"['grant', 'nos']",NP,5,-1,6
 0,313,"['70901002', '90924020']",NP,0,-1,1
 1,313,and,CONJ,0,-1,1
 2,313,[],NP,0,-1,1
@@ -2658,17 +2757,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,313,['china'],NP,3,-1,4
 12,313,[],NP,3,-1,4
 13,313,under,PREP,4,-1,5
-14,313,"['contrac', 't']",NP,4,-1,5
-15,313,['nos'],NP,4,-1,5
+14,313,"['contract', 'nos']",NP,4,-1,5
 0,314,"['200800060005', '20091102120014']",NP,0,-1,1
-0,315,"['496the', '2010']",NP,0,-1,1
-1,315,"['international', 'conference']",NP,0,-1,1
-2,315,[],NP,0,-1,1
-3,315,on,PREP,1,-1,2
-4,315,"['e', 'business']",NP,1,-1,2
-5,315,[],NP,1,-1,2
-6,315,in,PREP,2,-1,3
-7,315,"['telligence', 'fig']",NP,2,-1,3
+0,315,['496'],NP,0,-1,1
+1,315,[],NP,0,-1,1
+2,315,the,DET,1,-1,2
+3,315,"['2010', 'international']",NP,1,-1,2
+4,315,['conference'],NP,1,-1,2
+5,315,on,PREP,2,-1,3
+6,315,"['e', 'business']",NP,2,-1,3
+7,315,[],NP,2,-1,3
+8,315,in,PREP,3,-1,4
+9,315,"['telligence', 'fig']",NP,3,-1,4
 0,316,['3:'],NP,0,-1,1
 1,316,[],NP,0,-1,1
 2,316,the,DET,1,-1,2
@@ -2680,8 +2780,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 8,316,on,PREP,3,-1,4
 9,316,[],NP,3,-1,4
 10,316,the,DET,4,-1,5
-11,316,"['separating', 'andoriginal']",NP,4,-1,5
-12,316,['schemes'],NP,4,-1,5
+11,316,['separating'],NP,4,-1,5
+12,316,and,CONJ,4,-1,5
+13,316,"['original', 'schemes']",NP,4,-1,5
 0,317,"['references', '[1]']",NP,0,-1,1
 1,317,['c'],NP,0,-1,1
 0,318,['l'],NP,0,-1,1
@@ -2831,14 +2932,17 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,381,"['cog:', 'local']",NP,0,-1,1
 1,381,['decomposition'],NP,0,-1,1
 2,381,for,PREP,1,-1,2
-3,381,"['rare', 'classanalysis']",NP,1,-1,2
+3,381,"['rare', 'class']",NP,1,-1,2
+4,381,['analysis'],NP,1,-1,2
 0,382,"['dmkd', '20(2):1384–5810']",NP,0,-1,1
 1,382,['2010'],NP,0,-1,1
-0,383,"['497the', '2010']",NP,0,-1,1
-1,383,"['international', 'conference']",NP,0,-1,1
-2,383,[],NP,0,-1,1
-3,383,on,PREP,1,-1,2
-4,383,"['e', 'business']",NP,1,-1,2
-5,383,[],NP,1,-1,2
-6,383,in,PREP,2,-1,3
-7,383,['telligence'],NP,2,-1,3
+0,383,['497'],NP,0,-1,1
+1,383,[],NP,0,-1,1
+2,383,the,DET,1,-1,2
+3,383,"['2010', 'international']",NP,1,-1,2
+4,383,['conference'],NP,1,-1,2
+5,383,on,PREP,2,-1,3
+6,383,"['e', 'business']",NP,2,-1,3
+7,383,[],NP,2,-1,3
+8,383,in,PREP,3,-1,4
+9,383,['telligence'],NP,3,-1,4
