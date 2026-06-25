@@ -287,6 +287,7 @@ def search_for_target_word(word,document,index=-1,index_list=[]):
             return [-1,-1] #if the proposed location does not match the word, the word must not be present. Throw -1s to indicate this
         right = bisect.bisect_right(word_list,word)
         support = right - left
+        print(f"left:{left} support: {support}")
         return [left,support] #This returns an array. Index 0 shows the locaiton that the word was found at, if applicable
         #Index 1 shows the number of times that the word is present in the document
     else:
@@ -304,6 +305,8 @@ def find_word_and_prev_word_info(document,word):
     locaiton_info = search_for_target_word(word,document) #First, find the index and number of occurances of the word
     prev_word = search_for_previous_word(locaiton_info[0],document) #Then, find the row location of the previous word
     prev_word_info = search_for_target_word(prev_word[1],document) #Finally, given the row information, find the previous word's occuances and index
+    print(f"word info: {prev_word_info}")
+    print(f"locaiton_info: {locaiton_info}")
     return [locaiton_info,prev_word_info]
 
 def get_word_from_index(document,index):
@@ -347,28 +350,33 @@ def should_split(document,prev_word,word):
     else:
         return False
 
+with open("paths.csv", mode='r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    next(reader)
+    #extraction()
+    for row in reader:
+        print("file:")
+        use_file = row[0]
+        print(use_file)
+        document = use_file
+        word_to_location_mapping(document)
+        #Create a mapping for each pdf present
 
-document = "ClassOverlapping"
-word_to_location_mapping(document)
-input = f"data/dict/working_set/mapped/{document}_mapped.csv"
-with open(input,'r') as file:
-    rows = list(csv.reader(file))
-    split_list = []
-    split_count=0
-    for row in rows:
-        word = row[1]
-        word_and_prev_word = find_word_and_prev_word_info(document,word)#gather info for the word and prev word
+        #input = f"data/dict/working_set/mapped/{document}_mapped.csv"
+        #with open(input,'r') as file:
+        #    rows = list(csv.reader(file))
+        #    split_list = []
+        #    split_count=0
+            #for row in rows:
+            #    word = row[1]
+            #    word_and_prev_word = find_word_and_prev_word_info(document,word)#gather info for the word and prev word
 
-        word = word_and_prev_word[0] #word index and frequency
-        prev_word = word_and_prev_word[1] #previous word index and frequency
-        prev_word_support = prev_word[1] #The number of times that the previous word was used in the document
-        word_support = word[1]
-        #print(prev_word_support)
-        #print(f"word: {word}")
-        #print(f"prev word: {prev_word}")
-        #print(f"verdict: {should_split(document,prev_word,word)}")
-        if should_split(document,prev_word,word):
-            split_count = split_count+1
-            split_list.append([word,get_word_from_index(document,word[0])])
-for word in split_list:
-    print(word)
+            #    word = word_and_prev_word[0] #word index and frequency
+            #    prev_word = word_and_prev_word[1] #previous word index and frequency
+            #    prev_word_support = prev_word[1] #The number of times that the previous word was used in the document
+            #    word_support = word[1]
+            #    if should_split(document,prev_word,word):
+            #        split_count = split_count+1
+            #        split_list.append([word,get_word_from_index(document,word[0])])
+        #for word in split_list:
+        #    print(word)
