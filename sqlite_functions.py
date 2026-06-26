@@ -1,9 +1,10 @@
 import sqlite3
 import csv
+import os.path
 
 # Connect to SQLite using a context manager
 def create_table(name):
-    with sqlite3.connect(f"{name}.db") as connection:
+    with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
 
         # Create employees table if not exists
@@ -23,7 +24,7 @@ def create_table(name):
 
 def import_contents(name):
     # Connect to database using context manager
-    with sqlite3.connect(f"{name}.db") as connection:
+    with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
         
         # Open CSV file using context manager and insert data
@@ -36,9 +37,9 @@ def import_contents(name):
         cursor.executemany(f"INSERT INTO {name} (phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to) VALUES (?, ?, ?, ?, ?, ?, ?)", data)
     print("CSV data successfully inserted into SQLite.")
 
-def traverse(name):
+def traverse_db(name):
     # Using context manager to fetch data
-    with sqlite3.connect(f"{name}.db") as connection:
+    with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
         cursor.execute(f"SELECT * FROM {name}")
         # Iterate over the cursor for efficient memory use
@@ -46,7 +47,7 @@ def traverse(name):
             print(row)
 
 def search(name,sentence_id,bundle_id):
-    with sqlite3.connect(f"{name}.db") as connection:
+    with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
         print(f"Name (sqlite): {name}")
         print(f"id (sqlite): {sentence_id}")
