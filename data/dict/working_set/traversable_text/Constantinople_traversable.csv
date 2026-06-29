@@ -38,45 +38,49 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 0,5,['jstor'],NP,0,-1,1
 0,6,"['org', 'stable']",NP,0,-1,1
 1,6,"['23253836', 'jstor']",NP,0,-1,1
-2,6,is,AUX,0,-1,1
-3,6,[],NP,0,-1,1
-4,6,a,DET,1,-1,2
-5,6,['not'],NP,1,-1,2
-6,6,[],NP,1,-1,2
-7,6,for,PREP,2,-1,3
-8,6,"['profit', 'service']",NP,2,-1,3
-9,6,[],NP,2,-1,3
-10,6,that,COMP,2,-1,3
-11,6,"['helps', 'scholars']",NP,2,-1,3
-12,6,and,CONJ,2,-1,3
-13,6,"['students', 'discover']",NP,2,-1,3
-14,6,"['researchers', 'use']",NP,2,-1,3
-15,6,and,CONJ,2,-1,3
-16,6,"['build', 'upon']",NP,2,-1,3
-17,6,[],NP,2,-1,3
-18,6,a,DET,3,-1,4
-19,6,"['wide', 'range']",NP,3,-1,4
-20,6,[],NP,3,-1,4
-21,6,of,PREP,4,-1,5
-22,6,['content'],NP,4,-1,5
-23,6,[],NP,4,-1,5
-24,6,in,PREP,5,-1,6
-25,6,[],NP,5,-1,6
-26,6,a,DET,6,-1,7
-27,6,"['trusted', 'digital']",NP,6,-1,7
-28,6,['archive'],NP,6,-1,7
+2,6,[],NP,0,-1,1
+3,6,is,AUX,0,-1,1
+4,6,[],NP,0,-1,1
+5,6,a,DET,1,-1,2
+6,6,['not'],NP,1,-1,2
+7,6,[],NP,1,-1,2
+8,6,for,PREP,2,-1,3
+9,6,"['profit', 'service']",NP,2,-1,3
+10,6,[],NP,2,-1,3
+11,6,that,COMP,2,-1,3
+12,6,"['helps', 'scholars']",NP,2,-1,3
+13,6,['researchers'],NP,2,-1,3
+14,6,and,CONJ,2,-1,3
+15,6,"['students', 'discover']",NP,2,-1,3
+16,6,['use'],NP,2,-1,3
+17,6,and,CONJ,2,-1,3
+18,6,"['build', 'upon']",NP,2,-1,3
+19,6,[],NP,2,-1,3
+20,6,a,DET,3,-1,4
+21,6,"['wide', 'range']",NP,3,-1,4
+22,6,[],NP,3,-1,4
+23,6,of,PREP,4,-1,5
+24,6,['content'],NP,4,-1,5
+25,6,[],NP,4,-1,5
+26,6,in,PREP,5,-1,6
+27,6,[],NP,5,-1,6
+28,6,a,DET,6,-1,7
+29,6,"['trusted', 'digital']",NP,6,-1,7
+30,6,['archive'],NP,6,-1,7
 0,7,"['we', 'use']",NP,0,-1,1
 1,7,"['information', 'technology']",NP,0,-1,1
-2,7,and,CONJ,0,-1,1
-3,7,['tools'],NP,0,-1,1
-4,7,[],NP,0,-1,1
-5,7,to,PREP,1,-1,2
-6,7,"['increase', 'productivity']",NP,1,-1,2
-7,7,and,CONJ,1,-1,2
-8,7,"['facilitate', 'new']",NP,1,-1,2
-9,7,['forms'],NP,1,-1,2
-10,7,of,PREP,2,-1,3
-11,7,['scholarship'],NP,2,-1,3
+2,7,[],NP,0,-1,1
+3,7,and,CONJ,0,-1,1
+4,7,['tools'],NP,0,-1,1
+5,7,[],NP,0,-1,1
+6,7,to,PREP,1,-1,2
+7,7,"['increase', 'productivity']",NP,1,-1,2
+8,7,[],NP,1,-1,2
+9,7,and,CONJ,1,-1,2
+10,7,"['facilitate', 'new']",NP,1,-1,2
+11,7,['forms'],NP,1,-1,2
+12,7,of,PREP,2,-1,3
+13,7,['scholarship'],NP,2,-1,3
 0,8,[],NP,0,-1,1
 1,8,for,PREP,1,-1,2
 2,8,"['more', 'information']",NP,1,-1,2
@@ -106,40 +110,44 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 19,10,"['https:', 'about']",NP,7,-1,8
 0,11,['jstor'],NP,0,-1,1
 0,12,"['org', 'terms']",NP,0,-1,1
-1,12,and,CONJ,0,-1,1
-2,12,"['cambridge', 'university']",NP,0,-1,1
-3,12,are,AUX,0,-1,1
-4,12,['collaborating'],NP,0,-1,1
-5,12,['press'],NP,0,-1,1
-6,12,with,PREP,1,-1,2
-7,12,['jstor'],NP,1,-1,2
-8,12,[],NP,1,-1,2
-9,12,to,PREP,2,-1,3
-10,12,"['digitize', 'preserve']",NP,2,-1,3
-11,12,and,CONJ,2,-1,3
-12,12,"['extend', 'access']",NP,2,-1,3
+1,12,[],NP,0,-1,1
+2,12,and,CONJ,0,-1,1
+3,12,"['cambridge', 'university']",NP,0,-1,1
+4,12,['press'],NP,0,-1,1
+5,12,are,AUX,0,-1,1
+6,12,['collaborating'],NP,0,-1,1
+7,12,[],NP,0,-1,1
+8,12,with,PREP,1,-1,2
+9,12,['jstor'],NP,1,-1,2
+10,12,[],NP,1,-1,2
+11,12,to,PREP,2,-1,3
+12,12,"['digitize', 'preserve']",NP,2,-1,3
 13,12,[],NP,2,-1,3
-14,12,to,PREP,3,-1,4
-15,12,"['church', 'history']",NP,3,-1,4
-16,12,[],NP,3,-1,4
-17,12,this,DET,4,-1,5
-18,12,"['content', 'downloaded']",NP,4,-1,5
-19,12,[],NP,4,-1,5
-20,12,from,PREP,5,-1,6
-21,12,['\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00132'],NP,5,-1,6
+14,12,and,CONJ,2,-1,3
+15,12,"['extend', 'access']",NP,2,-1,3
+16,12,[],NP,2,-1,3
+17,12,to,PREP,3,-1,4
+18,12,"['church', 'history']",NP,3,-1,4
+19,12,[],NP,3,-1,4
+20,12,this,DET,4,-1,5
+21,12,"['content', 'downloaded']",NP,4,-1,5
+22,12,[],NP,4,-1,5
+23,12,from,PREP,5,-1,6
+24,12,['\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00132'],NP,5,-1,6
 0,13,['174'],NP,0,-1,1
 0,14,['253'],NP,0,-1,1
 0,15,['69'],NP,0,-1,1
 1,15,[],NP,0,-1,1
 2,15,on,PREP,1,-1,2
 3,15,"['thu', '21']",NP,1,-1,2
-4,15,may,MOD,1,-1,2
-5,15,"['2026', '17:03:59']",NP,1,-1,2
-6,15,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
-7,15,"['use', 'subject']",NP,1,-1,2
-8,15,[],NP,1,-1,2
-9,15,to,PREP,2,-1,3
-10,15,"['https:', 'about']",NP,2,-1,3
+4,15,[],NP,1,-1,2
+5,15,may,MOD,1,-1,2
+6,15,"['2026', '17:03:59']",NP,1,-1,2
+7,15,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
+8,15,"['use', 'subject']",NP,1,-1,2
+9,15,[],NP,1,-1,2
+10,15,to,PREP,2,-1,3
+11,15,"['https:', 'about']",NP,2,-1,3
 0,16,['jstor'],NP,0,-1,1
 0,17,"['org', 'terms']",NP,0,-1,1
 1,17,"['434', 'church']",NP,0,-1,1
@@ -178,19 +186,21 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 11,25,[],NP,4,-1,5
 12,25,in,PREP,5,-1,6
 13,25,['1453'],NP,5,-1,6
-14,25,has,AUX,5,-1,6
-15,25,been,AUX,5,-1,6
-16,25,"['long', 'considered']",NP,5,-1,6
-17,25,['one'],NP,5,-1,6
-18,25,of,PREP,6,-1,7
-19,25,[],NP,6,-1,7
-20,25,the,DET,7,-1,8
-21,25,"['epochal', 'events']",NP,7,-1,8
-22,25,[],NP,7,-1,8
-23,25,of,PREP,8,-1,9
-24,25,[],NP,8,-1,9
-25,25,the,DET,9,-1,10
-26,25,"['medieval', 'world']",NP,9,-1,10
+14,25,[],NP,5,-1,6
+15,25,has,AUX,5,-1,6
+16,25,[],NP,5,-1,6
+17,25,been,AUX,5,-1,6
+18,25,"['long', 'considered']",NP,5,-1,6
+19,25,['one'],NP,5,-1,6
+20,25,of,PREP,6,-1,7
+21,25,[],NP,6,-1,7
+22,25,the,DET,7,-1,8
+23,25,"['epochal', 'events']",NP,7,-1,8
+24,25,[],NP,7,-1,8
+25,25,of,PREP,8,-1,9
+26,25,[],NP,8,-1,9
+27,25,the,DET,9,-1,10
+28,25,"['medieval', 'world']",NP,9,-1,10
 0,26,"['dramatic', 'accounts']",NP,0,-1,1
 1,26,[],NP,0,-1,1
 2,26,of,PREP,1,-1,2
@@ -208,11 +218,12 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 14,26,['after'],NP,5,-1,6
 15,26,the,DET,6,-1,7
 16,26,['events'],NP,6,-1,7
-17,26,and,CONJ,6,-1,7
-18,26,"['they', 'continue']",NP,6,-1,7
-19,26,[],NP,6,-1,7
-20,26,to,PREP,7,-1,8
-21,26,['proliferate'],NP,7,-1,8
+17,26,[],NP,6,-1,7
+18,26,and,CONJ,6,-1,7
+19,26,"['they', 'continue']",NP,6,-1,7
+20,26,[],NP,6,-1,7
+21,26,to,PREP,7,-1,8
+22,26,['proliferate'],NP,7,-1,8
 0,27,"['most', 'focus']",NP,0,-1,1
 1,27,[],NP,0,-1,1
 2,27,on,PREP,1,-1,2
@@ -263,143 +274,160 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,29,[],NP,4,-1,5
 13,29,a,DET,5,-1,6
 14,29,['vivid'],NP,5,-1,6
-15,29,and,CONJ,5,-1,6
-16,29,"['compelling', 'narrative']",NP,5,-1,6
-17,29,[],NP,5,-1,6
-18,29,of,PREP,6,-1,7
-19,29,[],NP,6,-1,7
-20,29,the,DET,7,-1,8
-21,29,['reigns'],NP,7,-1,8
-22,29,[],NP,7,-1,8
-23,29,of,PREP,8,-1,9
-24,29,[],NP,8,-1,9
-25,29,the,DET,9,-1,10
-26,29,"['last', 'palaiologan']",NP,9,-1,10
-27,29,"['emperors', '(1403']",NP,9,-1,10
-28,29,"['1453)', 'manuel']",NP,9,-1,10
-29,29,and,CONJ,9,-1,10
-30,29,"['his', 'sons']",NP,9,-1,10
-31,29,"['ii', 'john']",NP,9,-1,10
-32,29,['viii'],NP,9,-1,10
-33,29,and,CONJ,9,-1,10
-34,29,"['constantine', 'xi']",NP,9,-1,10
+15,29,[],NP,5,-1,6
+16,29,and,CONJ,5,-1,6
+17,29,"['compelling', 'narrative']",NP,5,-1,6
+18,29,[],NP,5,-1,6
+19,29,of,PREP,6,-1,7
+20,29,[],NP,6,-1,7
+21,29,the,DET,7,-1,8
+22,29,['reigns'],NP,7,-1,8
+23,29,[],NP,7,-1,8
+24,29,of,PREP,8,-1,9
+25,29,[],NP,8,-1,9
+26,29,the,DET,9,-1,10
+27,29,"['last', 'palaiologan']",NP,9,-1,10
+28,29,"['emperors', '(1403']",NP,9,-1,10
+29,29,"['1453)', 'manuel']",NP,9,-1,10
+30,29,['ii'],NP,9,-1,10
+31,29,and,CONJ,9,-1,10
+32,29,"['his', 'sons']",NP,9,-1,10
+33,29,"['john', 'viii']",NP,9,-1,10
+34,29,[],NP,9,-1,10
 35,29,and,CONJ,9,-1,10
-36,29,[],NP,9,-1,10
-37,29,the,DET,10,-1,11
-38,29,['fates'],NP,10,-1,11
-39,29,[],NP,10,-1,11
-40,29,of,PREP,11,-1,12
-41,29,"['their', 'survivors']",NP,11,-1,12
-42,29,"['after', '1453']",NP,11,-1,12
+36,29,"['constantine', 'xi']",NP,9,-1,10
+37,29,[],NP,9,-1,10
+38,29,and,CONJ,9,-1,10
+39,29,[],NP,9,-1,10
+40,29,the,DET,10,-1,11
+41,29,['fates'],NP,10,-1,11
+42,29,[],NP,10,-1,11
+43,29,of,PREP,11,-1,12
+44,29,"['their', 'survivors']",NP,11,-1,12
+45,29,"['after', '1453']",NP,11,-1,12
 0,30,"['he', 'not']",NP,0,-1,1
 1,30,"['only', 'brings']",NP,0,-1,1
 2,30,[],NP,0,-1,1
 3,30,the,DET,1,-1,2
 4,30,"['issues', 'setting']",NP,1,-1,2
-5,30,and,CONJ,1,-1,2
-6,30,['personalities'],NP,1,-1,2
-7,30,[],NP,1,-1,2
-8,30,to,PREP,2,-1,3
-9,30,['life'],NP,2,-1,3
-10,30,but,CONJ,2,-1,3
-11,30,"['also', 'presents']",NP,2,-1,3
-12,30,"['strong', 'arguments']",NP,2,-1,3
-13,30,[],NP,2,-1,3
-14,30,for,PREP,3,-1,4
-15,30,"['revising', 'our']",NP,3,-1,4
-16,30,['view'],NP,3,-1,4
-17,30,of,PREP,4,-1,5
-18,30,"['byzantine', 'failure']",NP,4,-1,5
+5,30,[],NP,1,-1,2
+6,30,and,CONJ,1,-1,2
+7,30,['personalities'],NP,1,-1,2
+8,30,[],NP,1,-1,2
+9,30,to,PREP,2,-1,3
+10,30,['life'],NP,2,-1,3
+11,30,[],NP,2,-1,3
+12,30,but,CONJ,2,-1,3
+13,30,"['also', 'presents']",NP,2,-1,3
+14,30,"['strong', 'arguments']",NP,2,-1,3
+15,30,[],NP,2,-1,3
+16,30,for,PREP,3,-1,4
+17,30,"['revising', 'our']",NP,3,-1,4
+18,30,['view'],NP,3,-1,4
+19,30,of,PREP,4,-1,5
+20,30,"['byzantine', 'failure']",NP,4,-1,5
 0,31,['based'],NP,0,-1,1
 1,31,[],NP,0,-1,1
 2,31,on,PREP,1,-1,2
 3,31,"['contemporary', 'sources']",NP,1,-1,2
-4,31,and,CONJ,1,-1,2
-5,31,"['recent', 'research']",NP,1,-1,2
-6,31,[],NP,1,-1,2
-7,31,this,DET,2,-1,3
-8,31,['book'],NP,2,-1,3
-9,31,is,AUX,2,-1,3
-10,31,"['important', 'reading']",NP,2,-1,3
-11,31,[],NP,2,-1,3
-12,31,for,PREP,3,-1,4
-13,31,"['historians', 'as']",NP,3,-1,4
-14,31,"['well', 'as']",NP,3,-1,4
-15,31,"['general', 'audiences']",NP,3,-1,4
+4,31,[],NP,1,-1,2
+5,31,and,CONJ,1,-1,2
+6,31,"['recent', 'research']",NP,1,-1,2
+7,31,[],NP,1,-1,2
+8,31,this,DET,2,-1,3
+9,31,['book'],NP,2,-1,3
+10,31,[],NP,2,-1,3
+11,31,is,AUX,2,-1,3
+12,31,"['important', 'reading']",NP,2,-1,3
+13,31,[],NP,2,-1,3
+14,31,for,PREP,3,-1,4
+15,31,"['historians', 'as']",NP,3,-1,4
+16,31,"['well', 'as']",NP,3,-1,4
+17,31,"['general', 'audiences']",NP,3,-1,4
 0,32,"['harris', 'argues']",NP,0,-1,1
 1,32,[],NP,0,-1,1
 2,32,that,COMP,0,-1,1
 3,32,[],NP,0,-1,1
 4,32,the,DET,1,-1,2
 5,32,"['late', 'byzantines']",NP,1,-1,2
-6,32,were,AUX,1,-1,2
-7,32,['realists'],NP,1,-1,2
-8,32,[],NP,1,-1,2
-9,32,in,PREP,2,-1,3
-10,32,"['teracted', 'closely']",NP,2,-1,3
-11,32,and,CONJ,2,-1,3
-12,32,"['generally', 'peacefully']",NP,2,-1,3
-13,32,[],NP,2,-1,3
-14,32,in,PREP,3,-1,4
-15,32,"['everyday', 'life']",NP,3,-1,4
-16,32,[],NP,3,-1,4
-17,32,with,PREP,4,-1,5
-18,32,"['ottoman', 'turks']",NP,4,-1,5
-19,32,['as'],NP,4,-1,5
-20,32,with,PREP,5,-1,6
-21,32,['genoese'],NP,5,-1,6
-22,32,and,CONJ,5,-1,6
-23,32,['venetians'],NP,5,-1,6
+6,32,[],NP,1,-1,2
+7,32,were,AUX,1,-1,2
+8,32,['realists'],NP,1,-1,2
+9,32,[],NP,1,-1,2
+10,32,in,PREP,2,-1,3
+11,32,"['teracted', 'closely']",NP,2,-1,3
+12,32,[],NP,2,-1,3
+13,32,and,CONJ,2,-1,3
+14,32,"['generally', 'peacefully']",NP,2,-1,3
+15,32,[],NP,2,-1,3
+16,32,in,PREP,3,-1,4
+17,32,"['everyday', 'life']",NP,3,-1,4
+18,32,[],NP,3,-1,4
+19,32,with,PREP,4,-1,5
+20,32,"['ottoman', 'turks']",NP,4,-1,5
+21,32,['as'],NP,4,-1,5
+22,32,with,PREP,5,-1,6
+23,32,['genoese'],NP,5,-1,6
 24,32,[],NP,5,-1,6
-25,32,in,PREP,6,-1,7
-26,32,"['their', 'small']",NP,6,-1,7
-27,32,"['remaining', 'territories']",NP,6,-1,7
-28,32,[],NP,6,-1,7
-29,32,in,PREP,7,-1,8
-30,32,['constantinople'],NP,7,-1,8
-31,32,and,CONJ,7,-1,8
-32,32,['greece'],NP,7,-1,8
+25,32,and,CONJ,5,-1,6
+26,32,['venetians'],NP,5,-1,6
+27,32,[],NP,5,-1,6
+28,32,in,PREP,6,-1,7
+29,32,"['their', 'small']",NP,6,-1,7
+30,32,"['remaining', 'territories']",NP,6,-1,7
+31,32,[],NP,6,-1,7
+32,32,in,PREP,7,-1,8
+33,32,['constantinople'],NP,7,-1,8
+34,32,[],NP,7,-1,8
+35,32,and,CONJ,7,-1,8
+36,32,['greece'],NP,7,-1,8
 0,33,[],NP,0,-1,1
 1,33,in,PREP,1,-1,2
 2,33,['terconnected'],NP,1,-1,2
 3,33,[],NP,1,-1,2
 4,33,by,PREP,2,-1,3
 5,33,"['family', 'ties']",NP,2,-1,3
-6,33,and,CONJ,2,-1,3
-7,33,"['trade', 'byzantines']",NP,2,-1,3
-8,33,"['balkan', 'christians']",NP,2,-1,3
-9,33,"['italians', 'europeans']",NP,2,-1,3
-10,33,and,CONJ,2,-1,3
-11,33,"['turks', 'shared']",NP,2,-1,3
-12,33,"[""byzantium's"", 'former']",NP,2,-1,3
-13,33,"['european', 'territory']",NP,2,-1,3
+6,33,[],NP,2,-1,3
+7,33,and,CONJ,2,-1,3
+8,33,"['trade', 'byzantines']",NP,2,-1,3
+9,33,"['balkan', 'christians']",NP,2,-1,3
+10,33,"['italians', 'europeans']",NP,2,-1,3
+11,33,[],NP,2,-1,3
+12,33,and,CONJ,2,-1,3
+13,33,"['turks', 'shared']",NP,2,-1,3
+14,33,"[""byzantium's"", 'former']",NP,2,-1,3
+15,33,"['european', 'territory']",NP,2,-1,3
 0,34,"['during', 'their']",NP,0,-1,1
 1,34,"['last', 'half']",NP,0,-1,1
 2,34,"['century', 'byzantine']",NP,0,-1,1
 3,34,"['rulers', 'maneuvered']",NP,0,-1,1
 4,34,"['between', 'ottoman']",NP,0,-1,1
-5,34,and,CONJ,0,-1,1
-6,34,"['western', 'alliances']",NP,0,-1,1
-7,34,"['accepting', 'turkish']",NP,0,-1,1
-8,34,['vassalage'],NP,0,-1,1
-9,34,and,CONJ,0,-1,1
-10,34,"['paying', 'tribute']",NP,0,-1,1
-11,34,['testing'],NP,0,-1,1
-12,34,the,DET,1,-1,2
-13,34,['limits'],NP,1,-1,2
-14,34,[],NP,1,-1,2
-15,34,of,PREP,2,-1,3
-16,34,"['treaties', 'engaging']",NP,2,-1,3
-17,34,['alternately'],NP,2,-1,3
-18,34,in,PREP,3,-1,4
-19,34,['diplomacy'],NP,3,-1,4
-20,34,and,CONJ,3,-1,4
-21,34,"['military', 'action']",NP,3,-1,4
-22,34,and,CONJ,3,-1,4
-23,34,"['dabbling', 'dangerously']",NP,3,-1,4
-24,34,[],NP,3,-1,4
-25,34,with,PREP,4,-1,5
-26,34,"['ottoman', 'pretenders']",NP,4,-1,5
+5,34,[],NP,0,-1,1
+6,34,and,CONJ,0,-1,1
+7,34,"['western', 'alliances']",NP,0,-1,1
+8,34,"['accepting', 'turkish']",NP,0,-1,1
+9,34,['vassalage'],NP,0,-1,1
+10,34,[],NP,0,-1,1
+11,34,and,CONJ,0,-1,1
+12,34,"['paying', 'tribute']",NP,0,-1,1
+13,34,['testing'],NP,0,-1,1
+14,34,the,DET,1,-1,2
+15,34,['limits'],NP,1,-1,2
+16,34,[],NP,1,-1,2
+17,34,of,PREP,2,-1,3
+18,34,"['treaties', 'engaging']",NP,2,-1,3
+19,34,['alternately'],NP,2,-1,3
+20,34,in,PREP,3,-1,4
+21,34,['diplomacy'],NP,3,-1,4
+22,34,[],NP,3,-1,4
+23,34,and,CONJ,3,-1,4
+24,34,"['military', 'action']",NP,3,-1,4
+25,34,[],NP,3,-1,4
+26,34,and,CONJ,3,-1,4
+27,34,"['dabbling', 'dangerously']",NP,3,-1,4
+28,34,[],NP,3,-1,4
+29,34,with,PREP,4,-1,5
+30,34,"['ottoman', 'pretenders']",NP,4,-1,5
 0,35,"['they', 'played']",NP,0,-1,1
 1,35,"['turkish', 'demands']",NP,0,-1,1
 2,35,"['off', 'against']",NP,0,-1,1
@@ -413,53 +441,60 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,35,[],NP,2,-1,3
 11,35,to,PREP,3,-1,4
 12,35,"['seek', 'aid']",NP,3,-1,4
-13,35,and,CONJ,3,-1,4
-14,35,['crusades'],NP,3,-1,4
-15,35,but,CONJ,3,-1,4
-16,35,did,AUX,3,-1,4
-17,35,"['their', 'best']",NP,3,-1,4
+13,35,[],NP,3,-1,4
+14,35,and,CONJ,3,-1,4
+15,35,['crusades'],NP,3,-1,4
+16,35,[],NP,3,-1,4
+17,35,but,CONJ,3,-1,4
 18,35,[],NP,3,-1,4
-19,35,to,PREP,4,-1,5
-20,35,"['delay', 'implementing']",NP,4,-1,5
-21,35,"['papal', 'demands']",NP,4,-1,5
-22,35,[],NP,4,-1,5
-23,35,for,PREP,5,-1,6
-24,35,"['church', 'union']",NP,5,-1,6
-25,35,[],NP,5,-1,6
-26,35,that,COMP,5,-1,6
-27,35,"['served', 'as']",NP,5,-1,6
+19,35,did,AUX,3,-1,4
+20,35,"['their', 'best']",NP,3,-1,4
+21,35,[],NP,3,-1,4
+22,35,to,PREP,4,-1,5
+23,35,"['delay', 'implementing']",NP,4,-1,5
+24,35,"['papal', 'demands']",NP,4,-1,5
+25,35,[],NP,4,-1,5
+26,35,for,PREP,5,-1,6
+27,35,"['church', 'union']",NP,5,-1,6
 28,35,[],NP,5,-1,6
-29,35,a,DET,6,-1,7
-30,35,['condition'],NP,6,-1,7
-31,35,[],NP,6,-1,7
-32,35,of,PREP,7,-1,8
-33,35,['support'],NP,7,-1,8
+29,35,that,COMP,5,-1,6
+30,35,"['served', 'as']",NP,5,-1,6
+31,35,[],NP,5,-1,6
+32,35,a,DET,6,-1,7
+33,35,['condition'],NP,6,-1,7
+34,35,[],NP,6,-1,7
+35,35,of,PREP,7,-1,8
+36,35,['support'],NP,7,-1,8
 0,36,"['harris', 'demonstrates']",NP,0,-1,1
 1,36,[],NP,0,-1,1
 2,36,that,COMP,0,-1,1
 3,36,"['both', 'emperors']",NP,0,-1,1
-4,36,and,CONJ,0,-1,1
-5,36,"['powerful', 'families']",NP,0,-1,1
-6,36,were,AUX,0,-1,1
-7,36,"['often', 'divided']",NP,0,-1,1
-8,36,[],NP,0,-1,1
-9,36,in,PREP,1,-1,2
-10,36,"['their', 'allegiances']",NP,1,-1,2
-11,36,"['sometimes', 'changing']",NP,1,-1,2
-12,36,['sides'],NP,1,-1,2
-13,36,[],NP,1,-1,2
-14,36,for,PREP,2,-1,3
-15,36,"['political', 'ambition']",NP,2,-1,3
-16,36,or,CONJ,2,-1,3
-17,36,[],NP,2,-1,3
-18,36,the,DET,3,-1,4
-19,36,['need'],NP,3,-1,4
-20,36,[],NP,3,-1,4
-21,36,to,PREP,4,-1,5
-22,36,"['conserve', 'their']",NP,4,-1,5
-23,36,and,CONJ,4,-1,5
-24,36,"['protect', 'their']",NP,4,-1,5
-25,36,"['wealth', 'families']",NP,4,-1,5
+4,36,[],NP,0,-1,1
+5,36,and,CONJ,0,-1,1
+6,36,"['powerful', 'families']",NP,0,-1,1
+7,36,[],NP,0,-1,1
+8,36,were,AUX,0,-1,1
+9,36,"['often', 'divided']",NP,0,-1,1
+10,36,[],NP,0,-1,1
+11,36,in,PREP,1,-1,2
+12,36,"['their', 'allegiances']",NP,1,-1,2
+13,36,"['sometimes', 'changing']",NP,1,-1,2
+14,36,['sides'],NP,1,-1,2
+15,36,[],NP,1,-1,2
+16,36,for,PREP,2,-1,3
+17,36,"['political', 'ambition']",NP,2,-1,3
+18,36,[],NP,2,-1,3
+19,36,or,CONJ,2,-1,3
+20,36,[],NP,2,-1,3
+21,36,the,DET,3,-1,4
+22,36,['need'],NP,3,-1,4
+23,36,[],NP,3,-1,4
+24,36,to,PREP,4,-1,5
+25,36,"['conserve', 'their']",NP,4,-1,5
+26,36,['wealth'],NP,4,-1,5
+27,36,and,CONJ,4,-1,5
+28,36,"['protect', 'their']",NP,4,-1,5
+29,36,['families'],NP,4,-1,5
 0,37,['following'],NP,0,-1,1
 1,37,[],NP,0,-1,1
 2,37,a,DET,1,-1,2
@@ -486,55 +521,60 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 23,37,[],NP,7,-1,8
 24,37,of,PREP,8,-1,9
 25,37,"['manuel', 'ii']",NP,8,-1,9
-26,37,and,CONJ,8,-1,9
-27,37,"['subsequent', 'rulers']",NP,8,-1,9
-28,37,[],NP,8,-1,9
-29,37,in,PREP,9,-1,10
-30,37,"['their', 'diminished']",NP,9,-1,10
-31,37,['empire'],NP,9,-1,10
+26,37,[],NP,8,-1,9
+27,37,and,CONJ,8,-1,9
+28,37,"['subsequent', 'rulers']",NP,8,-1,9
+29,37,[],NP,8,-1,9
+30,37,in,PREP,9,-1,10
+31,37,"['their', 'diminished']",NP,9,-1,10
+32,37,['empire'],NP,9,-1,10
 0,38,[],NP,0,-1,1
 1,38,in,PREP,1,-1,2
 2,38,"['constantinople', 'they']",NP,1,-1,2
 3,38,"['maintained', 'impressive']",NP,1,-1,2
 4,38,['ceremonies'],NP,1,-1,2
-5,38,and,CONJ,1,-1,2
-6,38,['titles'],NP,1,-1,2
-7,38,[],NP,1,-1,2
-8,38,in,PREP,2,-1,3
-9,38,[],NP,2,-1,3
-10,38,a,DET,3,-1,4
-11,38,"['ramshackle', 'city']",NP,3,-1,4
-12,38,[],NP,3,-1,4
-13,38,of,PREP,4,-1,5
-14,38,"['crumbling', 'monuments']",NP,4,-1,5
-15,38,and,CONJ,4,-1,5
-16,38,"['deserted', 'areas']",NP,4,-1,5
-17,38,"['while', 'venetian']",NP,4,-1,5
-18,38,and,CONJ,4,-1,5
-19,38,"['genoese', 'semi']",NP,4,-1,5
-20,38,"['independent', 'enclaves']",NP,4,-1,5
-21,38,['bustled'],NP,4,-1,5
-22,38,[],NP,4,-1,5
-23,38,with,PREP,5,-1,6
-24,38,[],NP,5,-1,6
-25,38,the,DET,6,-1,7
-26,38,"['trade', 'shipping']",NP,6,-1,7
-27,38,and,CONJ,6,-1,7
-28,38,"['international', 'finance']",NP,6,-1,7
-29,38,"['they', 'controlled']",NP,6,-1,7
+5,38,[],NP,1,-1,2
+6,38,and,CONJ,1,-1,2
+7,38,['titles'],NP,1,-1,2
+8,38,[],NP,1,-1,2
+9,38,in,PREP,2,-1,3
+10,38,[],NP,2,-1,3
+11,38,a,DET,3,-1,4
+12,38,"['ramshackle', 'city']",NP,3,-1,4
+13,38,[],NP,3,-1,4
+14,38,of,PREP,4,-1,5
+15,38,"['crumbling', 'monuments']",NP,4,-1,5
+16,38,[],NP,4,-1,5
+17,38,and,CONJ,4,-1,5
+18,38,"['deserted', 'areas']",NP,4,-1,5
+19,38,"['while', 'venetian']",NP,4,-1,5
+20,38,[],NP,4,-1,5
+21,38,and,CONJ,4,-1,5
+22,38,"['genoese', 'semi']",NP,4,-1,5
+23,38,"['independent', 'enclaves']",NP,4,-1,5
+24,38,['bustled'],NP,4,-1,5
+25,38,[],NP,4,-1,5
+26,38,with,PREP,5,-1,6
+27,38,[],NP,5,-1,6
+28,38,the,DET,6,-1,7
+29,38,"['trade', 'shipping']",NP,6,-1,7
 30,38,[],NP,6,-1,7
-31,38,a,DET,7,-1,8
-32,38,['source'],NP,7,-1,8
-33,38,[],NP,7,-1,8
-34,38,of,PREP,8,-1,9
-35,38,['wealth'],NP,8,-1,9
-36,38,[],NP,8,-1,9
-37,38,for,PREP,9,-1,10
-38,38,['some'],NP,9,-1,10
-39,38,[],NP,9,-1,10
-40,38,of,PREP,10,-1,11
-41,38,"[""constantinople's"", 'leading']",NP,10,-1,11
-42,38,['citizens'],NP,10,-1,11
+31,38,and,CONJ,6,-1,7
+32,38,"['international', 'finance']",NP,6,-1,7
+33,38,"['they', 'controlled']",NP,6,-1,7
+34,38,[],NP,6,-1,7
+35,38,a,DET,7,-1,8
+36,38,['source'],NP,7,-1,8
+37,38,[],NP,7,-1,8
+38,38,of,PREP,8,-1,9
+39,38,['wealth'],NP,8,-1,9
+40,38,[],NP,8,-1,9
+41,38,for,PREP,9,-1,10
+42,38,['some'],NP,9,-1,10
+43,38,[],NP,9,-1,10
+44,38,of,PREP,10,-1,11
+45,38,"[""constantinople's"", 'leading']",NP,10,-1,11
+46,38,['citizens'],NP,10,-1,11
 0,39,[],NP,0,-1,1
 1,39,the,DET,1,-1,2
 2,39,"['remaining', 'empire']",NP,1,-1,2
@@ -552,76 +592,83 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,42,[],NP,0,-1,1
 2,42,on,PREP,1,-1,2
 3,42,"['thu', '21']",NP,1,-1,2
-4,42,may,MOD,1,-1,2
-5,42,"['2026', '17:03:59']",NP,1,-1,2
-6,42,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
-7,42,"['use', 'subject']",NP,1,-1,2
-8,42,[],NP,1,-1,2
-9,42,to,PREP,2,-1,3
-10,42,"['https:', 'about']",NP,2,-1,3
+4,42,[],NP,1,-1,2
+5,42,may,MOD,1,-1,2
+6,42,"['2026', '17:03:59']",NP,1,-1,2
+7,42,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
+8,42,"['use', 'subject']",NP,1,-1,2
+9,42,[],NP,1,-1,2
+10,42,to,PREP,2,-1,3
+11,42,"['https:', 'about']",NP,2,-1,3
 0,43,['jstor'],NP,0,-1,1
 0,44,"['org', 'terms']",NP,0,-1,1
 1,44,"['book', 'reviews']",NP,0,-1,1
-2,44,and,CONJ,0,-1,1
-3,44,"['notes', '435']",NP,0,-1,1
-4,44,"['territories', 'ruled']",NP,0,-1,1
-5,44,"['quasi', 'independently']",NP,0,-1,1
-6,44,[],NP,0,-1,1
-7,44,by,PREP,1,-1,2
-8,44,"['palaiologos', 'family']",NP,1,-1,2
-9,44,['members'],NP,1,-1,2
-10,44,in,PREP,2,-1,3
-11,44,"['ternecine', 'quarrels']",NP,2,-1,3
-12,44,"['continued', 'even']",NP,2,-1,3
-13,44,"['beyond', '1453']",NP,2,-1,3
+2,44,[],NP,0,-1,1
+3,44,and,CONJ,0,-1,1
+4,44,"['notes', '435']",NP,0,-1,1
+5,44,"['territories', 'ruled']",NP,0,-1,1
+6,44,"['quasi', 'independently']",NP,0,-1,1
+7,44,[],NP,0,-1,1
+8,44,by,PREP,1,-1,2
+9,44,"['palaiologos', 'family']",NP,1,-1,2
+10,44,['members'],NP,1,-1,2
+11,44,in,PREP,2,-1,3
+12,44,"['ternecine', 'quarrels']",NP,2,-1,3
+13,44,"['continued', 'even']",NP,2,-1,3
+14,44,"['beyond', '1453']",NP,2,-1,3
 0,45,"['survival', 'depended']",NP,0,-1,1
 1,45,[],NP,0,-1,1
 2,45,on,PREP,1,-1,2
 3,45,"['th', 'fortunes']",NP,1,-1,2
-4,45,and,CONJ,1,-1,2
-5,45,['personalities'],NP,1,-1,2
-6,45,[],NP,1,-1,2
-7,45,of,PREP,2,-1,3
-8,45,"['ottoman', 'rulers']",NP,2,-1,3
-9,45,and,CONJ,2,-1,3
-10,45,"['byzantine', 'skill']",NP,2,-1,3
-11,45,[],NP,2,-1,3
-12,45,in,PREP,3,-1,4
-13,45,"['determining', 'where']",NP,3,-1,4
-14,45,could,MOD,3,-1,4
-15,45,"['safely', 'push']",NP,3,-1,4
-16,45,"['they', 'treaty']",NP,3,-1,4
-17,45,['limits'],NP,3,-1,4
+4,45,[],NP,1,-1,2
+5,45,and,CONJ,1,-1,2
+6,45,['personalities'],NP,1,-1,2
+7,45,[],NP,1,-1,2
+8,45,of,PREP,2,-1,3
+9,45,"['ottoman', 'rulers']",NP,2,-1,3
+10,45,[],NP,2,-1,3
+11,45,and,CONJ,2,-1,3
+12,45,"['byzantine', 'skill']",NP,2,-1,3
+13,45,[],NP,2,-1,3
+14,45,in,PREP,3,-1,4
+15,45,"['determining', 'where']",NP,3,-1,4
+16,45,['they'],NP,3,-1,4
+17,45,could,MOD,3,-1,4
+18,45,"['safely', 'push']",NP,3,-1,4
+19,45,"['treaty', 'limits']",NP,3,-1,4
 0,46,"['harris', 'vivi']",NP,0,-1,1
 1,46,['describes'],NP,0,-1,1
 2,46,the,DET,1,-1,2
 3,46,"['disastrous', 'consequences']",NP,1,-1,2
 4,46,"['manuel', 'ii']",NP,1,-1,2
 5,46,"['john', 'viii']",NP,1,-1,2
-6,46,and,CONJ,1,-1,2
-7,46,"['constantin', 'ix']",NP,1,-1,2
-8,46,['engendered'],NP,1,-1,2
-9,46,by,PREP,2,-1,3
-10,46,[],NP,2,-1,3
-11,46,in,PREP,3,-1,4
-12,46,"['volving', 'themselves']",NP,3,-1,4
-13,46,[],NP,3,-1,4
-14,46,in,PREP,4,-1,5
-15,46,"['ottoman', 'succession']",NP,4,-1,5
-16,46,"['strugg', 'expanding']",NP,4,-1,5
-17,46,"['their', 'territories']",NP,4,-1,5
-18,46,and,CONJ,4,-1,5
-19,46,['battling'],NP,4,-1,5
-20,46,[],NP,4,-1,5
-21,46,with,PREP,5,-1,6
-22,46,"['their', 'brothers']",NP,5,-1,6
-23,46,but,CONJ,5,-1,6
-24,46,"['he', 'also']",NP,5,-1,6
-25,46,"['cre', 'all']",NP,5,-1,6
-26,46,"['three', 'rulers']",NP,5,-1,6
-27,46,[],NP,5,-1,6
-28,46,with,PREP,6,-1,7
-29,46,"['diplomatic', 'skills']",NP,6,-1,7
+6,46,[],NP,1,-1,2
+7,46,and,CONJ,1,-1,2
+8,46,"['constantin', 'ix']",NP,1,-1,2
+9,46,['engendered'],NP,1,-1,2
+10,46,by,PREP,2,-1,3
+11,46,[],NP,2,-1,3
+12,46,in,PREP,3,-1,4
+13,46,"['volving', 'themselves']",NP,3,-1,4
+14,46,[],NP,3,-1,4
+15,46,in,PREP,4,-1,5
+16,46,"['ottoman', 'succession']",NP,4,-1,5
+17,46,"['strugg', 'expanding']",NP,4,-1,5
+18,46,"['their', 'territories']",NP,4,-1,5
+19,46,[],NP,4,-1,5
+20,46,and,CONJ,4,-1,5
+21,46,['battling'],NP,4,-1,5
+22,46,[],NP,4,-1,5
+23,46,with,PREP,5,-1,6
+24,46,"['their', 'brothers']",NP,5,-1,6
+25,46,[],NP,5,-1,6
+26,46,but,CONJ,5,-1,6
+27,46,"['he', 'also']",NP,5,-1,6
+28,46,"['cre', 'all']",NP,5,-1,6
+29,46,"['three', 'rulers']",NP,5,-1,6
+30,46,[],NP,5,-1,6
+31,46,with,PREP,6,-1,7
+32,46,"['diplomatic', 'skills']",NP,6,-1,7
 0,47,[],NP,0,-1,1
 1,47,the,DET,1,-1,2
 2,47,"['ottoman', 'policy']",NP,1,-1,2
@@ -637,81 +684,90 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 12,47,"['life', 'property']",NP,4,-1,5
 13,47,"['religious', 'practice—to']",NP,4,-1,5
 14,47,"['besieged', 'cities']",NP,4,-1,5
-15,47,was,AUX,4,-1,5
-16,47,"['critical;', 'refusal']",NP,4,-1,5
-17,47,['resulted'],NP,4,-1,5
-18,47,in,PREP,5,-1,6
-19,47,"['pillag', 'rape']",NP,5,-1,6
-20,47,and,CONJ,5,-1,6
-21,47,"['captivity', 'evident']",NP,5,-1,6
-22,47,[],NP,5,-1,6
-23,47,in,PREP,6,-1,7
-24,47,[],NP,6,-1,7
-25,47,the,DET,7,-1,8
-26,47,"['violent', 'destruction']",NP,7,-1,8
-27,47,[],NP,7,-1,8
-28,47,of,PREP,8,-1,9
-29,47,[],NP,8,-1,9
-30,47,the,DET,9,-1,10
-31,47,['ssalonica'],NP,9,-1,10
-32,47,[],NP,9,-1,10
-33,47,in,PREP,10,-1,11
-34,47,['14'],NP,10,-1,11
-35,47,[],NP,10,-1,11
-36,47,the,DET,11,-1,12
-37,47,"[""author's"", 'discussion']",NP,11,-1,12
-38,47,[],NP,11,-1,12
-39,47,of,PREP,12,-1,13
-40,47,"['church', 'union']",NP,12,-1,13
-41,47,is,AUX,12,-1,13
-42,47,"['especially', 'relevant']",NP,12,-1,13
+15,47,[],NP,4,-1,5
+16,47,was,AUX,4,-1,5
+17,47,"['critical;', 'refusal']",NP,4,-1,5
+18,47,['resulted'],NP,4,-1,5
+19,47,in,PREP,5,-1,6
+20,47,"['pillag', 'rape']",NP,5,-1,6
+21,47,[],NP,5,-1,6
+22,47,and,CONJ,5,-1,6
+23,47,"['captivity', 'evident']",NP,5,-1,6
+24,47,[],NP,5,-1,6
+25,47,in,PREP,6,-1,7
+26,47,[],NP,6,-1,7
+27,47,the,DET,7,-1,8
+28,47,"['violent', 'destruction']",NP,7,-1,8
+29,47,[],NP,7,-1,8
+30,47,of,PREP,8,-1,9
+31,47,[],NP,8,-1,9
+32,47,the,DET,9,-1,10
+33,47,['ssalonica'],NP,9,-1,10
+34,47,[],NP,9,-1,10
+35,47,in,PREP,10,-1,11
+36,47,['14'],NP,10,-1,11
+37,47,[],NP,10,-1,11
+38,47,the,DET,11,-1,12
+39,47,"[""author's"", 'discussion']",NP,11,-1,12
+40,47,[],NP,11,-1,12
+41,47,of,PREP,12,-1,13
+42,47,"['church', 'union']",NP,12,-1,13
 43,47,[],NP,12,-1,13
-44,47,for,PREP,13,-1,14
-45,47,"['churc', 'history']",NP,13,-1,14
+44,47,is,AUX,12,-1,13
+45,47,"['especially', 'relevant']",NP,12,-1,13
+46,47,[],NP,12,-1,13
+47,47,for,PREP,13,-1,14
+48,47,"['churc', 'history']",NP,13,-1,14
 0,48,[],NP,0,-1,1
 1,48,the,DET,1,-1,2
 2,48,['price'],NP,1,-1,2
 3,48,[],NP,1,-1,2
 4,48,for,PREP,2,-1,3
 5,48,"['western', 'military']",NP,2,-1,3
-6,48,was,AUX,2,-1,3
-7,48,"['high:', 'acceptance']",NP,2,-1,3
-8,48,['aid'],NP,2,-1,3
-9,48,of,PREP,3,-1,4
-10,48,"['churc', 'union']",NP,3,-1,4
-11,48,['unpalatable'],NP,3,-1,4
-12,48,in,PREP,4,-1,5
-13,48,['constantinople'],NP,4,-1,5
-14,48,and,CONJ,4,-1,5
-15,48,"['certain', 'ottoman']",NP,4,-1,5
-16,48,['reprisals'],NP,4,-1,5
+6,48,['aid'],NP,2,-1,3
+7,48,was,AUX,2,-1,3
+8,48,"['high:', 'acceptance']",NP,2,-1,3
+9,48,[],NP,2,-1,3
+10,48,of,PREP,3,-1,4
+11,48,"['churc', 'union']",NP,3,-1,4
+12,48,['unpalatable'],NP,3,-1,4
+13,48,in,PREP,4,-1,5
+14,48,['constantinople'],NP,4,-1,5
+15,48,[],NP,4,-1,5
+16,48,and,CONJ,4,-1,5
+17,48,"['certain', 'ottoman']",NP,4,-1,5
+18,48,['reprisals'],NP,4,-1,5
 0,49,['manue'],NP,0,-1,1
-1,49,had,AUX,0,-1,1
-2,49,"['counseled', 'his']",NP,0,-1,1
-3,49,['son'],NP,0,-1,1
-4,49,to,PREP,1,-1,2
-5,49,['avoid'],NP,1,-1,2
-6,49,[],NP,1,-1,2
-7,49,an,DET,2,-1,3
-8,49,['agreement'],NP,2,-1,3
-9,49,but,CONJ,2,-1,3
-10,49,['john'],NP,2,-1,3
-11,49,and,CONJ,2,-1,3
-12,49,"['his', 'advis']",NP,2,-1,3
-13,49,['came'],NP,2,-1,3
-14,49,to,PREP,3,-1,4
-15,49,['believe'],NP,3,-1,4
-16,49,[],NP,3,-1,4
-17,49,that,COMP,3,-1,4
-18,49,[],NP,3,-1,4
-19,49,a,DET,4,-1,5
-20,49,['crusade'],NP,4,-1,5
-21,49,[],NP,4,-1,5
-22,49,to,PREP,5,-1,6
-23,49,"['destabilize', 'ottoman']",NP,5,-1,6
-24,49,was,AUX,5,-1,6
-25,49,"['worth', 'accepting']",NP,5,-1,6
-26,49,"['rule', 'union']",NP,5,-1,6
+1,49,[],NP,0,-1,1
+2,49,had,AUX,0,-1,1
+3,49,"['counseled', 'his']",NP,0,-1,1
+4,49,['son'],NP,0,-1,1
+5,49,to,PREP,1,-1,2
+6,49,['avoid'],NP,1,-1,2
+7,49,[],NP,1,-1,2
+8,49,an,DET,2,-1,3
+9,49,['agreement'],NP,2,-1,3
+10,49,[],NP,2,-1,3
+11,49,but,CONJ,2,-1,3
+12,49,['john'],NP,2,-1,3
+13,49,[],NP,2,-1,3
+14,49,and,CONJ,2,-1,3
+15,49,"['his', 'advis']",NP,2,-1,3
+16,49,['came'],NP,2,-1,3
+17,49,to,PREP,3,-1,4
+18,49,['believe'],NP,3,-1,4
+19,49,[],NP,3,-1,4
+20,49,that,COMP,3,-1,4
+21,49,[],NP,3,-1,4
+22,49,a,DET,4,-1,5
+23,49,['crusade'],NP,4,-1,5
+24,49,[],NP,4,-1,5
+25,49,to,PREP,5,-1,6
+26,49,"['destabilize', 'ottoman']",NP,5,-1,6
+27,49,['rule'],NP,5,-1,6
+28,49,was,AUX,5,-1,6
+29,49,"['worth', 'accepting']",NP,5,-1,6
+30,49,['union'],NP,5,-1,6
 0,50,"[""harris's"", 'account']",NP,0,-1,1
 1,50,[],NP,0,-1,1
 2,50,of,PREP,1,-1,2
@@ -735,68 +791,72 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 20,50,['emphasizing'],NP,7,-1,8
 21,50,the,DET,8,-1,9
 22,50,"['political', 'calculation']",NP,8,-1,9
-23,50,and,CONJ,8,-1,9
-24,50,"['careful', 'diplomacy']",NP,8,-1,9
-25,50,[],NP,8,-1,9
-26,50,that,COMP,8,-1,9
-27,50,['resulted'],NP,8,-1,9
-28,50,[],NP,8,-1,9
-29,50,in,PREP,9,-1,10
-30,50,['acceptance'],NP,9,-1,10
-31,50,[],NP,9,-1,10
-32,50,of,PREP,10,-1,11
-33,50,[],NP,10,-1,11
-34,50,a,DET,11,-1,12
-35,50,"['compromised', 'wording']",NP,11,-1,12
-36,50,['approving'],NP,11,-1,12
-37,50,the,DET,12,-1,13
-38,50,"['latin', 'filioque']",NP,12,-1,13
-39,50,and,CONJ,12,-1,13
+23,50,[],NP,8,-1,9
+24,50,and,CONJ,8,-1,9
+25,50,"['careful', 'diplomacy']",NP,8,-1,9
+26,50,[],NP,8,-1,9
+27,50,that,COMP,8,-1,9
+28,50,['resulted'],NP,8,-1,9
+29,50,[],NP,8,-1,9
+30,50,in,PREP,9,-1,10
+31,50,['acceptance'],NP,9,-1,10
+32,50,[],NP,9,-1,10
+33,50,of,PREP,10,-1,11
+34,50,[],NP,10,-1,11
+35,50,a,DET,11,-1,12
+36,50,"['compromised', 'wording']",NP,11,-1,12
+37,50,['approving'],NP,11,-1,12
+38,50,the,DET,12,-1,13
+39,50,"['latin', 'filioque']",NP,12,-1,13
 40,50,[],NP,12,-1,13
-41,50,the,DET,13,-1,14
-42,50,"['more', 'difficult']",NP,13,-1,14
-43,50,['acceptance'],NP,13,-1,14
-44,50,of,PREP,14,-1,15
-45,50,"['papal', 'supremacy']",NP,14,-1,15
+41,50,and,CONJ,12,-1,13
+42,50,[],NP,12,-1,13
+43,50,the,DET,13,-1,14
+44,50,"['more', 'difficult']",NP,13,-1,14
+45,50,['acceptance'],NP,13,-1,14
+46,50,of,PREP,14,-1,15
+47,50,"['papal', 'supremacy']",NP,14,-1,15
 0,51,[],NP,0,-1,1
 1,51,the,DET,1,-1,2
 2,51,['cost'],NP,1,-1,2
 3,51,[],NP,1,-1,2
 4,51,to,PREP,2,-1,3
 5,51,['byzantium'],NP,2,-1,3
-6,51,was,AUX,2,-1,3
-7,51,['enormous'],NP,2,-1,3
-8,51,[],NP,2,-1,3
-9,51,in,PREP,3,-1,4
-10,51,[],NP,3,-1,4
-11,51,the,DET,4,-1,5
-12,51,['defeat'],NP,4,-1,5
-13,51,[],NP,4,-1,5
-14,51,of,PREP,5,-1,6
-15,51,[],NP,5,-1,6
-16,51,the,DET,6,-1,7
-17,51,"['promised', 'crusade']",NP,6,-1,7
-18,51,[],NP,6,-1,7
-19,51,at,PREP,7,-1,8
-20,51,['varna'],NP,7,-1,8
-21,51,[],NP,7,-1,8
-22,51,in,PREP,8,-1,9
-23,51,['1444'],NP,8,-1,9
-24,51,and,CONJ,8,-1,9
+6,51,[],NP,2,-1,3
+7,51,was,AUX,2,-1,3
+8,51,['enormous'],NP,2,-1,3
+9,51,[],NP,2,-1,3
+10,51,in,PREP,3,-1,4
+11,51,[],NP,3,-1,4
+12,51,the,DET,4,-1,5
+13,51,['defeat'],NP,4,-1,5
+14,51,[],NP,4,-1,5
+15,51,of,PREP,5,-1,6
+16,51,[],NP,5,-1,6
+17,51,the,DET,6,-1,7
+18,51,"['promised', 'crusade']",NP,6,-1,7
+19,51,[],NP,6,-1,7
+20,51,at,PREP,7,-1,8
+21,51,['varna'],NP,7,-1,8
+22,51,[],NP,7,-1,8
+23,51,in,PREP,8,-1,9
+24,51,['1444'],NP,8,-1,9
 25,51,[],NP,8,-1,9
-26,51,the,DET,9,-1,10
-27,51,"['bitter', 'controversies']",NP,9,-1,10
-28,51,[],NP,9,-1,10
-29,51,that,COMP,9,-1,10
-30,51,['arose'],NP,9,-1,10
-31,51,[],NP,9,-1,10
-32,51,over,PREP,10,-1,11
-33,51,[],NP,10,-1,11
-34,51,the,DET,11,-1,12
-35,51,['agreement'],NP,11,-1,12
-36,51,[],NP,11,-1,12
-37,51,in,PREP,12,-1,13
-38,51,['constantinople'],NP,12,-1,13
+26,51,and,CONJ,8,-1,9
+27,51,[],NP,8,-1,9
+28,51,the,DET,9,-1,10
+29,51,"['bitter', 'controversies']",NP,9,-1,10
+30,51,[],NP,9,-1,10
+31,51,that,COMP,9,-1,10
+32,51,['arose'],NP,9,-1,10
+33,51,[],NP,9,-1,10
+34,51,over,PREP,10,-1,11
+35,51,[],NP,10,-1,11
+36,51,the,DET,11,-1,12
+37,51,['agreement'],NP,11,-1,12
+38,51,[],NP,11,-1,12
+39,51,in,PREP,12,-1,13
+40,51,['constantinople'],NP,12,-1,13
 0,52,[],NP,0,-1,1
 1,52,the,DET,1,-1,2
 2,52,"['final', 'siege']",NP,1,-1,2
@@ -806,34 +866,37 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,52,[],NP,2,-1,3
 7,52,the,DET,3,-1,4
 8,52,"['author', 'argues']",NP,3,-1,4
-9,52,was,AUX,3,-1,4
-10,52,['unexpected'],NP,3,-1,4
-11,52,[],NP,3,-1,4
-12,52,by,PREP,4,-1,5
-13,52,['greeks'],NP,4,-1,5
-14,52,and,CONJ,4,-1,5
-15,52,['turks'],NP,4,-1,5
-16,52,[],NP,4,-1,5
-17,52,the,DET,5,-1,6
-18,52,['product'],NP,5,-1,6
-19,52,[],NP,5,-1,6
-20,52,of,PREP,6,-1,7
-21,52,"['obsessive', 'planning']",NP,6,-1,7
-22,52,[],NP,6,-1,7
-23,52,by,PREP,7,-1,8
-24,52,[],NP,7,-1,8
-25,52,the,DET,8,-1,9
-26,52,"['young', 'mehmed']",NP,8,-1,9
-27,52,"['ii', 'soon']",NP,8,-1,9
-28,52,"['after', 'he']",NP,8,-1,9
-29,52,"['became', 'sultan']",NP,8,-1,9
-30,52,and,CONJ,8,-1,9
-31,52,[],NP,8,-1,9
-32,52,a,DET,9,-1,10
-33,52,"['dramatic', 'change']",NP,9,-1,10
-34,52,[],NP,9,-1,10
-35,52,from,PREP,10,-1,11
-36,52,"['his', 'predecessors']",NP,10,-1,11
+9,52,[],NP,3,-1,4
+10,52,was,AUX,3,-1,4
+11,52,['unexpected'],NP,3,-1,4
+12,52,[],NP,3,-1,4
+13,52,by,PREP,4,-1,5
+14,52,['greeks'],NP,4,-1,5
+15,52,[],NP,4,-1,5
+16,52,and,CONJ,4,-1,5
+17,52,['turks'],NP,4,-1,5
+18,52,[],NP,4,-1,5
+19,52,the,DET,5,-1,6
+20,52,['product'],NP,5,-1,6
+21,52,[],NP,5,-1,6
+22,52,of,PREP,6,-1,7
+23,52,"['obsessive', 'planning']",NP,6,-1,7
+24,52,[],NP,6,-1,7
+25,52,by,PREP,7,-1,8
+26,52,[],NP,7,-1,8
+27,52,the,DET,8,-1,9
+28,52,"['young', 'mehmed']",NP,8,-1,9
+29,52,"['ii', 'soon']",NP,8,-1,9
+30,52,"['after', 'he']",NP,8,-1,9
+31,52,"['became', 'sultan']",NP,8,-1,9
+32,52,[],NP,8,-1,9
+33,52,and,CONJ,8,-1,9
+34,52,[],NP,8,-1,9
+35,52,a,DET,9,-1,10
+36,52,"['dramatic', 'change']",NP,9,-1,10
+37,52,[],NP,9,-1,10
+38,52,from,PREP,10,-1,11
+39,52,"['his', 'predecessors']",NP,10,-1,11
 0,53,['according'],NP,0,-1,1
 1,53,[],NP,0,-1,1
 2,53,to,PREP,1,-1,2
@@ -842,13 +905,15 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,53,of,PREP,2,-1,3
 6,53,"['his', 'invasion']",NP,2,-1,3
 7,53,"['as', 'jihad']",NP,2,-1,3
-8,53,was,AUX,2,-1,3
-9,53,['new'],NP,2,-1,3
-10,53,and,CONJ,2,-1,3
-11,53,['unwelcome'],NP,2,-1,3
-12,53,[],NP,2,-1,3
-13,53,to,PREP,3,-1,4
-14,53,"['many', 'turks']",NP,3,-1,4
+8,53,[],NP,2,-1,3
+9,53,was,AUX,2,-1,3
+10,53,['new'],NP,2,-1,3
+11,53,[],NP,2,-1,3
+12,53,and,CONJ,2,-1,3
+13,53,['unwelcome'],NP,2,-1,3
+14,53,[],NP,2,-1,3
+15,53,to,PREP,3,-1,4
+16,53,"['many', 'turks']",NP,3,-1,4
 0,54,"['traditionally', 'constantine']",NP,0,-1,1
 1,54,"[""ix's"", 'determination']",NP,0,-1,1
 2,54,[],NP,0,-1,1
@@ -865,34 +930,40 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 13,54,[],NP,4,-1,5
 14,54,in,PREP,5,-1,6
 15,54,['1453'],NP,5,-1,6
-16,54,has,AUX,5,-1,6
-17,54,been,AUX,5,-1,6
-18,54,"['seen', 'as']",NP,5,-1,6
-19,54,but,CONJ,5,-1,6
-20,54,"['harris', 'suggests']",NP,5,-1,6
+16,54,[],NP,5,-1,6
+17,54,has,AUX,5,-1,6
+18,54,[],NP,5,-1,6
+19,54,been,AUX,5,-1,6
+20,54,"['seen', 'as']",NP,5,-1,6
 21,54,['heroism'],NP,5,-1,6
-22,54,that,COMP,5,-1,6
-23,54,['both'],NP,5,-1,6
+22,54,but,CONJ,5,-1,6
+23,54,"['harris', 'suggests']",NP,5,-1,6
 24,54,[],NP,5,-1,6
-25,54,the,DET,6,-1,7
-26,54,['poor'],NP,6,-1,7
-27,54,and,CONJ,6,-1,7
-28,54,[],NP,6,-1,7
-29,54,the,DET,7,-1,8
-30,54,"['wealthy', 'inside']",NP,7,-1,8
-31,54,"['constantinople', 'like']",NP,7,-1,8
-32,54,[],NP,7,-1,8
-33,54,the,DET,8,-1,9
-34,54,"['genoese', 'venetians']",NP,8,-1,9
-35,54,and,CONJ,8,-1,9
-36,54,"['many', 'turks']",NP,8,-1,9
-37,54,"['saw', 'military']",NP,8,-1,9
-38,54,['conquest'],NP,8,-1,9
-39,54,and,CONJ,8,-1,9
-40,54,"['its', 'consequences']",NP,8,-1,9
-41,54,['as'],NP,8,-1,9
-42,54,a,DET,9,-1,10
-43,54,['disaster'],NP,9,-1,10
+25,54,that,COMP,5,-1,6
+26,54,['both'],NP,5,-1,6
+27,54,[],NP,5,-1,6
+28,54,the,DET,6,-1,7
+29,54,['poor'],NP,6,-1,7
+30,54,[],NP,6,-1,7
+31,54,and,CONJ,6,-1,7
+32,54,[],NP,6,-1,7
+33,54,the,DET,7,-1,8
+34,54,"['wealthy', 'inside']",NP,7,-1,8
+35,54,"['constantinople', 'like']",NP,7,-1,8
+36,54,[],NP,7,-1,8
+37,54,the,DET,8,-1,9
+38,54,"['genoese', 'venetians']",NP,8,-1,9
+39,54,[],NP,8,-1,9
+40,54,and,CONJ,8,-1,9
+41,54,"['many', 'turks']",NP,8,-1,9
+42,54,"['saw', 'military']",NP,8,-1,9
+43,54,['conquest'],NP,8,-1,9
+44,54,[],NP,8,-1,9
+45,54,and,CONJ,8,-1,9
+46,54,"['its', 'consequences']",NP,8,-1,9
+47,54,['as'],NP,8,-1,9
+48,54,a,DET,9,-1,10
+49,54,['disaster'],NP,9,-1,10
 0,55,"['despite', 'his']",NP,0,-1,1
 1,55,"['meticulous', 'preparations']",NP,0,-1,1
 2,55,"['mehmed', 'made']",NP,0,-1,1
@@ -911,143 +982,159 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,55,[],NP,4,-1,5
 16,55,to,PREP,5,-1,6
 17,55,['constantine'],NP,5,-1,6
-18,55,and,CONJ,5,-1,6
-19,55,"['many', 'remembering']",NP,5,-1,6
-20,55,[],NP,5,-1,6
-21,55,the,DET,6,-1,7
-22,55,['fate'],NP,6,-1,7
-23,55,[],NP,6,-1,7
-24,55,of,PREP,7,-1,8
-25,55,[],NP,7,-1,8
-26,55,the,DET,8,-1,9
-27,55,['ssalonica'],NP,8,-1,9
-28,55,must,MOD,8,-1,9
-29,55,have,AUX,8,-1,9
-30,55,"['wished', 'it']",NP,8,-1,9
+18,55,[],NP,5,-1,6
+19,55,and,CONJ,5,-1,6
+20,55,"['many', 'remembering']",NP,5,-1,6
+21,55,[],NP,5,-1,6
+22,55,the,DET,6,-1,7
+23,55,['fate'],NP,6,-1,7
+24,55,[],NP,6,-1,7
+25,55,of,PREP,7,-1,8
+26,55,[],NP,7,-1,8
+27,55,the,DET,8,-1,9
+28,55,['ssalonica'],NP,8,-1,9
+29,55,[],NP,8,-1,9
+30,55,must,MOD,8,-1,9
 31,55,[],NP,8,-1,9
-32,55,to,PREP,9,-1,10
-33,55,be,AUX,9,-1,10
-34,55,['accepted'],NP,9,-1,10
+32,55,have,AUX,8,-1,9
+33,55,"['wished', 'it']",NP,8,-1,9
+34,55,[],NP,8,-1,9
+35,55,to,PREP,9,-1,10
+36,55,[],NP,9,-1,10
+37,55,be,AUX,9,-1,10
+38,55,['accepted'],NP,9,-1,10
 0,56,['what'],NP,0,-1,1
-1,56,might,MOD,0,-1,1
-2,56,have,AUX,0,-1,1
-3,56,['happened'],NP,0,-1,1
-4,56,[],NP,0,-1,1
-5,56,to,PREP,1,-1,2
-6,56,[],NP,1,-1,2
-7,56,the,DET,2,-1,3
-8,56,['city'],NP,2,-1,3
-9,56,and,CONJ,2,-1,3
-10,56,['its'],NP,2,-1,3
+1,56,[],NP,0,-1,1
+2,56,might,MOD,0,-1,1
+3,56,[],NP,0,-1,1
+4,56,have,AUX,0,-1,1
+5,56,['happened'],NP,0,-1,1
+6,56,[],NP,0,-1,1
+7,56,to,PREP,1,-1,2
+8,56,[],NP,1,-1,2
+9,56,the,DET,2,-1,3
+10,56,['city'],NP,2,-1,3
 11,56,[],NP,2,-1,3
-12,56,in,PREP,3,-1,4
-13,56,['habitants'],NP,3,-1,4
-14,56,is,AUX,3,-1,4
-15,56,['worthy'],NP,3,-1,4
-16,56,[],NP,3,-1,4
-17,56,of,PREP,4,-1,5
-18,56,['speculation'],NP,4,-1,5
+12,56,and,CONJ,2,-1,3
+13,56,['its'],NP,2,-1,3
+14,56,[],NP,2,-1,3
+15,56,in,PREP,3,-1,4
+16,56,['habitants'],NP,3,-1,4
+17,56,[],NP,3,-1,4
+18,56,is,AUX,3,-1,4
+19,56,['worthy'],NP,3,-1,4
+20,56,[],NP,3,-1,4
+21,56,of,PREP,4,-1,5
+22,56,['speculation'],NP,4,-1,5
 0,57,[],NP,0,-1,1
 1,57,the,DET,1,-1,2
 2,57,['end'],NP,1,-1,2
 3,57,[],NP,1,-1,2
 4,57,of,PREP,2,-1,3
 5,57,['byzantium'],NP,2,-1,3
-6,57,does,AUX,2,-1,3
-7,57,"['not', 'end']",NP,2,-1,3
-8,57,[],NP,2,-1,3
-9,57,with,PREP,3,-1,4
-10,57,[],NP,3,-1,4
-11,57,the,DET,4,-1,5
-12,57,['fall'],NP,4,-1,5
-13,57,[],NP,4,-1,5
-14,57,of,PREP,5,-1,6
-15,57,['constantinople'],NP,5,-1,6
-16,57,but,CONJ,5,-1,6
-17,57,['traces'],NP,5,-1,6
-18,57,[],NP,5,-1,6
-19,57,the,DET,6,-1,7
-20,57,['fate'],NP,6,-1,7
-21,57,[],NP,6,-1,7
-22,57,of,PREP,7,-1,8
-23,57,[],NP,7,-1,8
-24,57,in,PREP,8,-1,9
-25,57,['habitants'],NP,8,-1,9
-26,57,were,AUX,8,-1,9
-27,57,['able'],NP,8,-1,9
+6,57,[],NP,2,-1,3
+7,57,does,AUX,2,-1,3
+8,57,"['not', 'end']",NP,2,-1,3
+9,57,[],NP,2,-1,3
+10,57,with,PREP,3,-1,4
+11,57,[],NP,3,-1,4
+12,57,the,DET,4,-1,5
+13,57,['fall'],NP,4,-1,5
+14,57,[],NP,4,-1,5
+15,57,of,PREP,5,-1,6
+16,57,['constantinople'],NP,5,-1,6
+17,57,[],NP,5,-1,6
+18,57,but,CONJ,5,-1,6
+19,57,['traces'],NP,5,-1,6
+20,57,[],NP,5,-1,6
+21,57,the,DET,6,-1,7
+22,57,['fate'],NP,6,-1,7
+23,57,[],NP,6,-1,7
+24,57,of,PREP,7,-1,8
+25,57,[],NP,7,-1,8
+26,57,in,PREP,8,-1,9
+27,57,['habitants'],NP,8,-1,9
 28,57,[],NP,8,-1,9
-29,57,to,PREP,9,-1,10
-30,57,['escape'],NP,9,-1,10
-31,57,[],NP,9,-1,10
-32,57,the,DET,10,-1,11
-33,57,['loss'],NP,10,-1,11
-34,57,[],NP,10,-1,11
-35,57,of,PREP,11,-1,12
-36,57,[],NP,11,-1,12
-37,57,the,DET,12,-1,13
-38,57,"['last', 'byzantine']",NP,12,-1,13
-39,57,['strongholds'],NP,12,-1,13
-40,57,in,PREP,13,-1,14
-41,57,[],NP,13,-1,14
-42,57,the,DET,14,-1,15
-43,57,['peloponnese'],NP,14,-1,15
-44,57,and,CONJ,14,-1,15
-45,57,[],NP,14,-1,15
-46,57,the,DET,15,-1,16
-47,57,['end'],NP,15,-1,16
-48,57,[],NP,15,-1,16
-49,57,of,PREP,16,-1,17
-50,57,[],NP,16,-1,17
-51,57,the,DET,17,-1,18
-52,57,"['palaiologan', 'rulers']",NP,17,-1,18
+29,57,were,AUX,8,-1,9
+30,57,['able'],NP,8,-1,9
+31,57,[],NP,8,-1,9
+32,57,to,PREP,9,-1,10
+33,57,['escape'],NP,9,-1,10
+34,57,[],NP,9,-1,10
+35,57,the,DET,10,-1,11
+36,57,['loss'],NP,10,-1,11
+37,57,[],NP,10,-1,11
+38,57,of,PREP,11,-1,12
+39,57,[],NP,11,-1,12
+40,57,the,DET,12,-1,13
+41,57,"['last', 'byzantine']",NP,12,-1,13
+42,57,['strongholds'],NP,12,-1,13
+43,57,in,PREP,13,-1,14
+44,57,[],NP,13,-1,14
+45,57,the,DET,14,-1,15
+46,57,['peloponnese'],NP,14,-1,15
+47,57,[],NP,14,-1,15
+48,57,and,CONJ,14,-1,15
+49,57,[],NP,14,-1,15
+50,57,the,DET,15,-1,16
+51,57,['end'],NP,15,-1,16
+52,57,[],NP,15,-1,16
+53,57,of,PREP,16,-1,17
+54,57,[],NP,16,-1,17
+55,57,the,DET,17,-1,18
+56,57,"['palaiologan', 'rulers']",NP,17,-1,18
 0,58,"[""harris's"", 'final']",NP,0,-1,1
 1,58,['words'],NP,0,-1,1
 2,58,to,PREP,1,-1,2
 3,58,['readers'],NP,1,-1,2
-4,58,have,AUX,1,-1,2
-5,58,"['not', 'experienced']",NP,1,-1,2
-6,58,"['their', 'situation']",NP,1,-1,2
-7,58,are,AUX,1,-1,2
+4,58,[],NP,1,-1,2
+5,58,have,AUX,1,-1,2
+6,58,"['not', 'experienced']",NP,1,-1,2
+7,58,"['their', 'situation']",NP,1,-1,2
 8,58,[],NP,1,-1,2
-9,58,to,PREP,2,-1,3
-10,58,"['not', 'judge']",NP,2,-1,3
-11,58,"['too', 'harshly']",NP,2,-1,3
-12,58,[],NP,2,-1,3
-13,58,the,DET,3,-1,4
-14,58,"['late', 'byzantines']",NP,3,-1,4
-15,58,['lacking'],NP,3,-1,4
-16,58,[],NP,3,-1,4
-17,58,the,DET,4,-1,5
-18,58,['resources'],NP,4,-1,5
-19,58,[],NP,4,-1,5
-20,58,to,PREP,5,-1,6
-21,58,['oppose'],NP,5,-1,6
-22,58,[],NP,5,-1,6
-23,58,the,DET,6,-1,7
-24,58,"['ottomans', 'militarily']",NP,6,-1,7
-25,58,"['generally', 'chose']",NP,6,-1,7
-26,58,['survival'],NP,6,-1,7
-27,58,and,CONJ,6,-1,7
-28,58,['accommodation'],NP,6,-1,7
+9,58,are,AUX,1,-1,2
+10,58,[],NP,1,-1,2
+11,58,to,PREP,2,-1,3
+12,58,"['not', 'judge']",NP,2,-1,3
+13,58,"['too', 'harshly']",NP,2,-1,3
+14,58,[],NP,2,-1,3
+15,58,the,DET,3,-1,4
+16,58,"['late', 'byzantines']",NP,3,-1,4
+17,58,['lacking'],NP,3,-1,4
+18,58,[],NP,3,-1,4
+19,58,the,DET,4,-1,5
+20,58,['resources'],NP,4,-1,5
+21,58,[],NP,4,-1,5
+22,58,to,PREP,5,-1,6
+23,58,['oppose'],NP,5,-1,6
+24,58,[],NP,5,-1,6
+25,58,the,DET,6,-1,7
+26,58,"['ottomans', 'militarily']",NP,6,-1,7
+27,58,"['generally', 'chose']",NP,6,-1,7
+28,58,['survival'],NP,6,-1,7
 29,58,[],NP,6,-1,7
-30,58,this,DET,7,-1,8
-31,58,"['content', 'downloaded']",NP,7,-1,8
-32,58,[],NP,7,-1,8
-33,58,from,PREP,8,-1,9
-34,58,['\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00132'],NP,8,-1,9
+30,58,and,CONJ,6,-1,7
+31,58,['accommodation'],NP,6,-1,7
+32,58,[],NP,6,-1,7
+33,58,this,DET,7,-1,8
+34,58,"['content', 'downloaded']",NP,7,-1,8
+35,58,[],NP,7,-1,8
+36,58,from,PREP,8,-1,9
+37,58,['\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00132'],NP,8,-1,9
 0,59,['174'],NP,0,-1,1
 0,60,['253'],NP,0,-1,1
 0,61,['69'],NP,0,-1,1
 1,61,[],NP,0,-1,1
 2,61,on,PREP,1,-1,2
 3,61,"['thu', '21']",NP,1,-1,2
-4,61,may,MOD,1,-1,2
-5,61,"['2026', '17:03:59']",NP,1,-1,2
-6,61,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
-7,61,"['use', 'subject']",NP,1,-1,2
-8,61,[],NP,1,-1,2
-9,61,to,PREP,2,-1,3
-10,61,"['https:', 'about']",NP,2,-1,3
+4,61,[],NP,1,-1,2
+5,61,may,MOD,1,-1,2
+6,61,"['2026', '17:03:59']",NP,1,-1,2
+7,61,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
+8,61,"['use', 'subject']",NP,1,-1,2
+9,61,[],NP,1,-1,2
+10,61,to,PREP,2,-1,3
+11,61,"['https:', 'about']",NP,2,-1,3
 0,62,['jstor'],NP,0,-1,1
 0,63,"['org', 'terms']",NP,0,-1,1
 1,63,"['436', 'church']",NP,0,-1,1
@@ -1063,18 +1150,20 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,64,for,PREP,1,-1,2
 2,64,[],NP,1,-1,2
 3,64,those,DET,2,-1,3
-4,64,have,AUX,2,-1,3
-5,64,"['followed', 'th']",NP,2,-1,3
-6,64,['argument'],NP,2,-1,3
-7,64,of,PREP,3,-1,4
-8,64,[],NP,3,-1,4
-9,64,the,DET,4,-1,5
-10,64,['book'],NP,4,-1,5
-11,64,[],NP,4,-1,5
-12,64,the,DET,5,-1,6
-13,64,['plea'],NP,5,-1,6
-14,64,is,AUX,5,-1,6
-15,64,['compelling'],NP,5,-1,6
+4,64,[],NP,2,-1,3
+5,64,have,AUX,2,-1,3
+6,64,"['followed', 'th']",NP,2,-1,3
+7,64,['argument'],NP,2,-1,3
+8,64,of,PREP,3,-1,4
+9,64,[],NP,3,-1,4
+10,64,the,DET,4,-1,5
+11,64,['book'],NP,4,-1,5
+12,64,[],NP,4,-1,5
+13,64,the,DET,5,-1,6
+14,64,['plea'],NP,5,-1,6
+15,64,[],NP,5,-1,6
+16,64,is,AUX,5,-1,6
+17,64,['compelling'],NP,5,-1,6
 0,65,['overall'],NP,0,-1,1
 1,65,[],NP,0,-1,1
 2,65,this,DET,1,-1,2
@@ -1088,8 +1177,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 10,65,"['history', 'fo']",NP,3,-1,4
 11,65,"['general', 'readers']",NP,3,-1,4
 12,65,"['undergraduate', 'courses']",NP,3,-1,4
-13,65,and,CONJ,3,-1,4
-14,65,['historians'],NP,3,-1,4
+13,65,[],NP,3,-1,4
+14,65,and,CONJ,3,-1,4
+15,65,['historians'],NP,3,-1,4
 0,66,"['it', 'makes']",NP,0,-1,1
 1,66,['use'],NP,0,-1,1
 2,66,of,PREP,1,-1,2
@@ -1099,78 +1189,87 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,66,[],NP,2,-1,3
 7,66,the,DET,3,-1,4
 8,66,['period'],NP,3,-1,4
-9,66,and,CONJ,3,-1,4
-10,66,['offers'],NP,3,-1,4
-11,66,[],NP,3,-1,4
-12,66,a,DET,4,-1,5
-13,66,['corrective'],NP,4,-1,5
-14,66,[],NP,4,-1,5
-15,66,to,PREP,5,-1,6
-16,66,[],NP,5,-1,6
-17,66,the,DET,6,-1,7
-18,66,"['romantic', 'heroism']",NP,6,-1,7
-19,66,[],NP,6,-1,7
-20,66,an,DET,7,-1,8
-21,66,['blame'],NP,7,-1,8
-22,66,[],NP,7,-1,8
-23,66,that,COMP,7,-1,8
-24,66,"['still', 'affect']",NP,7,-1,8
-25,66,[],NP,7,-1,8
-26,66,in,PREP,8,-1,9
-27,66,['terpretations'],NP,8,-1,9
-28,66,[],NP,8,-1,9
-29,66,of,PREP,9,-1,10
-30,66,[],NP,9,-1,10
-31,66,the,DET,10,-1,11
-32,66,['period'],NP,10,-1,11
+9,66,[],NP,3,-1,4
+10,66,and,CONJ,3,-1,4
+11,66,['offers'],NP,3,-1,4
+12,66,[],NP,3,-1,4
+13,66,a,DET,4,-1,5
+14,66,['corrective'],NP,4,-1,5
+15,66,[],NP,4,-1,5
+16,66,to,PREP,5,-1,6
+17,66,[],NP,5,-1,6
+18,66,the,DET,6,-1,7
+19,66,"['romantic', 'heroism']",NP,6,-1,7
+20,66,[],NP,6,-1,7
+21,66,an,DET,7,-1,8
+22,66,['blame'],NP,7,-1,8
+23,66,[],NP,7,-1,8
+24,66,that,COMP,7,-1,8
+25,66,"['still', 'affect']",NP,7,-1,8
+26,66,[],NP,7,-1,8
+27,66,in,PREP,8,-1,9
+28,66,['terpretations'],NP,8,-1,9
+29,66,[],NP,8,-1,9
+30,66,of,PREP,9,-1,10
+31,66,[],NP,9,-1,10
+32,66,the,DET,10,-1,11
+33,66,['period'],NP,10,-1,11
 0,67,['it'],NP,0,-1,1
-1,67,would,MOD,0,-1,1
-2,67,be,AUX,0,-1,1
-3,67,['helpful'],NP,0,-1,1
-4,67,[],NP,0,-1,1
-5,67,for,PREP,1,-1,2
-6,67,"['t', 'author']",NP,1,-1,2
-7,67,[],NP,1,-1,2
-8,67,to,PREP,2,-1,3
-9,67,have,AUX,2,-1,3
-10,67,"['included', 'more']",NP,2,-1,3
-11,67,['reflection'],NP,2,-1,3
-12,67,on,PREP,3,-1,4
-13,67,[],NP,3,-1,4
-14,67,the,DET,4,-1,5
-15,67,['sources'],NP,4,-1,5
-16,67,[],NP,4,-1,5
-17,67,for,PREP,5,-1,6
-18,67,[],NP,5,-1,6
-19,67,the,DET,6,-1,7
-20,67,"['period', 'especially']",NP,6,-1,7
-21,67,"['since', 'so']",NP,6,-1,7
-22,67,['many'],NP,6,-1,7
-23,67,are,AUX,6,-1,7
-24,67,['available'],NP,6,-1,7
-25,67,[],NP,6,-1,7
-26,67,in,PREP,7,-1,8
-27,67,['translation'],NP,7,-1,8
-28,67,and,CONJ,7,-1,8
-29,67,have,AUX,7,-1,8
-30,67,"['generate', 'significant']",NP,7,-1,8
-31,67,['controversy'],NP,7,-1,8
-0,68,but,CONJ,0,-1,1
-1,68,[],NP,0,-1,1
-2,68,this,DET,1,-1,2
-3,68,['suggestion'],NP,1,-1,2
-4,68,does,AUX,1,-1,2
-5,68,"['not', 'detract']",NP,1,-1,2
-6,68,[],NP,1,-1,2
-7,68,from,PREP,2,-1,3
-8,68,[],NP,2,-1,3
-9,68,the,DET,3,-1,4
-10,68,['meri'],NP,3,-1,4
-11,68,[],NP,3,-1,4
-12,68,of,PREP,4,-1,5
-13,68,[],NP,4,-1,5
-14,68,the,DET,5,-1,6
-15,68,['work'],NP,5,-1,6
+1,67,[],NP,0,-1,1
+2,67,would,MOD,0,-1,1
+3,67,[],NP,0,-1,1
+4,67,be,AUX,0,-1,1
+5,67,['helpful'],NP,0,-1,1
+6,67,[],NP,0,-1,1
+7,67,for,PREP,1,-1,2
+8,67,"['t', 'author']",NP,1,-1,2
+9,67,[],NP,1,-1,2
+10,67,to,PREP,2,-1,3
+11,67,[],NP,2,-1,3
+12,67,have,AUX,2,-1,3
+13,67,"['included', 'more']",NP,2,-1,3
+14,67,['reflection'],NP,2,-1,3
+15,67,on,PREP,3,-1,4
+16,67,[],NP,3,-1,4
+17,67,the,DET,4,-1,5
+18,67,['sources'],NP,4,-1,5
+19,67,[],NP,4,-1,5
+20,67,for,PREP,5,-1,6
+21,67,[],NP,5,-1,6
+22,67,the,DET,6,-1,7
+23,67,"['period', 'especially']",NP,6,-1,7
+24,67,"['since', 'so']",NP,6,-1,7
+25,67,['many'],NP,6,-1,7
+26,67,[],NP,6,-1,7
+27,67,are,AUX,6,-1,7
+28,67,['available'],NP,6,-1,7
+29,67,[],NP,6,-1,7
+30,67,in,PREP,7,-1,8
+31,67,['translation'],NP,7,-1,8
+32,67,[],NP,7,-1,8
+33,67,and,CONJ,7,-1,8
+34,67,[],NP,7,-1,8
+35,67,have,AUX,7,-1,8
+36,67,"['generate', 'significant']",NP,7,-1,8
+37,67,['controversy'],NP,7,-1,8
+0,68,[],NP,0,-1,1
+1,68,but,CONJ,0,-1,1
+2,68,[],NP,0,-1,1
+3,68,this,DET,1,-1,2
+4,68,['suggestion'],NP,1,-1,2
+5,68,[],NP,1,-1,2
+6,68,does,AUX,1,-1,2
+7,68,"['not', 'detract']",NP,1,-1,2
+8,68,[],NP,1,-1,2
+9,68,from,PREP,2,-1,3
+10,68,[],NP,2,-1,3
+11,68,the,DET,3,-1,4
+12,68,['meri'],NP,3,-1,4
+13,68,[],NP,3,-1,4
+14,68,of,PREP,4,-1,5
+15,68,[],NP,4,-1,5
+16,68,the,DET,5,-1,6
+17,68,['work'],NP,5,-1,6
 0,69,"['dorothy', 'de']",NP,0,-1,1
 1,69,['f'],NP,0,-1,1
 0,70,"['abrahamse', 'california']",NP,0,-1,1
@@ -1196,8 +1295,9 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 15,71,[],NP,5,-1,6
 16,71,to,PREP,6,-1,7
 17,71,['revolution'],NP,6,-1,7
-18,71,and,CONJ,6,-1,7
-19,71,['beyond'],NP,6,-1,7
+18,71,[],NP,6,-1,7
+19,71,and,CONJ,6,-1,7
+20,71,['beyond'],NP,6,-1,7
 0,72,[],NP,0,-1,1
 1,72,by,PREP,1,-1,2
 2,72,"['john', 'frederick']",NP,1,-1,2
@@ -1220,15 +1320,18 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,77,[],NP,2,-1,3
 8,77,on,PREP,3,-1,4
 9,77,['church'],NP,3,-1,4
-10,77,and,CONJ,3,-1,4
-11,77,"['religious', 'history']",NP,3,-1,4
-12,77,[],NP,3,-1,4
-13,77,in,PREP,4,-1,5
-14,77,"['latin', 'america']",NP,4,-1,5
-15,77,would,MOD,4,-1,5
-16,77,have,AUX,4,-1,5
-17,77,"['come', 'away']",NP,4,-1,5
-18,77,"['empty', 'handed']",NP,4,-1,5
+10,77,[],NP,3,-1,4
+11,77,and,CONJ,3,-1,4
+12,77,"['religious', 'history']",NP,3,-1,4
+13,77,[],NP,3,-1,4
+14,77,in,PREP,4,-1,5
+15,77,"['latin', 'america']",NP,4,-1,5
+16,77,[],NP,4,-1,5
+17,77,would,MOD,4,-1,5
+18,77,[],NP,4,-1,5
+19,77,have,AUX,4,-1,5
+20,77,"['come', 'away']",NP,4,-1,5
+21,77,"['empty', 'handed']",NP,4,-1,5
 0,78,['luckily'],NP,0,-1,1
 1,78,[],NP,0,-1,1
 2,78,in,PREP,1,-1,2
@@ -1237,71 +1340,78 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 5,78,"['past', 'five']",NP,2,-1,3
 6,78,"['years', 'three']",NP,2,-1,3
 7,78,"['such', 'texts']",NP,2,-1,3
-8,78,have,AUX,2,-1,3
-9,78,been,AUX,2,-1,3
-10,78,['published'],NP,2,-1,3
+8,78,[],NP,2,-1,3
+9,78,have,AUX,2,-1,3
+10,78,[],NP,2,-1,3
+11,78,been,AUX,2,-1,3
+12,78,['published'],NP,2,-1,3
 0,79,"['john', ""schwaller's""]",NP,0,-1,1
-1,79,is,AUX,0,-1,1
-2,79,['book'],NP,0,-1,1
-3,79,the,DET,1,-1,2
-4,79,"['most', 'recent']",NP,1,-1,2
-5,79,['addition'],NP,1,-1,2
-6,79,to,PREP,2,-1,3
-7,79,[],NP,2,-1,3
-8,79,this,DET,3,-1,4
-9,79,"['small', 'pool']",NP,3,-1,4
+1,79,['book'],NP,0,-1,1
+2,79,is,AUX,0,-1,1
+3,79,[],NP,0,-1,1
+4,79,the,DET,1,-1,2
+5,79,"['most', 'recent']",NP,1,-1,2
+6,79,['addition'],NP,1,-1,2
+7,79,to,PREP,2,-1,3
+8,79,[],NP,2,-1,3
+9,79,this,DET,3,-1,4
+10,79,"['small', 'pool']",NP,3,-1,4
 0,80,['it'],NP,0,-1,1
-1,80,is,AUX,0,-1,1
-2,80,[],NP,0,-1,1
-3,80,a,DET,1,-1,2
-4,80,['broad'],NP,1,-1,2
-5,80,but,CONJ,1,-1,2
-6,80,"['concise', 'synthesis']",NP,1,-1,2
-7,80,['aimed'],NP,1,-1,2
-8,80,at,PREP,2,-1,3
-9,80,[],NP,2,-1,3
-10,80,the,DET,3,-1,4
-11,80,"['non', 'specialist']",NP,3,-1,4
+1,80,[],NP,0,-1,1
+2,80,is,AUX,0,-1,1
+3,80,[],NP,0,-1,1
+4,80,a,DET,1,-1,2
+5,80,['broad'],NP,1,-1,2
+6,80,[],NP,1,-1,2
+7,80,but,CONJ,1,-1,2
+8,80,"['concise', 'synthesis']",NP,1,-1,2
+9,80,['aimed'],NP,1,-1,2
+10,80,at,PREP,2,-1,3
+11,80,[],NP,2,-1,3
+12,80,the,DET,3,-1,4
+13,80,"['non', 'specialist']",NP,3,-1,4
 0,81,"['it', 'focuses']",NP,0,-1,1
 1,81,['primarily'],NP,0,-1,1
 2,81,on,PREP,1,-1,2
 3,81,[],NP,1,-1,2
 4,81,the,DET,2,-1,3
 5,81,"['institutional', 'political']",NP,2,-1,3
-6,81,and,CONJ,2,-1,3
-7,81,"['economic', 'history']",NP,2,-1,3
-8,81,[],NP,2,-1,3
-9,81,of,PREP,3,-1,4
-10,81,[],NP,3,-1,4
-11,81,the,DET,4,-1,5
-12,81,['church'],NP,4,-1,5
-13,81,[],NP,4,-1,5
-14,81,in,PREP,5,-1,6
-15,81,"['latin', 'america']",NP,5,-1,6
-16,81,"['providing', 'much']",NP,5,-1,6
-17,81,['detail'],NP,5,-1,6
-18,81,[],NP,5,-1,6
-19,81,on,PREP,6,-1,7
-20,81,"['shifting', 'church']",NP,6,-1,7
-21,81,"['state', 'relations']",NP,6,-1,7
-22,81,"['ecclesiastical', 'landholding']",NP,6,-1,7
-23,81,and,CONJ,6,-1,7
+6,81,[],NP,2,-1,3
+7,81,and,CONJ,2,-1,3
+8,81,"['economic', 'history']",NP,2,-1,3
+9,81,[],NP,2,-1,3
+10,81,of,PREP,3,-1,4
+11,81,[],NP,3,-1,4
+12,81,the,DET,4,-1,5
+13,81,['church'],NP,4,-1,5
+14,81,[],NP,4,-1,5
+15,81,in,PREP,5,-1,6
+16,81,"['latin', 'america']",NP,5,-1,6
+17,81,"['providing', 'much']",NP,5,-1,6
+18,81,['detail'],NP,5,-1,6
+19,81,[],NP,5,-1,6
+20,81,on,PREP,6,-1,7
+21,81,"['shifting', 'church']",NP,6,-1,7
+22,81,"['state', 'relations']",NP,6,-1,7
+23,81,"['ecclesiastical', 'landholding']",NP,6,-1,7
 24,81,[],NP,6,-1,7
-25,81,the,DET,7,-1,8
-26,81,"['financial', 'practices']",NP,7,-1,8
-27,81,[],NP,7,-1,8
-28,81,of,PREP,8,-1,9
-29,81,"['various', 'church']",NP,8,-1,9
-30,81,['bodies'],NP,8,-1,9
-31,81,from,PREP,9,-1,10
-32,81,[],NP,9,-1,10
-33,81,the,DET,10,-1,11
-34,81,['conquest'],NP,10,-1,11
-35,81,[],NP,10,-1,11
-36,81,to,PREP,11,-1,12
-37,81,[],NP,11,-1,12
-38,81,the,DET,12,-1,13
-39,81,['present'],NP,12,-1,13
+25,81,and,CONJ,6,-1,7
+26,81,[],NP,6,-1,7
+27,81,the,DET,7,-1,8
+28,81,"['financial', 'practices']",NP,7,-1,8
+29,81,[],NP,7,-1,8
+30,81,of,PREP,8,-1,9
+31,81,"['various', 'church']",NP,8,-1,9
+32,81,['bodies'],NP,8,-1,9
+33,81,from,PREP,9,-1,10
+34,81,[],NP,9,-1,10
+35,81,the,DET,10,-1,11
+36,81,['conquest'],NP,10,-1,11
+37,81,[],NP,10,-1,11
+38,81,to,PREP,11,-1,12
+39,81,[],NP,11,-1,12
+40,81,the,DET,12,-1,13
+41,81,['present'],NP,12,-1,13
 0,82,['each'],NP,0,-1,1
 1,82,[],NP,0,-1,1
 2,82,of,PREP,1,-1,2
@@ -1311,28 +1421,34 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 6,82,[],NP,2,-1,3
 7,82,the,DET,3,-1,4
 8,82,['church'],NP,3,-1,4
-9,82,and,CONJ,3,-1,4
-10,82,['religion'],NP,3,-1,4
-11,82,[],NP,3,-1,4
-12,82,in,PREP,4,-1,5
-13,82,"['latin', 'america']",NP,4,-1,5
-14,82,is,AUX,4,-1,5
-15,82,['valuable'],NP,4,-1,5
-0,83,but,CONJ,0,-1,1
-1,83,"['not', 'surprisingly']",NP,0,-1,1
-2,83,['given'],NP,0,-1,1
-3,83,the,DET,1,-1,2
-4,83,"['vast', 'area']",NP,1,-1,2
-5,83,and,CONJ,1,-1,2
-6,83,"['time', 'covered—two']",NP,1,-1,2
+9,82,[],NP,3,-1,4
+10,82,and,CONJ,3,-1,4
+11,82,['religion'],NP,3,-1,4
+12,82,[],NP,3,-1,4
+13,82,in,PREP,4,-1,5
+14,82,"['latin', 'america']",NP,4,-1,5
+15,82,[],NP,4,-1,5
+16,82,is,AUX,4,-1,5
+17,82,['valuable'],NP,4,-1,5
+0,83,[],NP,0,-1,1
+1,83,but,CONJ,0,-1,1
+2,83,"['not', 'surprisingly']",NP,0,-1,1
+3,83,['given'],NP,0,-1,1
+4,83,the,DET,1,-1,2
+5,83,"['vast', 'area']",NP,1,-1,2
+6,83,[],NP,1,-1,2
 7,83,and,CONJ,1,-1,2
-8,83,['continents'],NP,1,-1,2
-9,83,over,PREP,2,-1,3
-10,83,"['five', 'centuries—each']",NP,2,-1,3
-11,83,has,AUX,2,-1,3
-12,83,[],NP,2,-1,3
-13,83,a,DET,3,-1,4
-14,83,"['different', 'focus']",NP,3,-1,4
+8,83,"['time', 'covered—two']",NP,1,-1,2
+9,83,['continents'],NP,1,-1,2
+10,83,and,CONJ,1,-1,2
+11,83,[],NP,1,-1,2
+12,83,over,PREP,2,-1,3
+13,83,"['five', 'centuries—each']",NP,2,-1,3
+14,83,[],NP,2,-1,3
+15,83,has,AUX,2,-1,3
+16,83,[],NP,2,-1,3
+17,83,a,DET,3,-1,4
+18,83,"['different', 'focus']",NP,3,-1,4
 0,84,[],NP,0,-1,1
 1,84,the,DET,1,-1,2
 2,84,"['first', 'published']",NP,1,-1,2
@@ -1345,12 +1461,14 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 9,84,[],NP,3,-1,4
 10,84,of,PREP,4,-1,5
 11,84,['ecclesiastical'],NP,4,-1,5
-12,84,and,CONJ,4,-1,5
-13,84,"['religious', 'history']",NP,4,-1,5
-14,84,"['(ondina', 'e']",NP,4,-1,5
+12,84,[],NP,4,-1,5
+13,84,and,CONJ,4,-1,5
+14,84,"['religious', 'history']",NP,4,-1,5
+15,84,"['(ondina', 'e']",NP,4,-1,5
 0,85,['gonzalez'],NP,0,-1,1
-1,85,and,CONJ,0,-1,1
-2,85,"['justo', 'l']",NP,0,-1,1
+1,85,[],NP,0,-1,1
+2,85,and,CONJ,0,-1,1
+3,85,"['justo', 'l']",NP,0,-1,1
 0,86,"['gonzalez', 'christianity']",NP,0,-1,1
 1,86,[],NP,0,-1,1
 2,86,in,PREP,1,-1,2
@@ -1361,69 +1479,75 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 7,86,"['cambridge', 'university']",NP,2,-1,3
 8,86,"['press', '2008])']",NP,2,-1,3
 0,87,['it'],NP,0,-1,1
-1,87,is,AUX,0,-1,1
-2,87,"['particularly', 'strong']",NP,0,-1,1
-3,87,[],NP,0,-1,1
-4,87,in,PREP,1,-1,2
-5,87,"['its', 'coverage']",NP,1,-1,2
-6,87,[],NP,1,-1,2
-7,87,of,PREP,2,-1,3
-8,87,[],NP,2,-1,3
-9,87,the,DET,3,-1,4
-10,87,"['colonial', 'period']",NP,3,-1,4
-11,87,and,CONJ,3,-1,4
+1,87,[],NP,0,-1,1
+2,87,is,AUX,0,-1,1
+3,87,"['particularly', 'strong']",NP,0,-1,1
+4,87,[],NP,0,-1,1
+5,87,in,PREP,1,-1,2
+6,87,"['its', 'coverage']",NP,1,-1,2
+7,87,[],NP,1,-1,2
+8,87,of,PREP,2,-1,3
+9,87,[],NP,2,-1,3
+10,87,the,DET,3,-1,4
+11,87,"['colonial', 'period']",NP,3,-1,4
 12,87,[],NP,3,-1,4
-13,87,the,DET,4,-1,5
-14,87,['rise'],NP,4,-1,5
-15,87,[],NP,4,-1,5
-16,87,of,PREP,5,-1,6
-17,87,['protestantism'],NP,5,-1,6
-18,87,[],NP,5,-1,6
-19,87,in,PREP,6,-1,7
-20,87,"['modern', 'latin']",NP,6,-1,7
-21,87,['america'],NP,6,-1,7
+13,87,and,CONJ,3,-1,4
+14,87,[],NP,3,-1,4
+15,87,the,DET,4,-1,5
+16,87,['rise'],NP,4,-1,5
+17,87,[],NP,4,-1,5
+18,87,of,PREP,5,-1,6
+19,87,['protestantism'],NP,5,-1,6
+20,87,[],NP,5,-1,6
+21,87,in,PREP,6,-1,7
+22,87,"['modern', 'latin']",NP,6,-1,7
+23,87,['america'],NP,6,-1,7
 0,88,[],NP,0,-1,1
 1,88,the,DET,1,-1,2
 2,88,"['second', 'text']",NP,1,-1,2
-3,88,and,CONJ,1,-1,2
-4,88,['society'],NP,1,-1,2
-5,88,['religion'],NP,1,-1,2
-6,88,in,PREP,2,-1,3
-7,88,"['latin', 'america']",NP,2,-1,3
-8,88,is,AUX,2,-1,3
+3,88,['religion'],NP,1,-1,2
+4,88,and,CONJ,1,-1,2
+5,88,['society'],NP,1,-1,2
+6,88,[],NP,1,-1,2
+7,88,in,PREP,2,-1,3
+8,88,"['latin', 'america']",NP,2,-1,3
 9,88,[],NP,2,-1,3
-10,88,a,DET,3,-1,4
-11,88,['collection'],NP,3,-1,4
-12,88,[],NP,3,-1,4
-13,88,of,PREP,4,-1,5
-14,88,['essays'],NP,4,-1,5
-15,88,[],NP,4,-1,5
-16,88,on,PREP,5,-1,6
-17,88,"['broad', 'topics']",NP,5,-1,6
-18,88,[],NP,5,-1,6
-19,88,that,COMP,5,-1,6
-20,88,['as'],NP,5,-1,6
-21,88,[],NP,5,-1,6
-22,88,a,DET,6,-1,7
-23,88,['whole'],NP,6,-1,7
-24,88,[],NP,6,-1,7
-25,88,in,PREP,7,-1,8
-26,88,"['troduces', 'many']",NP,7,-1,8
-27,88,[],NP,7,-1,8
-28,88,the,DET,8,-1,9
-29,88,['mes'],NP,8,-1,9
-30,88,and,CONJ,8,-1,9
-31,88,['issues'],NP,8,-1,9
+10,88,is,AUX,2,-1,3
+11,88,[],NP,2,-1,3
+12,88,a,DET,3,-1,4
+13,88,['collection'],NP,3,-1,4
+14,88,[],NP,3,-1,4
+15,88,of,PREP,4,-1,5
+16,88,['essays'],NP,4,-1,5
+17,88,[],NP,4,-1,5
+18,88,on,PREP,5,-1,6
+19,88,"['broad', 'topics']",NP,5,-1,6
+20,88,[],NP,5,-1,6
+21,88,that,COMP,5,-1,6
+22,88,['as'],NP,5,-1,6
+23,88,[],NP,5,-1,6
+24,88,a,DET,6,-1,7
+25,88,['whole'],NP,6,-1,7
+26,88,[],NP,6,-1,7
+27,88,in,PREP,7,-1,8
+28,88,"['troduces', 'many']",NP,7,-1,8
+29,88,[],NP,7,-1,8
+30,88,the,DET,8,-1,9
+31,88,['mes'],NP,8,-1,9
 32,88,[],NP,8,-1,9
-33,88,in,PREP,9,-1,10
-34,88,"['latin', 'american']",NP,9,-1,10
-35,88,and,CONJ,9,-1,10
-36,88,"['religious', 'history']",NP,9,-1,10
-37,88,"['church', '(lee']",NP,9,-1,10
-38,88,['m'],NP,9,-1,10
+33,88,and,CONJ,8,-1,9
+34,88,['issues'],NP,8,-1,9
+35,88,[],NP,8,-1,9
+36,88,in,PREP,9,-1,10
+37,88,"['latin', 'american']",NP,9,-1,10
+38,88,['church'],NP,9,-1,10
+39,88,and,CONJ,9,-1,10
+40,88,"['religious', 'history']",NP,9,-1,10
+41,88,"['(lee', 'm']",NP,9,-1,10
 0,89,['penyak'],NP,0,-1,1
-1,89,and,CONJ,0,-1,1
-2,89,"['walter', 'j']",NP,0,-1,1
+1,89,[],NP,0,-1,1
+2,89,and,CONJ,0,-1,1
+3,89,"['walter', 'j']",NP,0,-1,1
 0,90,['petry'],NP,0,-1,1
 1,90,[],NP,0,-1,1
 2,90,this,DET,1,-1,2
@@ -1437,12 +1561,13 @@ phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to
 1,93,[],NP,0,-1,1
 2,93,on,PREP,1,-1,2
 3,93,"['thu', '21']",NP,1,-1,2
-4,93,may,MOD,1,-1,2
-5,93,"['2026', '17:03:59']",NP,1,-1,2
-6,93,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
-7,93,"['use', 'subject']",NP,1,-1,2
-8,93,[],NP,1,-1,2
-9,93,to,PREP,2,-1,3
-10,93,"['https:', 'about']",NP,2,-1,3
+4,93,[],NP,1,-1,2
+5,93,may,MOD,1,-1,2
+6,93,"['2026', '17:03:59']",NP,1,-1,2
+7,93,"['utc\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00', 'all']",NP,1,-1,2
+8,93,"['use', 'subject']",NP,1,-1,2
+9,93,[],NP,1,-1,2
+10,93,to,PREP,2,-1,3
+11,93,"['https:', 'about']",NP,2,-1,3
 0,94,['jstor'],NP,0,-1,1
 0,95,"['org', 'terms']",NP,0,-1,1

@@ -19,6 +19,7 @@ def search_query(keywords,input_file="ClassOverlapping"):
             print(f"bundle_id: {instance[4]}")
             print(f"file: {input_file}")
             search(input_file,instance[2],instance[4])
+            
 name = "ClassOverlapping"
 if not os.path.isfile(f'db_files/{name}.db'):
     initialize(name)

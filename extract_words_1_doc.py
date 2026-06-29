@@ -116,6 +116,7 @@ def extraction(input_file):
                 "sentiment_sum": 0.0,
                 "review_count": 0
             })
+    print(f"file: {file}")
     text = pd.read_csv(file)
     #print("text (as of read csv) (extract words):")
     #print(text)
@@ -480,6 +481,8 @@ def extraction(input_file):
 
     output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
     y = Skeletons(pdf,output_file2)
+    print("NPLIST:")
+    print(y.document.NPLIST)
 
     out = "data/dict/working_set/stats/" + input_file + "_stats.csv" #outputs the base stats of the words
     #print(word_df)

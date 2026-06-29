@@ -330,7 +330,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 328,1,51,76,10
 329,1,51,79,10
 330,1,51,87,10
-331,1,51,93,10
+331,1,51,91,10
 332,1,51,94,10
 333,1,51,103,10
 334,1,51,128,10
@@ -532,7 +532,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 530,after,91,17,0
 531,aggregate,0,11,2
 532,and,51,88,10
-533,and,51,91,10
+533,and,51,92,10
 534,and,51,98,10
 535,and,53,49,3
 536,anything,58,2,0
@@ -816,7 +816,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 814,group,50,18,0
 815,has,33,27,1
 816,has,35,12,2
-817,here,33,21,0
+817,here,33,19,0
 818,here,53,38,3
 819,i,33,33,3
 820,i,36,9,2
@@ -909,7 +909,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 907,index=false),48,1,0
 908,index=false),93,1,0
 909,is,33,16,0
-910,is,33,19,0
+910,is,33,20,0
 911,is,53,46,3
 912,is,58,5,0
 913,is,67,6,0
@@ -922,7 +922,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 920,it,33,26,1
 921,it,59,2,0
 922,items(),38,0,0
-923,iterating,33,20,0
+923,iterating,33,21,0
 924,iterrows(),34,0,0
 925,iterrows():,63,0,0
 926,j,51,33,5
@@ -1161,7 +1161,7 @@ mapped_id,word,sentence_id,location_in_sentence,bundle_id
 1159,rows_to_check,61,1,0
 1160,rows_to_check,67,1,0
 1161,s1i,51,59,10
-1162,s1i,51,92,10
+1162,s1i,51,93,10
 1163,s1i,51,99,10
 1164,s2):,51,3,0
 1165,s2j,51,62,10

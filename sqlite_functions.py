@@ -1,6 +1,5 @@
 import sqlite3
 import csv
-import os.path
 
 # Connect to SQLite using a context manager
 def create_table(name):
