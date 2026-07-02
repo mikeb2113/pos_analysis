@@ -19,7 +19,7 @@ def create_table(name):
                 leads_to INTEGER NOT NULL
             )
         ''')
-    print("Database and table setup complete.")
+    #print("Database and table setup complete.")
 
 def import_contents(name):
     # Connect to database using context manager
@@ -34,7 +34,7 @@ def import_contents(name):
         
         # Execute bulk insert
         cursor.executemany(f"INSERT INTO {name} (phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to) VALUES (?, ?, ?, ?, ?, ?, ?)", data)
-    print("CSV data successfully inserted into SQLite.")
+    #print("CSV data successfully inserted into SQLite.")
 
 def traverse_db(name):
     # Using context manager to fetch data
@@ -46,13 +46,16 @@ def traverse_db(name):
             print(row)
 
 def search(name,sentence_id,bundle_id):
+    rows = []
     with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
         print(f"Name (sqlite): {name}")
         print(f"id (sqlite): {sentence_id}")
         cursor.execute(f"SELECT * FROM {name} WHERE sentence_id = {sentence_id} AND phrase IS NOT '[]'")
         for row in cursor:
-            print(row)
+            print(f"cursor row: {row}")
+            rows.append(row)
+    return rows
 
 def initialize(name):
     create_table(name)
