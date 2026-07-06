@@ -93,32 +93,59 @@ def file_overview(input_file):
         #print(f"====={input_file} OVERVIEW END=====")
     return instances
 
-name = "ClassOverlapping"
-if not os.path.isfile(f'db_files/{name}.db'):
-    initialize(name)
-print(f"overview: {file_overview(name)}")
-#print(file_overview(name))
-sentence_builder = ""
-sentence_set = set()
-word_theme_connections = file_overview(name)
-for word_occurances in word_theme_connections:
-    print(f"instance: {word_occurances}")
-    print("sentences:")
-    for sentence in word_occurances:
-        print(sentence)
-        for row in sentence:
-            sentence_builder = sentence_builder + row[3]
-            #print(row[3])
-            #sentences.append(row[3])
-        sentence_set.add(sentence_builder)
-        sentence_builder = ""
-        print()
-        #print(f"sentence: {sentence}")
-print("set:")
-for sentence in sentence_set:
-    print(sentence)
-#for word in sentences:
-#    print(word)
-#print(file_overview(name))
-#search_query("classification",name)
-#traverse_db(name)
+def proceed_from_file(name):
+    #name = "ClassOverlapping"
+    if not os.path.isfile(f'db_files/{name}.db'):
+        initialize(name)
+    print(f"overview: {file_overview(name)}")
+    #print(file_overview(name))
+    sentence_builder = ""
+    sentence_set = set()
+    sentence_hash = {}
+    num_set = set()
+    word_theme_connections = file_overview(name)
+    for word_occurances in word_theme_connections:
+        print(f"instance: {word_occurances}")
+        print("sentences:")
+        for sentence in word_occurances:
+            print(sentence)
+            sentence_num = 0
+            for row in sentence:
+                sentence_num = row[2]
+                num_set.add(sentence_num)
+                append = [row[3].replace("[",""),sentence_num]
+                append[0] = append[0].replace("]","")
+                append[0] = append[0].replace("\'","")
+                sentence_builder = sentence_builder + append[0] + " "
+                #print(row[3])
+                #sentences.append(row[3])
+            sentence_builder = sentence_builder[:-1]
+            sentence_builder = sentence_builder + "."
+            sentence_set.add(sentence_builder)
+            sentence_hash[sentence_num] = sentence_builder
+            sentence_num = 0
+            sentence_builder = ""
+            print()
+            #print(f"sentence: {sentence}")
+    print("set:")
+
+    for num in num_set:
+        print(sentence_hash[num])
+    #for sentence in sentence_set:
+    #    print(sentence)
+
+    #for word in sentences:
+    #    print(word)
+    #print(file_overview(name))
+    #search_query("classification",name)
+    print("traversing...")
+    #traverse_db(name)
+
+with open("paths.csv", mode='r', encoding='utf-8') as file:
+    reader = csv.reader(file)
+    next(reader)
+    #extraction()
+    for row in reader:
+        print("file:")
+        use_file = row[0]
+        proceed_from_file(use_file)
