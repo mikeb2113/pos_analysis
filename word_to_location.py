@@ -283,7 +283,7 @@ def search_for_target_word(word,document,index=-1,index_list=[]):
             word_list.append(row[1])
         left = bisect.bisect_left(word_list,word) #These bisects find the location that a given word would be inserted, if applicable
         if word_list[left]!=word:
-            print("Word absent")
+            #print("Word absent")
             return [-1,-1] #if the proposed location does not match the word, the word must not be present. Throw -1s to indicate this
         right = bisect.bisect_right(word_list,word)
         support = right - left

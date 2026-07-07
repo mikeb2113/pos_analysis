@@ -19,6 +19,16 @@ def create_table(name):
                 leads_to INTEGER NOT NULL
             )
         ''')
+def get_word_count(name):
+    with sqlite3.connect(f"./db_files/{name}.db") as connection:
+        cursor = connection.cursor()
+
+        # Create employees table if not exists
+        cursor.execute(f'''
+            SELECT DISTINCT COUNT(phrase) AS word_count FROM {name}
+        ''')
+        #print(cursor.fetchall())
+        return cursor.fetchall()[0][0]
     #print("Database and table setup complete.")
 
 def import_contents(name):
@@ -49,11 +59,11 @@ def search(name,sentence_id,bundle_id):
     rows = []
     with sqlite3.connect(f"./db_files/{name}.db") as connection:
         cursor = connection.cursor()
-        print(f"Name (sqlite): {name}")
-        print(f"id (sqlite): {sentence_id}")
+        #print(f"Name (sqlite): {name}")
+        #print(f"id (sqlite): {sentence_id}")
         cursor.execute(f"SELECT * FROM {name} WHERE sentence_id = {sentence_id} AND phrase IS NOT '[]'")
         for row in cursor:
-            print(f"cursor row: {row}")
+            #print(f"cursor row: {row}")
             rows.append(row)
     return rows
 
