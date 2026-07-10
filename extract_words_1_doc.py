@@ -505,10 +505,15 @@ def extraction(input_file):
     pdf_transform = pdf_to_text(pdf_path)[0]
     #print(f"source -> {input_file} pdf: {pdf_transform}")
     #pdf = unstick_library_prefixes(pdf_to_text(pdf_path)[0])
-    pdf = pdf_to_text(pdf_path)[0]
+    pdf_info = pdf_to_text(pdf_path)
+    pdf = pdf_info[0]
+    page_count = pdf_info[2]
+    #print(f"file: {input_file}")
+    print(f"page count: {pdf_info}")
+    print(f"referencing: {pdf_info[0][2]}")
 
     output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
-    y = Skeletons(pdf,output_file2)
+    y = Skeletons(pdf,output_file2,)
     print("NPLIST:")
     print(y.document.NPLIST)
 
