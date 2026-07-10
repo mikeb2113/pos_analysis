@@ -224,23 +224,28 @@ def word_to_location_mapping(file):
         items = cleaned.split(", ")
         sent_id = row["sentence_id"]
         bund_id = row["bundle_id"]
+        xmin = row["xmin"]
+        ymin = row["ymin"]
+        xmax = row["xmax"]
+        ymax = row["ymax"]
+        page = row["Page"]
         for item in items:
             if item != "":
                 if last_num != sent_id:
                     idx = 0
                     last_num = sent_id
-                newline = [item,sent_id,idx,bund_id]
+                newline = [item,sent_id,idx,bund_id,xmin,ymin,xmax,ymax,page]
                     #last_num=item[2]
                 dataset.append(newline)
                 idx = idx+1
                     #print(f"{item}, {sent_id}, {bund_id}")
     dataset.sort()
     with open(output,"w",newline="") as file:
-        header = ["mapped_id","word","sentence_id","location_in_sentence","bundle_id"]
+        header = ["mapped_id","word","sentence_id","location_in_sentence","bundle_id","xmin","ymin","xmax","ymax","Page"]
         writer = csv.writer(file,escapechar='"')
         writer.writerow(header)
         for idx,item in enumerate(dataset):
-            row = [idx,item[0],item[1],item[2],item[3]]
+            row = [idx,item[0],item[1],item[2],item[3],item[4],item[5],item[6],item[7],item[8]]
             writer.writerow(row)
     #print(dataset)
 
