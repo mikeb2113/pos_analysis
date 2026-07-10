@@ -502,20 +502,25 @@ def extraction(input_file):
 
             # Save final updated stats file AFTER confidence changes
     pdf_path = "pdfs/" + input_file + ".pdf"
-    pdf_transform = pdf_to_text(pdf_path)[0]
+    #pdf_transform = pdf_to_text(pdf_path)[0]
     #print(f"source -> {input_file} pdf: {pdf_transform}")
     #pdf = unstick_library_prefixes(pdf_to_text(pdf_path)[0])
     pdf_info = pdf_to_text(pdf_path)
     pdf = pdf_info[0]
     page_count = pdf_info[2]
     #print(f"file: {input_file}")
-    print(f"page count: {pdf_info}")
-    print(f"referencing: {pdf_info[0][2]}")
+    #print(f"page count: {pdf_info}")
+    #print(f"referencing: {pdf_info[0][2]}")
+    #print(f"page info: {pdf_info[0][2]}")
 
     output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
-    y = Skeletons(pdf,output_file2,)
-    print("NPLIST:")
-    print(y.document.NPLIST)
+    #y = Skeletons(pdf,output_file2,pdf_info)
+    #print("VALIDATING COORDINATES:")
+    #print(pdf_info[0][1])
+    #print(f"sentences: {len(pdf_info)}")
+    y = Skeletons(pdf,output_file2,pdf_info[0][1],pdf_info[0][2],len(pdf_info))
+    #print("NPLIST:")
+    #print(y.document.NPLIST)
 
     out = "data/dict/working_set/stats/" + input_file + "_stats.csv" #outputs the base stats of the words
     #print(word_df)

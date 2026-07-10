@@ -67,12 +67,12 @@ for file in files:#go to the original files: take each file individually
     for i,sentence in enumerate(file.sentences):
         #print(f"sentence: {sentence.text}")
         #for i,data in enumerate(sentence.text):
-        print(f"text: {sentence.text[0][i]}")
-        print(f"xmin: {sentence.text[1][i][0]}")
-        print(f"ymin: {sentence.text[1][i][1]}")
-        print(f"xmax: {sentence.text[1][i][2]}")
-        print(f"ymax: {sentence.text[1][i][3]}")
-        print(f"Page: {sentence.text[2][i]}")
+        #print(f"text: {sentence.text[0][i]}")
+        #print(f"xmin: {sentence.text[1][i][0]}")
+        #print(f"ymin: {sentence.text[1][i][1]}")
+        #print(f"xmax: {sentence.text[1][i][2]}")
+        #print(f"ymax: {sentence.text[1][i][3]}")
+        #print(f"Page: {sentence.text[2][i]}")
         #print(f"File: {file.source_name} Sentences length: {len(sentence.text[0])}")
         #print(f"length measure 2: {len(sentence.text[2])}")
         #print(sentence.text[0][0])

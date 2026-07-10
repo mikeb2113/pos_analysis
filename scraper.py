@@ -97,8 +97,9 @@ class csvable: #This iterates through each pdf and aquires stats
         #print(pdf_reader[0])#Sentence 0: [text,coords,page]
         #print("ONE:")
         #print(pdf_reader[1])#Sentence 1: [text,coords,page]
-        print(f"SOURCE: {source_name} TOTAL LENGTH: {len(pdf_reader)}")
-        if len(pdf_reader)<10000:
+        #print(f"SOURCE: {source_name} TOTAL LENGTH: {len(pdf_reader)}")
+        sentences = len(pdf_reader)
+        if sentences<10000:
             #split = re.split(r'[.?!]',pdf_reader)#str(content[idx])) #save the text, split by sentence ending punctuation
             #builder.append(split) #save split text
             for i,sentence in enumerate(pdf_reader):
@@ -124,7 +125,7 @@ class csvable: #This iterates through each pdf and aquires stats
                 #print(f"page: {sentence[2][0]}")
                 #print(f"Proposing coordinates: {sentence[1][0]}")
                 #print(f"Proposing page: {sentence[2][0]}")
-                sentence_info = self.sentence(sentence,length,char_length,sentiment,source,source_name,pdf_reader[i][1][0][0],pdf_reader[i][1][0][1],pdf_reader[i][1][0][2],pdf_reader[i][1][0][3],sentence[2][0],len(pdf_reader))
+                sentence_info = self.sentence(sentence,length,char_length,sentiment,source,source_name,pdf_reader[i][1][0][0],pdf_reader[i][1][0][1],pdf_reader[i][1][0][2],pdf_reader[i][1][0][3],sentence[2][0],sentences)
                 self.sentences.append(sentence_info)
                 #print(f"char_length: {char_length}") 
                 #print(f"length: {length}")                                             
