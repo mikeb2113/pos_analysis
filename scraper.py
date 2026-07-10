@@ -49,7 +49,7 @@ def convert_to_utf8(filename,encoding):
 
 class csvable: #This iterates through each pdf and aquires stats
     class sentence: #This will be used to save the information that belongs to a sentence
-        def __init__(self, text, word_count, length_chars, polarity, source,source_name):
+        def __init__(self, text, word_count, length_chars, polarity, source,source_name,xmin,ymin,xmax,ymax,page,total_sentences):
              self.text = text
              self.word_count = word_count
              self.length_chars = length_chars
@@ -58,6 +58,12 @@ class csvable: #This iterates through each pdf and aquires stats
              self.source_name = source_name
              self.subject = None
              self.star_rating = -1
+             self.xmin = xmin
+             self.ymin = ymin
+             self.xmax = xmax
+             self.ymax = ymax
+             self.page = page
+             self.total_sentences = total_sentences
 
 
     def __init__(self, input_text,source,source_name):
@@ -68,7 +74,7 @@ class csvable: #This iterates through each pdf and aquires stats
         #print("checking:")
         #print(input_text[-4:])
         if(input_text[-4:]==".pdf"):
-            print("Read as pdf!")
+            #print("Read as pdf!")
             pdf_reader = pdf_to_text(input_text)
             #pdf_reader = PdfReader(input_text)
 
@@ -85,18 +91,40 @@ class csvable: #This iterates through each pdf and aquires stats
         text = ""
         #for idx,page in enumerate(pdf_reader):#looks for each page in a pdf
         #content[idx] = page#get the text
-        split = re.split(r'[.?!]',pdf_reader)#str(content[idx])) #save the text, split by sentence ending punctuation
-        builder.append(split) #save split text
-        for i in builder:
-                    ##print(i)
-                    ##print()
-            for i2 in i:
-                        #i2 now holds each sentence
-                        # So now make a requirements object for each sentence!
-                char_length = len(i2)-1
-                length = len(i2.split(" "))-1
-                sentiment = analyzer.polarity_scores(i2)["compound"]
-                sentence_info = self.sentence(i2,length,char_length,sentiment,source,source_name)
+        #print("VALIDATING READER:")
+        #print(pdf_reader)
+        #print("ZERO:")
+        #print(pdf_reader[0])#Sentence 0: [text,coords,page]
+        #print("ONE:")
+        #print(pdf_reader[1])#Sentence 1: [text,coords,page]
+        print(f"SOURCE: {source_name} TOTAL LENGTH: {len(pdf_reader)}")
+        if len(pdf_reader)<10000:
+            #split = re.split(r'[.?!]',pdf_reader)#str(content[idx])) #save the text, split by sentence ending punctuation
+            #builder.append(split) #save split text
+            for i,sentence in enumerate(pdf_reader):
+                builder.append(sentence)
+            #for i in builder:
+                        ##print(i)
+                        ##print()
+                #for i2 in i:
+                            #i2 now holds each sentence
+                            # So now make a requirements object for each sentence!
+                char_length = len(sentence)-1
+                #print(f"sentence: {sentence[0][0]}")
+                length = len(sentence[0][0].split(" "))-1
+                sentiment = analyzer.polarity_scores(sentence[0][0])["compound"]
+                #print(f"VALIDATING PDF_READER: {pdf_reader}")
+                #print(f"INDEX COORDINATES {i}: {pdf_reader[i][1][0]}")
+                #print("Coordinates:")
+                #print(f"xmin: {pdf_reader[i][1][0][0]}")
+                #print(f"ymin: {pdf_reader[i][1][0][1]}")
+                #print(f"xmax: {pdf_reader[i][1][0][2]}")
+                #print(f"ymax: {pdf_reader[i][1][0][3]}")
+                #print(f"coords: {sentence[1][0]}")
+                #print(f"page: {sentence[2][0]}")
+                #print(f"Proposing coordinates: {sentence[1][0]}")
+                #print(f"Proposing page: {sentence[2][0]}")
+                sentence_info = self.sentence(sentence,length,char_length,sentiment,source,source_name,pdf_reader[i][1][0][0],pdf_reader[i][1][0][1],pdf_reader[i][1][0][2],pdf_reader[i][1][0][3],sentence[2][0],len(pdf_reader))
                 self.sentences.append(sentence_info)
                 #print(f"char_length: {char_length}") 
                 #print(f"length: {length}")                                             

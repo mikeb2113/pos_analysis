@@ -215,4 +215,5 @@ with open("paths.csv", mode='r', encoding='utf-8') as file:
         print(f"Accessing file: {row[0]}")
         use_file = row[0]
         for sentence in file_sentence_hash[use_file]:
-            print(sentence)
+            print(sentence) #Each sentence associated with a file is saved into an array as strings
+                            #This can then be iterated through to see each sentence

@@ -14,9 +14,9 @@ from threading import Lock
 import csv
 input_file = "ClassOverlapping"
 pdf_path = "pdfs/" + input_file + ".pdf"
-pdf_transform = pdf_to_text(pdf_path)
+pdf_transform = pdf_to_text(pdf_path)[0]
 #print(f"source -> {input_file} pdf: {pdf_transform}")
-pdf = unstick_library_prefixes(pdf_to_text(pdf_path))
+pdf = unstick_library_prefixes(pdf_to_text(pdf_path)[0])
 
 output_file2 = input_file + "_traversable.csv"#Output to the path as a CSV with connections present
 y = Skeletons(pdf,output_file2)

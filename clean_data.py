@@ -60,41 +60,49 @@ def detect_language_status(text):
 
     except LangDetectException:
         return "unknown", None
-
+#xmin,ymin,xmax,ymax
 for file in files:#go to the original files: take each file individually
-    header = ["Original_Text","Word_Count","Char_Count","Sentiment_Polarity","Translated_Text","Source_Id","Source_Name"]
+    header = ["Original_Text","Word_Count","Char_Count","Sentiment_Polarity","Translated_Text","Source_Id","Source_Name","xmin","ymin","xmax","ymax","Page","Total_Sentences"]
     rows = []
     for sentence in file.sentences:
-        #print(sentence.text)
-        if(is_number(sentence.text)) or is_empty(sentence.text):
+        #print(f"File: {file.source_name} Sentences length: {len(sentence.text[0])}")
+        #print(f"length measure 2: {len(sentence.text[2])}")
+        #print(sentence.text[0][0])
+        #print(f"Validating sentence: {sentence.text[0][0]}")
+        if(is_number(sentence.text[0][0])) or is_empty(sentence.text[0][0]):
              continue
         else:
             path = file_mapping.get(file)
             #print(f"Source: {file.source_name}")
             path = "data/dict/working_set/pdfs_as_csvs/" + file.source_name + ".csv" #Output to this address as a csv
             # preserve original text
-            #sentence.text #Save the original text in case of a translation being required
+            #sentence.text[0][0] #Save the original text in case of a translation being required
             paths.append([path,file.source_name])
             paths_file = "paths.csv"
-            #for idx, value in sentence.text.items():#attempt to translate each sentence
-            status, confidence = detect_language_status(sentence.text) #Attempt to translate to see if english & confidence
+            #for idx, value in sentence.text[0][0].items():#attempt to translate each sentence
+            status, confidence = detect_language_status(sentence.text[0][0]) #Attempt to translate to see if english & confidence
 
             #Then, save all the aggregated data into a row.
-            cleaned_original = clean_text(sentence.text)
+            cleaned_original = clean_text(sentence.text[0][0])
 
             try:
                     # SAFER: only translate when confidently non-English
+                #print(f"xmin: {sentence.text[1][0][0]}")
+                #print(f"ymin: {sentence.text[1][0][1]}")
+                #print(f"xmax: {sentence.text[1][0][2]}")
+                #print(f"ymax: {sentence.text[1][0][3]}")
+                #print(f"Page: {sentence.text[2][0]}")
                 if status == "confident_non_english":
-                        translated = GoogleTranslator(source="auto", target="en").translate(str(sentence.text))
+                        translated = GoogleTranslator(source="auto", target="en").translate(str(sentence.text[0][0]))
                         cleaned = clean_text(translated)
-                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,1,cleaned]
+                        row = [sentence.text[0][0],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,1,cleaned,sentence.text[1][0][0],sentence.text[1][0][1],sentence.text[1][0][2],sentence.text[1][0][3],sentence.text[2][0],sentence.total_sentences]
                 else:
                         cleaned = cleaned_original
-                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,cleaned]
+                        row = [sentence.text[0][0],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,0,cleaned,sentence.text[1][0][0],sentence.text[1][0][1],sentence.text[1][0][2],sentence.text[1][0][3],sentence.text[2][0],sentence.total_sentences]
 
             except Exception:
                     cleaned = cleaned_original
-                    row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,""]
+                    row = [sentence.text[0][0],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,0,"",sentence.text[1][0][0],sentence.text[1][0][1],sentence.text[1][0][2],sentence.text[1][0][3],sentence.text[2][0],sentence.total_sentences]
             rows.append(row)
             #print("row(clean_data):")
             #print(row)

@@ -83,7 +83,13 @@ def extraction(input_file):
     "Sentiment_Polarity" : 3,
     "Translated_Text" : 4,
     "Source_Id" : 5,
-    "Source_Name" : 6
+    "Source_Name" : 6,
+    "xmin" : 7,
+    "ymin" : 8,
+    "xmax" : 9,
+    "ymax" : 10,
+    "Page" : 11,
+    "Total_Sentences" : 12
     }
 
     def tokenize(text):
@@ -138,6 +144,19 @@ def extraction(input_file):
             #or maybe it has been incorrectly transformed
     for i, (_, row1) in enumerate(text.iterrows(), start=1):
                 text = _[idx["Original_Text"]]
+                #xmin = _[idx["xmin"]]
+                #ymin = _[idx["ymin"]]
+                #xmax = _[idx["xmax"]]
+                #ymax = _[idx["ymax"]]
+                #page = _[idx["Page"]]
+                #total_sentences = _[idx["Total_Sentences"]]
+    #"xmin" : 7,
+    #"ymin" : 8,
+    #"xmax" : 9,
+    #"ymax" : 10,
+    #"Page" : 11,
+    #"Total_Sentences" : 12
+
                 #print("Original text (iterrows) (extract words):")
                 #print(text)
                 #print()
@@ -193,6 +212,14 @@ def extraction(input_file):
                     "review_count": stats["review_count"],
                     "avg_sentiment": stats["sentiment_sum"] / frequency,
                     "length": len(word)
+
+    #"xmin" : 7,
+    #"ymin" : 8,
+    #"xmax" : 9,
+    #"ymax" : 10,
+    #"Page" : 11,
+    #"Total_Sentences" : 12
+
                 })
 
                 #if i % 1000 == 0:
@@ -475,9 +502,10 @@ def extraction(input_file):
 
             # Save final updated stats file AFTER confidence changes
     pdf_path = "pdfs/" + input_file + ".pdf"
-    pdf_transform = pdf_to_text(pdf_path)
+    pdf_transform = pdf_to_text(pdf_path)[0]
     #print(f"source -> {input_file} pdf: {pdf_transform}")
-    pdf = unstick_library_prefixes(pdf_to_text(pdf_path))
+    #pdf = unstick_library_prefixes(pdf_to_text(pdf_path)[0])
+    pdf = pdf_to_text(pdf_path)[0]
 
     output_file2 = "data/dict/working_set/traversable_text/" + input_file + "_traversable.csv"#Output to the path as a CSV with connections present
     y = Skeletons(pdf,output_file2)
