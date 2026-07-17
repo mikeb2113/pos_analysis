@@ -16,7 +16,13 @@ def create_table(name):
                 type TEXT NOT NULL,
                 bundle_id INTEGER NOT NULL,
                 preceeded_by INTEGER NOT NULL,
-                leads_to INTEGER NOT NULL
+                leads_to INTEGER NOT NULL,
+                xmin INTEGER NOT NULL,
+                ymin INTEGER NOT NULL,
+                xmax INTEGER NOT NULL,
+                ymax INTEGER NOT NULL,
+                Page INTEGER NOT NULL,
+                Total_Sentences INTEGER NOT NULL
             )
         ''')
 def get_word_count(name):
@@ -30,6 +36,7 @@ def get_word_count(name):
         #print(cursor.fetchall())
         return cursor.fetchall()[0][0]
     #print("Database and table setup complete.")
+#phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to,xmin,ymin,xmax,ymax,Page,Total_Sentences
 
 def import_contents(name):
     # Connect to database using context manager
@@ -43,7 +50,7 @@ def import_contents(name):
             data = list(reader)  # Read all remaining rows
         
         # Execute bulk insert
-        cursor.executemany(f"INSERT INTO {name} (phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to) VALUES (?, ?, ?, ?, ?, ?, ?)", data)
+        cursor.executemany(f"INSERT INTO {name} (phrase_id,sentence_id,phrase,type,bundle_id,preceeded_by,leads_to,xmin,ymin,xmax,ymax,Page,Total_Sentences) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", data)
     #print("CSV data successfully inserted into SQLite.")
 
 def traverse_db(name):
