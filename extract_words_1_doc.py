@@ -506,6 +506,8 @@ def extraction(input_file):
     #print(f"source -> {input_file} pdf: {pdf_transform}")
     #pdf = unstick_library_prefixes(pdf_to_text(pdf_path)[0])
     pdf_info = pdf_to_text(pdf_path)
+    #print(f"validating pdf info: {pdf_info}")
+    #print(pdf_info)
     pdf = pdf_info[0]
     page_count = pdf_info[2]
     #print(f"file: {input_file}")
@@ -518,7 +520,12 @@ def extraction(input_file):
     #print("VALIDATING COORDINATES:")
     #print(pdf_info[0][1])
     #print(f"sentences: {len(pdf_info)}")
-    y = Skeletons(pdf,output_file2,pdf_info[0][1],pdf_info[0][2],len(pdf_info))
+    print("VALIDATING PDF: ")
+    print(pdf)
+    print("Info:")
+    print(pdf_info)
+    #passes an array of sentences into skeletons
+    y = Skeletons(pdf_info,output_file2,pdf_info[1],pdf_info[2],len(pdf_info))
     #print("NPLIST:")
     #print(y.document.NPLIST)
 
