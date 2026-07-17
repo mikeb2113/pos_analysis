@@ -3,6 +3,7 @@ from sqlite_functions import search, initialize, get_word_count, traverse_db
 from csir.word_data import Word
 import os.path
 import csv
+from highlight_functions import highlight
 
 #def create_table(input_file):
 
@@ -258,9 +259,16 @@ with open("paths.csv", mode='r', encoding='utf-8') as file:
         sentences = []
         try:
             sentences = file_sentence_hash[use_file]
+            for sentence in sentences:
+                print(sentence)
+                #file,page,x,y,dimensions
+                text = sentence[5]
+                dimensions = [sentence[0],sentence[1],sentence[2],sentence[3]]
+                page = sentence[4]
+                highlight(use_file,page,0,0,dimensions)
         except KeyError:
             sentences = []
-        print(sentences)
+        #print(sentences)
         #for sentence in sentences:
         #    print(sentence) #Each sentence associated with a file is saved into an array as strings
                             #This can then be iterated through to see each sentence

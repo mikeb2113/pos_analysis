@@ -7,13 +7,18 @@ from pathlib import Path
 
 def highlight(file,page,x,y,dimensions):
     writer = PdfWriter()
-    writer.add_page(page)
+    #writer.add_page(page)
     
     if not os.path.exists(f"write_to/{file}.pdf"):
         print("No file!")
         input_file = f"pdfs/{file}.pdf"
         file = Path(f"write_to/{file}.pdf")
         file.parent.mkdir(exist_ok=True, parents=True)
+        print(f"xmin: {dimensions[0]}")
+        print(f"ymin: {dimensions[1]}")
+        print(f"xmax: {dimensions[2]}")
+        print(f"ymax: {dimensions[3]}")
+        print(f"page: {page}")
 
         #rect = (50, 550, 200, 650)
         quad_points = [dimensions[0], dimensions[1], dimensions[2], dimensions[1], dimensions[0], dimensions[3], dimensions[2], dimensions[3]]
@@ -23,7 +28,7 @@ def highlight(file,page,x,y,dimensions):
             rect=dimensions,
             quad_points=ArrayObject([FloatObject(quad_point) for quad_point in quad_points]),
         )
-        writer.add_annotation(page_number=0, annotation=annotation)
+        writer.add_annotation(page_number=page, annotation=annotation)
 
     # Write the annotated file to disk
     writer.write(file)
