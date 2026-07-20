@@ -3,7 +3,7 @@ from sqlite_functions import search, initialize, get_word_count, traverse_db
 from csir.word_data import Word
 import os.path
 import csv
-from highlight_functions import highlight
+from highlight_functions import highlight_by_text, return_quad
 
 #def create_table(input_file):
 
@@ -71,7 +71,7 @@ def search_query(keywords,input_file="ClassOverlapping"):
 def ensure_file_exists(name):
     if not os.path.isfile(f'db_files/{name}.db'):
         initialize(name)
-        print(f"initialized database file: {name}")
+        #print(f"initialized database file: {name}")
 
 def overview_keywords(input_file,remove_top_num = 0):
     file = open(f"data/dict/working_set/stats_with_features/stats_with_features_{input_file}.csv")
@@ -92,9 +92,9 @@ def overview_keywords(input_file,remove_top_num = 0):
                     remove_top_num = remove_top_num - 1
                 #print(f"full row: {row}")
                 if i > end_index: #Change trigger. Maybe: instead of naively taking the first 10: if there is too high of a word presence, remove the most common counted word?
-                    print("words:")
-                    for word in words:
-                        print(word)
+                    #print("words:")
+                    #for word in words:
+                        #print(word)
                     return words
         #later: read the first 10 rows, discounting the and of in to etc. Do a search of the top 10 words. return sentences where these occur
         #consider simply skipping these words, going to the next rather than omitting entirely
@@ -122,10 +122,10 @@ def proceed_from_file(name, remove_top_num = 0):
     sentence_hash = {}
     num_set = set()
     word_theme_connections = file_overview(name,remove_top_num)
-    print("parsing info:")
-    for item1 in word_theme_connections:
-        for item2 in item1:
-            print(item2)
+    #print("parsing info:")
+    #for item1 in word_theme_connections:
+    #    for item2 in item1:
+            #print(item2)
     #print(word_theme_connections)
     for word_occurances in word_theme_connections:
         #print(f"instance: {word_occurances}")
@@ -134,8 +134,8 @@ def proceed_from_file(name, remove_top_num = 0):
             #print(sentence)
             sentence_num = 0
             for row in sentence:
-                print("row in sentence:")
-                print(row)
+                #print("row in sentence:")
+                #print(row)
                 sentence_num = row[2]
                 num_set.add(sentence_num)
                 append = [row[3].replace("[",""),sentence_num]
@@ -148,8 +148,8 @@ def proceed_from_file(name, remove_top_num = 0):
                 ymax = row[11]
                 page = row[12]
                 word = sentence_builder
-                print("word test:")
-                print(word)
+                #print("word test:")
+                #print(word)
 
                 #xmin: int
                 #ymin: int
@@ -218,8 +218,8 @@ def get_overall_relevent_sentences(file,remove_top_num = 0):
     if remaining_words_ratio < .25:
         remove_top_num = remove_top_num+1
         get_overall_relevent_sentences(file,remove_top_num)
-    if not relevant_sentences:
-        print("There are no relevant sentences!")
+    #if not relevant_sentences:
+        #print("There are no relevant sentences!")
     else:
         return [relevant_sentences,remaining_words_ratio]
         #print(sentence_hash[num])
@@ -232,21 +232,21 @@ def get_relevant_sentences_for_all_training_files():
         next(reader)
         for row in reader:
             use_file = row[0]
-            print(f"evaluating file: {use_file}")
+            #print(f"evaluating file: {use_file}")
             sentences_and_ratio = get_overall_relevent_sentences(use_file)
-            print("==========sentences and ratio test==========")
+            #print("==========sentences and ratio test==========")
             if not sentences_and_ratio:
-                print("no sentences for sentences and ratio test!")
+                #print("no sentences for sentences and ratio test!")
                 break
-            print(sentences_and_ratio)
-            print("==========end of sentences and ratio test==========")
-            print("==========sentences test==========")
-            print(sentences_and_ratio[0])
-            print("==========end of sentence test==========")
+            #print(sentences_and_ratio)
+            #print("==========end of sentences and ratio test==========")
+            #print("==========sentences test==========")
+            #print(sentences_and_ratio[0])
+            #print("==========end of sentence test==========")
             sentences = sentences_and_ratio[0]
             ratio = sentences_and_ratio[1]
             file_sentence_hash[use_file] = sentences
-            print(f"ratio: {ratio}")
+            #print(f"ratio: {ratio}")
     return file_sentence_hash
 
 file_sentence_hash = get_relevant_sentences_for_all_training_files()
@@ -254,22 +254,23 @@ with open("paths.csv", mode='r', encoding='utf-8') as file:
     reader = csv.reader(file)
     next(reader)
     for row in reader:
-        print(f"Accessing file: {row[0]}")
+        #print(f"Accessing file: {row[0]}")
         use_file = row[0]
         sentences = []
         try:
             sentences = file_sentence_hash[use_file]
             for sentence in sentences:
-                print(sentence)
+                #print(sentence)
                 #file,page,x,y,dimensions
                 text = sentence[5]
                 dimensions = [sentence[0],sentence[1],sentence[2],sentence[3]]
-                page = sentence[4]
-                highlight(use_file,page,0,0,dimensions)
+                page = sentence[4]#input_word,page,input_doc,output_doc
+                #output = use_file + "_highlighted.pdf"
+                highlight_by_text(sentence,use_file)
         except KeyError:
             sentences = []
         #print(sentences)
         #for sentence in sentences:
         #    print(sentence) #Each sentence associated with a file is saved into an array as strings
                             #This can then be iterated through to see each sentence
-        print()
+        #print()
