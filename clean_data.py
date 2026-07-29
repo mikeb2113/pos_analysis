@@ -77,7 +77,7 @@ for file in files:#go to the original files: take each file individually
         #print(f"length measure 2: {len(sentence.text[2])}")
         #print(sentence.text[0][0])
         #print(f"Validating sentence: {sentence.text[0][0]}")
-        if(is_number(sentence.text[0][i])) or is_empty(sentence.text[0][i]):
+        if is_number(sentence.text) or is_empty(sentence.text):
              continue
         else:
             path = file_mapping.get(file)
@@ -88,12 +88,49 @@ for file in files:#go to the original files: take each file individually
             paths.append([path,file.source_name])
             paths_file = "paths.csv"
             #for idx, value in sentence.text[0][0].items():#attempt to translate each sentence
-            status, confidence = detect_language_status(sentence.text[0][i]) #Attempt to translate to see if english & confidence
-
+            status, confidence = detect_language_status(sentence.text) #Attempt to translate to see if english & confidence
             #Then, save all the aggregated data into a row.
-            cleaned_original = clean_text(sentence.text[0][0])
+            cleaned_original = clean_text(sentence.text)
+            cleaned = cleaned_original
+            print("sentence:")
+            print(sentence)
+            print("sentence.text:")
+            print(sentence.text)
+            print("sentence.word_count:")
+            print(sentence.word_count)
+            print("sentence.length_chars:")
+            print(sentence.length_chars)
+            print("sentence.polarity:")
+            print(sentence.polarity)
+            print("sentence.text:")
+            print(sentence.text)
+            print("sentence.source:")
+            print(sentence.source)
+            print("sentence.source_name")
+            print(sentence.source_name)
+            print("status")
+            print(status)
+            print("confidenice")
+            print(confidence)
+            print("cleande")
+            print(cleaned)
+            print("xmin")
+            print(sentence.xmin)
+            print("ymin")
+            print(sentence.ymin)
+            print("xmax")
+            print(sentence.xmax)
+            print("ymax")
+            print(sentence.ymax)
+            print("page")
+            print(sentence.page)
+            print("sentence.total_sentences")
+            print(sentence.total_sentences)
+#"Original_Text","Word_Count","Char_Count","Sentiment_Polarity","Translated_Text","Source_Id","Source_Name","xmin","ymin","xmax","ymax","Page","Total_Sentences"]
+
 
             try:
+
                     # SAFER: only translate when confidently non-English
                 #print(f"xmin: {sentence.text[1][0][0]}")
                 #print(f"ymin: {sentence.text[1][0][1]}")
@@ -101,16 +138,25 @@ for file in files:#go to the original files: take each file individually
                 #print(f"ymax: {sentence.text[1][0][3]}")
                 #print(f"Page: {sentence.text[2][0]}")
                 if status == "confident_non_english":
-                        translated = GoogleTranslator(source="auto", target="en").translate(str(sentence.text[0][0]))
-                        cleaned = clean_text(translated)
-                        row = [sentence.text[0][i],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,1,cleaned,sentence.text[1][i][0],sentence.text[1][i][1],sentence.text[1][i][2],sentence.text[1][i][3],sentence.text[2][i],sentence.total_sentences]
+                        #translated = GoogleTranslator(source="auto", target="en").translate(str(sentence.text[0][0]))
+                        #cleaned = clean_text(translated)
+                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,1,cleaned,sentence.xmin,sentence.ymin,sentence.xmax,sentence.ymax,sentence.page,sentence.total_sentences]
                 else:
-                        cleaned = cleaned_original
-                        row = [sentence.text[0][i],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,0,cleaned,sentence.text[1][i][0],sentence.text[1][i][1],sentence.text[1][i][2],sentence.text[1][i][3],sentence.text[2][i],sentence.total_sentences]
+                        #cleaned = cleaned_original
+                        row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,cleaned,sentence.xmin,sentence.ymin,sentence.xmax,sentence.ymax,sentence.page,sentence.total_sentences]
 
             except Exception:
                     cleaned = cleaned_original
-                    row = [sentence.text[0][i],sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text[0][0],sentence.source,sentence.source_name,status,confidence,0,"",sentence.text[1][i][0],sentence.text[1][i][1],sentence.text[1][i][2],sentence.text[1][i][3],sentence.text[2][i],sentence.total_sentences]
+                    #print("validation:")
+                    #print(status)
+                    #print(confidence)
+                    #print(sentence.text[1][i][0])
+                    #print(sentence.text[1][i][1])
+                    #print(sentence.text[1][i][2])
+                    #print(sentence.text[1][i][3])
+                    #print(sentence.text[2][i])
+                    #print(sentence.total_sentences)
+                    row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,"",sentence.xmin,sentence.ymin,sentence.xmax,sentence.ymax,sentence.page,sentence.total_sentences]
             rows.append(row)
             #print("row(clean_data):")
             #print(row)

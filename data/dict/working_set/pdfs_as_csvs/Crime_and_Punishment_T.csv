@@ -1,0 +1,4 @@
+Original_Text,Word_Count,Char_Count,Sentiment_Polarity,Translated_Text,Source_Id,Source_Name,xmin,ymin,xmax,ymax,Page,Total_Sentences
+Crime and Punishment ,24602,24601,-0.7717,Crime and Punishment ,7,Crime_and_Punishment_T,english,0.9999965597908479,0,Crime and Punishment ,66.37399291992188,63.60108184814453,326.75946044921875,87.60108184814453,0,3
+Fyodor Dostoevsky ,24602,24601,0.0,Fyodor Dostoevsky ,7,Crime_and_Punishment_T,confident_non_english,0.99999178103538,1,Fyodor Dostoevsky ,145.3939971923828,101.56898498535156,242.7645721435547,114.85298919677734,0,3
+ ,24602,24601,0.0, ,7,Crime_and_Punishment_T,empty,,0, ,52.21400451660156,130.70712280273438,55.55000305175781,142.70712280273438,0,3
