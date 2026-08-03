@@ -47,7 +47,12 @@ class probability_functions:
     def get_word(self,context,index):
         return context[index]
 
+    def onehot_to_word(self,idx):
+        return self.int_to_word()[idx]
 
+    def word_to_onehot(self,idx):
+        return self.onehot_encoding[self.word_to_int()[idx]]
+    
     def identify_window(self,context,window_size,index):
         words_goal = 2*window_size+1
         left = index-window_size
@@ -164,9 +169,22 @@ for entry in prob_dict.dict:
     #print()
 prob_dict.onehot()
 #print(prob_dict.onehot_encoding)
+#for encoding in prob_dict.onehot_encoding:
+#    print(encoding)
+#    print()
+#print(prob_dict.int_to_word())
 for encoding in prob_dict.onehot_encoding:
-    print(encoding)
-    print()
+    #print(encoding)
+    for idx,space in enumerate(encoding):
+        if space == 1:
+            print(prob_dict.onehot_to_word(idx))
+            #This finds the word associated with the encoding
+for word in prob_dict.dict:
+    print(prob_dict.word_to_onehot(word))
+    #This finds the onehot encoding associated with a word
+
+
+            #print(prob_dict.dict[prob_dict.int_to_word()[idx]])
 #print(prob_dict.int_to_word)
 
 #encodings = prob_dict.onehot()
