@@ -7,6 +7,13 @@ class probability_functions:
         self.text = text
         self.onehot_encoding = list()
 
+    def sort(self):
+        arr = []
+        for word in self.dict:
+            #print(word)
+            arr.append(word)
+        return arr
+
     def set_target_text(self,text):
         self.text = text
 
@@ -23,7 +30,7 @@ class probability_functions:
                             local_dict[word] = local_dict[word]+1
 
         else:
-            print("word already in dict!")
+            #print("word already in dict!")
             local_dict = self.dict[target_word]
             for idx,word in enumerate(context): 
                 if word not in local_dict:
@@ -87,7 +94,11 @@ class probability_functions:
             for target_word in self.dict[word_key]:
                 self.dict[word_key][target_word] = self.dict[word_key][target_word]/total_words
             #print(self.dict[word_entry][word])
-    
+
+    def get_encoding(self,word):
+        number = self.word_to_int()[word]
+        return number
+
     def word_to_int(self):
         return dict((word, i) for i, word in enumerate(self.dict))
     
@@ -134,6 +145,11 @@ class probability_functions:
         #print(inverted)
         self.onehot_encoding = onehot_encoded
 
+    def get_encoding(self,word):
+        idx = self.word_to_int()[word]
+        list = [0]*len(self.dict)
+        list[idx] = 1
+        return list
 
 
 text = """
@@ -168,27 +184,13 @@ for entry in prob_dict.dict:
     #print(f"entry: {entry} probabilities: {prob_dict.dict[entry]}")
     #print()
 prob_dict.onehot()
-#print(prob_dict.onehot_encoding)
-#for encoding in prob_dict.onehot_encoding:
-#    print(encoding)
-#    print()
-#print(prob_dict.int_to_word())
+
 for encoding in prob_dict.onehot_encoding:
     #print(encoding)
     for idx,space in enumerate(encoding):
         if space == 1:
-            print(prob_dict.onehot_to_word(idx))
-            #This finds the word associated with the encoding
-for word in prob_dict.dict:
-    print(prob_dict.word_to_onehot(word))
-    #This finds the onehot encoding associated with a word
+            break
 
+sorted = prob_dict.sort()
 
-            #print(prob_dict.dict[prob_dict.int_to_word()[idx]])
-#print(prob_dict.int_to_word)
-
-#encodings = prob_dict.onehot()
-
-#onehot_encodings = prob_dict.onehot()
-
-#prob_dict.percentage("Since")
+print(prob_dict.get_encoding("Since"))
