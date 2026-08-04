@@ -1,11 +1,11 @@
 import sys
 from numpy import argmax
 class probability_functions:
-    def __init__(self,text):
+    def __init__(self,text,window_size):
         self.dict = {}
         self.word_set = set()
         self.text = text
-        self.onehot_encoding = list()
+        self.generate_probabilities(window_size)
 
     def sort(self):
         arr = []
@@ -80,20 +80,12 @@ class probability_functions:
         return window
 
     def percentage(self,word_entry,window):
-        #length = len(self.dict[word_entry])
-        #print(f"length: {length}")
         for word_key in self.dict:
             total_words = 0
             for target_word in self.dict[word_key]:
                 total_words = total_words+self.dict[word_key][target_word]
-                #print("word_key:")
-                #print(self.dict[word_key])
-                #print("target word:")
-                #print(self.dict[word_key])
-                #print(f"{word_key} total word count: {total_words}")
             for target_word in self.dict[word_key]:
                 self.dict[word_key][target_word] = self.dict[word_key][target_word]/total_words
-            #print(self.dict[word_entry][word])
 
     def get_encoding(self,word):
         number = self.word_to_int()[word]
@@ -105,44 +97,20 @@ class probability_functions:
     def int_to_word(self):
         return dict((i,word) for i, word in enumerate(self.dict))
 
-        #char_to_int = dict((c, i) for i, c in enumerate(self.dict))
-        #int_to_char = dict((i, c) for i, c in enumerate(self.dict))
     def onehot(self):
-        # define input string
-        #data = 'hello world'
-        #print(data)
-        # define universe of possible input values
-        #alphabet = 'abcdefghijklmnopqrstuvwxyz '
-        # define a mapping of chars to integers
         length = len(self.dict)
-        word_to_int = self.word_to_int()#dict((c, i) for i, c in enumerate(self.dict))
-        int_to_word = self.int_to_word()#dict((i, c) for i, c in enumerate(self.dict))
-        #print("word to int:")
-        #print(char_to_int)
-        #print("int to word:")
-        #print(int_to_char)
-        # integer encode input data
+        word_to_int = self.word_to_int()
+        int_to_word = self.int_to_word()
         integer_encoded = [word_to_int[char] for char in self.dict]
-        #print(integer_encoded)
-        # one hot encode
         onehot_encoded = list()
-        #for entry in 
         entries = []
         for word in self.dict:
             entries.append(word)
         for entry in integer_encoded:
             letter = [0 for _ in range(len(self.dict))] 
-            #print("entries:")
-            #print(entries)
-            #letter = [0 for _ in range(len(entries))]
-            #print("entry:")
-            #print(entry)
             letter[entry] = 1
             onehot_encoded.append(letter)
-        #print(onehot_encoded)
-        # invert encoding
         inverted = int_to_word[argmax(onehot_encoded[0])]
-        #print(inverted)
         self.onehot_encoding = onehot_encoded
 
     def get_encoding(self,word):
@@ -151,46 +119,56 @@ class probability_functions:
         list[idx] = 1
         return list
 
+    def get_input_vector(self,word):
+        input_vector = [0]*len(self.dict)
+        for neighbor in self.dict[word]:
+            encoding = prob_dict.word_to_int()[neighbor]#prob_dict.word_to_int()#get_encoding(word)
+            #print("intermediate encoding:")
+            #print(encoding)
+            input_vector[encoding] = 1
+        #This finds the desired input vector in predicting words of an input
+        return input_vector
 
-text = """
-        Since the components of CRISPR-Cas systems are derived from
-        bacteria, host immune response to Cas gene and Cas protein is
-        regarded as one of the most important challenges in the clinical tri-
-        als of CRISPR-Cas system [156,252]. It was found that in vivo deliv-
-        ery of CRISPR-Cas components can elicit immune responses against
-        the Cas protein [252,253]. Furthermore, researchers also found that
-        there were anti-Cas9 antibodies and anti-Cas9 T cells existing in
-        healthy humans, suggesting the pre-existing of humoral and cel-
-        luar immune responses to Cas9 protein in humans [254]. There-
-        fore, how to detect and reduce the immunogenicity of Cas
-        proteins is a major challenge will be faced in clinical application
-        of CRISPR-Cas systems. Researchers are trying to handle this prob-
-        lem by modifying Cas9 protein or using Cas9 homologues [255]
-        """
-prob_dict = probability_functions(text)
-window_size = 2
-context = prob_dict.word_breakdown()
-length = len(context)
-active = 0
+    def generate_probabilities(self,window_size):
+        context = self.word_breakdown()
+        length = len(context)
+        active = 0
 
-while active < length:
-    word = prob_dict.get_word(context,active)
-    window = prob_dict.identify_window(context,window_size,active)
-    prob_dict.aggregate_prob(window,word)
-    active = active+1
+        while active < length:
+            word = self.get_word(context,active)
+            window = self.identify_window(context,window_size,active)
+            self.aggregate_prob(window,word)
+            active = active+1
+
+    def jaccards(self,word1,word2):
+        arr1 = self.get_input_vector(word1)
+        arr2 = self.get_input_vector(word2)
+        print(f"entry: {word1}")
+        print(arr1)
+        print(f"entry: {word2}")
+        print(arr2)
+        ones = 0 
+        like_ones = 0
+        for idx,number1 in enumerate(arr1):
+            number2 = arr2[idx]
+            if number1 == 1 or number2 == 1:
+                if number1 == 1 and number2 == 1:
+                    like_ones = like_ones+1
+                ones = ones+1
+        return like_ones/ones
+
+window_size = 5
+text = """Since the components of CRISPR-Cas systems are derived from bacteria, host immune response to Cas gene and Cas protein is regarded as one of the most important challenges in the clinical trials of CRISPR-Cas system [156,252]. It was found that in vivo delivery of CRISPR-Cas components can elicit immune responses against the Cas protein [252,253]. Furthermore, researchers also found that there were anti-Cas9 antibodies and anti-Cas9 T cells existing in healthy humans, suggesting the pre-existing of humoral and celluar immune responses to Cas9 protein in humans [254]. Therefore, how to detect and reduce the immunogenicity of Cas proteins is a major challenge will be faced in clinical application of CRISPR-Cas systems. Researchers are trying to handle this problem by modifying Cas9 protein or using Cas9 homologues [255]"""
+prob_dict = probability_functions(text,window_size)
 
 for entry in prob_dict.dict:
     prob_dict.percentage(entry,window_size)
-    #print(f"entry: {entry} probabilities: {prob_dict.dict[entry]}")
-    #print()
-prob_dict.onehot()
 
-for encoding in prob_dict.onehot_encoding:
-    #print(encoding)
-    for idx,space in enumerate(encoding):
-        if space == 1:
-            break
+for entry in prob_dict.dict:
+    print(prob_dict.get_input_vector(entry))
 
-sorted = prob_dict.sort()
+print(prob_dict.jaccards("host","immune"))
 
-print(prob_dict.get_encoding("Since"))
+#prob_dict.onehot()
+#print(prob_dict.get_encoding("Since"))
+
