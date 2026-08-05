@@ -1,10 +1,10 @@
 import sys
 from numpy import argmax
-class probability_functions:
+class synonym_resolution:
     def __init__(self,text,window_size):
         self.dict = {}
         self.word_set = set()
-        self.text = text
+        self.text = self.flatten_input(text)
         self.generate_probabilities(window_size)
 
     def sort(self):
@@ -122,7 +122,7 @@ class probability_functions:
     def get_input_vector(self,word):
         input_vector = [0]*len(self.dict)
         for neighbor in self.dict[word]:
-            encoding = prob_dict.word_to_int()[neighbor]#prob_dict.word_to_int()#get_encoding(word)
+            encoding = self.word_to_int()[neighbor]#prob_dict.word_to_int()#get_encoding(word)
             #print("intermediate encoding:")
             #print(encoding)
             input_vector[encoding] = 1
@@ -157,18 +157,24 @@ class probability_functions:
                 ones = ones+1
         return like_ones/ones
 
-window_size = 5
-text = """Since the components of CRISPR-Cas systems are derived from bacteria, host immune response to Cas gene and Cas protein is regarded as one of the most important challenges in the clinical trials of CRISPR-Cas system [156,252]. It was found that in vivo delivery of CRISPR-Cas components can elicit immune responses against the Cas protein [252,253]. Furthermore, researchers also found that there were anti-Cas9 antibodies and anti-Cas9 T cells existing in healthy humans, suggesting the pre-existing of humoral and celluar immune responses to Cas9 protein in humans [254]. Therefore, how to detect and reduce the immunogenicity of Cas proteins is a major challenge will be faced in clinical application of CRISPR-Cas systems. Researchers are trying to handle this problem by modifying Cas9 protein or using Cas9 homologues [255]"""
-prob_dict = probability_functions(text,window_size)
+    def flatten_input(self,array_of_words):
+        flat = ""
+        for word in array_of_words:
+            flat = flat + word + " "
+        return flat
 
-for entry in prob_dict.dict:
-    prob_dict.percentage(entry,window_size)
 
-for entry in prob_dict.dict:
-    print(prob_dict.get_input_vector(entry))
+#window_size = 5
+#ex = ["Advances in Humanities Research Vol.12 Issue 6", "EWA Publishing", "Available Online: 10 September 2025", "DOI: 10.54254/2753-7080/2025.26572", "The Cold War: origins,causes, and global impacts", "Yixuan Bai", "Nanjing Jingling High School Hexi Campus, Nanjing, China", "646467343@qq.com", "Abstract.\xa0", "Republics between 1947 and 1991. After World War II, the US and the USSR became two poles of the world by virtue of their", "great strength, and they became opposed due to differences in ideology and geopolitics. Militarily, NATO confronts the Warsaw", "Pact and launches an arms race; Economically, the US implemented the Marshall Plan, and the USSR established the Economic", "and Mutual Association; There is also a fierce ideological confrontation. It profoundly affected the international landscape,", "economic development and cultural exchanges, and finally ended with the collapse of the USSR and the drastic changes in the", "Eastern Europe. As an important historical stage in the second half of the 20th century, the Cold War had an extremely far-", "reaching impact on the world.This article will introduce the basic concepts related to the Cold War, such as the historical", "background of the Cold War, the introduction of the two camps, the introduction of emphasis, the aspects of struggle, and the", "international political theories related to the Cold War. It also discuss the key events of the Cold War and discuss the impact of", "the Cold War and its implications for the present day from three periods: the pre-60s, the 70s, the 80s and beyond.", "Keywords:\xa0", "1. Introduction", "The Cold War originated from the Yalta Conference at the end of the Second World War. After the end of the Second World War,", "the United States(the US)and the Soviet Union(the USSR), as the most powerful countries, naturally formed opposition due to", "different ideologies. In 1946, former British Prime Minister Winston Churchill delivered his 'Iron Curtain Speech', marking the"]
 
-print(prob_dict.jaccards("host","immune"))
+#text = """Since the components of CRISPR-Cas systems are derived from bacteria, host immune response to Cas gene and Cas protein is regarded as one of the most important challenges in the clinical trials of CRISPR-Cas system [156,252]. It was found that in vivo delivery of CRISPR-Cas components can elicit immune responses against the Cas protein [252,253]. Furthermore, researchers also found that there were anti-Cas9 antibodies and anti-Cas9 T cells existing in healthy humans, suggesting the pre-existing of humoral and celluar immune responses to Cas9 protein in humans [254]. Therefore, how to detect and reduce the immunogenicity of Cas proteins is a major challenge will be faced in clinical application of CRISPR-Cas systems. Researchers are trying to handle this problem by modifying Cas9 protein or using Cas9 homologues [255]"""
+#prob_dict = synonym_resolution(ex,window_size)
 
-#prob_dict.onehot()
-#print(prob_dict.get_encoding("Since"))
+#for entry in prob_dict.dict:
+#    prob_dict.percentage(entry,window_size)
 
+#for entry in prob_dict.dict:
+#    print(prob_dict.get_input_vector(entry))
+
+
+#print(prob_dict.jaccards("US","NATO"))

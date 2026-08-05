@@ -64,6 +64,8 @@ def detect_language_status(text):
 for file in files:#go to the original files: take each file individually
     header = ["Original_Text","Word_Count","Char_Count","Sentiment_Polarity","Translated_Text","Source_Id","Source_Name","xmin","ymin","xmax","ymax","Page","Total_Sentences"]
     rows = []
+    print('ENTIRE SENTENCES TEST:')
+    print(file.sentences)
     for i,sentence in enumerate(file.sentences):
         #print(f"sentence: {sentence.text}")
         #for i,data in enumerate(sentence.text):
@@ -78,6 +80,7 @@ for file in files:#go to the original files: take each file individually
         #print(sentence.text[0][0])
         #print(f"Validating sentence: {sentence.text[0][0]}")
         if is_number(sentence.text) or is_empty(sentence.text):
+             print("continuing...")
              continue
         else:
             path = file_mapping.get(file)
@@ -146,6 +149,7 @@ for file in files:#go to the original files: take each file individually
                         row = [sentence.text,sentence.word_count,sentence.length_chars,sentence.polarity,sentence.text,sentence.source,sentence.source_name,status,confidence,0,cleaned,sentence.xmin,sentence.ymin,sentence.xmax,sentence.ymax,sentence.page,sentence.total_sentences]
 
             except Exception:
+                    print("exception :(")
                     cleaned = cleaned_original
                     #print("validation:")
                     #print(status)

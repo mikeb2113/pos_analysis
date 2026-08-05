@@ -98,11 +98,12 @@ class csvable: #This iterates through each pdf and aquires stats
         #print("ONE:")
         #print(pdf_reader[1])#Sentence 1: [text,coords,page]
         #print(f"SOURCE: {source_name} TOTAL LENGTH: {len(pdf_reader)}")
-        sentences = len(pdf_reader)
+        text = pdf_reader[0]
+        sentences = len(text)
         if sentences<10000:
             #split = re.split(r'[.?!]',pdf_reader)#str(content[idx])) #save the text, split by sentence ending punctuation
             #builder.append(split) #save split text
-            for i,sentence in enumerate(pdf_reader):
+            for i,sentence in enumerate(text):
                 builder.append(sentence)
             #for i in builder:
                         ##print(i)
@@ -112,8 +113,9 @@ class csvable: #This iterates through each pdf and aquires stats
                             # So now make a requirements object for each sentence!
                 char_length = len(sentence)-1
                 #print(f"sentence: {sentence[0][0]}")
-                length = len(sentence)
-                sentiment = analyzer.polarity_scores(pdf_reader[0][i])["compound"]
+                length = len(sentence.split(" "))
+                print(f"compound test: {text[i]}")
+                sentiment = analyzer.polarity_scores(text[i])["compound"]
                 print(f"VALIDATING PDF_READER: {pdf_reader[1][i]}")
                 print(f"INDEX COORDINATES {i}: {pdf_reader[1][i]}")
                 print("Coordinates:")
@@ -125,6 +127,7 @@ class csvable: #This iterates through each pdf and aquires stats
                 print(f"page: {pdf_reader[2][i]}")
                 print(f"Proposing coordinates: {pdf_reader[1][i]}")
                 print(f"Proposing page: {pdf_reader[2][i]}")
+                print(f"sentence length: {length}")
                 sentence_info = self.sentence(pdf_reader[0][i],length,char_length,sentiment,source,source_name,pdf_reader[1][i][0],pdf_reader[1][i][1],pdf_reader[1][i][2],pdf_reader[1][i][3],pdf_reader[2][i],sentences)
                 self.sentences.append(sentence_info)
                 #print(f"char_length: {char_length}") 

@@ -6,8 +6,10 @@ from pathlib import Path
 import sys
 from csir.document import Document
 from csir.skeletons import Skeletons
+from CBOW.prob_functions import synonym_resolution
 from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
 import csir.skeletons
+import CBOW.prob_functions
 import json
 from threading import Thread
 from threading import Lock
@@ -526,6 +528,7 @@ def extraction(input_file):
     print(pdf_info)
     #passes an array of sentences into skeletons
     y = Skeletons(pdf_info,output_file2,pdf_info[1],pdf_info[2],len(pdf_info))
+    synonyms = synonym_resolution(y.document.text,10)
     #print("NPLIST:")
     #print(y.document.NPLIST)
 

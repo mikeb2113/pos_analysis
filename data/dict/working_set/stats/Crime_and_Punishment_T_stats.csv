@@ -1,0 +1,6 @@
+word,noun,verb,adjective,adverb,auxiliary,compositions,conjunctions,determiners,existential_determiners,modifiers,negative_quantifiers,prepositions,universal_determiners,possessive_determiners,pronouns,frequency,review_count,avg_sentiment,length,confident,resolved_word
+crime,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,-0.7717,5,1,crime
+and,1,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,-0.7717,3,1,and
+punishment,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,-0.7717,10,1,punishment
+fyodor,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.0,6,1,fyodor
+dostoevsky,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0.0,10,1,dostoevsky
