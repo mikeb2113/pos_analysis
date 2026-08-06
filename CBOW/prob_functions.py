@@ -5,8 +5,6 @@ class synonym_resolution:
         self.dict = {}
         self.word_set = set()
         self.text = self.flatten_input(text,flat)
-        print("text validation:")
-        print(self.text)
         self.generate_probabilities(window_size)
 
     def sort(self):
@@ -145,10 +143,6 @@ class synonym_resolution:
     def jaccards(self,word1,word2):
         arr1 = self.get_input_vector(word1)
         arr2 = self.get_input_vector(word2)
-        #print(f"entry: {word1}")
-        #print(arr1)
-        #print(f"entry: {word2}")
-        #print(arr2)
         ones = 0 
         like_ones = 0
         for idx,number1 in enumerate(arr1):
@@ -168,26 +162,44 @@ class synonym_resolution:
         else:
             for word in array_of_words:
                 flattened = flattened + word
+        print("flat:")
+        print(flattened)
         return flattened
 
     def score_similarities(self):
-        for word1 in prob_dict.dict:
-            for word2 in prob_dict.dict:
+        for word1 in self.dict:
+            for word2 in self.dict:
                 if word1 != word2:
-                    similarity = prob_dict.jaccards(word1,word2)
+                    similarity = self.jaccards(word1,word2)
                     print(f"similarity between {word1} and {word2}: {similarity}")
 
+    def in_dict(self,word):
+        return word in self.dict
 
-window_size = 5
-ex = ["Advances in Humanities Research Vol.12 Issue 6", "EWA Publishing", "Available Online: 10 September 2025", "DOI: 10.54254/2753-7080/2025.26572", "The Cold War: origins,causes, and global impacts", "Yixuan Bai", "Nanjing Jingling High School Hexi Campus, Nanjing, China", "646467343@qq.com", "Abstract.\xa0", "Republics between 1947 and 1991. After World War II, the US and the USSR became two poles of the world by virtue of their", "great strength, and they became opposed due to differences in ideology and geopolitics. Militarily, NATO confronts the Warsaw", "Pact and launches an arms race; Economically, the US implemented the Marshall Plan, and the USSR established the Economic", "and Mutual Association; There is also a fierce ideological confrontation. It profoundly affected the international landscape,", "economic development and cultural exchanges, and finally ended with the collapse of the USSR and the drastic changes in the", "Eastern Europe. As an important historical stage in the second half of the 20th century, the Cold War had an extremely far-", "reaching impact on the world.This article will introduce the basic concepts related to the Cold War, such as the historical", "background of the Cold War, the introduction of the two camps, the introduction of emphasis, the aspects of struggle, and the", "international political theories related to the Cold War. It also discuss the key events of the Cold War and discuss the impact of", "the Cold War and its implications for the present day from three periods: the pre-60s, the 70s, the 80s and beyond.", "Keywords:\xa0", "1. Introduction", "The Cold War originated from the Yalta Conference at the end of the Second World War. After the end of the Second World War,", "the United States(the US)and the Soviet Union(the USSR), as the most powerful countries, naturally formed opposition due to", "different ideologies. In 1946, former British Prime Minister Winston Churchill delivered his 'Iron Curtain Speech', marking the"]
-flat = True
-#text = """Since the components of CRISPR-Cas systems are derived from bacteria, host immune response to Cas gene and Cas protein is regarded as one of the most important challenges in the clinical trials of CRISPR-Cas system [156,252]. It was found that in vivo delivery of CRISPR-Cas components can elicit immune responses against the Cas protein [252,253]. Furthermore, researchers also found that there were anti-Cas9 antibodies and anti-Cas9 T cells existing in healthy humans, suggesting the pre-existing of humoral and celluar immune responses to Cas9 protein in humans [254]. Therefore, how to detect and reduce the immunogenicity of Cas proteins is a major challenge will be faced in clinical application of CRISPR-Cas systems. Researchers are trying to handle this problem by modifying Cas9 protein or using Cas9 homologues [255]"""
-prob_dict = synonym_resolution(ex,window_size,flat)
+    def combine_dicts(self,dictionary):
+        dict1 = self.dict
+        dict2 = dictionary.dict
+        collisions = 0
+        for entry2 in dict2:
+            if entry2 not in dict1:
+                dict1[entry2] = dict2[entry2]
+            else:
+                collisions = collisions+1
+                for word2 in dict2[entry2]:
+                    if word2 not in dict1[entry2]:
+                        dict1[entry2][word2] = 1
+                    else:
+                        dict1[entry2][word2] = dict1[entry2][word2]+1
 
-#for entry in prob_dict.dict:
-#    prob_dict.percentage(entry,window_size)
+#window_size = 1
+#ex = ["Advances in ","Humanities Research ","Vol 5 "," EWA Publishing"]#["Advances in Humanities Research Vol.12 Issue 6", "EWA Publishing", "Available Online: 10 September 2025", "DOI: 10.54254/2753-7080/2025.26572", "The Cold War: origins,causes, and global impacts", "Yixuan Bai", "Nanjing Jingling High School Hexi Campus, Nanjing, China", "646467343@qq.com", "Abstract.\xa0", "Republics between 1947 and 1991. After World War II, the US and the USSR became two poles of the world by virtue of their", "great strength, and they became opposed due to differences in ideology and geopolitics. Militarily, NATO confronts the Warsaw", "Pact and launches an arms race; Economically, the US implemented the Marshall Plan, and the USSR established the Economic", "and Mutual Association; There is also a fierce ideological confrontation. It profoundly affected the international landscape,", "economic development and cultural exchanges, and finally ended with the collapse of the USSR and the drastic changes in the", "Eastern Europe. As an important historical stage in the second half of the 20th century, the Cold War had an extremely far-", "reaching impact on the world.This article will introduce the basic concepts related to the Cold War, such as the historical", "background of the Cold War, the introduction of the two camps, the introduction of emphasis, the aspects of struggle, and the", "international political theories related to the Cold War. It also discuss the key events of the Cold War and discuss the impact of", "the Cold War and its implications for the present day from three periods: the pre-60s, the 70s, the 80s and beyond.", "Keywords:\xa0", "1. Introduction", "The Cold War originated from the Yalta Conference at the end of the Second World War. After the end of the Second World War,", "the United States(the US)and the Soviet Union(the USSR), as the most powerful countries, naturally formed opposition due to", "different ideologies. In 1946, former British Prime Minister Winston Churchill delivered his 'Iron Curtain Speech', marking the"]
+#flat = True
+#text = ["Since the ","Advances in ","CRISPR-CAS systems ","are derived "]#["Since the components of CRISPR-Cas systems are derived from bacteria","host immune response to Cas gene and Cas protein is regarded as one of the most important challenges in the clinical trials of CRISPR-Cas system [156,252]","It was found that in vivo delivery of CRISPR-Cas components can elicit immune responses against the Cas protein [252,253]","Furthermore, researchers also found that there were anti-Cas9 antibodies and anti-Cas9 T cells existing in healthy humans","suggesting the pre-existing of humoral and celluar immune responses to Cas9 protein in humans [254]","Therefore, how to detect and reduce the immunogenicity of Cas proteins is a major challenge will be faced in clinical application of CRISPR-Cas systems","Researchers are trying to handle this problem by modifying Cas9 protein or using Cas9 homologues [255]"]
+#prob_dict1 = synonym_resolution(ex,window_size,flat)
+#prob_dict2 = synonym_resolution(text,window_size,flat)
 
-#for entry in prob_dict.dict:
-#    print(prob_dict.get_input_vector(entry))
+#prob_dict1.combine_dicts(prob_dict2)
 
-#print(prob_dict.jaccards("US","NATO"))
+
+#for word1 in prob_dict1.dict:
+#    print(f"{word1} prob: {prob_dict1.dict[word1]}")
