@@ -209,7 +209,6 @@ def word_to_location_mapping(file):
 
     df_trav = pd.read_csv(trav)
     #df_stats = pd.read_csv(stats)
-
     trav_dict = get_dict(df_trav)
     #stats_dict = get_dict(df_stats)
     #with open(output,"a",newline="") as file:
@@ -365,6 +364,7 @@ with open("paths.csv", mode='r', encoding='utf-8') as file:
         print(use_file)
         document = use_file
         word_to_location_mapping(document)
+        print()
         #Create a mapping for each pdf present
 
         #input = f"data/dict/working_set/mapped/{document}_mapped.csv"

@@ -6,7 +6,6 @@ from pathlib import Path
 import sys
 from csir.document import Document
 from csir.skeletons import Skeletons
-from CBOW.prob_functions import synonym_resolution
 from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
 import csir.skeletons
 import CBOW.prob_functions
