@@ -38,10 +38,11 @@ def file_synonym_mapping(file,window_size):
     #print("Sentences validation:")
     #print(y.sentences)
     synonoym_mapping = synonym_resolution(y.sentences,window_size)
-    for word in synonoym_mapping.dict:
-        synonoym_mapping.percentage(word,window_size)
+    #for word in synonoym_mapping.dict:
+    #    synonoym_mapping.percentage(word,window_size)
     return synonoym_mapping
 
+dictionaries = []
 with open("paths.csv", mode='r', encoding='utf-8') as file:
     reader = csv.reader(file)
     next(reader)
@@ -52,6 +53,17 @@ with open("paths.csv", mode='r', encoding='utf-8') as file:
         print(use_file)
         #extraction(use_file)
         #print(file_synonym_mapping(use_file).dict)
-        dictionary = file_synonym_mapping(use_file,10).dict
-        for entry in dictionary:
-            print(f"word: {entry} stats: {dictionary[entry]}")
+        dictionary = file_synonym_mapping(use_file,10)
+        dictionaries.append(dictionary)
+#        for entry in dictionary:
+#            print(f"word: {entry} stats: {dictionary[entry]}")
+original = dictionaries[0]
+max = len(dictionaries)
+active = 1
+window_size = 10
+while active < max:
+    original.combine_dicts(dictionaries[active])
+for word in original.dict:
+    original.percentage(word,window_size)
+for entry in original:
+    print(f"word: {entry} stats: {original[entry]}")

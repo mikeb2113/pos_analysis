@@ -1,7 +1,9 @@
 import sys
 from numpy import argmax
+import numpy as np
 class synonym_resolution:
-    def __init__(self,text,window_size,flat):
+    
+    def __init__(self,text,window_size,flat=False):
         self.dict = {}
         self.word_set = set()
         self.text = self.flatten_input(text,flat)
@@ -87,6 +89,14 @@ class synonym_resolution:
             for target_word in self.dict[word_key]:
                 self.dict[word_key][target_word] = self.dict[word_key][target_word]/total_words
 
+    def percentage2(self,word_entry,window):
+        for word_key,value in self.dict.items():
+            total_words = 0
+            for target_word in value:
+                total_words = total_words+value[target_word]
+            for target_word in value:
+                value[target_word] = value[target_word]/total_words
+
     def get_encoding(self,word):
         number = self.word_to_int()[word]
         return number
@@ -162,8 +172,8 @@ class synonym_resolution:
         else:
             for word in array_of_words:
                 flattened = flattened + word
-        print("flat:")
-        print(flattened)
+        #print("flat:")
+        #print(flattened)
         return flattened
 
     def score_similarities(self):
@@ -171,7 +181,7 @@ class synonym_resolution:
             for word2 in self.dict:
                 if word1 != word2:
                     similarity = self.jaccards(word1,word2)
-                    print(f"similarity between {word1} and {word2}: {similarity}")
+                    #print(f"similarity between {word1} and {word2}: {similarity}")
 
     def in_dict(self,word):
         return word in self.dict
