@@ -37,6 +37,7 @@ public:
     std::vector<std::string> identify_window(std::vector<std::string> context,int window_size,int index);
     std::string flatten_input(std::vector<std::string> array_of_words,bool flat);
     void append(std::vector<std::string> array, std::string insertion);
+    void print_all();
 
 private:
     int window_size;

@@ -30,6 +30,17 @@ synonym_resolution::synonym_resolution
 */
 
 }
+
+void synonym_resolution::print_all
+(
+
+)
+{
+    for(int i = 0; i < text.size(); i++){
+        std::cout << text[i] << "\n";
+    }
+}
+
 std::string synonym_resolution::flatten_input
 (
     std::vector<std::string> array_of_words,
@@ -38,13 +49,13 @@ std::string synonym_resolution::flatten_input
 {
     std::string flattened = "";
     if(!flat){
-        for(int i = 0; i < array_of_words.size(); i++){ //For array in array of words
-            for(int i2 = 0; i2 < array_of_words[i].size(); i2++)
+        for(int i = 0; i < array_of_words.size()-1; i++){ //For array in array of words
+            for(int i2 = 0; i2 < array_of_words[i].size()-1; i2++)
                 flattened = flattened + array_of_words[i][i2] + " ";
         }
     }
     else{
-        for(int i = 0; i < array_of_words.size(); i++){ //For array in array of words (or word in array)
+        for(int i = 0; i < array_of_words.size()-1; i++){ //For array in array of words (or word in array)
             flattened = flattened + array_of_words[i] + " ";
         }
     }
@@ -95,7 +106,7 @@ std::unordered_map<
 if (!(word_set.find(input_word) != word_set.end())){ //If word is not already in the word set
     word_set.insert(input_word); //Insert into the global set if word is not already there
 }
-for(int i = 0; i < context.size(); i++){
+for(int i = 0; i < context.size()-1; i++){
     if(!(local_set.find(input_word) != local_set.end())){ //If the input word is not already in the local set
         local_set.insert(input_word);//Put the word into the local set
         local_dict[input_word] = 1; //this is the word's first instance in this dictionary. Set it's initial value to 1
@@ -120,7 +131,7 @@ void synonym_resolution::generate_probabilities(
 )
 {
     std::vector<std::string> context = word_breakdown();
-    int length = context.size();
+    int length = context.size()-1;
     int active = 0;
 
     while(active < length){
@@ -144,7 +155,7 @@ std::vector<std::string> synonym_resolution::identify_window
     int active_index = left;
     std::string word = "";
     std::vector<std::string> window;
-    int max = context.size();
+    int max = context.size()-1;
     while(active_index < right){
         if(active_index == index){
             active_index++;
@@ -154,15 +165,16 @@ std::vector<std::string> synonym_resolution::identify_window
             return window;
         }
         if(active_index>=0){
-            //int endidx = window.size();
-            append(window,context[active_index]);
+            //int endidx = window.size()-1;
+            window.push_back(context[active_index]);
+            //append(window,context[active_index]);
         }
         active_index++;
     }
     return window;
 }
 void synonym_resolution::append(std::vector<std::string> array, std::string insertion){
-    int endidx = array.size();
+    int endidx = array.size()-1;
     array[endidx] = insertion;
 }
 
@@ -182,11 +194,12 @@ std::vector<std::string> synonym_resolution::word_breakdown
 {
     std::vector<std::string> split_string = split(text);
     std::vector<std::string> context;
-    for(int i = 0; i < split_string.size(); i++){
-        if(split_string[i].size() != 0){
-            //int endidx = context.size();
+    for(int i = 0; i < split_string.size()-1; i++){
+        if(split_string[i].size()-1 != 0){
+            //int endidx = context.size()-1;
             //context[endidx] = split_string[i];
-            append(context,split_string[i]);
+            //append(context,split_string[i]);
+            context.push_back(split_string[i]);
         }
     }
     return context;
@@ -199,14 +212,15 @@ std::vector<std::string> synonym_resolution::split
 {
     std::string builder;
     std::vector<std::string> output;
-    for(int i = 0; i < input.size(); i++){
+    for(int i = 0; i < input.size()-1; i++){
         if(input[i] != *" "){
             builder[i] = input[i];
         }
         else{
-            //int endidx = output.size();
+            //int endidx = output.size()-1;
             //output[endidx] = builder;
-            append(output,builder);
+            //append(output,builder);
+            output.push_back(builder);
             builder = "";
         }
     }
