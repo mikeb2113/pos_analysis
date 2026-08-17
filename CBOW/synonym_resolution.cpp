@@ -19,23 +19,44 @@ synonym_resolution::synonym_resolution
     bool flat
 )
 {
-    //std::cout << "Instantiating object..." << "\n";
+    this->input = input;
     std::set<std::string> word_set;
-    //std::cout << "Flattening input..." << "\n";
+    chars_to_string();
     this->text = flatten_input(input,flat);
-    //std::cout << "Generating probabilities..." << "\n";
-    //std::cout << "window size: " << window_size << "\n";
-    //Correct up to here
     generate_probabilities(window_size);
-    //std::cout << "Instantiation complete!" << "\n";
-/*
-        self.dict = {}
-        self.word_set = set()
+}
 
-        self.text = self.flatten_input(text,flat)
-        self.generate_probabilities(window_size)
-*/
+std::vector<std::string> synonym_resolution::getInput()
+{
+    return this->input;
+}
 
+void synonym_resolution::chars_to_string
+(
+
+)
+{
+    std::vector<std::string> test_container;
+    std::string intermediate;
+    for(int sentence_num = 0; sentence_num < this->input.size(); sentence_num++){
+        std::cout << "iteration: " << sentence_num << "\n";
+        for(int i = 0; i < this->input[sentence_num].size(); i++){
+            if(this->input[sentence_num][i] != *" "){
+                intermediate += this->input[sentence_num][i];
+            }
+            else{
+                test_container.push_back(intermediate);
+                std::cout << intermediate << "\n";
+                intermediate = "";
+            }
+        }
+        if(intermediate != ""){
+            test_container.push_back(intermediate);
+            std::cout << intermediate << "\n";
+            intermediate = "";
+        }
+    }
+    this->input = test_container;
 }
 
 void synonym_resolution::print_all
@@ -57,7 +78,7 @@ std::string synonym_resolution::flatten_input
     std::string flattened = "";
     if(!flat){
         for(int i = 0; i < array_of_words.size(); i++){ //For array in array of words
-            for(int i2 = 0; i2 < array_of_words[i].size()-1; i2++)
+            for(int i2 = 0; i2 < array_of_words[i].size(); i2++)
                 flattened = flattened + array_of_words[i][i2] + " ";
         }
     }
@@ -82,6 +103,11 @@ std::unordered_map<
     synonym_resolution::get_dict()
 {
     return dict;
+}
+
+std::set<std::string> synonym_resolution::getSet()
+{
+    return this->word_set;
 }
 
 void synonym_resolution::set_string(std::string new_text)
@@ -123,7 +149,7 @@ std::unordered_map<
 if (!(word_set.find(input_word) != word_set.end())){ //If word is not already in the word set
     word_set.insert(input_word); //Insert into the global set if word is not already there
 }
-for(int i = 0; i < context.size()-1; i++){
+for(int i = 0; i < context.size(); i++){
     if(!(local_set.find(input_word) != local_set.end())){ //If the input word is not already in the local set
         local_set.insert(input_word);//Put the word into the local set
         local_dict[input_word] = 1; //this is the word's first instance in this dictionary. Set it's initial value to 1
@@ -151,11 +177,11 @@ void synonym_resolution::generate_probabilities(
     //std::cout << "First, validating input data:" << "\n";
     //std::cout << "assigning context:" << "\n";
     std::vector<std::string> context = word_breakdown();
-    for(int i = 0; i < context.size()-1; i++){
-        //std::cout << context[i] << "\n";
+    for(int i = 0; i < context.size(); i++){
+        std::cout << context[i] << "\n";
     }
     //std::cout << "context complete" << "\n";
-    int length = context.size()-1;
+    int length = context.size();
     int active = 0;
 
     //std::cout << "Getting probabilities..." << "\n";
@@ -186,7 +212,7 @@ std::vector<std::string> synonym_resolution::identify_window
     int active_index = left;
     std::string word = "";
     std::vector<std::string> window;
-    int max = context.size()-1;
+    int max = context.size();
     while(active_index < right){
         if(active_index == index){
             active_index++;
@@ -196,7 +222,7 @@ std::vector<std::string> synonym_resolution::identify_window
             return window;
         }
         if(active_index>=0){
-            //int endidx = window.size()-1;
+            //int endidx = window.size();
             window.push_back(context[active_index]);
             //append(window,context[active_index]);
         }
@@ -205,7 +231,7 @@ std::vector<std::string> synonym_resolution::identify_window
     return window;
 }
 void synonym_resolution::append(std::vector<std::string> array, std::string insertion){
-    int endidx = array.size()-1;
+    int endidx = array.size();
     array[endidx] = insertion;
 }
 
@@ -228,14 +254,14 @@ std::vector<std::string> synonym_resolution::word_breakdown
     ////std::cout << input << "\n";
     std::vector<std::string> split_string = split(this->text);
     //std::cout << "text post-split:" << "\n";
-    for(int i = 0; i < split_string.size()-1; i++){
+    for(int i = 0; i < split_string.size(); i++){
         //std::cout << split_string[i] << "\n";
     }
     //std::cout << "filling context:" << "\n";
     std::vector<std::string> context;
-    for(int i = 0; i < split_string.size()-1; i++){
-        if(split_string[i].size()-1 != 0){
-            //int endidx = context.size()-1;
+    for(int i = 0; i < split_string.size(); i++){
+        if(split_string[i].size() != 0){
+            //int endidx = context.size();
             //context[endidx] = split_string[i];
             //append(context,split_string[i]);
             context.push_back(split_string[i]);
@@ -243,7 +269,7 @@ std::vector<std::string> synonym_resolution::word_breakdown
     }
     //std::cout << "context filled!" << "\n";
     //std::cout << "Proof:" << "\n";
-    for(int i = 0; i < context.size()-1; i++){
+    for(int i = 0; i < context.size(); i++){
         //std::cout << context[i] << "\n";
     }
     return context;
@@ -270,7 +296,7 @@ std::vector<std::string> synonym_resolution::split
             builder.push_back(input[i]);
         }
         else{
-            //int endidx = output.size()-1;
+            //int endidx = output.size();
             //output[endidx] = builder;
             //append(output,builder);
             //std::cout << "Pushing to output:" << "\n";
@@ -279,7 +305,7 @@ std::vector<std::string> synonym_resolution::split
         }
     }
     //std::cout << "result:" << "\n";
-    for(int i = 0; i < output.size()-1; i++){
+    for(int i = 0; i < output.size(); i++){
         //std::cout << output[i] << "\n";
     }
     return output;

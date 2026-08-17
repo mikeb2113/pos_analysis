@@ -10,7 +10,7 @@ class synonym_resolution {
 public:
     synonym_resolution
     (
-        std::vector<std::string> dict,
+        std::vector<std::string> input,
         int window_size,
         bool flat = false
     );
@@ -31,6 +31,7 @@ public:
     void add_to_word_dict(std::vector<std::string> context, std::string input_word);
     void aggregate_prob(std::vector<std::string> context,std::string input_word);
     void generate_probabilities(int window_size);
+    void chars_to_string();
     std::vector<std::string> split(std::string input);
     std::vector<std::string> word_breakdown();
     std::string get_word(std::vector<std::string> context, int index);
@@ -42,6 +43,8 @@ public:
     std::string flatten_input(std::vector<std::string> array_of_words,bool flat);
     void append(std::vector<std::string> array, std::string insertion);
     void print_all();
+    std::vector<std::string> getInput();
+    std::set<std::string> getSet();
 
 private:
     int window_size;
@@ -52,7 +55,7 @@ private:
         std::string,
         std::set<std::string>
     > dict;
-
+    std::vector<std::string> input;
     std::set<std::string> word_set;
 };
 

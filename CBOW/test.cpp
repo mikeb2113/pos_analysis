@@ -11,63 +11,20 @@ int main(){
 
     synonym_resolution test(input,window_size,flat);
     std::cout << "Object created!" << "\n";
-
-
-
-    /*std::string text = test.getText();
-    for(int i = 0; i < text.size(); i++){
-        std::cout << text[i] << "\n";
+    std::cout << "Validating text..." << "\n";
+    std::vector<std::string> output = test.getInput();
+    std::cout << output.size();
+    for(int i = 0; i < output.size(); i++){
+        std::cout << output[i] << "\n";
     }
-    std::cout << "Test run 1 complete!" << "\n";
-    std::cout << "Test run 2:" << "\n";
-    std::string test_value_1 = "this";
-    std::string test_value_2 = "is";
-    std::string test_value_3 = "a";
-    std::string test_value_4 = "test";
-    std::vector<std::string> test_input;
-    test_input.push_back(test_value_1);
-    test_input.push_back(test_value_2);
-    test_input.push_back(test_value_3);
-    test_input.push_back(test_value_4);
-    for(int i = 0; i < test_input.size(); i++){
-        std::cout << test_input[i] << "\n";
-    }*/
-
-
-    
-    std::unordered_map<
-        std::string,//key
-
-        /*
-        std::unordered_map< 
-        std::set<std::string>,
-        int
-        >
-        */
-        std::vector<std::string>
-    > global_dictionary;
-
+    std::cout << "dictionary validation: " << "\n";
     std::unordered_map<
         std::string,
-        int
-        >   local_values;
-    std::cout << "validating dictionary..." << "\n";
-
-
-
-    /*
-  std::unordered_map<
-    std::string,
-    int
-    > test_map = {};
-    int occurances = test_map["fox"];
-    std::cout << "fox occurances: " << occurances << "\n";
-*/
-
-
-    //std::cout << dictionary["fox"]["jumped"] << "\n";
-    /*for(auto itr = begin(dictionary); itr != end(dictionary); ++itr){
-        std::cout << itr << "\n";
-    }*/
+        std::set<std::string>
+    > dictionary = test.get_dict();
+    std::set<std::string> test_word_set = test.getSet();
+    for(std::_Rb_tree_const_iterator<std::string> itr = test_word_set.begin(); itr != test_word_set.end(); itr++){
+        std::cout << *itr << "\n";
+    }
     return 0;
 }
