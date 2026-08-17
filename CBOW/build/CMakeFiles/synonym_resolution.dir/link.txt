@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/synonym_resolution.dir/test.cpp.o CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o -o synonym_resolution 

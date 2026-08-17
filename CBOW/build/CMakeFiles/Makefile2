@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/michael/Desktop/projects/pos_analysis/CBOW/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/my_program.dir/all
+all: CMakeFiles/synonym_resolution.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/my_program.dir/clean
+clean: CMakeFiles/synonym_resolution.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/my_program.dir
+# Target rules for target CMakeFiles/synonym_resolution.dir
 
 # All Build rule for target.
-CMakeFiles/my_program.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles --progress-num=1,2,3 "Built target my_program"
-.PHONY : CMakeFiles/my_program.dir/all
+CMakeFiles/synonym_resolution.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles --progress-num=1,2,3 "Built target synonym_resolution"
+.PHONY : CMakeFiles/synonym_resolution.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/my_program.dir/rule: cmake_check_build_system
+CMakeFiles/synonym_resolution.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/my_program.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/synonym_resolution.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles 0
-.PHONY : CMakeFiles/my_program.dir/rule
+.PHONY : CMakeFiles/synonym_resolution.dir/rule
 
 # Convenience name for target.
-my_program: CMakeFiles/my_program.dir/rule
-.PHONY : my_program
+synonym_resolution: CMakeFiles/synonym_resolution.dir/rule
+.PHONY : synonym_resolution
 
 # clean rule for target.
-CMakeFiles/my_program.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/clean
-.PHONY : CMakeFiles/my_program.dir/clean
+CMakeFiles/synonym_resolution.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/clean
+.PHONY : CMakeFiles/synonym_resolution.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

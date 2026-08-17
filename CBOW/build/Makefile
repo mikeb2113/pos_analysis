@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_program
+# Target rules for targets named synonym_resolution
 
 # Build rule for target.
-my_program: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_program
-.PHONY : my_program
+synonym_resolution: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 synonym_resolution
+.PHONY : synonym_resolution
 
 # fast build rule for target.
-my_program/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/build
-.PHONY : my_program/fast
+synonym_resolution/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/build
+.PHONY : synonym_resolution/fast
 
 synonym_resolution.o: synonym_resolution.cpp.o
 .PHONY : synonym_resolution.o
 
 # target to build an object file
 synonym_resolution.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/synonym_resolution.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o
 .PHONY : synonym_resolution.cpp.o
 
 synonym_resolution.i: synonym_resolution.cpp.i
@@ -142,7 +142,7 @@ synonym_resolution.i: synonym_resolution.cpp.i
 
 # target to preprocess a source file
 synonym_resolution.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/synonym_resolution.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.i
 .PHONY : synonym_resolution.cpp.i
 
 synonym_resolution.s: synonym_resolution.cpp.s
@@ -150,7 +150,7 @@ synonym_resolution.s: synonym_resolution.cpp.s
 
 # target to generate assembly for a file
 synonym_resolution.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/synonym_resolution.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.s
 .PHONY : synonym_resolution.cpp.s
 
 test.o: test.cpp.o
@@ -158,7 +158,7 @@ test.o: test.cpp.o
 
 # target to build an object file
 test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/test.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/test.cpp.o
 .PHONY : test.cpp.o
 
 test.i: test.cpp.i
@@ -166,7 +166,7 @@ test.i: test.cpp.i
 
 # target to preprocess a source file
 test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/test.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/test.cpp.i
 .PHONY : test.cpp.i
 
 test.s: test.cpp.s
@@ -174,7 +174,7 @@ test.s: test.cpp.s
 
 # target to generate assembly for a file
 test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_program.dir/build.make CMakeFiles/my_program.dir/test.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/test.cpp.s
 .PHONY : test.cpp.s
 
 # Help Target
@@ -185,7 +185,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_program"
+	@echo "... synonym_resolution"
 	@echo "... synonym_resolution.o"
 	@echo "... synonym_resolution.i"
 	@echo "... synonym_resolution.s"

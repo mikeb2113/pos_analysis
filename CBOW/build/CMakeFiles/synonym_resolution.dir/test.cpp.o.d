@@ -1,4 +1,4 @@
-CMakeFiles/my_program.dir/test.cpp.o: \
+CMakeFiles/synonym_resolution.dir/test.cpp.o: \
  /home/michael/Desktop/projects/pos_analysis/CBOW/test.cpp \
  /usr/include/stdc-predef.h \
  /home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.h \

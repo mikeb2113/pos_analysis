@@ -10,7 +10,7 @@ class synonym_resolution {
 public:
     synonym_resolution
     (
-        std::vector<std::string> text,
+        std::vector<std::string> dict,
         int window_size,
         bool flat = false
     );
@@ -34,6 +34,10 @@ public:
     std::vector<std::string> split(std::string input);
     std::vector<std::string> word_breakdown();
     std::string get_word(std::vector<std::string> context, int index);
+    std::unordered_map<
+        std::string,
+        std::set<std::string>
+    > get_dict(); 
     std::vector<std::string> identify_window(std::vector<std::string> context,int window_size,int index);
     std::string flatten_input(std::vector<std::string> array_of_words,bool flat);
     void append(std::vector<std::string> array, std::string insertion);

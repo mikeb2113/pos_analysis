@@ -1,4 +1,4 @@
-CMakeFiles/my_program.dir/synonym_resolution.cpp.o: \
+CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o: \
  /home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.cpp \
  /usr/include/stdc-predef.h \
  /home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.h \
@@ -167,4 +167,4 @@ CMakeFiles/my_program.dir/synonym_resolution.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
- /usr/include/c++/11/bits/istream.tcc
+ /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/stdlib.h

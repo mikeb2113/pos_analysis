@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Compile the executable by explicitly listing all .cpp source files
-add_executable(my_program 
+add_executable(synonym_resolution 
     test.cpp 
     synonym_resolution.cpp
 )

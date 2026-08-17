@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.cpp" "CMakeFiles/my_program.dir/synonym_resolution.cpp.o" "gcc" "CMakeFiles/my_program.dir/synonym_resolution.cpp.o.d"
-  "/home/michael/Desktop/projects/pos_analysis/CBOW/test.cpp" "CMakeFiles/my_program.dir/test.cpp.o" "gcc" "CMakeFiles/my_program.dir/test.cpp.o.d"
+  "/home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.cpp" "CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o" "gcc" "CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o.d"
+  "/home/michael/Desktop/projects/pos_analysis/CBOW/test.cpp" "CMakeFiles/synonym_resolution.dir/test.cpp.o" "gcc" "CMakeFiles/synonym_resolution.dir/test.cpp.o.d"
   )
 
 # Targets to which this target links.
