@@ -54,68 +54,51 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/michael/Desktop/projects/pos_analysis/CBOW
+CMAKE_SOURCE_DIR = /home/michael/Desktop/projects/pos_analysis/CBOW/build/_deps/stringzilla-subbuild
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/michael/Desktop/projects/pos_analysis/CBOW/build
+CMAKE_BINARY_DIR = /home/michael/Desktop/projects/pos_analysis/CBOW/build/_deps/stringzilla-subbuild
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/synonym_resolution.dir/all
-all: _deps/stringzilla-build/all
+all: CMakeFiles/stringzilla-populate.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: _deps/stringzilla-build/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/synonym_resolution.dir/clean
-clean: _deps/stringzilla-build/clean
+clean: CMakeFiles/stringzilla-populate.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory _deps/stringzilla-build
-
-# Recursive "all" directory target.
-_deps/stringzilla-build/all:
-.PHONY : _deps/stringzilla-build/all
-
-# Recursive "preinstall" directory target.
-_deps/stringzilla-build/preinstall:
-.PHONY : _deps/stringzilla-build/preinstall
-
-# Recursive "clean" directory target.
-_deps/stringzilla-build/clean:
-.PHONY : _deps/stringzilla-build/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/synonym_resolution.dir
+# Target rules for target CMakeFiles/stringzilla-populate.dir
 
 # All Build rule for target.
-CMakeFiles/synonym_resolution.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles --progress-num=1,2,3 "Built target synonym_resolution"
-.PHONY : CMakeFiles/synonym_resolution.dir/all
+CMakeFiles/stringzilla-populate.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stringzilla-populate.dir/build.make CMakeFiles/stringzilla-populate.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stringzilla-populate.dir/build.make CMakeFiles/stringzilla-populate.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/CBOW/build/_deps/stringzilla-subbuild/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target stringzilla-populate"
+.PHONY : CMakeFiles/stringzilla-populate.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/synonym_resolution.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/synonym_resolution.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/CMakeFiles 0
-.PHONY : CMakeFiles/synonym_resolution.dir/rule
+CMakeFiles/stringzilla-populate.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/_deps/stringzilla-subbuild/CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/stringzilla-populate.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/CBOW/build/_deps/stringzilla-subbuild/CMakeFiles 0
+.PHONY : CMakeFiles/stringzilla-populate.dir/rule
 
 # Convenience name for target.
-synonym_resolution: CMakeFiles/synonym_resolution.dir/rule
-.PHONY : synonym_resolution
+stringzilla-populate: CMakeFiles/stringzilla-populate.dir/rule
+.PHONY : stringzilla-populate
 
 # clean rule for target.
-CMakeFiles/synonym_resolution.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/synonym_resolution.dir/build.make CMakeFiles/synonym_resolution.dir/clean
-.PHONY : CMakeFiles/synonym_resolution.dir/clean
+CMakeFiles/stringzilla-populate.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/stringzilla-populate.dir/build.make CMakeFiles/stringzilla-populate.dir/clean
+.PHONY : CMakeFiles/stringzilla-populate.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

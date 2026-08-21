@@ -15,48 +15,58 @@ public:
         bool flat = false
     );
     /*synonym_resolution(
-        std::vector<std::string> text,
+        std::vector<std::string_view> text,
         int window_size,
         bool flat = false
     );*/
 
-    std::string getText() const;
-    void set_string(std::string new_text);
+    std::string_view getText() const;
+    //void set_string(std::string_view new_text);
 
     int getWindowSize() const;
     void setWindowSize(int newWindowSize);
 
     bool getFlat() const;
     void setFlat(bool newFlat);
-    void add_to_word_dict(std::vector<std::string> context, std::string input_word);
-    void aggregate_prob(std::vector<std::string> context,std::string input_word);
+    void add_to_word_dict(std::vector<std::string_view> context, std::string_view input_word);
+    void aggregate_prob(std::vector<std::string_view> context,std::string_view input_word);
     void generate_probabilities(int window_size);
     void chars_to_string();
-    std::vector<std::string> split(std::string input);
-    std::vector<std::string> word_breakdown();
-    std::string get_word(std::vector<std::string> context, int index);
+    std::vector<std::string_view> split(std::string_view input);
+    std::vector<std::string_view> word_breakdown();
+    std::string_view get_word(std::vector<std::string_view> context, int index);
     std::unordered_map<
-        std::string,
-        std::set<std::string>
+        std::string_view,
+        std::unordered_map<std::string_view, int>
     > get_dict(); 
-    std::vector<std::string> identify_window(std::vector<std::string> context,int window_size,int index);
+    std::vector<std::string_view> identify_window(std::vector<std::string_view> context,int window_size,int index);
     std::string flatten_input(std::vector<std::string> array_of_words,bool flat);
-    void append(std::vector<std::string> array, std::string insertion);
+    //void append(std::vector<std::string_view> array, std::string_view insertion);
     void print_all();
     std::vector<std::string> getInput();
-    std::set<std::string> getSet();
-
+    std::set<std::string_view> getSet();
+    void add_to_dict(std::string_view key_word, std::string_view insert_word,int occurances);
+    void print_set();
+    //template <typename callback_type_, typename predicate_type_>
+    //void split(std::string_view_view str, predicate_type_ && is_delimiter, callback_type_ && callback);
 private:
     int window_size;
     bool flat;
-    std::string text;
+    std::string_view text;
 
-    std::unordered_map<
-        std::string,
-        std::set<std::string>
-    > dict;
+    /*std::unordered_map<
+        std::string_view,
+        std::set<std::string_view>
+    > dict;*/
+
+std::unordered_map<
+        std::string_view,
+        std::unordered_map<
+            std::string_view, int>
+        >           dict;
+
     std::vector<std::string> input;
-    std::set<std::string> word_set;
+    std::set<std::string_view> word_set;
 };
 
 #endif
