@@ -2,7 +2,6 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <stringzilla/stringzilla.hpp>
 /*
 (
     //std::string_view text,
@@ -15,23 +14,22 @@
 */
 synonym_resolution::synonym_resolution
 (
-    std::vector<std::string> input,
+    std::vector<std::string_view> input,
     int window_size,
     bool flat
 )
     : input(input),
       flat(flat),
-      window_size(window_size),
-      text(flatten_input(input,flat))
+      window_size(window_size)
+      //text(flatten_input(input,flat))
 {
 
-    namespace sz = ashvardanian::stringzilla;
     sz::string haystack = "some string";
     sz::string_view needle = sz::string_view(haystack).substr(0, 4);
 
     this->input = input;
     std::set<std::string_view> word_set;
-    chars_to_string();
+    //chars_to_string();
     //this->text = flatten_input(input,flat);
     generate_probabilities(window_size);
     print_set();
@@ -89,7 +87,7 @@ void synonym_resolution::print_set()
     }
 }
 
-std::vector<std::string> synonym_resolution::getInput()
+std::vector<std::string_view> synonym_resolution::getInput()
 {
     return this->input;
 }
@@ -99,7 +97,7 @@ std::vector<std::string> synonym_resolution::getInput()
     this->dict[key_word][insert_word] = occurances;
 }
 
-void synonym_resolution::chars_to_string
+/*void synonym_resolution::chars_to_string
 (
 
 )
@@ -125,7 +123,7 @@ void synonym_resolution::chars_to_string
         }
     }
     this->input = test_container;
-}
+}*/
 
 void synonym_resolution::print_all
 (
@@ -137,29 +135,40 @@ void synonym_resolution::print_all
     }
 }
 
-std::string synonym_resolution::flatten_input
+/*sz::string synonym_resolution::flatten_input
 (
     std::vector<std::string> array_of_words,
     bool flat
 )
 {
-    std::string flattened = "";
-    if(!flat){
-        for(int i = 0; i < array_of_words.size(); i++){ //For array in array of words
-            for(int i2 = 0; i2 < array_of_words[i].size(); i2++)
-                flattened = flattened + array_of_words[i][i2] + " ";
+    std::cout << "flattening input..." << "\n";
+    sz::string flattened = "";
+    if(flat){
+        std::cout << "flat input!" << "\n";
+        for(int i = 0; i < array_of_words.size(); i++){
+            for(auto word : array_of_words[i]){
+                flattened = flattened + word;
+            }
         }
     }
     else{
-        for(int i = 0; i < array_of_words.size(); i++){ //For array in array of words (or word in array)
-            flattened = flattened + array_of_words[i] + " ";
+        std::cout << "non-flat input!" << "\n";
+    }
+    else{
+        for(int i = 0; i < array_of_words.size(); i++){
+            for(int i2 = 0; i2 < array_of_words[i].size(); i2++){
+                for(auto word : array_of_words[i][i2]){
+                    flattened = flattened + word;
+                }
+            }
         }
     }
     //std::cout << "flattened: " << flattened << "\n";
+    std::cout << "flattened input: " << flattened << "\n";
     return flattened;
-}
+}*/
 
-std::string_view synonym_resolution::getText() const
+sz::string_view synonym_resolution::getText() const
 {
     return text;
 }
@@ -205,7 +214,7 @@ void synonym_resolution::setFlat(bool newFlat)
 
 void synonym_resolution::add_to_word_dict
 (
-    std::vector<std::string_view> context, 
+    std::vector<sz::string_view> context, 
     std::string_view input_word
 )
 {
@@ -232,7 +241,7 @@ if (!(word_set.find(input_word) != word_set.end())){ //If word is not already in
 
 void synonym_resolution::aggregate_prob
 (
-    std::vector<std::string_view> context,
+    std::vector<sz::string_view> context,
     std::string_view input_word
 )
 {
@@ -246,7 +255,7 @@ void synonym_resolution::generate_probabilities(
     //std::cout << "Beginning probabilities function" << "\n";
     //std::cout << "First, validating input data:" << "\n";
     //std::cout << "assigning context:" << "\n";
-    std::vector<std::string_view> context = word_breakdown();
+    std::vector<sz::string_view> context = word_breakdown(input,true);
     for(int i = 0; i < context.size(); i++){
         //std::cout << context[i] << "\n";
     }
@@ -258,7 +267,7 @@ void synonym_resolution::generate_probabilities(
     while(active < length){
         std::string_view word = get_word(context,active);
         //std::cout << "current word = " << word << "\n";
-        std::vector<std::string_view> window = identify_window(context,window_size,active);
+        std::vector<sz::string_view> window = identify_window(context,window_size,active);
         //std::cout << "Window:" << "\n";
         for(int i = 0; i < window.size(); i++){
             //std::cout << window[i] << "\n";
@@ -269,9 +278,9 @@ void synonym_resolution::generate_probabilities(
     }
 }
 
-std::vector<std::string_view> synonym_resolution::identify_window
+std::vector<sz::string_view> synonym_resolution::identify_window
 (
-    std::vector<std::string_view> context,
+    std::vector<sz::string_view> context,
     int window_size,
     int index
 )
@@ -281,7 +290,7 @@ std::vector<std::string_view> synonym_resolution::identify_window
     int right = index+window_size;
     int active_index = left;
     std::string_view word = "";
-    std::vector<std::string_view> window;
+    std::vector<sz::string_view> window;
     int max = context.size();
     while(active_index < right){
         if(active_index == index){
@@ -305,47 +314,81 @@ std::vector<std::string_view> synonym_resolution::identify_window
     array[endidx] = insertion;
 }*/
 
-std::string_view synonym_resolution::get_word
+sz::string_view synonym_resolution::get_word
 (
-    std::vector<std::string_view> context,
+    std::vector<sz::string_view> context,
     int index
 )
 {
     return context[index];
 }
 
-std::vector<std::string_view> synonym_resolution::word_breakdown
+std::vector<sz::string_view> synonym_resolution::word_breakdown
 (
-
+    std::vector<std::string_view> array_of_words,
+    bool flat
 )
 {
-    //std::cout << "Validating initial input data: text:" << "\n";
-    //std::string_view input = text;
-    ////std::cout << input << "\n";
-    std::vector<std::string_view> split_string = split(this->text);
-    //std::cout << "text post-split:" << "\n";
-    for(int i = 0; i < split_string.size(); i++){
-        //std::cout << split_string[i] << "\n";
+    std::cout << "word_breakdown input: " << "\n" << text << "\n";
+    std::vector<sz::string_view> context;
+    int idx = 0;
+    std::cout << "checking input validity..." << "\n";
+    for(int i = 0; i < array_of_words.size(); i++){
+        std::cout << array_of_words[i] << "\n";
     }
-    //std::cout << "filling context:" << "\n";
-    std::vector<std::string_view> context;
-    for(int i = 0; i < split_string.size(); i++){
-        if(split_string[i].size() != 0){
-            //int endidx = context.size();
-            //context[endidx] = split_string[i];
-            //append(context,split_string[i]);
-            context.push_back(split_string[i]);
+    if(flat){
+        std::cout << "flat input!" << "\n";
+        for(auto word : array_of_words){
+                //context.push_back(word);
+                context = word.split("\n\r");
         }
+        //for(int i = 0; i < array_of_words.size(); i++){
+           /*for(auto word : array_of_words){
+                context.push_back(word);
+            }*/
+        //}
     }
-    //std::cout << "context filled!" << "\n";
-    //std::cout << "Proof:" << "\n";
+    std::cout << "printing context:" << "\n";
     for(int i = 0; i < context.size(); i++){
-        //std::cout << context[i] << "\n";
+        std::cout << context[i] << "\n";
     }
     return context;
 }
 
-std::vector<std::string_view> synonym_resolution::split
+/*sz::string synonym_resolution::flatten_input
+(
+    std::vector<std::string> array_of_words,
+    bool flat
+)
+{
+    std::cout << "flattening input..." << "\n";
+    sz::string flattened = "";
+    if(flat){
+        std::cout << "flat input!" << "\n";
+        for(int i = 0; i < array_of_words.size(); i++){
+            for(auto word : array_of_words[i]){
+                flattened = flattened + word;
+            }
+        }
+    }
+    else{
+        std::cout << "non-flat input!" << "\n";
+    }
+    else{
+        for(int i = 0; i < array_of_words.size(); i++){
+            for(int i2 = 0; i2 < array_of_words[i].size(); i2++){
+                for(auto word : array_of_words[i][i2]){
+                    flattened = flattened + word;
+                }
+            }
+        }
+    }
+    //std::cout << "flattened: " << flattened << "\n";
+    std::cout << "flattened input: " << flattened << "\n";
+    return flattened;
+}*/
+
+/*std::vector<std::string_view> synonym_resolution::split
 (
     std::string_view input
 )
@@ -379,4 +422,4 @@ std::vector<std::string_view> synonym_resolution::split
         //std::cout << output[i] << "\n";
     }
     return output;
-}
+}*/

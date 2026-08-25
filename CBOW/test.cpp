@@ -3,9 +3,9 @@
 #include <stringzilla/stringzilla.hpp>
 
 int main(){
-    std::string test1 = "The quick brown fox jumped over the lazy dog";
-    std::string test2 = "Marvel vs Capcom";
-    std::vector<std::string> input;
+    std::string_view test1 = "The quick brown fox jumped over the lazy dog";
+    std::string_view test2 = "Marvel vs Capcom";
+    std::vector<std::string_view> input;
     input.push_back(test1);
     input.push_back(test2);
     bool flat = true;
@@ -17,7 +17,7 @@ int main(){
 
     sz::string_view text = "The quick brown fox jumped over the lazy dog";
 
-    for (sz::string_view word : text.split(' ')) {
+    for (sz::string_view word : text.split("\r\n")) {
         if (!word.empty()) {
             std::cout << word << '\n';
         }

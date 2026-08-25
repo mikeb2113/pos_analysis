@@ -1,5 +1,5 @@
-CMakeFiles/synonym_resolution.dir/test.cpp.o: \
- /home/michael/Desktop/projects/pos_analysis/CBOW/test.cpp \
+CMakeFiles/synonym_resolution.dir/synonym_resolution.cpp.o: \
+ /home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.cpp \
  /usr/include/stdc-predef.h \
  /home/michael/Desktop/projects/pos_analysis/CBOW/synonym_resolution.h \
  /usr/include/c++/11/string \
