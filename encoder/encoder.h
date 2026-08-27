@@ -25,19 +25,38 @@ class encoder{
     std::array<std::byte,8> NEG_QUANT = {std::byte{0}, std::byte{1}, std::byte{2}, std::byte{3}, std::byte{4}, std::byte{5}, std::byte{6}, std::byte{7}};
 */
     
-    std::map<std::byte,std::string> DET;
-    std::map<std::byte,std::string> PREP;
-    std::map<std::byte,std::string> CONJ;
-    std::map<std::byte,std::string> COMP;
-    std::map<std::byte,std::string> MOD;
-    std::map<std::byte,std::string> AUX;
-    std::map<std::byte,std::string> EXT_DET;
-    std::map<std::byte,std::string> UNI_DET;
-    std::map<std::byte,std::string> NEG_QUANT;    
-    std::unordered_set<sz::string> pos_dict;
-    bool in_lib(sz::string_view& input);
-    
+    std::map<std::byte,sz::string> DET;
+    std::map<std::byte,sz::string> PREP;
+    std::map<std::byte,sz::string> CONJ;
+    std::map<std::byte,sz::string> COMP;
+    std::map<std::byte,sz::string> MOD;
+    std::map<std::byte,sz::string> AUX;
+    std::map<std::byte,sz::string> EXT_DET;
+    std::map<std::byte,sz::string> UNI_DET;
+    std::map<std::byte,sz::string> NEG_QUANT;    
+    std::unordered_set<sz::string_view, uint16_t> pos_dict;
+    std::unordered_set<sz::string> MISC;
+
     std::array<std::byte,9> MAP;
+
+    std::unordered_set<std::string> pos_names;
+
+    bool in_lib(sz::string_view& input);
+    sz::string encoder::find_word(std::byte);
+    std::byte encoder::POS_to_byte(std::string& pos);
+
+    enum class POS : uint16_t {
+        DET       = 1 << 0,
+        PREP      = 1 << 1,
+        CONJ      = 1 << 2,
+        COMP      = 1 << 3,
+        MOD       = 1 << 4,
+        AUX       = 1 << 5,
+        EXT_DET   = 1 << 6,
+        UNI_DET   = 1 << 7,
+        NEG_QUANT = 1 << 8
+    };
+
     private:
 };
 
