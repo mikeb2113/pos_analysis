@@ -1,3 +1,5 @@
 /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles/encode.dir
 /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles/edit_cache.dir
 /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles/rebuild_cache.dir
+/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-build/CMakeFiles/edit_cache.dir
+/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-build/CMakeFiles/rebuild_cache.dir

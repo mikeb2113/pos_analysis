@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/encode.dir/encoder.cpp.o -o encode 
+/usr/bin/c++ CMakeFiles/encode.dir/test.cpp.o CMakeFiles/encode.dir/encoder.cpp.o -o encode 

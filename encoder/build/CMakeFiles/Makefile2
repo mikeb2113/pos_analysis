@@ -64,15 +64,32 @@ CMAKE_BINARY_DIR = /home/michael/Desktop/projects/pos_analysis/encoder/build
 
 # The main recursive "all" target.
 all: CMakeFiles/encode.dir/all
+all: _deps/stringzilla-build/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: _deps/stringzilla-build/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/encode.dir/clean
+clean: _deps/stringzilla-build/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory _deps/stringzilla-build
+
+# Recursive "all" directory target.
+_deps/stringzilla-build/all:
+.PHONY : _deps/stringzilla-build/all
+
+# Recursive "preinstall" directory target.
+_deps/stringzilla-build/preinstall:
+.PHONY : _deps/stringzilla-build/preinstall
+
+# Recursive "clean" directory target.
+_deps/stringzilla-build/clean:
+.PHONY : _deps/stringzilla-build/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/encode.dir
@@ -81,12 +98,12 @@ clean: CMakeFiles/encode.dir/clean
 CMakeFiles/encode.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encode.dir/build.make CMakeFiles/encode.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/encode.dir/build.make CMakeFiles/encode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles --progress-num=1,2 "Built target encode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles --progress-num=1,2,3 "Built target encode"
 .PHONY : CMakeFiles/encode.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/encode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/encode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/michael/Desktop/projects/pos_analysis/encoder/build/CMakeFiles 0
 .PHONY : CMakeFiles/encode.dir/rule

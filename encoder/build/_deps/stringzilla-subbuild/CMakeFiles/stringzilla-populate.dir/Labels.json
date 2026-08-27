@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/stringzilla-populate"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/stringzilla-populate.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/stringzilla-populate-complete.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-build.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-configure.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-download.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-install.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-mkdir.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-patch.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-test.rule"
+		},
+		{
+			"file" : "/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/stringzilla-populate-prefix/src/stringzilla-populate-stamp/stringzilla-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"stringzilla-populate"
+		],
+		"name" : "stringzilla-populate"
+	}
+}

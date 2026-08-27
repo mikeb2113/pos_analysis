@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/encode.dir/encoder.cpp.o"
   "CMakeFiles/encode.dir/encoder.cpp.o.d"
+  "CMakeFiles/encode.dir/test.cpp.o"
+  "CMakeFiles/encode.dir/test.cpp.o.d"
   "encode"
   "encode.pdb"
 )
