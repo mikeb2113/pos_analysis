@@ -22,11 +22,12 @@ encoder::encoder
     MAP{std::byte{0}, std::byte{1}, std::byte{2}, std::byte{3}, std::byte{4}, std::byte{5}, std::byte{6}, std::byte{7}, std::byte{8}},
     
     pos_dict{
+        //Ensure that each POS has bit shifts to identify them!
         {"the", 1 << 0}, 
-        {"a", 1 << 0 | 1 << 6}, 
-        {"an", 1 << 0 | 1 << 6}, 
+        {"a", (1 << 0) | (1 << 6)}, 
+        {"an", (1 << 0) | (1 << 6)}, 
         {"this", 1 << 0}, 
-        {"that", 1 << 0 | 1 << 3}, 
+        {"that", (1 << 0) | (1 << 3)}, 
         {"these", 1 << 0}, 
         {"those", 1 << 0},//id 0-6
 
@@ -48,7 +49,6 @@ encoder::encoder
         {"or", 1 << 2}, 
         {"but", 1 << 2},//id 14-16
 
-        {"that", 1 << 3 | 1 << 0}, 
         {"which", 1 << 3}, 
         {"who", 1 << 3}, 
         {"whom", 1 << 3},//id 17-20
@@ -78,8 +78,6 @@ encoder::encoder
         {"does", 1 << 5}, 
         {"did", 1 << 5},//id 30-43
 
-        {"a", 1 << 6 | 1 << 0}, 
-        {"an", 1 << 6 | 1 << 0},
         {"some", 1 << 6},
         {"one", 1 << 6},
         {"somebody", 1 << 6}, 
@@ -123,31 +121,199 @@ encoder::encoder
 
 };
 
-    std::byte encoder::POS_to_byte(std::string& pos){
-        auto it = pos_dict.find()
-    }
+    uint16_t encoder::find_word(sz::string_view& input){
+        auto it = pos_dict.find(input);
 
-    sz::string encoder::find_word(std::byte){
-        int length = 
+        if(it == pos_dict.end()){
+            return 0;
+        }
+        return it->second;
     }
 
     bool encoder::in_lib(sz::string_view& input) {
         return pos_dict.find(input) != pos_dict.end();
     }
-/*
-if(det):
-    return 1
-if(prep)
-    return 2
 
-    int main(){
-        encoder code = encoder();
-        for(int i = 0; i < code.DET.size(); i++){
-            std::byte key = std::byte(i);
-            std::string value = code.DET[key];
-            std::cout << value << "\n";
+    std::byte encoder::search_word(int bitshift,sz::string_view word){
+        if(bitshift & 1 << 0){
+            std::byte list_idx = std::byte(7);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
         }
-        return 0;
+        else if(bitshift & 1 << 1){
+            std::byte list_idx = std::byte(13);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 2){
+            std::byte list_idx = std::byte(3);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 3){
+            std::byte list_idx = std::byte(4);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 4){
+            std::byte list_idx = std::byte(9);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 5){
+            std::byte list_idx = std::byte(14);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 6){
+            std::byte list_idx = std::byte(9);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 7){
+            std::byte list_idx = std::byte(7);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        else if(bitshift & 1 << 8){
+            std::byte list_idx = std::byte(8);
+            int length = DET.size();
+            int active_index = int(length/2);
+            sz::string_view active_word = DET[std::byte(active_index)];
+            while(active_word != word){
+                if(active_word==word){
+                    return std::byte(active_index);
+                }
+                else{
+                    if(active_word < word){
+                        active_index += (int(active_index/2));
+                    }
+                    if(active_word > word){
+                        active_index -= (int(active_index/2));
+                    }
+                }
+                active_word = DET[std::byte(active_index)];
+            }
+        }
+        return std::byte(64);
     }
-*/
-
