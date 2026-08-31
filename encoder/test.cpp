@@ -27,8 +27,9 @@ int main(){
             bits.push_back(std::byte(0b11111111));
         }
     }
+
     std::byte instruction_number = std::byte(instruction_counter);
-    std::byte offset = std::byte(offset_placeholder);
-    std::byte reserved = std::byte(0b00000000);
+
+    ByteBuilder byteBuilder(instruction_counter,sentence_information_builder);
     return 0;
 }

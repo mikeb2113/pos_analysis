@@ -1,6 +1,7 @@
 #ifndef ENCODER_H
 #define ENCODER_H
 #include <stdio.h>
+#include <iostream>
 #include <array>
 #include <map>
 #include <unordered_set>
@@ -30,7 +31,8 @@ struct CaseInsensitiveEqual {
 
         for (std::size_t i = 0; i < a.size(); ++i) {
             unsigned char ca = a[i];
-            unsigned char cb = b[i];
+            unsigned char cb = b[i];        
+
 
             if (ca >= 'A' && ca <= 'Z')
                 ca += 'a' - 'A';
@@ -47,27 +49,60 @@ struct CaseInsensitiveEqual {
 };
 
 struct ByteBuilder {
-    std::array<std::byte,64> byte_array = {std::byte(0)};
-    size_t space = 0;
-
-    /*
-    ========BYTE INSTRUCTION============================================
-    bytes 0-1                       | idx 0-8   | size: 8   bits/2 bytes
-    bytes 2-5 next block offset     | idx 9-24  | size: 16  bits/4 bytes
-    bytes 6-7 reserved              | idx 25-32 | size: 8   bits/2 bytes
-    bytes 8-63 sentence info        | idx 33-63 | size: 32  bits/8 bytes
-    ====================================================================
-    */
-
-    void set_reserve
-    (
-        std::array<std::byte,8> new_reserve
-    )
-    {
-        for(int i = 0; i < new_reserve.size(); i++){
-            byte_array[i+25] = new_reserve[i];
+    public:
+    std::array<std::byte,64> byte_array;
+        ByteBuilder
+        (
+            int instruction_num,
+            std::byte sentence_info
+        )
+        {
+        int offset_placeholder = 1573;
+        std::byte reserved{0b11001100};
+        std::byte offset = std::byte(offset_placeholder);
+        std::cout << "testing builder init..." << "\n";
+        for(int i = 0; i < byte_array.size(); i++){
+            std::cout << 
+            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
         }
-    };
+        std::cout << "\n";
+        set_reserve(reserved);
+        for(int i = 0; i < byte_array.size(); i++){
+            std::cout << 
+            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
+        }
+        std::cout << "\n";
+
+        std::array<std::byte,64> byte_array = 
+            {
+                static_cast<std::byte>(instruction_num),
+                static_cast<std::byte>(offset),
+                static_cast<std::byte>(reserved),
+                static_cast<std::byte>(sentence_info)
+            };
+        };
+
+        size_t space = 0;
+
+        /*
+        ========BYTE INSTRUCTION============================================
+        bytes 0-1                       | idx 0-8   | size: 8   bits/2 bytes
+        bytes 2-5 next block offset     | idx 9-24  | size: 16  bits/4 bytes
+        bytes 6-7 reserved              | idx 25-32 | size: 8   bits/2 bytes
+        bytes 8-63 sentence info        | idx 33-63 | size: 32  bits/8 bytes
+        ====================================================================
+        */
+
+        void set_reserve
+        (
+            std::byte new_reserve
+        )
+        {
+            std::array<std::byte,4> bit;
+            for(int i = 0; i < 8; i++){
+                byte_array[i+25] = new_reserve;
+            }
+        };
 };
 
 class encoder{
