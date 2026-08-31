@@ -7,15 +7,15 @@ encoder::encoder
 
 )
     :
-    DET{{std::byte{0},"a"}, {std::byte{1},"an"}, {std::byte{2},"that"}, {std::byte{3},"the"}, {std::byte{4},"these"}, {std::byte{5},"this"}, {std::byte{6},"those"}},
-    PREP{{std::byte{0},"at"}, {std::byte{1},"by"}, {std::byte{2},"for"}, {std::byte{3},"from"}, {std::byte{4},"in"}, {std::byte{5},"into"}, {std::byte{6},"of"}, {std::byte{7},"on"}, {std::byte{8},"onto"}, {std::byte{9},"over"}, {std::byte{10},"to"}, {std::byte{11},"under"}, {std::byte{12},"with"}},
-    CONJ{{std::byte{0},"and"}, {std::byte{1},"but"}, {std::byte{2},"or"}},
-    COMP{{std::byte{0},"that"}, {std::byte{1},"which"}, {std::byte{2},"who"}, {std::byte{3},"whom"}},
-    MOD{{std::byte{0},"can"}, {std::byte{1},"could"}, {std::byte{2},"may"}, {std::byte{3},"might"}, {std::byte{4},"must"}, {std::byte{5},"shall"}, {std::byte{6},"should"}, {std::byte{7},"will"}, {std::byte{8},"would"}},
-    AUX{{std::byte{0},"am"}, {std::byte{1},"are"}, {std::byte{2},"be"}, {std::byte{3},"been"}, {std::byte{4},"being"}, {std::byte{5},"did"}, {std::byte{6},"do"}, {std::byte{7},"does"}, {std::byte{8},"had"}, {std::byte{9},"has"}, {std::byte{10},"have"}, {std::byte{11},"is"}, {std::byte{12},"was"}, {std::byte{13},"were"}},
-    EXT_DET{{std::byte{0},"a"}, {std::byte{1},"an"}, {std::byte{2},"certain"}, {std::byte{3},"one"}, {std::byte{4},"some"}, {std::byte{5},"somebody"}, {std::byte{6},"someone"}, {std::byte{7},"something"}, {std::byte{8},"somewhere"}},
-    UNI_DET{{std::byte{0},"all"}, {std::byte{1},"any"}, {std::byte{2},"each"}, {std::byte{3},"every"}, {std::byte{4},"whatever"}, {std::byte{5},"whichever"}, {std::byte{6},"whoever"}},
-    NEG_QUANT{{std::byte{0},"never"}, {std::byte{1},"no"}, {std::byte{2},"nobody"}, {std::byte{3},"none"}, {std::byte{4},"noone"}, {std::byte{5},"nothing"}, {std::byte{6},"nowhere"}, {std::byte{7},"no-one"}},
+    DET{{"a", std::byte{0}}, {"an", std::byte{1}}, {"that", std::byte{2}}, {"the", std::byte{3}}, {"these", std::byte{4}}, {"this", std::byte{5}}, {"those", std::byte{6}}},
+    PREP{{"at", std::byte{0}}, {"by", std::byte{1}}, {"for", std::byte{2}}, {"from", std::byte{3}}, {"in", std::byte{4}}, {"into", std::byte{5}}, {"of", std::byte{6}}, {"on", std::byte{7}}, {"onto", std::byte{8}}, {"over", std::byte{9}}, {"to", std::byte{10}}, {"under", std::byte{11}}, {"with", std::byte{12}}},
+    CONJ{{"and", std::byte{0}}, {"but", std::byte{1}}, {"or", std::byte{2}}},
+    COMP{{"that", std::byte{0}}, {"which", std::byte{1}}, {"who", std::byte{2}}, {"whom", std::byte{3}}},
+    MOD{{"can", std::byte{0}}, {"could", std::byte{1}}, {"may", std::byte{2}}, {"might", std::byte{3}}, {"must", std::byte{4}}, {"shall", std::byte{5}}, {"should", std::byte{6}}, {"will", std::byte{7}}, {"would", std::byte{8}}},
+    AUX{{"am", std::byte{0}}, {"are", std::byte{1}}, {"be", std::byte{2}}, {"been", std::byte{3}}, {"being", std::byte{4}}, {"did", std::byte{5}}, {"do", std::byte{6}}, {"does", std::byte{7}}, {"had", std::byte{8}}, {"has", std::byte{9}}, {"have", std::byte{10}}, {"is", std::byte{11}}, {"was", std::byte{12}}, {"were", std::byte{13}}},
+    EXT_DET{{"a", std::byte{0}}, {"an", std::byte{1}}, {"certain", std::byte{2}}, {"one", std::byte{3}}, {"some", std::byte{4}}, {"somebody", std::byte{5}}, {"someone", std::byte{6}}, {"something", std::byte{7}}, {"somewhere", std::byte{8}}},
+    UNI_DET{{"all", std::byte{0}}, {"any", std::byte{1}}, {"each", std::byte{2}}, {"every", std::byte{3}}, {"whatever", std::byte{4}}, {"whichever", std::byte{5}}, {"whoever", std::byte{6}}},
+    NEG_QUANT{{"never", std::byte{0}}, {"no", std::byte{1}}, {"nobody", std::byte{2}}, {"none", std::byte{3}}, {"noone", std::byte{4}}, {"nothing", std::byte{5}}, {"nowhere", std::byte{6}}, {"no-one", std::byte{7}}},
 
     MISC{},
 
@@ -127,7 +127,7 @@ encoder::encoder
         if(it == pos_dict.end()){
             return 0;
         }
-        return it->second;
+        return it->second; //This finds the byte code for the given word in the list.
     }
 
     bool encoder::in_lib(sz::string_view& input) {
@@ -136,184 +136,40 @@ encoder::encoder
 
     std::byte encoder::search_word(int bitshift,sz::string_view word){
         if(bitshift & 1 << 0){
-            std::byte list_idx = std::byte(7);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = DET[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 1){
-            std::byte list_idx = std::byte(13);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = PREP[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 2){
-            std::byte list_idx = std::byte(3);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = CONJ[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 3){
-            std::byte list_idx = std::byte(4);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = COMP[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 4){
-            std::byte list_idx = std::byte(9);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = MOD[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 5){
-            std::byte list_idx = std::byte(14);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = AUX[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 6){
-            std::byte list_idx = std::byte(9);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = EXT_DET[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 7){
-            std::byte list_idx = std::byte(7);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = UNI_DET[word];
+            return word_byte;
         }
         else if(bitshift & 1 << 8){
-            std::byte list_idx = std::byte(8);
-            int length = DET.size();
-            int active_index = int(length/2);
-            sz::string_view active_word = DET[std::byte(active_index)];
-            while(active_word != word){
-                if(active_word==word){
-                    return std::byte(active_index);
-                }
-                else{
-                    if(active_word < word){
-                        active_index += (int(active_index/2));
-                    }
-                    if(active_word > word){
-                        active_index -= (int(active_index/2));
-                    }
-                }
-                active_word = DET[std::byte(active_index)];
-            }
+            std::byte word_byte = NEG_QUANT[word];
+            return word_byte;
         }
         return std::byte(64);
     }
