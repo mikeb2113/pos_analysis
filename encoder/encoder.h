@@ -47,7 +47,27 @@ struct CaseInsensitiveEqual {
 };
 
 struct ByteBuilder {
+    std::array<std::byte,64> byte_array = {std::byte(0)};
+    size_t space = 0;
 
+    /*
+    ========BYTE INSTRUCTION============================================
+    bytes 0-1                       | idx 0-8   | size: 8   bits/2 bytes
+    bytes 2-5 next block offset     | idx 9-24  | size: 16  bits/4 bytes
+    bytes 6-7 reserved              | idx 25-32 | size: 8   bits/2 bytes
+    bytes 8-63 sentence info        | idx 33-63 | size: 32  bits/8 bytes
+    ====================================================================
+    */
+
+    void set_reserve
+    (
+        std::array<std::byte,8> new_reserve
+    )
+    {
+        for(int i = 0; i < new_reserve.size(); i++){
+            byte_array[i+25] = new_reserve[i];
+        }
+    };
 };
 
 class encoder{
