@@ -135,40 +135,47 @@ encoder::encoder
     }
 
     std::byte encoder::search_word(int bitshift,sz::string_view word){
+        std::string builder;
+        for(char c : word){
+            if(c >= 'A' && c <= 'Z'){
+                c += 'a' - 'A';
+            }
+            builder += c;
+        }
         if(bitshift & 1 << 0){
-            std::byte word_byte = DET[word];
+            std::byte word_byte = DET[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 1){
-            std::byte word_byte = PREP[word];
+            std::byte word_byte = PREP[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 2){
-            std::byte word_byte = CONJ[word];
+            std::byte word_byte = CONJ[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 3){
-            std::byte word_byte = COMP[word];
+            std::byte word_byte = COMP[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 4){
-            std::byte word_byte = MOD[word];
+            std::byte word_byte = MOD[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 5){
-            std::byte word_byte = AUX[word];
+            std::byte word_byte = AUX[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 6){
-            std::byte word_byte = EXT_DET[word];
+            std::byte word_byte = EXT_DET[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 7){
-            std::byte word_byte = UNI_DET[word];
+            std::byte word_byte = UNI_DET[builder];
             return word_byte;
         }
         else if(bitshift & 1 << 8){
-            std::byte word_byte = NEG_QUANT[word];
+            std::byte word_byte = NEG_QUANT[builder];
             return word_byte;
         }
         return std::byte(64);

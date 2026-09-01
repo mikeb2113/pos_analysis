@@ -30,6 +30,6 @@ int main(){
 
     std::byte instruction_number = std::byte(instruction_counter);
 
-    ByteBuilder byteBuilder(instruction_counter,sentence_information_builder);
+    ByteBuilder byteBuilder(instruction_counter,bits);
     return 0;
 }

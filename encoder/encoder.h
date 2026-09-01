@@ -48,38 +48,51 @@ struct CaseInsensitiveEqual {
     }
 };
 
-struct ByteBuilder {
-    public:
-    std::array<std::byte,64> byte_array;
+struct ByteBuilder 
+{
         ByteBuilder
         (
             int instruction_num,
-            std::byte sentence_info
+            std::vector<std::byte> sentence_info
         )
         {
-        int offset_placeholder = 1573;
+        //std::array<std::byte,64> byte_array
+            {
+
+            };
+        int offset_placeholder = 3;
         std::byte reserved{0b11001100};
         std::byte offset = std::byte(offset_placeholder);
         std::cout << "testing builder init..." << "\n";
+        /*for(int i = 0; i < byte_array.size(); i++){
+            std::cout << 
+            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
+        }*/
+        std::cout << "\n";
+        //set_reserve(reserved);
+        /*
         for(int i = 0; i < byte_array.size(); i++){
             std::cout << 
             std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
         }
         std::cout << "\n";
-        set_reserve(reserved);
-        for(int i = 0; i < byte_array.size(); i++){
-            std::cout << 
-            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
-        }
-        std::cout << "\n";
-
+        */
+       std::byte sentence;
+       for(int i = 0; i < sentence_info.size(); i++){
+        sentence = sentence_info[i];
+       }
         std::array<std::byte,64> byte_array = 
             {
                 static_cast<std::byte>(instruction_num),
                 static_cast<std::byte>(offset),
                 static_cast<std::byte>(reserved),
-                static_cast<std::byte>(sentence_info)
+                static_cast<std::byte>(sentence)
             };
+        for(int i = 0; i < byte_array.size(); i++){
+            std::cout << 
+            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
+        }
+        std::cout << "\n";
         };
 
         size_t space = 0;
@@ -93,7 +106,7 @@ struct ByteBuilder {
         ====================================================================
         */
 
-        void set_reserve
+        /*void set_reserve
         (
             std::byte new_reserve
         )
@@ -102,7 +115,7 @@ struct ByteBuilder {
             for(int i = 0; i < 8; i++){
                 byte_array[i+25] = new_reserve;
             }
-        };
+        };*/
 };
 
 class encoder{
