@@ -17,8 +17,8 @@ int main(){
         };
     bool in_NP = false;
     for(auto word : input.split(" ")){
-        instruction_counter++;
         if(code.in_lib(word)){
+            instruction_counter++;
             in_NP = false;
             std::cout << "A word was found in the dictionary!" << "\n";
             std::cout << word << "\n";
@@ -32,9 +32,11 @@ int main(){
             std::cout << "binary: "
                 << std::bitset<4>(std::to_integer<unsigned int>(bytes))
                 << '\n';
+
         }
         else{
             if(!in_NP){
+                instruction_counter++;
                 sentence_byte_array[13-idx-1] = std::bitset<4>(9);
             }
             in_NP = true;
