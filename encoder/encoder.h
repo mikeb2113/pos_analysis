@@ -55,44 +55,40 @@ struct ByteBuilder
         ByteBuilder
         (
             unsigned instruction_num,
-            std::array<std::byte,8> sentence_info
+            std::array<std::bitset<4>,13> sentence_info
         )
         {
-        //std::array<std::byte,64> byte_array
             {
 
             };
-        unsigned offset_placeholder = 3;
-        std::byte offset_as_bytes = std::byte(offset_placeholder);
-
-        //std::byte reserved{0b11001100};
-        unsigned reserved = 2;
-        std::byte offset = std::byte(offset_placeholder);
+        std::bitset<4> reserved_bytes = 0;
         std::cout << "testing builder init..." << "\n";
         std::cout << "\n";
         std::cout << "instruction num after byte builder: " << instruction_num << "\n";
-        std::bitset<8> instruction_bytes = instruction_num;
-        std::bitset<16> offest_bytes = offset_placeholder;
-        std::bitset<16> mask(0xFF);
-        std::bitset<8> offset_bytes_right = (offest_bytes & mask).to_ulong();
-        std::bitset<8> offset_bytes_left = ((offest_bytes >> 8) & mask).to_ulong();
-        std::bitset<8> reserved_bytes = reserved;
-
-        std::array<std::bitset<8>,8> byte_array = 
+        std::bitset<4> instruction_bytes = instruction_num;
+        std::array<std::bitset<4>,16> byte_array = 
             {
                 instruction_bytes,
-                offset_bytes_left,
-                offset_bytes_right,
-                reserved_bytes
+                reserved_bytes,
+                reserved_bytes,
+                sentence_info[0],
+                sentence_info[1],
+                sentence_info[2],
+                sentence_info[3],
+                sentence_info[4],
+                sentence_info[5],
+                sentence_info[6],
+                sentence_info[7],
+                sentence_info[8],
+                sentence_info[9],
+                sentence_info[10],
+                sentence_info[11],
+                sentence_info[12]
                 //sentence_info
             };
         std::cout << "\n" << "final string: " << "\n";
-        /*for(int i = 0; i < byte_array.size(); i++){
-            std::cout << 
-            std::bitset<1>(std::to_integer<unsigned int>(byte_array[i]));
-        }     */
        for(auto byte : byte_array){
-        std::cout << std::bitset<8>(byte);
+        std::cout << std::bitset<4>(byte);
        } 
         std::cout << "\n";
     };
@@ -100,20 +96,30 @@ struct ByteBuilder
         size_t space = 0;
 
         /*
+        OLD
         ========BYTE INSTRUCTION============================================
         bytes 0-1                       | idx 0-8   | size: 8   bits/2 bytes
         bytes 2-5 next block offset     | idx 9-24  | size: 16  bits/4 bytes
         bytes 6-7 reserved              | idx 25-32 | size: 8   bits/2 bytes
         bytes 8-63 sentence info        | idx 33-63 | size: 32  bits/8 bytes
         ====================================================================
+
+
+        NEW
+        |========BYTE INSTRUCTION===================================================================================================================
+        |byte 0 instruction count        | idx 0-3   | size: 4   bits/1 byte - Offers quick comparator before longer processing. Useful later      |
+        |Offset - N/A    Offset removed - encoding is fixed length. This can be derived                                                            |
+        |bytes 1-2 reserved              | idx 4-11  | size: 8   bits/2 bytes                                                                      |
+        |bytes 3-63 sentence info        | idx 12-63 | size: 52  bits/13 bytes                                                                     |
+        |===========================================================================================================================================
         */
 
-    std::array<std::byte,8> get_byte_array_8
+    std::array<std::byte,4> get_byte_array_8
     (
         int num
     )
     {
-        std::array<std::byte,8> instruction_byte_array;
+        std::array<std::byte,4> instruction_byte_array;
         std::byte conversion = std::byte(num);
         for(int i = 0; i < 8; i++){
             bool bit_is_one = (conversion & std::byte {1 << i}) != std::byte{0};
@@ -123,7 +129,6 @@ struct ByteBuilder
             else{
                 instruction_byte_array[i] = std::byte{0};
             }
-            //instruction_byte_array[i] = conversion[i];
         }
         return instruction_byte_array;
     };
@@ -143,19 +148,18 @@ struct ByteBuilder
             else{
                 instruction_byte_array[i] = std::byte{0};
             }
-            //instruction_byte_array[i] = conversion[i];
         }
         return instruction_byte_array;
     };
 
-    std::array<std::byte,32> get_byte_array_32
+    std::array<std::byte,52> get_byte_array_52
     (
         int num
     )
     {
-        std::array<std::byte,32> instruction_byte_array;
+        std::array<std::byte,52> instruction_byte_array;
         std::byte conversion = std::byte(num);
-        for(int i = 0; i < 32; i++){
+        for(int i = 0; i < 52; i++){
             bool bit_is_one = (conversion & std::byte {1 << i}) != std::byte{0};
             if(bit_is_one){
                 instruction_byte_array[i] = std::byte{1};
@@ -163,7 +167,6 @@ struct ByteBuilder
             else{
                 instruction_byte_array[i] = std::byte{0};
             }
-            //instruction_byte_array[i] = conversion[i];
         }
         return instruction_byte_array;
     };
@@ -212,7 +215,9 @@ class encoder{
         AUX       = 1 << 5,
         EXT_DET   = 1 << 6,
         UNI_DET   = 1 << 7,
-        NEG_QUANT = 1 << 8
+        NEG_QUANT = 1 << 8,
+        NP        = 1 << 9,
+        END       = 1 << 10
     };
 
     private:
