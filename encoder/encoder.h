@@ -196,14 +196,18 @@ class encoder{
     > pos_dict;
     std::unordered_set<sz::string_view> MISC;
 
-    std::array<std::byte,9> MAP;
+    //std::array<std::byte,10> MAP;
+    std::map<
+        std::byte,
+        std::map<sz::string_view,std::byte>
+        > MAP;
 
     std::unordered_set<std::string> pos_names;
 
     bool in_lib(sz::string_view& input);
     uint16_t find_word(sz::string_view& input);
     std::byte POS_to_byte(std::string& pos);
-    std::byte search_word(int bitshift,sz::string_view word);
+    std::byte search_word_in_known_lib(int bitshift,sz::string_view word);
     std::byte find_lib(sz::string_view word);
 
     enum class POS : uint16_t {

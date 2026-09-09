@@ -19,7 +19,19 @@ encoder::encoder
 
     MISC{},
 
-    MAP{std::byte{0}, std::byte{1}, std::byte{2}, std::byte{3}, std::byte{4}, std::byte{5}, std::byte{6}, std::byte{7}, std::byte{8}},
+    MAP
+        {
+            {std::byte{0}, DET},
+            {std::byte{1}, PREP},
+            {std::byte{2}, CONJ},
+            {std::byte{3}, COMP},
+            {std::byte{4}, MOD},
+            {std::byte{5}, AUX},
+            {std::byte{6}, EXT_DET},
+            {std::byte{7}, UNI_DET},
+            {std::byte{8}, NEG_QUANT}
+            //{std::byte{9}, MISC}
+        },
     
     pos_dict{
         //Ensure that each POS has bit shifts to identify them!
@@ -134,7 +146,7 @@ encoder::encoder
         return pos_dict.find(input) != pos_dict.end();
     }
 
-    std::byte encoder::search_word(int bitshift,sz::string_view word){
+    std::byte encoder::search_word_in_known_lib(int bitshift,sz::string_view word){
         std::string builder;
         for(char c : word){
             if(c >= 'A' && c <= 'Z'){
