@@ -211,17 +211,17 @@ class encoder{
     std::byte find_lib(sz::string_view word);
 
     enum class POS : uint16_t {
-        DET       = 1 << 0,
-        PREP      = 1 << 1,
-        CONJ      = 1 << 2,
-        COMP      = 1 << 3,
-        MOD       = 1 << 4,
-        AUX       = 1 << 5,
-        EXT_DET   = 1 << 6,
-        UNI_DET   = 1 << 7,
-        NEG_QUANT = 1 << 8,
-        NP        = 1 << 9,
-        END       = 1 << 10
+        DET       = 1 << 1,
+        PREP      = 1 << 2,
+        CONJ      = 1 << 3,
+        COMP      = 1 << 4,
+        MOD       = 1 << 5,
+        AUX       = 1 << 6,
+        EXT_DET   = 1 << 7,
+        UNI_DET   = 1 << 8,
+        NEG_QUANT = 1 << 9,
+        NP        = 1 << 10,
+        END       = 1 << 11
     };
 
     private:

@@ -21,99 +21,99 @@ encoder::encoder
 
     MAP
         {
-            {std::byte{0}, DET},
-            {std::byte{1}, PREP},
-            {std::byte{2}, CONJ},
-            {std::byte{3}, COMP},
-            {std::byte{4}, MOD},
-            {std::byte{5}, AUX},
-            {std::byte{6}, EXT_DET},
-            {std::byte{7}, UNI_DET},
-            {std::byte{8}, NEG_QUANT}
+            {std::byte{1}, DET},
+            {std::byte{2}, PREP},
+            {std::byte{3}, CONJ},
+            {std::byte{4}, COMP},
+            {std::byte{5}, MOD},
+            {std::byte{6}, AUX},
+            {std::byte{7}, EXT_DET},
+            {std::byte{8}, UNI_DET},
+            {std::byte{9}, NEG_QUANT}
             //{std::byte{9}, MISC}
         },
     
     pos_dict{
         //Ensure that each POS has bit shifts to identify them!
-        {"the", 1 << 0}, 
-        {"a", (1 << 0) | (1 << 6)}, 
-        {"an", (1 << 0) | (1 << 6)}, 
-        {"this", 1 << 0}, 
-        {"that", (1 << 0) | (1 << 3)}, 
-        {"these", 1 << 0}, 
-        {"those", 1 << 0},//id 0-6
+        {"the", 1 << 1}, 
+        {"a", (1 << 1) | (1 << 7)}, 
+        {"an", (1 << 1) | (1 << 7)}, 
+        {"this", 1 << 1}, 
+        {"that", (1 << 1) | (1 << 4)}, 
+        {"these", 1 << 1}, 
+        {"those", 1 << 1},//id 0-6
 
-        {"of", 1 << 1}, 
-        {"in", 1 << 1}, 
-        {"on", 1 << 1}, 
-        {"at", 1 << 1}, 
-        {"over", 1 << 1}, 
-        {"under", 1 << 1},
-        {"with", 1 << 1}, 
-        {"by", 1 << 1}, 
-        {"for", 1 << 1}, 
-        {"to", 1 << 1}, 
-        {"from", 1 << 1}, 
-        {"into", 1 << 1}, 
-        {"onto", 1 << 1},//id 7-13
+        {"of", 1 << 2}, 
+        {"in", 1 << 2}, 
+        {"on", 1 << 2}, 
+        {"at", 1 << 2}, 
+        {"over", 1 << 2}, 
+        {"under", 1 << 2},
+        {"with", 1 << 2}, 
+        {"by", 1 << 2}, 
+        {"for", 1 << 2}, 
+        {"to", 1 << 2}, 
+        {"from", 1 << 2}, 
+        {"into", 1 << 2}, 
+        {"onto", 1 << 2},//id 7-13
 
-        {"and", 1 << 2}, 
-        {"or", 1 << 2}, 
-        {"but", 1 << 2},//id 14-16
+        {"and", 1 << 3}, 
+        {"or", 1 << 3}, 
+        {"but", 1 << 3},//id 14-16
 
-        {"which", 1 << 3}, 
-        {"who", 1 << 3}, 
-        {"whom", 1 << 3},//id 17-20
+        {"which", 1 << 4}, 
+        {"who", 1 << 4}, 
+        {"whom", 1 << 4},//id 17-20
 
-        {"can", 1 << 4}, 
-        {"could", 1 << 4}, 
-        {"will", 1 << 4}, 
-        {"would", 1 << 4}, 
-        {"shall", 1 << 4}, 
-        {"should", 1 << 4}, 
-        {"may", 1 << 4}, 
-        {"might", 1 << 4}, 
-        {"must", 1 << 4},//id 21-29
+        {"can", 1 << 5}, 
+        {"could", 1 << 5}, 
+        {"will", 1 << 5}, 
+        {"would", 1 << 5}, 
+        {"shall", 1 << 5}, 
+        {"should", 1 << 5}, 
+        {"may", 1 << 5}, 
+        {"might", 1 << 5}, 
+        {"must", 1 << 5},//id 21-29
 
-        {"be", 1 << 5}, 
-        {"am", 1 << 5}, 
-        {"is", 1 << 5}, 
-        {"are", 1 << 5}, 
-        {"was", 1 << 5}, 
-        {"were", 1 << 5}, 
-        {"been", 1 << 5}, 
-        {"being", 1 << 5},
-        {"have", 1 << 5}, 
-        {"has", 1 << 5}, 
-        {"had", 1 << 5}, 
-        {"do", 1 << 5}, 
-        {"does", 1 << 5}, 
-        {"did", 1 << 5},//id 30-43
+        {"be", 1 << 6}, 
+        {"am", 1 << 6}, 
+        {"is", 1 << 6}, 
+        {"are", 1 << 6}, 
+        {"was", 1 << 6}, 
+        {"were", 1 << 6}, 
+        {"been", 1 << 6}, 
+        {"being", 1 << 6},
+        {"have", 1 << 6}, 
+        {"has", 1 << 6}, 
+        {"had", 1 << 6}, 
+        {"do", 1 << 6}, 
+        {"does", 1 << 6}, 
+        {"did", 1 << 6},//id 30-43
 
-        {"some", 1 << 6},
-        {"one", 1 << 6},
-        {"somebody", 1 << 6}, 
-        {"someone", 1 << 6}, 
-        {"something", 1 << 6}, 
-        {"somewhere", 1 << 6},
-        {"certain", 1 << 6},//id 44-52
+        {"some", 1 << 7},
+        {"one", 1 << 7},
+        {"somebody", 1 << 7}, 
+        {"someone", 1 << 7}, 
+        {"something", 1 << 7}, 
+        {"somewhere", 1 << 7},
+        {"certain", 1 << 7},//id 44-52
 
-        {"every", 1 << 7}, 
-        {"each", 1 << 7},
-        {"all", 1 << 7}, 
-        {"any", 1 << 7},
-        {"whoever", 1 << 7}, 
-        {"whatever", 1 << 7}, 
-        {"whichever", 1 << 7},//id 53-59
+        {"every", 1 << 8}, 
+        {"each", 1 << 8},
+        {"all", 1 << 8}, 
+        {"any", 1 << 8},
+        {"whoever", 1 << 8}, 
+        {"whatever", 1 << 8}, 
+        {"whichever", 1 << 8},//id 53-59
 
-        {"no", 1 << 8},
-        {"nobody", 1 << 8}, 
-        {"noone", 1 << 8}, 
-        {"no-one", 1 << 8}, 
-        {"none", 1 << 8},
-        {"nothing", 1 << 8},
-        {"nowhere", 1 << 8},
-        {"never", 1 << 8}//id 60-67
+        {"no", 1 << 9},
+        {"nobody", 1 << 9}, 
+        {"noone", 1 << 9}, 
+        {"no-one", 1 << 9}, 
+        {"none", 1 << 9},
+        {"nothing", 1 << 9},
+        {"nowhere", 1 << 9},
+        {"never", 1 << 9}//id 60-67
     },
 
     pos_names{

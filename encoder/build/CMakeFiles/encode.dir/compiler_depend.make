@@ -927,8 +927,50 @@ CMakeFiles/encode.dir/test.cpp.o: ../test.cpp \
   /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
   /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
   /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h
+  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
+  /usr/include/c++/11/cmath \
+  /usr/include/math.h \
+  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+  /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+  /usr/include/c++/11/bits/specfun.h \
+  /usr/include/c++/11/tr1/gamma.tcc \
+  /usr/include/c++/11/tr1/special_function_util.h \
+  /usr/include/c++/11/tr1/bessel_function.tcc \
+  /usr/include/c++/11/tr1/beta_function.tcc \
+  /usr/include/c++/11/tr1/ell_integral.tcc \
+  /usr/include/c++/11/tr1/exp_integral.tcc \
+  /usr/include/c++/11/tr1/hypergeometric.tcc \
+  /usr/include/c++/11/tr1/legendre_function.tcc \
+  /usr/include/c++/11/tr1/modified_bessel_func.tcc \
+  /usr/include/c++/11/tr1/poly_hermite.tcc \
+  /usr/include/c++/11/tr1/poly_laguerre.tcc \
+  /usr/include/c++/11/tr1/riemann_zeta.tcc
 
+
+/usr/include/c++/11/tr1/modified_bessel_func.tcc:
+
+/usr/include/c++/11/tr1/hypergeometric.tcc:
+
+/usr/include/c++/11/tr1/exp_integral.tcc:
+
+/usr/include/c++/11/tr1/ell_integral.tcc:
+
+/usr/include/c++/11/tr1/bessel_function.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/iscanonical.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
+
+/usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
 ../test.cpp:
 
@@ -943,6 +985,8 @@ CMakeFiles/encode.dir/test.cpp.o: ../test.cpp \
 /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h:
+
+/usr/include/c++/11/tr1/special_function_util.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
 
@@ -976,6 +1020,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_norm/neon.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_norm/icelake.h:
 
+/usr/include/c++/11/tr1/riemann_zeta.tcc:
+
 _deps/stringzilla-src/include/stringzilla/utf8_norm/tables.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_norm/serial.h:
@@ -995,6 +1041,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_uncased.h:
 _deps/stringzilla-src/include/stringzilla/utf8_uncased_fold/sve2.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_uncased_fold/neon.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_uncased_fold/haswell.h:
 
@@ -1017,6 +1065,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_sentences/haswell.h:
 _deps/stringzilla-src/include/stringzilla/utf8_sentences/tables.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_sentences.h:
+
+/usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 _deps/stringzilla-src/include/stringzilla/utf8_graphemes/sve2.h:
 
@@ -1062,6 +1112,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_runes/neon.h:
 
 _deps/stringzilla-src/include/stringzilla/intersect/icelake.h:
 
+/usr/include/c++/11/bits/specfun.h:
+
 _deps/stringzilla-src/include/stringzilla/intersect.h:
 
 _deps/stringzilla-src/include/stringzilla/sort/rvv.h:
@@ -1079,6 +1131,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_uncased_fold/serial.h:
 /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h:
 
 _deps/stringzilla-src/include/stringzilla/sort.h:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
 
 _deps/stringzilla-src/include/stringzilla/find/rvv.h:
 
@@ -1203,6 +1257,8 @@ _deps/stringzilla-src/include/stringzilla/intersect/sve.h:
 /usr/include/c++/11/bits/uses_allocator_args.h:
 
 /usr/include/c++/11/backward/auto_ptr.h:
+
+/usr/include/c++/11/tr1/poly_laguerre.tcc:
 
 _deps/stringzilla-src/include/stringzilla/hash.h:
 
@@ -1374,6 +1430,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_tokens/icelake.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
+/usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
+
 /usr/include/c++/11/bits/postypes.h:
 
 /usr/include/c++/11/cstdint:
@@ -1402,6 +1460,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_wordbreaks/serial.h:
 
 /usr/include/c++/11/bits/stl_multimap.h:
 
+/usr/include/c++/11/cmath:
+
 _deps/stringzilla-src/include/stringzilla/compare/v128.h:
 
 /usr/include/c++/11/bits/allocator.h:
@@ -1428,6 +1488,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_uncased/powervsx.h:
 
 /usr/include/c++/11/cwchar:
 
+/usr/include/math.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/11/bits/stl_tempbuf.h:
@@ -1446,9 +1508,13 @@ _deps/stringzilla-src/include/stringzilla/utf8_graphemes/neon.h:
 
 /usr/include/c++/11/bit:
 
+/usr/include/x86_64-linux-gnu/bits/fp-fast.h:
+
 /usr/include/c++/11/iostream:
 
 /usr/include/c++/11/bits/node_handle.h:
+
+/usr/include/c++/11/tr1/gamma.tcc:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
@@ -1531,6 +1597,8 @@ _deps/stringzilla-src/include/stringzilla/sort/skylake.h:
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+/usr/include/c++/11/tr1/legendre_function.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -1650,6 +1718,8 @@ _deps/stringzilla-src/include/stringzilla/hash/sve.h:
 
 /usr/include/c++/11/bits/alloc_traits.h:
 
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
@@ -1743,6 +1813,8 @@ _deps/stringzilla-src/include/stringzilla/utf8_tokens.h:
 /usr/include/c++/11/istream:
 
 /usr/include/c++/11/bits/istream.tcc:
+
+/usr/include/c++/11/tr1/beta_function.tcc:
 
 _deps/stringzilla-src/include/stringzilla/hash/neonsha.h:
 
