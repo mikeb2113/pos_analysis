@@ -209,6 +209,8 @@ class encoder{
     std::byte POS_to_byte(std::string& pos);
     std::byte search_word_in_known_lib(int bitshift,sz::string_view word);
     std::byte find_lib(sz::string_view word);
+    int get_clause_count(sz::string_view& word);
+    int get_storage_blocks(sz::string_view& input);
 
     enum class POS : uint16_t {
         DET       = 1 << 1,

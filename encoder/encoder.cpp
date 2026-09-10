@@ -133,6 +133,35 @@ encoder::encoder
 
 };
 
+    int encoder::get_clause_count(sz::string_view& input){
+        bool in_NP = false;
+        int clause_count = 0;
+        for(auto word : input.split(" ")){
+            if(in_lib(word)){
+                clause_count++;
+                in_NP = false;
+            }
+
+            else{
+                if(!in_NP){
+                    clause_count++;
+                    in_NP = true;
+                }
+            }
+        }
+        return clause_count;
+    }
+
+    int encoder::get_storage_blocks(sz::string_view& input){
+        int clause_count = get_clause_count(input);
+        int blocks = 1;
+        while(clause_count >= 13){
+            clause_count = clause_count - 13;
+            blocks++;
+        }
+        return blocks;
+    }
+
     uint16_t encoder::find_word(sz::string_view& input){
         auto it = pos_dict.find(input);
 
