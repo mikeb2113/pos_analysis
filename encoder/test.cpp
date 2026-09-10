@@ -43,6 +43,8 @@ int main(){
             }
         }
     }
+    sentence_byte_array[idx] = std::bitset<4>(11);
+    idx++;
     std::cout << "instruction num before byte builder:" << instruction_counter << "\n";
 
     std::byte instruction_number = std::byte(instruction_counter);
@@ -52,20 +54,20 @@ int main(){
 }
 
 /*
-1001
+0111
 
 0000
 0000
 
 0001
+1010
 0010
-0011
-0100
-0101
-0110
-0111
-1000
-1001
+0001
+1010
+0001
+1010
+0000
+0000
 0000
 0000
 0000
