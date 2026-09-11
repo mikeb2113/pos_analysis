@@ -127,13 +127,13 @@ Currently implemented:
 Planned:
 
 - Variable-width encoding to save the concrete values of noun phrases.
-- 
+  
 - Encoding that can move to the next memory block when exceeding the maximum count.
-- 
+  
 - Compiler system that can process the binary values.
-- 
+  
 - Statistical analysis to identify recurring patterns in a text.
-- 
+  
 - Labeling of noun-phrases to identify relationships in a text.
 
 ## Motivation / Research
