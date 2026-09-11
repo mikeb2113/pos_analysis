@@ -1,0 +1,78 @@
+# =========================
+# C++ / CMake
+# =========================
+
+# Build directories
+build/
+cmake-build-*/
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+
+
+# =========================
+# Python
+# =========================
+
+# Python bytecode/cache
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# =========================
+# IDE / Editor
+# =========================
+
+# VS Code local settings
+.vscode/
+
+# JetBrains IDEs
+.idea/
+
+# Vim temporary files
+*.swp
+*.swo
+
+
+# =========================
+# OS / Temporary Files
+# =========================
+
+.DS_Store
+Thumbs.db
+*~
+*.tmp
+*.log
+
+
+# =========================
+# Secrets / Environment
+# =========================
+
+.env
+.env.*
+!.env.example

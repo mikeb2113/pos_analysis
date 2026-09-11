@@ -2,6 +2,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
+#include <cmath>
 encoder::encoder
 (
 
@@ -152,9 +153,9 @@ encoder::encoder
         return clause_count;
     }
 
-    int encoder::get_storage_blocks(sz::string_view& input){
+    std::size_t encoder::get_storage_blocks(sz::string_view& input){
         int clause_count = get_clause_count(input);
-        int blocks = 1;
+        std::size_t blocks = 1;
         while(clause_count >= 13){
             clause_count = clause_count - 13;
             blocks++;
@@ -169,6 +170,99 @@ encoder::encoder
             return 0;
         }
         return it->second; //This finds the byte code for the given word in the list.
+    }
+
+    std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
+        int blocks = get_storage_blocks(input);
+        std::vector<std::bitset<64>> array(blocks);
+    }
+
+    std::array<std::bitset<4>,13> encoder::generate_segment(sz::string_view& input, sz::string_view prefix, int blocks = 1, int iteration = 0, int instruction_counter = 0, bool in_NP = false){ 
+        //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
+        //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
+
+        std::array<std::bitset<4>,13> sentence_byte_array = 
+            {
+                std::bitset<4>(0)
+            };
+        int idx = 0;
+        sz::string prefix_builder;
+
+        if(iteration< blocks)
+        {
+            while(idx<13)
+            {
+                for(auto word : input.split(" "))
+                {
+                    prefix_builder += word;
+                    uint16_t bitshift = find_word(word);
+                    std::byte bytes = std::byte(std::log2((int(bitshift))));
+                    //std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
+
+                    if(in_lib(word))
+                    {
+                        instruction_counter++;
+                        in_NP = false;
+
+                        //std::byte bytes = code.search_word_in_known_lib(bitshift,word);
+
+                        sentence_byte_array[idx] = std::bitset<4>(int(bytes));
+                        //std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
+                        idx++;
+                    }
+
+                    else
+                    {
+                        if(!in_NP)
+                        {
+                            //std::cout << "[NP]";
+                            instruction_counter++;
+                            sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
+                            in_NP = true;
+                            idx++;
+                        }
+                    }
+                }
+            }
+        }
+        else if (iteration==blocks)
+        {
+            while(idx<12)
+            {
+                for(auto word : input.split(" "))
+                {
+                    uint16_t bitshift = find_word(word);
+                    std::byte bytes = std::byte(std::log2((int(bitshift))));
+                    //std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
+
+                    if(in_lib(word))
+                    {
+                        instruction_counter++;
+                        in_NP = false;
+
+                        //std::byte bytes = code.search_word_in_known_lib(bitshift,word);
+
+                        sentence_byte_array[idx] = std::bitset<4>(int(bytes));
+                        //std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
+                        idx++;
+                    }
+
+                    else
+                    {
+                        if(!in_NP)
+                        {
+                            //std::cout << "[NP]";
+                            instruction_counter++;
+                            sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
+                            in_NP = true;
+                            idx++;
+                        }
+                    }
+                }
+            } 
+            sentence_byte_array[idx] = std::bitset<4>(11);
+        }
+
     }
 
     bool encoder::in_lib(sz::string_view& input) {

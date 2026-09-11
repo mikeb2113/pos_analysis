@@ -5,6 +5,7 @@
 #include <cmath>
 int main(){
     encoder code;
+    sz::string_view dog = "The quick brown fox jumped over the lazy dog";
     sz::string_view input = "The quick brown fox jumped over the lazy dog Then the down howled";
     sz::string_view input2 = "the of and which can be some every no";
     sz::string_view input3 = "Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo ";
@@ -25,13 +26,15 @@ int main(){
     //The amount of subtractions needed is the amount of 64-bit spaces required.
     //For input4, we will need 2 64-bit spaces.
     //int clause_count = code.get_clause_count(input4);
-    int blocks = code.get_storage_blocks(input4);
+    const std::size_t blocks = code.get_storage_blocks(input4);
     std::cout << "Storage required: " << blocks << "\n";
-    for(auto word : input4.split(" ")){
-
+    //std::array<std::byte,blocks> array;
+    std::vector<std::bitset<64>> array(blocks);
+    std::cout << "testing input size... " << array.size() << "\n";
+    for(auto word : dog.split(" ")){
         uint16_t bitshift = code.find_word(word);
         std::byte bytes = std::byte(std::log2((int(bitshift))));
-        std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
+        //std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
 
         if(code.in_lib(word)){
             instruction_counter++;
@@ -40,13 +43,13 @@ int main(){
             //std::byte bytes = code.search_word_in_known_lib(bitshift,word);
 
             sentence_byte_array[idx] = std::bitset<4>(int(bytes));
-            std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
+            //std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
             idx++;
         }
 
         else{
             if(!in_NP){
-                std::cout << "[NP]";
+                //std::cout << "[NP]";
                 instruction_counter++;
                 sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
                 in_NP = true;
@@ -56,7 +59,7 @@ int main(){
     }
     sentence_byte_array[idx] = std::bitset<4>(11);
     idx++;
-    std::cout << "instruction num before byte builder:" << instruction_counter << "\n";
+    //std::cout << "instruction num before byte builder:" << instruction_counter << "\n";
 
     std::byte instruction_number = std::byte(instruction_counter);
 

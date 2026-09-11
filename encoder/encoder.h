@@ -210,7 +210,9 @@ class encoder{
     std::byte search_word_in_known_lib(int bitshift,sz::string_view word);
     std::byte find_lib(sz::string_view word);
     int get_clause_count(sz::string_view& word);
-    int get_storage_blocks(sz::string_view& input);
+    std::size_t get_storage_blocks(sz::string_view& input);
+    std::vector<std::bitset<64>> generate_encoding(sz::string_view& input);
+    std::array<std::bitset<4>,13> generate_segment(sz::string_view& input, sz::string_view prefix, int blocks = 1, int iteration = 0, int instruction_counter = 0, bool in_NP = false);
 
     enum class POS : uint16_t {
         DET       = 1 << 1,
