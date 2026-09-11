@@ -75,7 +75,7 @@ Input:
 Structural representation:
 DET → NP → PREP → DET → NP → DET → NP → END
 
-Instruction count:
+Instruction count (excluding ending instruction):
 7
 
 64-bit Layer 1 block:
