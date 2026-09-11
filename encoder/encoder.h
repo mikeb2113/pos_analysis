@@ -62,9 +62,11 @@ struct ByteBuilder
 
             };
         std::bitset<4> reserved_bytes = 0;
+        /*
         std::cout << "testing builder init..." << "\n";
         std::cout << "\n";
         std::cout << "instruction num after byte builder: " << instruction_num << "\n";
+        */
         std::bitset<4> instruction_bytes = instruction_num;
         std::array<std::bitset<4>,16> byte_array = 
             {
@@ -212,7 +214,7 @@ class encoder{
     int get_clause_count(sz::string_view& word);
     std::size_t get_storage_blocks(sz::string_view& input);
     std::vector<std::bitset<64>> generate_encoding(sz::string_view& input);
-    std::array<std::bitset<4>,13> generate_segment(sz::string_view& input, sz::string_view prefix, int blocks = 1, int iteration = 0, int instruction_counter = 0, bool in_NP = false);
+    std::array<std::bitset<4>,16> generate_segment(sz::string_view& input, int blocks = 1, sz::string_view prefix = "", int iteration = 0, int instruction_counter = 0, bool in_NP = false);
 
     enum class POS : uint16_t {
         DET       = 1 << 1,

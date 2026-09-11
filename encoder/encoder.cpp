@@ -135,6 +135,7 @@ encoder::encoder
 };
 
     int encoder::get_clause_count(sz::string_view& input){
+        //std::cout << "In clause count function! " << "\n";
         bool in_NP = false;
         int clause_count = 0;
         for(auto word : input.split(" ")){
@@ -154,7 +155,9 @@ encoder::encoder
     }
 
     std::size_t encoder::get_storage_blocks(sz::string_view& input){
+        //std::cout << "In storage blocks function! " << "\n";
         int clause_count = get_clause_count(input);
+        //std::cout << "clause count: " << clause_count << "\n";
         std::size_t blocks = 1;
         while(clause_count >= 13){
             clause_count = clause_count - 13;
@@ -174,40 +177,48 @@ encoder::encoder
 
     std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
         int blocks = get_storage_blocks(input);
-        std::vector<std::bitset<64>> array(blocks);
+        //std:: cout << "This input requires " << blocks << " memory block(s)!" << "\n";
+        std::vector<std::bitset<64>> array;
+        std::array<std::bitset<4>,16> segment = generate_segment(input,blocks);
+        std::bitset<64> entry(0);
+        int idx = 63;
+
+        for (const std::bitset<4>& nibble : segment) {
+            for (int i = 3; i >= 0; --i) {
+                entry[idx--] = nibble[i];
+            }
+        }
+        array.push_back(entry);
+
+        return array;
     }
 
-    std::array<std::bitset<4>,13> encoder::generate_segment(sz::string_view& input, sz::string_view prefix, int blocks = 1, int iteration = 0, int instruction_counter = 0, bool in_NP = false){ 
+    std::array<std::bitset<4>,16> encoder::generate_segment(sz::string_view& input, int blocks, sz::string_view prefix, int iteration, int instruction_counter, bool in_NP)
+    { 
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
-
         std::array<std::bitset<4>,13> sentence_byte_array = 
             {
                 std::bitset<4>(0)
             };
         int idx = 0;
         sz::string prefix_builder;
-
         if(iteration< blocks)
         {
-            while(idx<13)
-            {
                 for(auto word : input.split(" "))
+                if(idx < 13)
+                {
                 {
                     prefix_builder += word;
                     uint16_t bitshift = find_word(word);
                     std::byte bytes = std::byte(std::log2((int(bitshift))));
-                    //std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
 
                     if(in_lib(word))
                     {
                         instruction_counter++;
                         in_NP = false;
 
-                        //std::byte bytes = code.search_word_in_known_lib(bitshift,word);
-
                         sentence_byte_array[idx] = std::bitset<4>(int(bytes));
-                        //std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
                         idx++;
                     }
 
@@ -225,44 +236,39 @@ encoder::encoder
                 }
             }
         }
-        else if (iteration==blocks)
-        {
-            while(idx<12)
-            {
-                for(auto word : input.split(" "))
-                {
-                    uint16_t bitshift = find_word(word);
-                    std::byte bytes = std::byte(std::log2((int(bitshift))));
-                    //std::cout << "word: " << word << "\n" << "POS index: " << int(bytes) << "\n";
-
-                    if(in_lib(word))
-                    {
-                        instruction_counter++;
-                        in_NP = false;
-
-                        //std::byte bytes = code.search_word_in_known_lib(bitshift,word);
-
-                        sentence_byte_array[idx] = std::bitset<4>(int(bytes));
-                        //std::cout << "entry size: " << code.MAP[bytes].size() << "\n";
-                        idx++;
-                    }
-
-                    else
-                    {
-                        if(!in_NP)
-                        {
-                            //std::cout << "[NP]";
-                            instruction_counter++;
-                            sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
-                            in_NP = true;
-                            idx++;
-                        }
-                    }
-                }
-            } 
             sentence_byte_array[idx] = std::bitset<4>(11);
-        }
-
+            std::bitset<4> byteOne = sentence_byte_array[0];
+            std::bitset<4> byteTwo = sentence_byte_array[1];
+            std::bitset<4> byteThree = sentence_byte_array[2];
+            std::bitset<4> byteFour = sentence_byte_array[3];
+            std::bitset<4> byteFive = sentence_byte_array[4];
+            std::bitset<4> byteSix = sentence_byte_array[5];
+            std::bitset<4> byteSeven = sentence_byte_array[6];
+            std::bitset<4> byteEight = sentence_byte_array[7];
+            std::bitset<4> byteNine = sentence_byte_array[8];
+            std::bitset<4> byteTen = sentence_byte_array[9];
+            std::bitset<4> byteEleven = sentence_byte_array[10];
+            std::bitset<4> byteTwelve = sentence_byte_array[11];
+            std::bitset<4> byteThirteen = sentence_byte_array[12];
+        std::array<std::bitset<4>,16> segment_byte_array = 
+            {
+                std::bitset<4>(instruction_counter),
+                std::bitset<4>(0),
+                std::bitset<4>(0),
+                byteOne,
+                byteTwo,
+                byteThree,
+                byteFour,
+                byteFive,
+                byteSix,
+                byteSeven,
+                byteEight,
+                byteNine,
+                byteTen,
+                byteEleven,
+                byteTwelve
+            };
+            return segment_byte_array;
     }
 
     bool encoder::in_lib(sz::string_view& input) {

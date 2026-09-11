@@ -76,3 +76,9 @@ Thumbs.db
 .env
 .env.*
 !.env.example
+
+# Jupyter
+.ipynb_checkpoints/
+
+# VS Code Counter
+.VSCodeCounter/
