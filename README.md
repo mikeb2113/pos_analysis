@@ -100,8 +100,6 @@ count | reserved | instructions
 
 ## Implementation
 
-## Implementation
-
 ### C++17
 
 C++ was chosen to provide precise control over memory representation and
@@ -123,13 +121,19 @@ external dependencies such as StringZilla.
 CSIR is currently an experimental research prototype. Layer 1 structural encoding is functional, provided that the input may be represented without having to extend beyond the allowed 64-bit memory space.
 
 Currently implemented:
+
 - The syntactic layer is generated, assuming the instruction count does not exceed the encoding’s maximum count. This maximum count is equal to 13, or 12 if the given memory block must include an end-of-input instruction.
 
 Planned:
+
 - Variable-width encoding to save the concrete values of noun phrases.
+- 
 - Encoding that can move to the next memory block when exceeding the maximum count.
+- 
 - Compiler system that can process the binary values.
+- 
 - Statistical analysis to identify recurring patterns in a text.
+- 
 - Labeling of noun-phrases to identify relationships in a text.
 
 ## Motivation / Research
@@ -140,8 +144,9 @@ The structure of a text may offer useful logical shortcuts that can be exploited
 
 The questions this project sets out to answer are these: 
 
-Can inexpensive structural filtering eliminate obvious irrelevant candidates before more computationally expensive analysis is performed?
-If concrete definitions are ignored in preprocessing, can patterns and relationships be predicted before more expensive computational tasks?
+1) Can inexpensive structural filtering eliminate obvious irrelevant candidates before more computationally expensive analysis is performed?
+   
+2) If concrete definitions are ignored in preprocessing, can patterns and relationships be predicted before more expensive computational tasks?
 
 ## License
 
