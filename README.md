@@ -32,6 +32,7 @@ CSIR investigates an alternative: analyze syntax independently first, then deter
 ## Encoding Architecture
 
 This representation assumes the following allocations in a 64-bit representation:
+
 Bits 0-3 -> The count of instructions in this memory block
 
 Bits 4-11 -> Reserved for future use
@@ -85,12 +86,17 @@ count | reserved | instructions
 
 ## Design Goals
 
-Compact representation of text.
-Fast lookup.
-Deterministic representation of syntax.
-Reusable processing. Persist structural encodings so that preprocessing may only need to be performed once for a given input.
-Decouple syntax from semantics. Distinguish “What is being said” from “How is it being said.”
-Efficient comparison of textual syntactic data.
+- Compact representation of text.
+
+- Fast lookup.
+
+- Deterministic representation of syntax.
+
+- Reusable processing. Persist structural encodings so that preprocessing may only need to be performed once for a given input.
+
+- Decouple syntax from semantics. Distinguish “What is being said” from “How is it being said.”
+
+- Efficient comparison of textual syntactic data.
 
 ## Implementation
 
