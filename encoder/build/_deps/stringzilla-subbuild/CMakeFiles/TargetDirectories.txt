@@ -1,3 +1,0 @@
-/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/stringzilla-populate.dir
-/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/edit_cache.dir
-/home/michael/Desktop/projects/pos_analysis/encoder/build/_deps/stringzilla-subbuild/CMakeFiles/rebuild_cache.dir
