@@ -1,6 +1,6 @@
 # CSIR Encoder
 
-An experimental fixed width encoding system to capture the syntactic structure of text
+CSIR (Compiled Syntactic Information Retrieval) is an experimental fixed width encoding system to capture the syntactic structure of text
 
 ## Overview
 
