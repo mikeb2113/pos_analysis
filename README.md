@@ -20,6 +20,7 @@ A small library containing common linguistic functors is saved. These include:
 * Existential determiners
 * Universal determiners
 * Negative quantifiers
+ 
 A textual input is given to the program
 Syntactic data is saved into 64-bit fixed-width memory locations that do not consider the concrete definitions of words
 A planned second, variable width encoding will be generated. This will save a sequence of the largest possible noun phrases bounded between two functors.
