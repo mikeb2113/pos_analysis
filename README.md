@@ -10,7 +10,7 @@ CSIR investigates an alternative: analyze syntax independently first, then deter
 
 ## How It Works
 
-A small library containing common linguistic functors is saved. These include:
+1) A small library containing common linguistic functors is saved. These include:
 * Determiners
 * Prepositions
 * Conjunctions
@@ -21,10 +21,13 @@ A small library containing common linguistic functors is saved. These include:
 * Universal determiners
 * Negative quantifiers
  
-A textual input is given to the program
-Syntactic data is saved into 64-bit fixed-width memory locations that do not consider the concrete definitions of words
-A planned second, variable width encoding will be generated. This will save a sequence of the largest possible noun phrases bounded between two functors.
-This compact, fixed width layer can then be analyzed to identify parts of a text that are syntactically similar.
+2) A textual input is given to the program
+   
+3) Syntactic data is saved into 64-bit fixed-width memory locations that do not consider the concrete definitions of words
+   
+4) A planned second, variable width encoding will be generated. This will save a sequence of the largest possible noun phrases bounded between two functors.
+   
+5) This compact, fixed width layer can then be analyzed to identify parts of a text that are syntactically similar.
 
 ## Encoding Architecture
 
