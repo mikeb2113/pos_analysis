@@ -193,6 +193,17 @@ encoder::encoder
         return array;
     }
 
+    bool get_encoding_bit(const std::bitset<64>& bits, std::size_t index) {
+        //convert from symbolic, human-readable interpretation to literal interpretation
+        //(signifigant bit silliness)
+        return bits[63 - index];
+
+        //ex:
+        //bool first_bit = get_encoding_bit(encoding[0], 0);
+        //This can save the first bit stored from the first 64-bit memory block rather than having to put 63 for the
+        //first, which can get confusing to read
+    }
+
     std::array<std::bitset<4>,16> encoder::generate_segment(sz::string_view& input, int blocks, sz::string_view prefix, int iteration, int instruction_counter, bool in_NP)
     { 
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
