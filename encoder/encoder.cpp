@@ -17,7 +17,17 @@ encoder::encoder
     EXT_DET{{"a", std::byte{0}}, {"an", std::byte{1}}, {"certain", std::byte{2}}, {"one", std::byte{3}}, {"some", std::byte{4}}, {"somebody", std::byte{5}}, {"someone", std::byte{6}}, {"something", std::byte{7}}, {"somewhere", std::byte{8}}},
     UNI_DET{{"all", std::byte{0}}, {"any", std::byte{1}}, {"each", std::byte{2}}, {"every", std::byte{3}}, {"whatever", std::byte{4}}, {"whichever", std::byte{5}}, {"whoever", std::byte{6}}},
     NEG_QUANT{{"never", std::byte{0}}, {"no", std::byte{1}}, {"nobody", std::byte{2}}, {"none", std::byte{3}}, {"noone", std::byte{4}}, {"nothing", std::byte{5}}, {"nowhere", std::byte{6}}, {"no-one", std::byte{7}}},
+//I think that we should have spaghetti, which is delicious, for supper, and we 
+//should have garlic bread too, because I really want to have spaghetti and garlic bread.
 
+    /*
+I think that we should have spaghetti, 
+which is delicious, for supper, and we 
+
+
+should have garlic bread too, 
+because I really want to have spaghetti and garlic bread.
+    */
     MISC{},
 
     MAP
@@ -151,19 +161,19 @@ encoder::encoder
                 }
             }
         }
+        std::cout << "There are " << clause_count << " clauses! " << "\n";
         return clause_count;
     }
 
-    std::size_t encoder::get_storage_blocks(sz::string_view& input){
+    std::size_t encoder::get_storage_blocks(int clause_count, int interation, int blocks){
         //std::cout << "In storage blocks function! " << "\n";
-        int clause_count = get_clause_count(input);
         //std::cout << "clause count: " << clause_count << "\n";
-        std::size_t blocks = 1;
+        std::size_t blocks_needed = 1;
         while(clause_count >= 13){
             clause_count = clause_count - 13;
-            blocks++;
+            blocks_needed++;
         }
-        return blocks;
+        return blocks_needed;
     }
 
     uint16_t encoder::find_word(sz::string_view& input){
@@ -173,24 +183,6 @@ encoder::encoder
             return 0;
         }
         return it->second; //This finds the byte code for the given word in the list.
-    }
-
-    std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
-        int blocks = get_storage_blocks(input);
-        //std:: cout << "This input requires " << blocks << " memory block(s)!" << "\n";
-        std::vector<std::bitset<64>> array;
-        std::array<std::bitset<4>,16> segment = generate_segment(input,blocks);
-        std::bitset<64> entry(0);
-        int idx = 63;
-
-        for (const std::bitset<4>& nibble : segment) {
-            for (int i = 3; i >= 0; --i) {
-                entry[idx--] = nibble[i];
-            }
-        }
-        array.push_back(entry);
-
-        return array;
     }
 
     bool get_encoding_bit(const std::bitset<64>& bits, std::size_t index) {
@@ -204,29 +196,82 @@ encoder::encoder
         //first, which can get confusing to read
     }
 
-    std::array<std::bitset<4>,16> encoder::generate_segment(sz::string_view& input, int blocks, sz::string_view prefix, int iteration, int instruction_counter, bool in_NP)
+    std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
+        int initial_clause_count = get_clause_count(input);
+        int max_blocks = get_storage_blocks(initial_clause_count);
+        std:: cout << "This input requires " << max_blocks << " memory block(s)!" << "\n";
+        std::vector<std::bitset<64>> array;
+        sz::basic_string_slice<const char>::split_type view = input.split(" ");
+        std::vector<sz::string_view> indexable_view;
+        for(auto word : view){
+            indexable_view.push_back(word);
+        }
+        std::cout << "TESTING INPUT VIEW:" << "\n";
+        int index = 0;
+        for(auto test : view){
+            std::cout << test << "\n";
+        }
+        for(int current_block = 1; current_block <= max_blocks; current_block++){
+            std::array<std::bitset<4>,16> segment;
+            size_t test = segment.size();
+            std::cout << "bytes outside funciton: " << test << "\n";
+            segment = generate_segment(input,indexable_view,initial_clause_count,current_block,max_blocks);
+            std::bitset<64> entry(0);
+            int idx = 63;
+            //std::cout << "exiting block..." << "\n";
+            //std::cout << "attempting to write to memory... " << "\n";
+            for (const std::bitset<4> nibble : segment) {
+                //NOTE: there should be 16 nibbles (16*4)
+                //std::cout << "saving nibble..." << "\n";
+                for (int i = 3; i >= 0; --i) {
+                    entry[idx--] = nibble[i];
+                }
+            }
+            std::cout << "allocated! " << "\n";
+            array.push_back(entry);
+            std::cout << "pushed! " << "\n";
+        }
+
+        return array;
+    }
+
+    std::array<std::bitset<4>,16> encoder::generate_segment(sz::string_view& input, std::vector<sz::string_view> view, int initial_clause_count, int block, int max_blocks, int instruction_counter, int iteration, bool in_NP)
     { 
+        //std::cout << "iteration: " << block << "\n";
+        //std::cout << "max blocks: " << max_blocks << "\n";
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
+        //std::cout << "access test: " << view[1] << "\n";
         std::array<std::bitset<4>,13> sentence_byte_array = 
             {
                 std::bitset<4>(0)
             };
+        //sz::string prefix_builder;
+        //int max = block*13;
+        //int idx = max-13;
         int idx = 0;
-        sz::string prefix_builder;
-        if(iteration< blocks)
+        int words = 0;
+
+        auto split_range = input.split(" ");
+        std::size_t target_index = input.size();
+        auto it = std::next(split_range.begin(),target_index);
+        std::cout << "testing iterator..." << *it << "test done!" << "\n";
+
+        if(iteration<= max_blocks)
         {
-                for(auto word : input.split(" "))
-                if(idx < 13)
+            std::cout << "printign words..." << "\n";
+            for(auto word : view)
                 {
-                {
-                    prefix_builder += word;
+                    std::cout << word << "\n";
+                    words++;
+                    if(idx<13){
+                    //prefix_builder += word;
                     uint16_t bitshift = find_word(word);
                     std::byte bytes = std::byte(std::log2((int(bitshift))));
 
                     if(in_lib(word))
                     {
-                        instruction_counter++;
+                        //instruction_counter++;
                         in_NP = false;
 
                         sentence_byte_array[idx] = std::bitset<4>(int(bytes));
@@ -238,16 +283,22 @@ encoder::encoder
                         if(!in_NP)
                         {
                             //std::cout << "[NP]";
-                            instruction_counter++;
+                            //instruction_counter++;
                             sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
                             in_NP = true;
                             idx++;
                         }
                     }
                 }
-            }
+                }
         }
-            sentence_byte_array[idx] = std::bitset<4>(11);
+        size_t sentence_size = sentence_byte_array.size();
+        std::cout << "sentence byte array size: " << sentence_size << "\n";
+            //sentence_byte_array[idx] = std::bitset<4>(11);
+            //^above is the propsed ending bit. We dont need this - this can be 
+            //implicitely inferred by the instruction count. Instead, include a 14th
+            //count, which signifies 13 instructions + the implicit ending
+            std::cout << "validating instruction counter:" << instruction_counter << "\n";
             std::bitset<4> byteOne = sentence_byte_array[0];
             std::bitset<4> byteTwo = sentence_byte_array[1];
             std::bitset<4> byteThree = sentence_byte_array[2];
@@ -261,9 +312,22 @@ encoder::encoder
             std::bitset<4> byteEleven = sentence_byte_array[10];
             std::bitset<4> byteTwelve = sentence_byte_array[11];
             std::bitset<4> byteThirteen = sentence_byte_array[12];
+            int instruction;
+            if(block==max_blocks){
+                instruction = initial_clause_count-(13*block);
+                if(instruction==13){
+                    instruction++;
+                }
+            }
+            else{
+                instruction = 13;
+            }
+            std::cout << "instruction counter test: " << instruction_counter << "\n";
+            std::cout << "encoding thus far: " << "\n";
+            std::cout << std::bitset<4>(instruction) << std::bitset<4>(0) << std::bitset<4>(0) << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven << byteTwelve << byteThirteen << "\n";
         std::array<std::bitset<4>,16> segment_byte_array = 
             {
-                std::bitset<4>(instruction_counter),
+                std::bitset<4>(instruction),
                 std::bitset<4>(0),
                 std::bitset<4>(0),
                 byteOne,
@@ -277,8 +341,34 @@ encoder::encoder
                 byteNine,
                 byteTen,
                 byteEleven,
-                byteTwelve
+                byteTwelve,
+                byteThirteen
             };
+            size_t test = segment_byte_array.size();
+            std::cout << "bytes: " << test << "\n";
+            std::cout << "validating bits:"<< "\n";
+            std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
+            std::cout << "testing values at indexes:" << "\n";
+            std::cout << segment_byte_array[0] << "\n";
+            std::cout << segment_byte_array[1] << "\n";
+            std::cout << segment_byte_array[2] << "\n";
+            std::cout << segment_byte_array[3] << "\n";
+            std::cout << segment_byte_array[4] << "\n";
+            std::cout << segment_byte_array[5] << "\n";
+            std::cout << segment_byte_array[6] << "\n";
+            std::cout << segment_byte_array[7] << "\n";
+            std::cout << segment_byte_array[8] << "\n";
+            std::cout << segment_byte_array[9] << "\n";
+            std::cout << segment_byte_array[10] << "\n";
+            std::cout << segment_byte_array[11] << "\n";
+            std::cout << segment_byte_array[12] << "\n";
+            std::cout << segment_byte_array[13] << "\n";
+            std::cout << segment_byte_array[14] << "\n";
+            std::cout << segment_byte_array[15] << "\n";
+            std::cout << "Max clause access: 13 " << "\n";
+            std::cout << "Clause accessed: " << idx << "\n";
+
+            std::cout << "returning...." << "\n";
             return segment_byte_array;
     }
 
@@ -332,3 +422,24 @@ encoder::encoder
         }
         return std::byte(64);
     }
+
+/*
+1101
+
+0000
+0000
+
+1010
+0100
+1010
+0101
+0110
+1010
+0100
+0110
+1010
+0010
+1010
+0011
+1010
+*/

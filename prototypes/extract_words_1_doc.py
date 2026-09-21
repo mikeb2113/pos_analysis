@@ -4,11 +4,11 @@ import re
 #from clean_data import paths
 from pathlib import Path
 import sys
-from csir.document import Document
-from csir.skeletons import Skeletons
-from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
-import csir.skeletons
-import CBOW.prob_functions
+from prototypes.csir.document import Document
+from prototypes.csir.skeletons import Skeletons
+from prototypes.csir.pdf_extract import pdf_to_text,unstick_library_prefixes
+import prototypes.csir.skeletons
+import prototypes.CBOW.prob_functions
 import json
 from threading import Thread
 from threading import Lock

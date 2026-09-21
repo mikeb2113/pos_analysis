@@ -1,9 +1,9 @@
 import pandas as pd
 import numpy as np
 from scipy.special import lambertw
-from csir.document import Document
-from csir.skeletons import Skeletons
-from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
+from prototypes.csir.document import Document
+from prototypes.csir.skeletons import Skeletons
+from prototypes.csir.pdf_extract import pdf_to_text,unstick_library_prefixes
 import csv
 
 print("=====ADD_FEATURES=====")

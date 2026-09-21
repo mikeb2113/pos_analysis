@@ -1,9 +1,9 @@
-from traverse_function import search_for_target_word, traverse
-from sqlite_functions import search, initialize, get_word_count, traverse_db
-from csir.word_data import Word
+from prototypes.traverse_function import search_for_target_word, traverse
+from prototypes.sqlite_functions import search, initialize, get_word_count, traverse_db
+from prototypes.csir.word_data import Word
 import os.path
 import csv
-from highlight_functions import highlight_by_text, return_quad
+from prototypes.highlight_functions import highlight_by_text, return_quad
 
 #def create_table(input_file):
 

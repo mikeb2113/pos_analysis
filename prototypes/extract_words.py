@@ -1,4 +1,4 @@
-from extract_words_1_doc import extraction
+from prototypes.extract_words_1_doc import extraction
 import csv
 from collections import defaultdict
 import pandas as pd

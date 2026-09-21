@@ -1,5 +1,5 @@
 import pandas as pd
-from load_data import pos, reviews
+from prototypes.load_data import pos, reviews
 from langdetect import detect_langs, DetectorFactory
 from langdetect.lang_detect_exception import LangDetectException
 import unicodedata

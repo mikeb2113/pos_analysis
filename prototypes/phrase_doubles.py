@@ -1,7 +1,7 @@
-from csir.document import Document
-from csir.skeletons import Skeletons
-from csir.pdf_extract import pdf_to_text,unstick_library_prefixes
-import csir.skeletons
+from prototypes.csir.document import Document
+from prototypes.csir.skeletons import Skeletons
+from prototypes.csir.pdf_extract import pdf_to_text,unstick_library_prefixes
+import prototypes.csir.skeletons
 import json
 
 

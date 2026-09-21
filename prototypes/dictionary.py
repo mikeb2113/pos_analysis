@@ -1,10 +1,10 @@
-from extract_words_1_doc import extraction
+from prototypes.extract_words_1_doc import extraction
 import csv
 from collections import defaultdict
 import pandas as pd
-from csir.pdf_extract import pdf_to_text
-from csir.skeletons import Skeletons
-from CBOW.prob_functions import synonym_resolution
+from prototypes.csir.pdf_extract import pdf_to_text
+from prototypes.csir.skeletons import Skeletons
+from prototypes.CBOW.prob_functions import synonym_resolution
 
 class BTreeNode:
     def __init__(self, leaf=True):

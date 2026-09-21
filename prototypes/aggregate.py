@@ -1,5 +1,5 @@
 from __future__ import with_statement
-from scraper import csvable
+from prototypes.scraper import csvable
 from pathlib import Path
 import csv
 import os
