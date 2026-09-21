@@ -145,7 +145,7 @@ because I really want to have spaghetti and garlic bread.
 };
 
     int encoder::get_clause_count(sz::string_view& input){
-        //std::cout << "In clause count function! " << "\n";
+        ////std::cout << "In clause count function! " << "\n";
         bool in_NP = false;
         int clause_count = 0;
         for(auto word : input.split(" ")){
@@ -161,13 +161,13 @@ because I really want to have spaghetti and garlic bread.
                 }
             }
         }
-        std::cout << "There are " << clause_count << " clauses! " << "\n";
+        //std::cout << "There are " << clause_count << " clauses! " << "\n";
         return clause_count;
     }
 
     std::size_t encoder::get_storage_blocks(int clause_count, int interation, int blocks){
-        //std::cout << "In storage blocks function! " << "\n";
-        //std::cout << "clause count: " << clause_count << "\n";
+        ////std::cout << "In storage blocks function! " << "\n";
+        ////std::cout << "clause count: " << clause_count << "\n";
         std::size_t blocks_needed = 1;
         while(clause_count >= 13){
             clause_count = clause_count - 13;
@@ -206,30 +206,30 @@ because I really want to have spaghetti and garlic bread.
         for(auto word : view){
             indexable_view.push_back(word);
         }
-        std::cout << "TESTING INPUT VIEW:" << "\n";
+        //std::cout << "TESTING INPUT VIEW:" << "\n";
         int index = 0;
         for(auto test : view){
-            std::cout << test << "\n";
+            //std::cout << test << "\n";
         }
         for(int current_block = 1; current_block <= max_blocks; current_block++){
             std::array<std::bitset<4>,16> segment;
             size_t test = segment.size();
-            std::cout << "bytes outside funciton: " << test << "\n";
+            //std::cout << "bytes outside funciton: " << test << "\n";
             segment = generate_segment(input,indexable_view,initial_clause_count,current_block,max_blocks);
             std::bitset<64> entry(0);
             int idx = 63;
-            //std::cout << "exiting block..." << "\n";
-            //std::cout << "attempting to write to memory... " << "\n";
+            ////std::cout << "exiting block..." << "\n";
+            ////std::cout << "attempting to write to memory... " << "\n";
             for (const std::bitset<4> nibble : segment) {
                 //NOTE: there should be 16 nibbles (16*4)
-                //std::cout << "saving nibble..." << "\n";
+                ////std::cout << "saving nibble..." << "\n";
                 for (int i = 3; i >= 0; --i) {
                     entry[idx--] = nibble[i];
                 }
             }
-            std::cout << "allocated! " << "\n";
+            //std::cout << "allocated! " << "\n";
             array.push_back(entry);
-            std::cout << "pushed! " << "\n";
+            //std::cout << "pushed! " << "\n";
         }
 
         return array;
@@ -237,11 +237,24 @@ because I really want to have spaghetti and garlic bread.
 
     std::array<std::bitset<4>,16> encoder::generate_segment(sz::string_view& input, std::vector<sz::string_view> view, int initial_clause_count, int block, int max_blocks, int instruction_counter, int iteration, bool in_NP)
     { 
-        //std::cout << "iteration: " << block << "\n";
-        //std::cout << "max blocks: " << max_blocks << "\n";
+        ////std::cout << "iteration: " << block << "\n";
+        ////std::cout << "max blocks: " << max_blocks << "\n";
+        //std::cout << "block: " << block << "\n";
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
-        //std::cout << "access test: " << view[1] << "\n";
+        int word = 13*(block-1);
+        int instructions_remaining;// = instruction_counter - (13*block);
+        std::cout << "block: " << block << "\n";
+        std::cout << "max blocks: " << max_blocks << "\n";
+        std::cout << "instructions: " << initial_clause_count << "\n";
+        if(block!=max_blocks){
+            instructions_remaining = 13;
+        }
+        else{
+            std::cout << "equal!" << "\n";
+            instructions_remaining = abs(13 - abs(initial_clause_count - (13*block)));
+        }
+        std::cout << instructions_remaining << "\n";
         std::array<std::bitset<4>,13> sentence_byte_array = 
             {
                 std::bitset<4>(0)
@@ -255,14 +268,14 @@ because I really want to have spaghetti and garlic bread.
         auto split_range = input.split(" ");
         std::size_t target_index = input.size();
         auto it = std::next(split_range.begin(),target_index);
-        std::cout << "testing iterator..." << *it << "test done!" << "\n";
+        //std::cout << "testing iterator..." << *it << "test done!" << "\n";
 
         if(iteration<= max_blocks)
         {
-            std::cout << "printign words..." << "\n";
+            //std::cout << "printign words..." << "\n";
             for(auto word : view)
                 {
-                    std::cout << word << "\n";
+                    //std::cout << word << "\n";
                     words++;
                     if(idx<13){
                     //prefix_builder += word;
@@ -282,7 +295,7 @@ because I really want to have spaghetti and garlic bread.
                     {
                         if(!in_NP)
                         {
-                            //std::cout << "[NP]";
+                            ////std::cout << "[NP]";
                             //instruction_counter++;
                             sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
                             in_NP = true;
@@ -293,12 +306,12 @@ because I really want to have spaghetti and garlic bread.
                 }
         }
         size_t sentence_size = sentence_byte_array.size();
-        std::cout << "sentence byte array size: " << sentence_size << "\n";
+        //std::cout << "sentence byte array size: " << sentence_size << "\n";
             //sentence_byte_array[idx] = std::bitset<4>(11);
             //^above is the propsed ending bit. We dont need this - this can be 
             //implicitely inferred by the instruction count. Instead, include a 14th
             //count, which signifies 13 instructions + the implicit ending
-            std::cout << "validating instruction counter:" << instruction_counter << "\n";
+            //std::cout << "validating instruction counter:" << instruction_counter << "\n";
             std::bitset<4> byteOne = sentence_byte_array[0];
             std::bitset<4> byteTwo = sentence_byte_array[1];
             std::bitset<4> byteThree = sentence_byte_array[2];
@@ -322,9 +335,9 @@ because I really want to have spaghetti and garlic bread.
             else{
                 instruction = 13;
             }
-            std::cout << "instruction counter test: " << instruction_counter << "\n";
-            std::cout << "encoding thus far: " << "\n";
-            std::cout << std::bitset<4>(instruction) << std::bitset<4>(0) << std::bitset<4>(0) << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven << byteTwelve << byteThirteen << "\n";
+            //std::cout << "instruction counter test: " << instruction_counter << "\n";
+            //std::cout << "encoding thus far: " << "\n";
+            //std::cout << std::bitset<4>(instruction) << std::bitset<4>(0) << std::bitset<4>(0) << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven << byteTwelve << byteThirteen << "\n";
         std::array<std::bitset<4>,16> segment_byte_array = 
             {
                 std::bitset<4>(instruction),
@@ -345,30 +358,30 @@ because I really want to have spaghetti and garlic bread.
                 byteThirteen
             };
             size_t test = segment_byte_array.size();
-            std::cout << "bytes: " << test << "\n";
-            std::cout << "validating bits:"<< "\n";
-            std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
-            std::cout << "testing values at indexes:" << "\n";
-            std::cout << segment_byte_array[0] << "\n";
-            std::cout << segment_byte_array[1] << "\n";
-            std::cout << segment_byte_array[2] << "\n";
-            std::cout << segment_byte_array[3] << "\n";
-            std::cout << segment_byte_array[4] << "\n";
-            std::cout << segment_byte_array[5] << "\n";
-            std::cout << segment_byte_array[6] << "\n";
-            std::cout << segment_byte_array[7] << "\n";
-            std::cout << segment_byte_array[8] << "\n";
-            std::cout << segment_byte_array[9] << "\n";
-            std::cout << segment_byte_array[10] << "\n";
-            std::cout << segment_byte_array[11] << "\n";
-            std::cout << segment_byte_array[12] << "\n";
-            std::cout << segment_byte_array[13] << "\n";
-            std::cout << segment_byte_array[14] << "\n";
-            std::cout << segment_byte_array[15] << "\n";
-            std::cout << "Max clause access: 13 " << "\n";
-            std::cout << "Clause accessed: " << idx << "\n";
+            //std::cout << "bytes: " << test << "\n";
+            //std::cout << "validating bits:"<< "\n";
+            //std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
+            //std::cout << "testing values at indexes:" << "\n";
+            //std::cout << segment_byte_array[0] << "\n";
+            //std::cout << segment_byte_array[1] << "\n";
+            //std::cout << segment_byte_array[2] << "\n";
+            //std::cout << segment_byte_array[3] << "\n";
+            //std::cout << segment_byte_array[4] << "\n";
+            //std::cout << segment_byte_array[5] << "\n";
+            //std::cout << segment_byte_array[6] << "\n";
+            //std::cout << segment_byte_array[7] << "\n";
+            //std::cout << segment_byte_array[8] << "\n";
+            //std::cout << segment_byte_array[9] << "\n";
+            //std::cout << segment_byte_array[10] << "\n";
+            //std::cout << segment_byte_array[11] << "\n";
+            //std::cout << segment_byte_array[12] << "\n";
+            //std::cout << segment_byte_array[13] << "\n";
+            //std::cout << segment_byte_array[14] << "\n";
+            //std::cout << segment_byte_array[15] << "\n";
+            //std::cout << "Max clause access: 13 " << "\n";
+            //std::cout << "Clause accessed: " << idx << "\n";
 
-            std::cout << "returning...." << "\n";
+            //std::cout << "returning...." << "\n";
             return segment_byte_array;
     }
 
