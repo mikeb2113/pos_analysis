@@ -225,6 +225,7 @@ because I really want to have spaghetti and garlic bread.
             SentenceInfo info;
             info = generate_segment(input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
             starting_index = info.ending_index+1;
+            std::cout << "next starting index: " << starting_index << "\n";
             //std::cout << "next starting index: " << starting_index << "\n";
             segment = info.encoding;
             std::bitset<64> entry(0);
@@ -248,6 +249,10 @@ because I really want to have spaghetti and garlic bread.
 
     encoder::SentenceInfo encoder::generate_segment(sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info,int initial_clause_count, int block, int max_blocks, int starting_index, int iteration, bool in_NP)
     { 
+        iteration = block;
+        std::cout << "starting index: " << starting_index << "\n";
+        std::cout << "in NP: " << in_NP << "\n";
+        std::cout << "testing: starting at: " << view[starting_index] << "\n";
         //Consider changing this to return an array.
         //Array index 0, for example, might contain the segment. Index 1 may return an array with starting and ending indices from the input
         
@@ -256,7 +261,6 @@ because I really want to have spaghetti and garlic bread.
         //std::cout << "block: " << block << "\n";
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
-
         int instructions_remaining;// = instruction_counter - (13*block);
         int ending_index = starting_index;
         //std::cout << "starting "
@@ -294,19 +298,19 @@ because I really want to have spaghetti and garlic bread.
                 {
                     if(idx<13){
                     sz::string_view word = view[i];
-                    std::cout << word << " ";
                     //std::cout << word << "\n";
                     words++;
+                    ending_index++;
                     //prefix_builder += word;
                     uint16_t bitshift = find_word(word);
                     std::byte bytes = std::byte(std::log2((int(bitshift))));
-
                     if(in_lib(word))
                     {
                         //instruction_counter++;
                         in_NP = false;
 
                         sentence_byte_array[idx] = std::bitset<4>(int(bytes));
+                        //std::cout << "test: " << int(bytes) << "\n";
                         idx++;
                         std::cout << "\n";
                     }
@@ -317,12 +321,15 @@ because I really want to have spaghetti and garlic bread.
                         {
                             ////std::cout << "[NP]";
                             //instruction_counter++;
+
                             sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
                             in_NP = true;
-                            idx++;
+                            idx++; //This index doesn't work - we need to keep going until the NP is escaped!
                             std::cout << "\n";
+                            
                         }
                     }
+                    std::cout << word << " ";
                 }
                 else{
                     break;
@@ -330,16 +337,16 @@ because I really want to have spaghetti and garlic bread.
                 }
         }
         size_t sentence_size = sentence_byte_array.size();
-        /*
+        ending_index--;
         std::cout << "\n";
         std::cout << "starting index: ";
         std::cout << starting_index << "\n";
-        std::cout << "ending index: ";
-        std::cout << words << "\n";*/
+        std::cout << "ending index: " << ending_index << "\n";
 
         std::array<int,1> bounds;
         bounds[0] = starting_index;
-        bounds[1] = words;
+        bounds[1] = ending_index;
+        std::cout << "words: " << words << "\n";
         /*
         std::cout << "starting index (bounds): ";
         std::cout << bounds[0] << "\n";
@@ -400,7 +407,7 @@ because I really want to have spaghetti and garlic bread.
             std::cout << "\n\n";
             //std::cout << "bytes: " << test << "\n";
             //std::cout << "validating bits:"<< "\n";
-            //std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
+            std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
             //std::cout << "testing values at indexes:" << "\n";
             //std::cout << segment_byte_array[0] << "\n";
             //std::cout << segment_byte_array[1] << "\n";
@@ -429,7 +436,7 @@ because I really want to have spaghetti and garlic bread.
                 size_t starting_index;
                 size_t ending_index;
             };*/
-            SentenceInfo payload{segment_byte_array,size_t(starting_index),size_t(words)};
+            SentenceInfo payload{segment_byte_array,size_t(starting_index),size_t(ending_index)};
             return payload;
     }
 

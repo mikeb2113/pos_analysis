@@ -19,3 +19,76 @@ int main(){
         std::cout << "\n";
     return 0;
 }
+
+/*
+I think that we should have spaghetti, which is delicious, for supper, and we should 
+have 
+garlic bread too, because I really want to have spaghetti and garlic bread. I think that we should have spaghetti, which is delicious, 
+is delicious,
+for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread.
+too, because I really want to have spaghetti and garlic bread.
+*/
+
+
+/*
+I 
+think 
+that 
+we 
+should 
+have 
+spaghetti, 
+which 
+is 
+delicious, 
+for 
+supper, 
+and 
+we 
+should 
+
+have 
+garlic 
+bread 
+too, 
+because 
+I 
+really 
+want 
+
+to 
+have 
+spaghetti 
+and 
+garlic 
+bread. 
+I 
+think 
+that 
+we 
+should 
+have 
+spaghetti, 
+which 
+is 
+delicious, 
+for 
+supper, 
+and 
+we 
+should 
+have 
+garlic 
+bread 
+too, 
+because 
+I 
+really 
+want 
+to 
+have 
+spaghetti 
+and 
+garlic 
+bread.
+*/
