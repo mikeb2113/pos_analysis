@@ -145,7 +145,7 @@ because I really want to have spaghetti and garlic bread.
 };
 
     int encoder::get_clause_count(sz::string_view& input){
-        ////std::cout << "In clause count function! " << "\n";
+        //This function returns the total count of instructions to be processed
         bool in_NP = false;
         int clause_count = 0;
         for(auto word : input.split(" ")){
@@ -166,8 +166,8 @@ because I really want to have spaghetti and garlic bread.
     }
 
     std::size_t encoder::get_storage_blocks(int clause_count, int interation, int blocks){
-        ////std::cout << "In storage blocks function! " << "\n";
-        ////std::cout << "clause count: " << clause_count << "\n";
+        //This function returns the amount of storage blocks that will be needed to store the given
+        //number of instructions
         std::size_t blocks_needed = 1;
         while(clause_count >= 13){
             clause_count = clause_count - 13;
@@ -177,12 +177,13 @@ because I really want to have spaghetti and garlic bread.
     }
 
     uint16_t encoder::find_word(sz::string_view& input){
+        //This finds the byte code for the given word in the list.
         auto it = pos_dict.find(input);
 
         if(it == pos_dict.end()){
             return 0;
         }
-        return it->second; //This finds the byte code for the given word in the list.
+        return it->second; 
     }
 
     bool encoder::get_encoding_bit(const std::bitset<64>& bits, std::size_t index) {
@@ -197,52 +198,52 @@ because I really want to have spaghetti and garlic bread.
     }
 
     std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
+        //This function returns the full encoding in a vector. Each entry in the vector is a 64-bit binary string.
+        //Each string begins with an instruction count, followed by 2 more bytes for the reserved slots.
+        //the rest of the bytes are for instructions.
+        //Note that logically, the instruction count will always evaluate to 13 unless this is the last
+        //instruction block. For the last block, it can never be 13. 
+        
+        //Rather, if the last block contains
+        //13 instructions, it will add 1 to the instruction count 
+        //to denote 13 instructions + an implicit ending instruction
+
+        int starting_index = 0;
+        int index = 0;
         int initial_clause_count = get_clause_count(input);
-        std::cout << "initial clause: " << initial_clause_count << "\n";
         int max_blocks = get_storage_blocks(initial_clause_count);
-        std:: cout << "This input requires " << max_blocks << " memory block(s)!" << "\n";
+        //Derive the needed memory blocks and the number of instructions we need to save
+
         std::vector<std::bitset<64>> array;
         sz::basic_string_slice<const char>::split_type view = input.split(" ");
         std::vector<sz::string_view> indexable_view;
-        int starting_index = 0;
-        /*struct SentenceInfo{
-            std::array<std::bitset<4>,16> encoding;
-            size_t starting_index;
-            size_t ending_index;
-        };*/
+        //^We evaluate on a vector instead of the view itself so that we can simply index to access words
+
         for(auto word : view){
             indexable_view.push_back(word);
         }
-        //std::cout << "TESTING INPUT VIEW:" << "\n";
-        int index = 0;
-        for(auto test : view){
-            //std::cout << test << "\n";
-        }
+
         for(int current_block = 1; current_block <= max_blocks; current_block++){
             std::array<std::bitset<4>,16> segment;
-            size_t test = segment.size();
-            //std::cout << "current starting index: " << starting_index << "\n";
-            //std::cout << "bytes outside funciton: " << test << "\n";
+            //save an array of size 16. Each entry is a bitset of 4 for a total of 64 bits of storage
             SentenceInfo info;
+            //Save info to store important information
+
             info = generate_segment(input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
             starting_index = info.ending_index+1;
-            std::cout << "next starting index: " << starting_index << "\n";
-            //std::cout << "next starting index: " << starting_index << "\n";
             segment = info.encoding;
             std::bitset<64> entry(0);
+            //initialize entry to 0s. Then update with accurate values from info
             int idx = 63;
-            ////std::cout << "exiting block..." << "\n";
+
             std::cout << "attempting to write to memory... " << "\n";
             for (const std::bitset<4> nibble : segment) {
-                //NOTE: there should be 16 nibbles (16*4)
-                ////std::cout << "saving nibble..." << "\n";
                 for (int i = 3; i >= 0; --i) {
                     entry[idx--] = nibble[i];
                 }
             }
-            //std::cout << "allocated! " << "\n";
+            //Add the 64-bit encoding to the vector
             array.push_back(entry);
-            //std::cout << "pushed! " << "\n";
         }
 
         return array;
@@ -255,7 +256,7 @@ because I really want to have spaghetti and garlic bread.
         //Array index 0, for example, might contain the segment. Index 1 may return an array with starting and ending indices from the input
         //NOTE: The absolute MAX instruction count is 13 when the memory block is non-terminating.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
-        int instructions_remaining;// = instruction_counter - (13*block);
+        int instructions_remaining;
         int ending_index = starting_index;
         if(block!=max_blocks){
             instructions_remaining = 13;
@@ -270,10 +271,6 @@ because I really want to have spaghetti and garlic bread.
 
         int idx = 0;
         int words = 0;
-
-        //auto split_range = input.split(" ");
-        //std::size_t target_index = input.size();
-        //auto it = std::next(split_range.begin(),target_index);
 
         if(iteration <= max_blocks)
         {
@@ -290,9 +287,6 @@ because I really want to have spaghetti and garlic bread.
                     {
                         in_NP = false;
                         sentence_byte_array[idx] = std::bitset<4>(int(bytes));
-                        std::cout << word << " ";
-                        std::cout << std::bitset<4>(int(bytes)) << "\n";
-                        //std::cout << "In array: " << sentence_byte_array[idx] << "\n";
                         idx++;
                     }
 
@@ -301,11 +295,8 @@ because I really want to have spaghetti and garlic bread.
                         if(!in_NP)
                         {
                             sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
-                            std::cout << word << " ";
-                            std::cout << std::bitset<4>(10) << "\n";
-                            //std::cout << "In array: " << std::bitset<4>(10) << "\n";
                             in_NP = true;
-                            idx++; //This index doesn't work - we need to keep going until the NP is escaped!
+                            idx++;
                         }
                     }
                 }
@@ -320,15 +311,9 @@ because I really want to have spaghetti and garlic bread.
         std::array<int,2> bounds;
         bounds[0] = starting_index;
         bounds[1] = ending_index;
-        if(sentence_byte_array[0]==std::bitset<4>(13)){
-            std::cout << "first value overridden!" << "\n";
-        }
+
             std::bitset<4> byteOne = sentence_byte_array[0];
-            std::cout << "sentence byte arrayOne: " << sentence_byte_array[0] << "\n";
-            std::cout << "value put into byteOne: " << byteOne << "\n";
             std::bitset<4> byteTwo = sentence_byte_array[1];
-            std::cout << "sentence byte arrayTwo: " << sentence_byte_array[1] << "\n";
-            std::cout << "value put into byteTwo: " << byteTwo << "\n";
             std::bitset<4> byteThree = sentence_byte_array[2];
             std::bitset<4> byteFour = sentence_byte_array[3];
             std::bitset<4> byteFive = sentence_byte_array[4];
@@ -371,9 +356,7 @@ because I really want to have spaghetti and garlic bread.
                 byteThirteen
             };
             size_t test = segment_byte_array.size();
-            //std::cout << "validating bits:"<< "\n";
             //std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
-            std::cout << "byteOne: " << byteOne << "\n";
             words += (13*(block-1));
 
             SentenceInfo payload{segment_byte_array,size_t(starting_index),size_t(ending_index)};
@@ -381,10 +364,14 @@ because I really want to have spaghetti and garlic bread.
     }
 
     bool encoder::in_lib(sz::string_view& input) {
+        //Quick pre-check to see if a given word is present in any library.
+        //If not present, return false. If present, return true
         return pos_dict.find(input) != pos_dict.end();
     }
 
     std::byte encoder::search_word_in_known_lib(int bitshift,sz::string_view word){
+        //If we know what library a word belongs in, find the words index in that library.
+        //This has no current use, but may be used in the future for decoding back to the original input
         std::string builder;
         for(char c : word){
             if(c >= 'A' && c <= 'Z'){
@@ -430,24 +417,3 @@ because I really want to have spaghetti and garlic bread.
         }
         return std::byte(64);
     }
-
-/*
-1101
-
-0000
-0000
-
-1010
-0100
-1010
-0101
-0110
-1010
-0100
-0110
-1010
-0010
-1010
-0011
-1010
-*/
