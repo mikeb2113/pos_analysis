@@ -1,4 +1,4 @@
-#include "encoder.h"
+#include "encoder.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -27,6 +27,9 @@ which is delicious, for supper, and we
 
 should have garlic bread too, 
 because I really want to have spaghetti and garlic bread.
+
+//I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread. I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread.
+
     */
     MISC{},
 
@@ -197,6 +200,68 @@ because I really want to have spaghetti and garlic bread.
         //first, which can get confusing to read
     }
 
+    //bool encoder::smaller(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target){
+    bool encoder::smaller(std::vector<std::bitset<64>> input, std::vector<std::bitset<64>> target){
+        int input_size = input.size()-1;
+        int target_size = target.size()-1;
+        //First, see how long the total encoding is
+        //If one takes more memory than another - we know which is smaller
+
+        if(input_size < target_size){
+            return true;
+        }
+        else if(target_size<input_size){
+            return false;
+        }
+        //If they occupy an equal amount of memory, we can check the instruction count nibble in the front
+        else{
+            for(int i = 0; i < 4; i++){
+                //Look at each bit in the size nibble.
+                //Between the input and target, the first mismatch of a 0 and 1 at matching indices tells us which is larger
+                if(input[input_size][63-i]>target[target_size][63-i]){
+                    return false;
+                }
+                else if(input[input_size][63-i]<target[target_size][63-i]){
+                    return true;
+                }
+            }
+        }
+        return true;
+    }
+
+    std::vector<std::array<int,2>> encoder::presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target){
+        std::vector<std::bitset<64>> a;
+        std::vector<std::bitset<64>> b;
+        if(smaller(input,target)){
+            a = input;
+            b = target;
+        } else{
+            a = target;
+            b = input;
+        }
+        //This gurantees that unless the input and target are of equal values, then a will always be smaller
+        //We will compare the smaller to the larger between the input and target
+        int a_size = a.size();
+        int last_index_instructions = pow(2,0)*a[a_size-1][63] + pow(2,1)*a[a_size-1][62] + pow(2,2)*a[a_size-1][61] + pow(2,3)*a[a_size-1][60];
+        std::vector<std::array<int,2>> presence;
+        //Presence will hold the start and end indices where the smaller is present in the larger between a and b
+        int likeness = 0;
+        //We will use likeness to track how long a continuous match is!
+        for(int i = 0; i < b.size(); i++){
+            for(int i2 = 63; i2 > 0; i2--){
+                if(a[i][i2] != b[i][i2]){
+                    likeness = likeness/4;
+                    break;
+                }
+                else{
+                    likeness++;
+                }
+            }
+        }
+
+        return presence;
+    }
+
     std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
         //This function returns the full encoding in a vector. Each entry in the vector is a 64-bit binary string.
         //Each string begins with an instruction count, followed by 2 more bytes for the reserved slots.
@@ -236,7 +301,6 @@ because I really want to have spaghetti and garlic bread.
             //initialize entry to 0s. Then update with accurate values from info
             int idx = 63;
 
-            std::cout << "attempting to write to memory... " << "\n";
             for (const std::bitset<4> nibble : segment) {
                 for (int i = 3; i >= 0; --i) {
                     entry[idx--] = nibble[i];
@@ -416,4 +480,18 @@ because I really want to have spaghetti and garlic bread.
             return word_byte;
         }
         return std::byte(64);
+    }
+
+    bool encoder::equals(std::vector<std::bitset<64>> a, std::vector<std::bitset<64>> b){
+        if(a.size()!=b.size()){
+            return false;
+        }
+        int i = 0;
+        for(auto bit : a){
+            if(a[i] != b[i]){
+                return false;
+            }
+            i++;
+        }
+        return true;
     }

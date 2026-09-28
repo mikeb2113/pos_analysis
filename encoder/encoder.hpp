@@ -222,7 +222,10 @@ class encoder{
         
     SentenceInfo generate_segment(sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info, int initial_clause_count, int block, int max_blocks = 1, int starting_index = 0, int iteration = 0, bool in_NP = false);
     bool get_encoding_bit(const std::bitset<64>& bits, std::size_t index);
-    
+    bool equals(std::vector<std::bitset<64>> a, std::vector<std::bitset<64>> b);
+    bool smaller(std::vector<std::bitset<64>> input, std::vector<std::bitset<64>> target);
+    std::vector<std::array<int,2>> presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target);
+
     enum class POS : uint16_t {
         DET       = 1 << 1,
         PREP      = 1 << 2,

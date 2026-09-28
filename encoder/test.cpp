@@ -1,21 +1,33 @@
-#include "encoder.h"
+#include "encoder.hpp"
 #include <iostream>
 #include <bitset>
+#include <string>
+#include <vector>
 #include <stringzilla/memory.h>
-#include <cmath>
-int main(){
+using namespace std;
+int main() {
     encoder code;
-    sz::string_view dog = "The quick brown fox jumped over the lazy dog";
-    sz::string_view input = "The quick brown fox jumped over the lazy dog Then the down howled";
-    sz::string_view input2 = "the of and which can be some every no";
-    sz::string_view input3 = "Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo Buffalo ";
-    sz::string_view input4 = "I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread. I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread.";
 
-    std::vector<std::bitset<64>> encoding = code.generate_encoding(input4);
-        std::cout << "printing byte representation..." << "\n";
-        for(auto byte : encoding){
-            std::cout << byte;
-        }
-        std::cout << "\n";
+    std::string terminal_input;
+
+    sz::string_view example = "The USSR";
+    std::vector<std::bitset<64>> target = 
+    code.generate_encoding(example);
+
+    std::cout << "Input a string to search by: ";
+    std::getline(std::cin, terminal_input);
+
+    sz::string_view input(terminal_input);
+
+    std::vector<std::bitset<64>> encoding =
+        code.generate_encoding(input);
+
+    for (const auto& byte : encoding) {
+        std::cout << byte << '\n';
+    }
+
+    std::cout << "equality check: " << code.equals(encoding, target) << "\n";
+    std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
+    code.presence(encoding,target);
     return 0;
 }
