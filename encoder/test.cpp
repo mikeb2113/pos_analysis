@@ -22,12 +22,21 @@ int main() {
     std::vector<std::bitset<64>> encoding =
         code.generate_encoding(input);
 
+    std::cout << "input: " << "\n";
     for (const auto& byte : encoding) {
+        std::cout << byte << '\n';
+    }
+    std::cout << "target: " << "\n";
+    for (const auto& byte : target) {
         std::cout << byte << '\n';
     }
 
     std::cout << "equality check: " << code.equals(encoding, target) << "\n";
-    std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
-    code.presence(encoding,target);
+    //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
+    std::vector<std::array<int,2>> presence = code.presence(encoding,target);
+    std::cout << "indexing: " << "\n";
+    for(int i = 0; i < presence.size(); i++){
+        std::cout << "index: [" << presence[i][0] << ", " << presence[i][1] << "]" << "\n";
+    }
     return 0;
 }

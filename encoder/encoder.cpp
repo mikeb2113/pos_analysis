@@ -242,23 +242,66 @@ because I really want to have spaghetti and garlic bread.
         //This gurantees that unless the input and target are of equal values, then a will always be smaller
         //We will compare the smaller to the larger between the input and target
         int a_size = a.size();
-        int last_index_instructions = pow(2,0)*a[a_size-1][63] + pow(2,1)*a[a_size-1][62] + pow(2,2)*a[a_size-1][61] + pow(2,3)*a[a_size-1][60];
+        std::size_t last_index_instructions = pow(2,3)*a[a_size-1][63] + pow(2,2)*a[a_size-1][62] + pow(2,1)*a[a_size-1][61] + pow(2,0)*a[a_size-1][60];
+        if(last_index_instructions==14)
+            last_index_instructions--;
         std::vector<std::array<int,2>> presence;
         //Presence will hold the start and end indices where the smaller is present in the larger between a and b
-        int likeness = 0;
-        //We will use likeness to track how long a continuous match is!
-        for(int i = 0; i < b.size(); i++){
-            for(int i2 = 63; i2 > 0; i2--){
-                if(a[i][i2] != b[i][i2]){
-                    likeness = likeness/4;
-                    break;
-                }
-                else{
-                    likeness++;
-                }
+        int similar_bits = 0;
+        int simimlar_nibbles = 0;
+        int start_index = 51;
+        int end_index = 0;
+        int min_to_match = last_index_instructions + (13*(a.size()-1));
+        bool should_move_start_bit = false;
+        std::cout << "min to match: " << min_to_match << "\n";
+        std::cout << "the smaller instruction set is: " << last_index_instructions << "\n";
+        for(int i = 0; i < a.size(); i++){
+            std::bitset<64> a_shift = a << 12;
+            for(int i2 = 0; i2 < 13; i2++){
             }
         }
-
+        //We will use likeness to track how long a continuous match is!
+        /*
+        for(int i = 0; i < b.size(); i++){
+            //for(int i2 = 51; i2 > 0; i2--){
+            for(int i2 = 13; i2 > 0; i2--){
+                bool one_in_nibble_a = (a[i][i2*4-1] == 1 || a[i][i2*4-2] == 1 || a[i][i2*4-3] == 1 || a[i][i2*4-4] == 1);
+                bool one_in_nibble_b = (b[i][i2*4-1] == 1 || b[i][i2*4-2] == 1 || b[i][i2*4-3] == 1 || b[i][i2*4-4] == 1);
+                if(!one_in_nibble_a && !one_in_nibble_b){
+                    return presence;
+                }
+                for(int i3 = 1; i3 <= 4; i3++){
+                    bool nibble_contains_a_one = false;
+                if(a[i][i2*4-i3] != b[i][i2*4-i3]){
+                    std::cout << a[i][i2*4-i3] << " Does not equal " << b[i][i2*4-i3] << "\n";
+                    similar_bits = 0;
+                    start_index = i2*4-i3;
+                    should_move_start_bit = true;
+                    //break;
+                } else{
+                    if(should_move_start_bit){
+                        start_index++;
+                        should_move_start_bit = false;
+                    }
+                    std::cout << a[i][i2*4-i3] << " Equals " << b[i][i2*4-i3] << "\n";
+                    similar_bits++;
+                }
+                if(similar_bits%4==0){
+                    simimlar_nibbles++;
+                    similar_bits = 0;
+                if(simimlar_nibbles >= min_to_match){
+                    std::cout << "match detected!" << "\n";
+                    end_index = i2*4-i3;
+                    std::cout << "start at: " << start_index << " end at: " << end_index << "\n";
+                    presence.push_back(std::array<int,2>{start_index,end_index});
+                    simimlar_nibbles = 0;
+                    similar_bits = 0;
+                }
+                }
+            }
+            }
+        }
+        */
         return presence;
     }
 
