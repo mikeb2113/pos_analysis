@@ -229,7 +229,16 @@ because I really want to have spaghetti and garlic bread.
         return true;
     }
 
+    long long encoder::bitset_to_int(std::bitset<64> input){
+        long long result = 0;
+        for(int i = 51; i > 0; i--){
+            result = result+pow(2,i)*input[i];
+        }
+        return result;
+    }
+
     std::vector<std::array<int,2>> encoder::presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target){
+        std::vector<std::array<int,2>> presence;
         std::vector<std::bitset<64>> a;
         std::vector<std::bitset<64>> b;
         if(smaller(input,target)){
@@ -239,8 +248,65 @@ because I really want to have spaghetti and garlic bread.
             a = target;
             b = input;
         }
+        int consecutive_match = 0;
+        int a_size = a.size();
+        //unsigned long long a1 = (bitset_to_int(a[0]) << 12);
+        //unsigned long long b1 = (bitset_to_int(b[0]) << 12);
+        std::size_t last_index_instructions = pow(2,3)*a[a_size-1][63] + pow(2,2)*a[a_size-1][62] + pow(2,1)*a[a_size-1][61] + pow(2,0)*a[a_size-1][60];
+        int min_to_match = last_index_instructions + (13*(a.size()-1));
+        std::cout << "min to match: " << min_to_match << "\n";
+        for(int i = 0; i < a.size(); i++){
+            std::bitset<64> a1 = a[i] << 12;
+            std::bitset<64> b1 = b[i] << 12;
+
+            for(int i = 0; i < 12; i++){
+                if((a1[63-i]==0&&a1[63-i-1]==0&&a1[63-i-2]==0&&a1[63-i-3]==0) || (b1[63-i]==0&&b1[63-i-1]==0&&b1[63-i-2]==0&&b1[63-i-3]==0)){
+                    break;
+                }
+                for(int clauses = 0; clauses < min_to_match; clauses++){
+                    if(a1[63-i+(4*clauses)]==b1[63-i+(4*clauses)]&&a1[63-i-1+(4*clauses)]==b1[63-i-1+(4*clauses)]&&a1[63-i-2+(4*clauses)]==b1[63-i-2+(4*clauses)]&&a1[63-i-3+(4*clauses)]==b1[63-i-3+(4*clauses)]){
+                        consecutive_match++;
+                        //std::cout << "match found! " << "\n";
+                        if(consecutive_match==min_to_match){
+                            std::cout << "byte array: " << i << "\n";
+                            presence.push_back(std::array<int,2>{i+12,i+3+12+(4*clauses)});
+                            consecutive_match = 0;
+                        }
+                    }
+                }
+                b1 <<= 4;
+            }
+        }
+        /*
+        std::cout << "a1 test: " << a1 << "\n";
+        int bits_remaining = 51;
+
+        //std::string b1 = std::bitset<64>(bitset_to_int(b[0]) << 12).to_string();
+        for(int aid = 0; aid < a.size(); aid++){
+            for(int byte_array = 0; byte_array < b.size(); byte_array++){
+                for(int i = 12; i <= 63; i=i+4){
+                    if(b[byte_array][63-i]==0 && b[byte_array][63-(i+1)]==0 && b[byte_array][63-(i+2)]==0 && b[byte_array][63-(i+3)]==0){
+                        break;
+                    }
+                    if(a[aid][63-i]==b[byte_array][63-i]&&a[aid][63-(i+1)]==b[byte_array][63-(i+1)]&&a[aid][63-(i+2)]==b[byte_array][63-(i+2)]&&a[aid][63-(i+3)]==b[byte_array][63-(i+3)]){
+                        consecutive_match++;
+                        if(consecutive_match == min_to_match){
+                            for(int print = 0; print < b[byte_array].size(); print++){
+                                std::cout << b[byte_array][63-print];
+                            }
+                            std::cout << "\n";
+                            presence.push_back(std::array<int,2>{i,i+3});
+                            consecutive_match = 0;
+                        }
+                    }
+                }
+            }
+        }
+        */
+        //int a1 = bitset_to_int(a[0]) << 12;
         //This gurantees that unless the input and target are of equal values, then a will always be smaller
         //We will compare the smaller to the larger between the input and target
+        /*
         int a_size = a.size();
         std::size_t last_index_instructions = pow(2,3)*a[a_size-1][63] + pow(2,2)*a[a_size-1][62] + pow(2,1)*a[a_size-1][61] + pow(2,0)*a[a_size-1][60];
         if(last_index_instructions==14)
@@ -255,11 +321,14 @@ because I really want to have spaghetti and garlic bread.
         bool should_move_start_bit = false;
         std::cout << "min to match: " << min_to_match << "\n";
         std::cout << "the smaller instruction set is: " << last_index_instructions << "\n";
+        
+        
         for(int i = 0; i < a.size(); i++){
             std::bitset<64> a_shift = a << 12;
             for(int i2 = 0; i2 < 13; i2++){
             }
         }
+        */
         //We will use likeness to track how long a continuous match is!
         /*
         for(int i = 0; i < b.size(); i++){

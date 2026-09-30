@@ -225,7 +225,7 @@ class encoder{
     bool equals(std::vector<std::bitset<64>> a, std::vector<std::bitset<64>> b);
     bool smaller(std::vector<std::bitset<64>> input, std::vector<std::bitset<64>> target);
     std::vector<std::array<int,2>> presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target);
-
+    long long bitset_to_int(std::bitset<64>);
     enum class POS : uint16_t {
         DET       = 1 << 1,
         PREP      = 1 << 2,
