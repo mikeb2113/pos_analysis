@@ -29,7 +29,7 @@ should have garlic bread too,
 because I really want to have spaghetti and garlic bread.
 
 //I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread. I think that we should have spaghetti, which is delicious, for supper, and we should have garlic bread too, because I really want to have spaghetti and garlic bread.
-
+//The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled The quick brown fox jumped over the lazy dog then the dog howled 
     */
     MISC{},
 
@@ -248,27 +248,29 @@ because I really want to have spaghetti and garlic bread.
             a = target;
             b = input;
         }
-        int consecutive_match = 0;
-        int starting_index = 0;
         int a_size = a.size();
         std::size_t last_index_instructions = pow(2,3)*a[a_size-1][63] + pow(2,2)*a[a_size-1][62] + pow(2,1)*a[a_size-1][61] + pow(2,0)*a[a_size-1][60];
         int min_to_match = last_index_instructions + (13*(a.size()-1));
         //There must be at least min_to_match common nibbles in a row between a1 and b1
-        for(int byte_array = 0; byte_array < a.size(); byte_array++){
-            std::bitset<64> a1 = a[byte_array] << 12; //bitshift a given byte array left 12 
-            std::bitset<64> b1 = b[byte_array] << 12; //These 1 values will begin with the instructions and 0 out the rest
-            for(int i = 0; i < 12; i++){
-                if((a1[63]==0&&a1[63-1]==0&&a1[63-2]==0&&a1[63-3]==0) || (b1[63]==0&&b1[63-1]==0&&b1[63-2]==0&&b1[63-3]==0)){
-                    break; 
-                }
+        for(int a_byte_array = 0; a_byte_array < a.size(); a_byte_array++){
+            std::bitset<64> a1 = a[a_byte_array] << 12; //bitshift a given byte array left 12 
+            for(int byte_array = 0; byte_array < b.size(); byte_array++){
+                int consecutive_match = 0;
+                int starting_index = 0;
+                std::bitset<64> b1 = b[byte_array] << 12; //These 1 values will begin with the instructions and 0 out the rest
+                        std::cout << "a1: " << "\n";
+                for(int i = 0; i < 12; i++){
+                    if((a1[63]==0&&a1[63-1]==0&&a1[63-2]==0&&a1[63-3]==0) || (b1[63]==0&&b1[63-1]==0&&b1[63-2]==0&&b1[63-3]==0)){
+                        break; 
+                    }
                 //If we reach zeroed out sections - terminate the byte array early. This will make for 
                 //less redundant computations after each shift
                 for(int clauses = 0; clauses < min_to_match; clauses++){
-                    //count a "clauses" amount of nibbles in a row
                     if(a1[63-(4*clauses)]==b1[63-(4*clauses)]&&a1[63-1-(4*clauses)]==b1[63-1-(4*clauses)]&&a1[63-2-(4*clauses)]==b1[63-2-(4*clauses)]&&a1[63-3-(4*clauses)]==b1[63-3-(4*clauses)]){
                         consecutive_match++;
                         //increment consecutive match on a matching nibble
                         if(consecutive_match==min_to_match){
+                            std::cout << "[" << 12+starting_index << ", " << 11+starting_index+(4*min_to_match) << "] index: " << byte_array << "\n";
                             presence.push_back(std::array<int,2>{12+starting_index,11+starting_index+(4*min_to_match)});
                             consecutive_match = 0;
                             //If we have at least min_to_match matching nibbles in a row, append the start and end
@@ -280,10 +282,11 @@ because I really want to have spaghetti and garlic bread.
                         //Set to 0 incase there was at least one match, but less than the needed amount
                     }
                 }
-                b1 <<= 4;
-                //bitshift only the larger
-                starting_index += 4;
-                //Move the starting index with the shift
+                    b1 <<= 4;
+                    //bitshift only the larger
+                    starting_index += 4;
+                    //Move the starting index with the shift
+                }
             }
         }
         return presence;
