@@ -213,19 +213,22 @@ class encoder{
     std::byte find_lib(sz::string_view word);
     int get_clause_count(sz::string_view& word);
     std::size_t get_storage_blocks(int clause_count, int interation = 0, int blocks = 1);
-    std::vector<std::bitset<64>> generate_encoding(sz::string_view& input);
+    std::vector<std::bitset<64>> generate_POS_encoding(sz::string_view& input, bool POS_or_concrete);
+    std::array<std::vector<std::bitset<64>>,2> generate_encoding(sz::string_view& input);
     struct SentenceInfo{
             std::array<std::bitset<4>,16> encoding;
             size_t starting_index;
             size_t ending_index;
         };
         
-    SentenceInfo generate_segment(sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info, int initial_clause_count, int block, int max_blocks = 1, int starting_index = 0, int iteration = 0, bool in_NP = false);
+    SentenceInfo generate_segment(bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info, int initial_clause_count, int block, int max_blocks = 1, int starting_index = 0, int iteration = 0, bool in_NP = false);
     bool get_encoding_bit(const std::bitset<64>& bits, std::size_t index);
     bool equals(std::vector<std::bitset<64>> a, std::vector<std::bitset<64>> b);
     bool smaller(std::vector<std::bitset<64>> input, std::vector<std::bitset<64>> target);
     std::vector<std::array<int,2>> presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target);
     long long bitset_to_int(std::bitset<64>);
+    int write_to_binary(std::vector<std::bitset<64>> encoding);
+    int read_from_binary(std::string file_name);
     enum class POS : uint16_t {
         DET       = 1 << 1,
         PREP      = 1 << 2,

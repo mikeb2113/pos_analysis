@@ -3,6 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <cmath>
+#include <fstream> // Required for file streams
+#include <fcntl.h>      // open
+#include <sys/mman.h>   // mmap, munmap
+#include <sys/stat.h>   // fstat
+#include <unistd.h>     // close
+#include <bitset>
+#include <vector>
+#include <cstdint>
+#include <cstring>
 encoder::encoder
 (
 
@@ -237,6 +246,99 @@ because I really want to have spaghetti and garlic bread.
         return result;
     }
 
+    int encoder::write_to_binary(std::vector<std::bitset<64>> encoding)
+    {
+        // 1. Open the file in binary mode
+        std::ofstream outFile("data.bin", std::ios::out | std::ios::binary);
+        
+        // Always verify the file opened successfully
+        if (!outFile) {
+            std::cerr << "Error opening file for writing!" << std::endl;
+            return 1;
+        }
+
+        for(int i = 0; i < encoding.size(); i++){
+            outFile.write(reinterpret_cast<char *>(&encoding[i]),sizeof(encoding[i]));
+            std::cout << encoding[i];
+        }
+        return 0;
+    }
+
+    int encoder::read_from_binary(std::string file_name)
+    {
+    const char* filepath = file_name.c_str();
+
+    // 1. Open the file descriptor
+    int fd = open(filepath, O_RDONLY);
+    if (fd == -1) {
+        std::perror("Error opening file");
+        return 1;
+    }
+
+    // 2. Get the size of the file
+    struct stat sb;
+    if (fstat(fd, &sb) == -1) {
+        std::perror("Error getting file size");
+        close(fd);
+        return 1;
+    }
+    size_t fileSize = sb.st_size;
+
+    if (fileSize == 0) {
+        std::cout << "File is empty." << std::endl;
+        close(fd);
+        return 0;
+    }
+
+    // 3. Map the file into memory
+    // In C++, we must explicitly cast the void* returned by mmap
+    char* fileData = static_cast<char*>(mmap(
+        nullptr,                // Kernel chooses the address
+        fileSize,               // Length of the mapping
+        PROT_READ,              // Memory protection: read-only
+        MAP_PRIVATE,            // Pages are private to this process
+        fd,                     // File descriptor
+        0                       // Offset into the file
+    ));
+
+    if (fileData == MAP_FAILED) {
+        std::perror("Error with mmap");
+        close(fd);
+        return 1;
+    }
+
+    // 4. The file descriptor can be closed immediately after a successful mmap
+    close(fd);
+
+    // 5. Read from the memory-mapped file just like an ordinary array
+    // Ensure file contains complete 64-bit records
+    if (fileSize % sizeof(uint64_t) != 0) {
+        std::cerr << "Invalid file size!" << std::endl;
+        munmap(fileData, fileSize);
+        return 1;
+    }
+
+    size_t recordCount = fileSize / sizeof(uint64_t);
+
+    std::vector<std::bitset<64>> records;
+    records.reserve(recordCount);
+
+    for (size_t i = 0; i < recordCount; ++i) {
+        uint64_t value;
+
+        // Copy 8 bytes from mapped memory
+        std::memcpy(
+            &value,
+            fileData + i * sizeof(uint64_t),
+            sizeof(uint64_t)
+        );
+
+        records.emplace_back(value);
+    }
+
+    return 0;
+    }
+
     std::vector<std::array<int,2>> encoder::presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target){
         std::vector<std::array<int,2>> presence;
         std::vector<std::bitset<64>> a;
@@ -258,7 +360,6 @@ because I really want to have spaghetti and garlic bread.
                 int consecutive_match = 0;
                 int starting_index = 0;
                 std::bitset<64> b1 = b[byte_array] << 12; //These 1 values will begin with the instructions and 0 out the rest
-                        std::cout << "a1: " << "\n";
                 for(int i = 0; i < 12; i++){
                     if((a1[63]==0&&a1[63-1]==0&&a1[63-2]==0&&a1[63-3]==0) || (b1[63]==0&&b1[63-1]==0&&b1[63-2]==0&&b1[63-3]==0)){
                         break; 
@@ -293,7 +394,17 @@ because I really want to have spaghetti and garlic bread.
         //Return a vector with each matching candidate between the two inputs
     }
 
-    std::vector<std::bitset<64>> encoder::generate_encoding(sz::string_view& input){
+    std::array<std::vector<std::bitset<64>>,2> encoder::generate_encoding(sz::string_view& input){
+        std::vector<std::bitset<64>> pos = generate_POS_encoding(input,true);
+        std::vector<std::bitset<64>> concrete = generate_POS_encoding(input,false);
+        std::array<std::vector<std::bitset<64>>,2> encoding{pos,concrete};
+        return encoding;
+    }
+
+    std::vector<std::bitset<64>> encoder::generate_POS_encoding(sz::string_view& input, bool POS_or_concrete){
+        //if POS_or_concrete is true, then the encoding will be for the part of speech of the input
+        //if false, then the encoding will denote the indexes of the words from their parts of speech
+
         //This function returns the full encoding in a vector. Each entry in the vector is a 64-bit binary string.
         //Each string begins with an instruction count, followed by 2 more bytes for the reserved slots.
         //the rest of the bytes are for instructions.
@@ -325,7 +436,7 @@ because I really want to have spaghetti and garlic bread.
             SentenceInfo info;
             //Save info to store important information
 
-            info = generate_segment(input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
+            info = generate_segment(POS_or_concrete,input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
             starting_index = info.ending_index+1;
             segment = info.encoding;
             std::bitset<64> entry(0);
@@ -344,7 +455,7 @@ because I really want to have spaghetti and garlic bread.
         return array;
     }
 
-    encoder::SentenceInfo encoder::generate_segment(sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info,int initial_clause_count, int block, int max_blocks, int starting_index, int iteration, bool in_NP)
+    encoder::SentenceInfo encoder::generate_segment(bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info,int initial_clause_count, int block, int max_blocks, int starting_index, int iteration, bool in_NP)
     { 
         iteration = block;
         //Consider changing this to return an array.
@@ -376,8 +487,15 @@ because I really want to have spaghetti and garlic bread.
                     words++;
                     ending_index++;
                     uint16_t bitshift = find_word(word);
+                    std::byte bytes;
+                    if(POS_or_concrete == true){
+                        bytes = std::byte(std::log2((int(bitshift))));
+                    } else{
+                        bytes = search_word_in_known_lib(int(bitshift),word);
+                        //std::cout << "next byte: " << static_cast<int>(bytes) << "\n";
+                    }
 
-                    std::byte bytes = std::byte(std::log2((int(bitshift))));
+                    //std::byte bytes = std::byte(std::log2((int(bitshift))));
                     if(in_lib(word))
                     {
                         in_NP = false;
@@ -468,45 +586,46 @@ because I really want to have spaghetti and garlic bread.
         //If we know what library a word belongs in, find the words index in that library.
         //This has no current use, but may be used in the future for decoding back to the original input
         std::string builder;
+        std::cout << "bit shift: " << bitshift << "\n";
         for(char c : word){
             if(c >= 'A' && c <= 'Z'){
                 c += 'a' - 'A';
             }
             builder += c;
         }
-        if(bitshift & 1 << 0){
+        if(bitshift & 1 << 1){
             std::byte word_byte = DET[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 1){
+        else if(bitshift & 1 << 2){
             std::byte word_byte = PREP[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 2){
+        else if(bitshift & 1 << 3){
             std::byte word_byte = CONJ[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 3){
+        else if(bitshift & 1 << 4){
             std::byte word_byte = COMP[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 4){
+        else if(bitshift & 1 << 5){
             std::byte word_byte = MOD[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 5){
+        else if(bitshift & 1 << 6){
             std::byte word_byte = AUX[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 6){
+        else if(bitshift & 1 << 7){
             std::byte word_byte = EXT_DET[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 7){
+        else if(bitshift & 1 << 8){
             std::byte word_byte = UNI_DET[builder];
             return word_byte;
         }
-        else if(bitshift & 1 << 8){
+        else if(bitshift & 1 << 9){
             std::byte word_byte = NEG_QUANT[builder];
             return word_byte;
         }

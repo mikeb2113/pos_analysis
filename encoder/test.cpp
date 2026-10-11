@@ -11,7 +11,8 @@ int main() {
     std::string terminal_input;
 
     sz::string_view example = "The USSR";
-    std::vector<std::bitset<64>> target = 
+
+    std::array<std::vector<std::bitset<64>>,2> target = 
     code.generate_encoding(example);
 
     std::cout << "Input a string to search by: ";
@@ -19,23 +20,53 @@ int main() {
 
     sz::string_view input(terminal_input);
 
-    std::vector<std::bitset<64>> encoding =
+    std::array<std::vector<std::bitset<64>>,2> encoding =
         code.generate_encoding(input);
-
+    
     std::cout << "input: " << "\n";
-    for (const auto& byte : encoding) {
-        std::cout << byte << '\n';
-    }
-    std::cout << "target: " << "\n";
-    for (const auto& byte : target) {
-        std::cout << byte << '\n';
+    for(int i = 0; i < encoding.size(); i++){
+        if(i == 0){
+            std::cout << "part of speech encoding: " << "\n";
+        } else{
+            std::cout << "concrete encoding: " << "\n";
+        }
+        for (const auto& byte : encoding[i]) {
+            std::cout << byte << '\n';
+        }
+        std::cout << "\n";
     }
 
-    std::cout << "equality check: " << code.equals(encoding, target) << "\n";
+
+    std::cout << "target: " << "\n";
+    for(int i = 0; i < target.size(); i++){
+        if(i == 0){
+            std::cout << "part of speech encoding: " << "\n";
+        } else{
+            std::cout << "concrete encoding: " << "\n";
+        }
+        for (const auto& byte : target[i]) {
+            std::cout << byte << '\n';
+        }
+        std::cout << "\n";
+    }
+
+    std::cout << "equality check: " << code.equals(encoding[0], target[0]) << "\n";
     //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
-    std::vector<std::array<int,2>> presence = code.presence(encoding,target);
+    std::vector<std::array<int,2>> presence = code.presence(encoding[0],target[0]);
+    for(int i = 0; i < encoding.size(); i++){
+        if(code.write_to_binary(encoding[i])==1){
+            std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
+        } else{
+            std::cout << "file saved!" << "\n";
+        }
+    }
+
+    std::string source = "data1.bin";
+    code.read_from_binary(source);
+
+
+    //std::cout << "indexing: " << "\n";
     /*
-    std::cout << "indexing: " << "\n";
     for(int i = 0; i < presence.size(); i++){
         std::cout << "index: [" << presence[i][0] << ", " << presence[i][1] << "]" << "\n";
     }
