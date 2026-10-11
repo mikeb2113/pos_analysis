@@ -246,7 +246,7 @@ because I really want to have spaghetti and garlic bread.
         return result;
     }
 
-    int encoder::write_to_binary(std::vector<std::bitset<64>> encoding)
+    int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding)
     {
         // 1. Open the file in binary mode
         std::ofstream outFile("data.bin", std::ios::out | std::ios::binary);
@@ -258,13 +258,15 @@ because I really want to have spaghetti and garlic bread.
         }
 
         for(int i = 0; i < encoding.size(); i++){
-            outFile.write(reinterpret_cast<char *>(&encoding[i]),sizeof(encoding[i]));
-            std::cout << encoding[i];
+            for(auto bit : encoding[i]){
+                outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
+                std::cout << bit;
+            }
         }
         return 0;
     }
 
-    int encoder::read_from_binary(std::string file_name)
+    int encoder::read_from_binary(std::string file_name, int target)
     {
     const char* filepath = file_name.c_str();
 
@@ -318,8 +320,33 @@ because I really want to have spaghetti and garlic bread.
         return 1;
     }
 
-    size_t recordCount = fileSize / sizeof(uint64_t);
+    /*
+    |==============|
+    |id |    target|     
+    | 0 |    ALL   |
+    | 1 |    POS   |
+    | 2 |    WORD  |
+    |==============|
+    */
 
+    size_t recordCount;
+
+    switch (target){
+        case(1):
+            recordCount = (fileSize / sizeof(uint64_t)/2);
+            std::cout << "detected: POS" << "\n";
+            break;
+        case(2):
+            recordCount = (fileSize / sizeof(uint64_t)/2);
+            std::cout << "detected: WORD" << "\n";
+            break;
+        case(0):
+            recordCount = fileSize / sizeof(uint64_t);
+            std::cout << "detected: ALL" << "\n";
+            break;
+    }
+
+    std::cout << "record counts to touch: " << recordCount << "\n";
     std::vector<std::bitset<64>> records;
     records.reserve(recordCount);
 
@@ -334,6 +361,7 @@ because I really want to have spaghetti and garlic bread.
         );
 
         records.emplace_back(value);
+        std::cout << value << "\n";
     }
 
     return 0;
@@ -586,7 +614,6 @@ because I really want to have spaghetti and garlic bread.
         //If we know what library a word belongs in, find the words index in that library.
         //This has no current use, but may be used in the future for decoding back to the original input
         std::string builder;
-        std::cout << "bit shift: " << bitshift << "\n";
         for(char c : word){
             if(c >= 'A' && c <= 'Z'){
                 c += 'a' - 'A';

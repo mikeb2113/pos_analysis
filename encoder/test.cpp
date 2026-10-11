@@ -53,16 +53,19 @@ int main() {
     std::cout << "equality check: " << code.equals(encoding[0], target[0]) << "\n";
     //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
     std::vector<std::array<int,2>> presence = code.presence(encoding[0],target[0]);
-    for(int i = 0; i < encoding.size(); i++){
-        if(code.write_to_binary(encoding[i])==1){
-            std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
-        } else{
-            std::cout << "file saved!" << "\n";
-        }
+
+    if(code.write_to_binary(encoding)==1){
+        std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
+    } else{
+        std::cout << "file saved!" << "\n";
     }
 
-    std::string source = "data1.bin";
-    code.read_from_binary(source);
+    std::string source = "data.bin";
+    if(code.read_from_binary(source,2) == 1){
+        std::cout << "error: could not read file from memory! " << "\n";
+    } else{
+        std::cout << "file successfully read from memory!" << "\n";
+    }
 
 
     //std::cout << "indexing: " << "\n";
