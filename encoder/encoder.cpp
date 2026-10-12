@@ -499,6 +499,10 @@ because I really want to have spaghetti and garlic bread.
         int instructions_remaining;
         int ending_index = starting_index;
         int NPs = 0;
+        int NP_id = 1;
+        int NP_start = 0;
+        int NP_end = 0;
+        int page = 0;
         std::vector<int> NP_idxs;
         if(block!=max_blocks){
             instructions_remaining = 13;
@@ -534,6 +538,10 @@ because I really want to have spaghetti and garlic bread.
                     //std::byte bytes = std::byte(std::log2((int(bitshift))));
                     if(in_lib(word))
                     {
+                        if(!POS_or_concrete && in_NP){
+                            NP_end = i-1;
+                            std::cout << "end: " << NP_end << "\n";
+                        }
                         in_NP = false;
                         sentence_byte_array[idx] = std::bitset<4>(int(bytes));
                         idx++;
@@ -547,6 +555,14 @@ because I really want to have spaghetti and garlic bread.
                             if(!POS_or_concrete){
                                 NPs++;
                                 NP_idxs.push_back(idx);
+                                NP_start = i;
+                                
+
+                                std::cout << "testing NP values for word: " << view[i] << "\n";
+                                std::cout << "index: " << NP_id << "\n";
+                                std::cout << "start: " << NP_start << "\n";
+                                std::cout << "page: " << page << "\n";
+                                NP_id++;
                             }
                             in_NP = true;
                             idx++;
@@ -558,6 +574,10 @@ because I really want to have spaghetti and garlic bread.
                 }
                 }
             if(!POS_or_concrete){
+                if(in_NP){
+                    NP_end = view.size()-1;
+                    std::cout << "end: " << NP_end << "\n";
+                }
                 for(auto index : NP_idxs){
                     sentence_byte_array[index] = std::bitset<4>(NPs);
                     //If operating on the concrete representation: save the NP value as
