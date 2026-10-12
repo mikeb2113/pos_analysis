@@ -246,10 +246,10 @@ because I really want to have spaghetti and garlic bread.
         return result;
     }
 
-    int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding)
+    int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding,std::string file)
     {
         // 1. Open the file in binary mode
-        std::ofstream outFile("data.bin", std::ios::out | std::ios::binary);
+        std::ofstream outFile(file, std::ios::out | std::ios::binary);
         
         // Always verify the file opened successfully
         if (!outFile) {
@@ -426,6 +426,12 @@ because I really want to have spaghetti and garlic bread.
         std::vector<std::bitset<64>> pos = generate_POS_encoding(input,true);
         std::vector<std::bitset<64>> concrete = generate_POS_encoding(input,false);
         std::array<std::vector<std::bitset<64>>,2> encoding{pos,concrete};
+
+        if(write_to_binary(encoding,"input")==1){
+            std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
+        } else{
+            std::cout << "file saved!" << "\n";
+        }
         return encoding;
     }
 
@@ -492,6 +498,8 @@ because I really want to have spaghetti and garlic bread.
         //Otherwise, the MAX instruction count is 12, because the terminator instruction takes one byte.
         int instructions_remaining;
         int ending_index = starting_index;
+        int NPs = 0;
+        std::vector<int> NP_idxs;
         if(block!=max_blocks){
             instructions_remaining = 13;
         }
@@ -536,6 +544,10 @@ because I really want to have spaghetti and garlic bread.
                         if(!in_NP)
                         {
                             sentence_byte_array[idx] = std::bitset<4>(10); //This word is a part of a Noun Phrase - mark it as such!
+                            if(!POS_or_concrete){
+                                NPs++;
+                                NP_idxs.push_back(idx);
+                            }
                             in_NP = true;
                             idx++;
                         }
@@ -545,6 +557,16 @@ because I really want to have spaghetti and garlic bread.
                     break;
                 }
                 }
+            if(!POS_or_concrete){
+                for(auto index : NP_idxs){
+                    sentence_byte_array[index] = std::bitset<4>(NPs);
+                    //If operating on the concrete representation: save the NP value as
+                    //The total # of NPs in this encoding. This can allow us to skip repeated 
+                    //comparisons down stream
+                }
+                NPs = 0;
+                NP_idxs.clear();
+            }
         }
         size_t sentence_size = sentence_byte_array.size();
         ending_index--;

@@ -54,14 +54,8 @@ int main() {
     //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
     std::vector<std::array<int,2>> presence = code.presence(encoding[0],target[0]);
 
-    if(code.write_to_binary(encoding)==1){
-        std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
-    } else{
-        std::cout << "file saved!" << "\n";
-    }
-
     std::string source = "data.bin";
-    if(code.read_from_binary(source,2) == 1){
+    if(code.read_from_binary(source,0) == 1){
         std::cout << "error: could not read file from memory! " << "\n";
     } else{
         std::cout << "file successfully read from memory!" << "\n";
