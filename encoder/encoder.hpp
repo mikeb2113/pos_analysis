@@ -214,7 +214,7 @@ class encoder{
     int get_clause_count(sz::string_view& word);
     std::size_t get_storage_blocks(int clause_count, int interation = 0, int blocks = 1);
     std::vector<std::bitset<64>> generate_POS_encoding(sz::string_view& input, bool POS_or_concrete);
-    std::array<std::vector<std::bitset<64>>,2> generate_encoding(sz::string_view& input);
+    std::array<std::vector<std::bitset<64>>,2> generate_encoding(sz::string_view& input, std::string name);
     struct SentenceInfo{
             std::array<std::bitset<4>,16> encoding;
             size_t starting_index;
@@ -229,6 +229,8 @@ class encoder{
     long long bitset_to_int(std::bitset<64>);
     int write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding, std::string file);
     int read_from_binary(std::string file_name, int target = 0);
+    std::bitset<64> generate_header(std::string input);
+
     enum class POS : uint16_t {
         DET       = 1 << 1,
         PREP      = 1 << 2,

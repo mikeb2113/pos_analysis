@@ -17,15 +17,15 @@ encoder::encoder
 
 )
     :
-    DET{{"a", std::byte{0}}, {"an", std::byte{1}}, {"that", std::byte{2}}, {"the", std::byte{3}}, {"these", std::byte{4}}, {"this", std::byte{5}}, {"those", std::byte{6}}},
-    PREP{{"at", std::byte{0}}, {"by", std::byte{1}}, {"for", std::byte{2}}, {"from", std::byte{3}}, {"in", std::byte{4}}, {"into", std::byte{5}}, {"of", std::byte{6}}, {"on", std::byte{7}}, {"onto", std::byte{8}}, {"over", std::byte{9}}, {"to", std::byte{10}}, {"under", std::byte{11}}, {"with", std::byte{12}}},
-    CONJ{{"and", std::byte{0}}, {"but", std::byte{1}}, {"or", std::byte{2}}},
-    COMP{{"that", std::byte{0}}, {"which", std::byte{1}}, {"who", std::byte{2}}, {"whom", std::byte{3}}},
-    MOD{{"can", std::byte{0}}, {"could", std::byte{1}}, {"may", std::byte{2}}, {"might", std::byte{3}}, {"must", std::byte{4}}, {"shall", std::byte{5}}, {"should", std::byte{6}}, {"will", std::byte{7}}, {"would", std::byte{8}}},
-    AUX{{"am", std::byte{0}}, {"are", std::byte{1}}, {"be", std::byte{2}}, {"been", std::byte{3}}, {"being", std::byte{4}}, {"did", std::byte{5}}, {"do", std::byte{6}}, {"does", std::byte{7}}, {"had", std::byte{8}}, {"has", std::byte{9}}, {"have", std::byte{10}}, {"is", std::byte{11}}, {"was", std::byte{12}}, {"were", std::byte{13}}},
-    EXT_DET{{"a", std::byte{0}}, {"an", std::byte{1}}, {"certain", std::byte{2}}, {"one", std::byte{3}}, {"some", std::byte{4}}, {"somebody", std::byte{5}}, {"someone", std::byte{6}}, {"something", std::byte{7}}, {"somewhere", std::byte{8}}},
-    UNI_DET{{"all", std::byte{0}}, {"any", std::byte{1}}, {"each", std::byte{2}}, {"every", std::byte{3}}, {"whatever", std::byte{4}}, {"whichever", std::byte{5}}, {"whoever", std::byte{6}}},
-    NEG_QUANT{{"never", std::byte{0}}, {"no", std::byte{1}}, {"nobody", std::byte{2}}, {"none", std::byte{3}}, {"noone", std::byte{4}}, {"nothing", std::byte{5}}, {"nowhere", std::byte{6}}, {"no-one", std::byte{7}}},
+    DET{{"a", std::byte{1}}, {"an", std::byte{2}}, {"that", std::byte{3}}, {"the", std::byte{4}}, {"these", std::byte{5}}, {"this", std::byte{6}}, {"those", std::byte{7}}},
+    PREP{{"at", std::byte{1}}, {"by", std::byte{2}}, {"for", std::byte{3}}, {"from", std::byte{4}}, {"in", std::byte{5}}, {"into", std::byte{6}}, {"of", std::byte{7}}, {"on", std::byte{8}}, {"onto", std::byte{9}}, {"over", std::byte{10}}, {"to", std::byte{11}}, {"under", std::byte{12}}, {"with", std::byte{13}}},
+    CONJ{{"and", std::byte{1}}, {"but", std::byte{2}}, {"or", std::byte{3}}},
+    COMP{{"that", std::byte{1}}, {"which", std::byte{2}}, {"who", std::byte{3}}, {"whom", std::byte{4}}},
+    MOD{{"can", std::byte{1}}, {"could", std::byte{2}}, {"may", std::byte{3}}, {"might", std::byte{4}}, {"must", std::byte{5}}, {"shall", std::byte{6}}, {"should", std::byte{7}}, {"will", std::byte{8}}, {"would", std::byte{9}}},
+    AUX{{"am", std::byte{1}}, {"are", std::byte{2}}, {"be", std::byte{3}}, {"been", std::byte{4}}, {"being", std::byte{5}}, {"did", std::byte{6}}, {"do", std::byte{7}}, {"does", std::byte{8}}, {"had", std::byte{9}}, {"has", std::byte{10}}, {"have", std::byte{11}}, {"is", std::byte{12}}, {"was", std::byte{13}}, {"were", std::byte{14}}},
+    EXT_DET{{"a", std::byte{1}}, {"an", std::byte{2}}, {"certain", std::byte{3}}, {"one", std::byte{4}}, {"some", std::byte{5}}, {"somebody", std::byte{6}}, {"someone", std::byte{7}}, {"something", std::byte{8}}, {"somewhere", std::byte{9}}},
+    UNI_DET{{"all", std::byte{1}}, {"any", std::byte{2}}, {"each", std::byte{3}}, {"every", std::byte{4}}, {"whatever", std::byte{5}}, {"whichever", std::byte{6}}, {"whoever", std::byte{7}}},
+    NEG_QUANT{{"never", std::byte{1}}, {"no", std::byte{2}}, {"nobody", std::byte{3}}, {"none", std::byte{4}}, {"noone", std::byte{5}}, {"nothing", std::byte{6}}, {"nowhere", std::byte{7}}, {"no-one", std::byte{8}}},
 //I think that we should have spaghetti, which is delicious, for supper, and we 
 //should have garlic bread too, because I really want to have spaghetti and garlic bread.
 
@@ -248,10 +248,77 @@ because I really want to have spaghetti and garlic bread.
 
     int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding,std::string file)
     {
-        // 1. Open the file in binary mode
-        std::ofstream outFile(file, std::ios::out | std::ios::binary);
+
+        /*
+        for(int input = 0; input < encoding.size(); input++){
+            //std::cout << "size: " << encoding[input].size() << "\n";
+            //std::cout << "writing to binary: " << "\n";
+            for(int i = 0; i < encoding[input].size(); i++){
+                //std::cout << encoding[input][i] << "\n";
+                outFile.write(reinterpret_cast<char *>(&encoding[input][i]),sizeof(encoding[input][i]));
+            }
+        }
+        */
+
+        //for(int input = 0; input <= encoding.size(); input++){
+
+            //builder = 
+            //{
+            //    std::bitset<4>(0)
+            //};
+            //std::cout << "access test: " << "\n";
+            /*
+        for(int input = 0; input < encoding.size(); input++){
+            //std::cout << "size: " << encoding[input].size() << "\n";
+            std::cout << "writing to binary: " << "\n";
+            for(int i = 0; i < encoding[input].size(); i++){
+                std::cout << encoding[input][i] << "\n";
+            }
+        }*/
+/*
+            for(int i = 0; i < 64; i++){
+                for(int i2 = 0; i2 < 4; i2 = i2+4){
+                    //std::cout << encoding[input][63-(i+i2)];
+                    std::cout << encoding[input][63-(i+i2)];
+                }
+            }
+            std::cout << "\n";
+/*
+            for(int i = 0; i < 64; i++){
+                std::cout << encoding[input][i];
+            }
+            std::cout << "\n";
+*/
+            //std::bitset<8> builder = {encoding[i][0+i]}
+            //for(auto bit : encoding[i]){
+                //outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
+                //std::cout << bit;
+            //}
+        //}
         
         // Always verify the file opened successfully
+
+        // 1. Open the file in binary mode
+        std::ofstream outFile(file, std::ios::out | std::ios::binary);
+        //std::vector<std::bitset<8>> outfile_builder;
+        std::vector<std::array<std::bitset<4>,16>> outfile_builder;
+        std::bitset<64> builder = generate_header(file);
+        std::array<std::bitset<64>,1> intermediate = {builder};
+        //std::cout << "contents: " << "\n";
+        std::cout << "printing builder..." << "\n";
+
+        std::cout << "builder size: " << builder.size() << "\n";
+        /*
+        for(int i = 0; i < builder.size(); i++){
+            char val = builder[i];
+                outFile.write(reinterpret_cast<char *>(&val),sizeof(val));
+                //std::cout << builder[63-i];
+            }
+        std::cout << "\n";
+        */
+       for(auto bit : intermediate){
+        outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
+       }
         if (!outFile) {
             std::cerr << "Error opening file for writing!" << std::endl;
             return 1;
@@ -260,14 +327,24 @@ because I really want to have spaghetti and garlic bread.
         for(int i = 0; i < encoding.size(); i++){
             for(auto bit : encoding[i]){
                 outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-                std::cout << bit;
+                //std::cout << bit;
             }
         }
+
+        //std::array<std::bitset<4>,1> header = generate_header(file);
+        //int header_size = header.size();
+        //std::cout << "header size in bits: " << header_size << "\n";
+        //for(int i = 0; i < header_size; i++){
+        //    outFile.write(reinterpret_cast<char *>(&header[i]),sizeof(header[i]));
+            //std::cout << "header value: " << header[i] << "\n";
+        //}
+
         return 0;
     }
 
     int encoder::read_from_binary(std::string file_name, int target)
     {
+    int header_size = 4;
     const char* filepath = file_name.c_str();
 
     // 1. Open the file descriptor
@@ -283,9 +360,9 @@ because I really want to have spaghetti and garlic bread.
         std::perror("Error getting file size");
         close(fd);
         return 1;
-    }
+    } 
     size_t fileSize = sb.st_size;
-
+    std::cout << "file size: " << fileSize << "\n";
     if (fileSize == 0) {
         std::cout << "File is empty." << std::endl;
         close(fd);
@@ -359,7 +436,6 @@ because I really want to have spaghetti and garlic bread.
             fileData + i * sizeof(uint64_t),
             sizeof(uint64_t)
         );
-
         records.emplace_back(value);
         std::cout << value << "\n";
     }
@@ -371,6 +447,10 @@ because I really want to have spaghetti and garlic bread.
         std::vector<std::array<int,2>> presence;
         std::vector<std::bitset<64>> a;
         std::vector<std::bitset<64>> b;
+        std::string file = "test";
+        std::bitset<64> header = generate_header(file);
+        int header_size = header.size();
+        int shift = 12+(header_size*4);
         if(smaller(input,target)){ //First, gurantee a smaller variable: a
             a = input;
             b = target;
@@ -422,17 +502,31 @@ because I really want to have spaghetti and garlic bread.
         //Return a vector with each matching candidate between the two inputs
     }
 
-    std::array<std::vector<std::bitset<64>>,2> encoder::generate_encoding(sz::string_view& input){
+    std::array<std::vector<std::bitset<64>>,2> encoder::generate_encoding(sz::string_view& input, std::string name){
         std::vector<std::bitset<64>> pos = generate_POS_encoding(input,true);
         std::vector<std::bitset<64>> concrete = generate_POS_encoding(input,false);
         std::array<std::vector<std::bitset<64>>,2> encoding{pos,concrete};
 
-        if(write_to_binary(encoding,"input")==1){
+        if(write_to_binary(encoding,name)==1){
             std::cout << "error: could not write to binary file! Data not persisted!" << "\n";
         } else{
             std::cout << "file saved!" << "\n";
         }
         return encoding;
+    }
+
+    std::bitset<64> encoder::generate_header(std::string input){
+        sz::string_view file_type = ".txt";
+        std::bitset<4> file_byte_array;
+        std::bitset<64> header_array;
+        if(file_type != ".pdf"){
+            header_array = std::bitset<64>(1);
+            //If not a visual text format, set file type to 0
+        } else{
+            header_array = std::bitset<64>(0);
+            //If a visual text format, set file type to 1
+        }
+        return header_array;
     }
 
     std::vector<std::bitset<64>> encoder::generate_POS_encoding(sz::string_view& input, bool POS_or_concrete){

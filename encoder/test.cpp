@@ -13,7 +13,7 @@ int main() {
     sz::string_view example = "The USSR";
 
     std::array<std::vector<std::bitset<64>>,2> target = 
-    code.generate_encoding(example);
+    code.generate_encoding(example,"target");
 
     std::cout << "Input a string to search by: ";
     std::getline(std::cin, terminal_input);
@@ -21,7 +21,7 @@ int main() {
     sz::string_view input(terminal_input);
 
     std::array<std::vector<std::bitset<64>>,2> encoding =
-        code.generate_encoding(input);
+        code.generate_encoding(input,"terminal");
     
     std::cout << "input: " << "\n";
     for(int i = 0; i < encoding.size(); i++){
@@ -36,6 +36,7 @@ int main() {
         std::cout << "\n";
     }
 
+    std::array<std::string,2> sources = {"terminal","target"};
 
     std::cout << "target: " << "\n";
     for(int i = 0; i < target.size(); i++){
@@ -54,12 +55,15 @@ int main() {
     //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
     std::vector<std::array<int,2>> presence = code.presence(encoding[0],target[0]);
 
-    std::string source = "data.bin";
-    if(code.read_from_binary(source,0) == 1){
-        std::cout << "error: could not read file from memory! " << "\n";
-    } else{
-        std::cout << "file successfully read from memory!" << "\n";
+    //std::string source = "data.bin";
+    for(auto source : sources){
+        if(code.read_from_binary(source,0) == 1){
+            std::cout << "error: could not read file from memory! " << "\n";
+        } else{
+            std::cout << "file successfully read from memory!" << "\n";
+        }
     }
+
 
 
     //std::cout << "indexing: " << "\n";
