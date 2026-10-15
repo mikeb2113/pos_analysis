@@ -246,84 +246,46 @@ because I really want to have spaghetti and garlic bread.
         return result;
     }
 
-    int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding,std::string file)
-    {
-
-        /*
-        for(int input = 0; input < encoding.size(); input++){
-            //std::cout << "size: " << encoding[input].size() << "\n";
-            //std::cout << "writing to binary: " << "\n";
-            for(int i = 0; i < encoding[input].size(); i++){
-                //std::cout << encoding[input][i] << "\n";
-                outFile.write(reinterpret_cast<char *>(&encoding[input][i]),sizeof(encoding[input][i]));
-            }
-        }
-        */
-
-        //for(int input = 0; input <= encoding.size(); input++){
-
-            //builder = 
-            //{
-            //    std::bitset<4>(0)
-            //};
-            //std::cout << "access test: " << "\n";
-            /*
-        for(int input = 0; input < encoding.size(); input++){
-            //std::cout << "size: " << encoding[input].size() << "\n";
-            std::cout << "writing to binary: " << "\n";
-            for(int i = 0; i < encoding[input].size(); i++){
-                std::cout << encoding[input][i] << "\n";
-            }
-        }*/
-/*
-            for(int i = 0; i < 64; i++){
-                for(int i2 = 0; i2 < 4; i2 = i2+4){
-                    //std::cout << encoding[input][63-(i+i2)];
-                    std::cout << encoding[input][63-(i+i2)];
-                }
-            }
-            std::cout << "\n";
-/*
-            for(int i = 0; i < 64; i++){
-                std::cout << encoding[input][i];
-            }
-            std::cout << "\n";
-*/
-            //std::bitset<8> builder = {encoding[i][0+i]}
-            //for(auto bit : encoding[i]){
-                //outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-                //std::cout << bit;
-            //}
-        //}
-        
-        // Always verify the file opened successfully
-
-        // 1. Open the file in binary mode
+    int encoder::write_page_file(int start_index, std::string file){
+        //Write the start index of each page. Thus, the implicit index of each page can be used
+        //to see where each page starts according to the index of the input
+        file += "_page";
         std::ofstream outFile(file, std::ios::out | std::ios::binary);
-        //std::vector<std::bitset<8>> outfile_builder;
-        std::vector<std::array<std::bitset<4>,16>> outfile_builder;
-        std::bitset<64> builder = generate_header(file);
-        std::array<std::bitset<64>,1> intermediate = {builder};
-        //std::cout << "contents: " << "\n";
-        std::cout << "printing builder..." << "\n";
 
-        std::cout << "builder size: " << builder.size() << "\n";
-        /*
-        for(int i = 0; i < builder.size(); i++){
-            char val = builder[i];
-                outFile.write(reinterpret_cast<char *>(&val),sizeof(val));
-                //std::cout << builder[63-i];
-            }
-        std::cout << "\n";
-        */
-       for(auto bit : intermediate){
-        outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-       }
         if (!outFile) {
             std::cerr << "Error opening file for writing!" << std::endl;
             return 1;
         }
 
+        uint16_t write_page = uint16_t(start_index);
+        outFile.write(reinterpret_cast<const char *>(&write_page),sizeof(write_page));
+
+       return 0;
+    }
+
+    int encoder::write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding,std::string file)
+    {
+        // Always verify the file opened successfully
+
+        // 1. Open the file in binary mode
+        write_page_file(1,file);
+        std::ofstream outFile(file, std::ios::out | std::ios::binary);
+
+        std::vector<std::array<std::bitset<4>,16>> outfile_builder;
+        std::bitset<64> builder = generate_header(file);
+        std::array<std::bitset<64>,1> intermediate = {builder};
+
+        std::cout << "printing builder..." << "\n";
+
+        std::cout << "builder size: " << builder.size() << "\n";
+
+        if (!outFile) {
+            std::cerr << "Error opening file for writing!" << std::endl;
+            return 1;
+        }
+       for(auto bit : intermediate){
+        outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
+       }
         for(int i = 0; i < encoding.size(); i++){
             for(auto bit : encoding[i]){
                 outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
@@ -331,19 +293,102 @@ because I really want to have spaghetti and garlic bread.
             }
         }
 
-        //std::array<std::bitset<4>,1> header = generate_header(file);
-        //int header_size = header.size();
-        //std::cout << "header size in bits: " << header_size << "\n";
-        //for(int i = 0; i < header_size; i++){
-        //    outFile.write(reinterpret_cast<char *>(&header[i]),sizeof(header[i]));
-            //std::cout << "header value: " << header[i] << "\n";
-        //}
+        return 0;
+    }
+
+    int read_page_file(std::string file_name){
+        file_name += "_page";
+        const char* filepath = file_name.c_str();
+
+        // 1. Open the file descriptor
+        int fd = open(filepath, O_RDONLY);
+        if (fd == -1) {
+            std::perror("Error opening file");
+            return 1;
+        }
+
+        // 2. Get the size of the file
+        struct stat sb;
+        if (fstat(fd, &sb) == -1) {
+            std::perror("Error getting file size");
+            close(fd);
+            return 1;
+        } 
+        size_t fileSize = sb.st_size;
+        std::cout << "file size in pages: " << fileSize << "\n";
+        if (fileSize == 0) {
+            std::cout << "File is empty." << std::endl;
+            close(fd);
+            return 0;
+        }
+
+        // 3. Map the file into memory
+        // In C++, we must explicitly cast the void* returned by mmap
+        char* fileData = static_cast<char*>(mmap(
+            nullptr,                // Kernel chooses the address
+            fileSize,               // Length of the mapping
+            PROT_READ,              // Memory protection: read-only
+            MAP_PRIVATE,            // Pages are private to this process
+            fd,                     // File descriptor
+            0                       // Offset into the file
+        ));
+
+        if (fileData == MAP_FAILED) {
+            std::perror("Error with mmap");
+            close(fd);
+            return 1;
+        }
+
+        // 4. The file descriptor can be closed immediately after a successful mmap
+        close(fd);
+
+        // 5. Read from the memory-mapped file just like an ordinary array
+        // Ensure file contains complete 64-bit records
+        if (fileSize % sizeof(uint16_t) != 0) {
+            std::cerr << "Invalid file size!" << std::endl;
+            munmap(fileData, fileSize);
+            return 1;
+        }
+
+        /*
+        |==============|
+        |id |    target|     
+        | 0 |    ALL   |
+        | 1 |    POS   |
+        | 2 |    WORD  |
+        |==============|
+        */
+
+        size_t recordCount = fileSize / sizeof(uint16_t);
+
+        std::cout << "record counts to touch in pages: " << recordCount << "\n";
+        std::vector<std::bitset<16>> records;
+        records.reserve(recordCount);
+
+        for (size_t i = 0; i < recordCount; ++i) {
+            uint16_t value;
+
+            // Copy 8 bytes from mapped memory
+            std::memcpy(
+                &value,
+                fileData + i * sizeof(uint16_t),
+                sizeof(uint16_t)
+            );
+            records.emplace_back(value);
+            std::cout << "value from pages: " <<  value << "\n";
+        }
 
         return 0;
     }
 
-    int encoder::read_from_binary(std::string file_name, int target)
+
+
+
+    int encoder::read_from_binary(std::string file_name, int target, bool include_page_file)
     {
+    if(include_page_file){
+        read_page_file(file_name);
+    }
     int header_size = 4;
     const char* filepath = file_name.c_str();
 
@@ -626,10 +671,10 @@ because I really want to have spaghetti and garlic bread.
                         bytes = std::byte(std::log2((int(bitshift))));
                     } else{
                         bytes = search_word_in_known_lib(int(bitshift),word);
-                        //std::cout << "next byte: " << static_cast<int>(bytes) << "\n";
+
                     }
 
-                    //std::byte bytes = std::byte(std::log2((int(bitshift))));
+
                     if(in_lib(word))
                     {
                         if(!POS_or_concrete && in_NP){

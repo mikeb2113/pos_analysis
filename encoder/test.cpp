@@ -57,7 +57,8 @@ int main() {
 
     //std::string source = "data.bin";
     for(auto source : sources){
-        if(code.read_from_binary(source,0) == 1){
+        
+        if(code.read_from_binary(source,0,true) == 1){
             std::cout << "error: could not read file from memory! " << "\n";
         } else{
             std::cout << "file successfully read from memory!" << "\n";
