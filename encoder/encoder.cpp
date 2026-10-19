@@ -315,9 +315,9 @@ because I really want to have spaghetti and garlic bread.
             return 1;
         } 
         size_t fileSize = sb.st_size;
-        std::cout << "file size in pages: " << fileSize << "\n";
+        //std::cout << "file size in pages: " << fileSize << "\n";
         if (fileSize == 0) {
-            std::cout << "File is empty." << std::endl;
+            //std::cout << "File is empty." << std::endl;
             close(fd);
             return 0;
         }
@@ -334,7 +334,7 @@ because I really want to have spaghetti and garlic bread.
         ));
 
         if (fileData == MAP_FAILED) {
-            std::perror("Error with mmap");
+            //std::perror("Error with mmap");
             close(fd);
             return 1;
         }
@@ -345,7 +345,7 @@ because I really want to have spaghetti and garlic bread.
         // 5. Read from the memory-mapped file just like an ordinary array
         // Ensure file contains complete 64-bit records
         if (fileSize % sizeof(uint16_t) != 0) {
-            std::cerr << "Invalid file size!" << std::endl;
+            //std::cerr << "Invalid file size!" << std::endl;
             munmap(fileData, fileSize);
             return 1;
         }
@@ -361,7 +361,7 @@ because I really want to have spaghetti and garlic bread.
 
         size_t recordCount = fileSize / sizeof(uint16_t);
 
-        std::cout << "record counts to touch in pages: " << recordCount << "\n";
+        //std::cout << "record counts to touch in pages: " << recordCount << "\n";
         std::vector<std::bitset<16>> records;
         records.reserve(recordCount);
 
@@ -375,13 +375,142 @@ because I really want to have spaghetti and garlic bread.
                 sizeof(uint16_t)
             );
             records.emplace_back(value);
-            std::cout << "value from pages: " <<  value << "\n";
+            //std::cout << "value from pages: " <<  value << "\n";
         }
 
         return 0;
     }
 
+    std::string encoder::reconstruct_original(int start, int end, int index, sz::string_view& input, std::string file_name){
+        std::string output_builder;
+        int idx = start;
+        int required_bits = end-start+1;
 
+        if(start%4!=0||(end+1)%4!=0){
+            std::cout << "error: evidence of data corruption in the binary files!" << "\n";
+        }
+        
+        file_name += "_page";
+        const char* filepath = file_name.c_str();
+
+        // 1. Open the file descriptor
+        int fd = open(filepath, O_RDONLY);
+        if (fd == -1) {
+            std::perror("Error opening file");
+            return NULL;
+        }
+
+        // 2. Get the size of the file
+        struct stat sb;
+        if (fstat(fd, &sb) == -1) {
+            std::perror("Error getting file size");
+            close(fd);
+            return NULL;
+        } 
+        size_t fileSize = sb.st_size;
+        std::cout << "file size in pages: " << fileSize << "\n";
+        if (fileSize == 0) {
+            std::cout << "File is empty." << std::endl;
+            close(fd);
+            return NULL;
+        }
+
+        // 3. Map the file into memory
+        // In C++, we must explicitly cast the void* returned by mmap
+        char* fileData = static_cast<char*>(mmap(
+            nullptr,                // Kernel chooses the address
+            fileSize,               // Length of the mapping
+            PROT_READ,              // Memory protection: read-only
+            MAP_PRIVATE,            // Pages are private to this process
+            fd,                     // File descriptor
+            0                       // Offset into the file
+        ));
+
+        if (fileData == MAP_FAILED) {
+            std::perror("Error with mmap");
+            close(fd);
+            return NULL;
+        }
+
+        // 4. The file descriptor can be closed immediately after a successful mmap
+        close(fd);
+
+        // 5. Read from the memory-mapped file just like an ordinary array
+        // Ensure file contains complete 64-bit records
+        if (fileSize % sizeof(uint16_t) != 0) {
+            std::cerr << "Invalid file size!" << std::endl;
+            munmap(fileData, fileSize);
+            return NULL;
+        }
+
+        /*
+        |==============|
+        |id |    target|     
+        | 0 |    ALL   |
+        | 1 |    POS   |
+        | 2 |    WORD  |
+        |==============|
+        */
+
+        size_t recordCount = fileSize / sizeof(uint64_t);
+
+        std::cout << "record counts to touch in pages: " << recordCount << "\n";
+        std::vector<std::bitset<64>> records;
+        records.reserve(recordCount);
+
+        for (size_t i = 0; i < recordCount; ++i) {
+            uint64_t value;
+
+            // Copy 8 bytes from mapped memory
+            std::memcpy(
+                &value,
+                fileData + i * sizeof(uint64_t),
+                sizeof(uint64_t)
+            );
+            records.emplace_back(value);
+            std::cout << "value from pages: " <<  value << "\n";
+            std::cout << "file data from pages: " <<  fileData << "\n";
+        }
+
+        std::cout << "printing records: " << "\n";
+        for(int i = 0; i < records.size(); i++){
+            std::cout << records[i] << "\n";
+        }
+
+        std::bitset<64> byte_array = records[index];
+        std::cout << "relevant array bits: " << "\n";
+        std::cout << "testing byte array: " << "\n";
+        for(int i = 0; i < byte_array.size(); i++){
+            for(int i2 = 0; i2 < 4; i2++){
+                std::cout << byte_array[63-(i+i2)];
+            }
+            //std::cout << byte_array[i] << "\n";
+        }
+        while(idx<=end){
+            std::cout << byte_array[idx/4];
+            idx++;
+        }
+        std::cout << "\n";
+
+
+
+        /*
+        while(idx<end){
+         output_builder+=input[idx];
+         idx++;   
+        }
+         */
+        return output_builder;
+    }
+
+    std::vector<std::string> encoder::find_text_matches(std::vector<std::array<int,2>> text_coordinates, sz::string_view& input, std::string file_name){
+        std::vector<std::string> output_builder;
+        for(auto data : text_coordinates){
+            //    std::string encoder::reconstruct_original(int start, int end, int index, sz::string_view& input, std::string file_name){
+            output_builder.push_back(reconstruct_original(data[0],data[1],0,input,file_name));
+        }
+        return output_builder;
+    }
 
 
     int encoder::read_from_binary(std::string file_name, int target, bool include_page_file)
@@ -407,7 +536,6 @@ because I really want to have spaghetti and garlic bread.
         return 1;
     } 
     size_t fileSize = sb.st_size;
-    std::cout << "file size: " << fileSize << "\n";
     if (fileSize == 0) {
         std::cout << "File is empty." << std::endl;
         close(fd);
@@ -436,19 +564,15 @@ because I really want to have spaghetti and garlic bread.
 
     // 5. Read from the memory-mapped file just like an ordinary array
     // Ensure file contains complete 64-bit records
-    if (fileSize % sizeof(uint64_t) != 0) {
+    std::cout << "file size: " << fileSize*8 << "\n";
+    std::cout << "file size test: " << sizeof(uint64_t) << "\n";
+    std::cout << "divis test: " << (fileSize*8)%sizeof(uint64_t) << "\n";
+    /*
+    if (((fileSize*8) % sizeof(uint64_t)) != 0) {
         std::cerr << "Invalid file size!" << std::endl;
         munmap(fileData, fileSize);
         return 1;
     }
-
-    /*
-    |==============|
-    |id |    target|     
-    | 0 |    ALL   |
-    | 1 |    POS   |
-    | 2 |    WORD  |
-    |==============|
     */
 
     size_t recordCount;
@@ -469,22 +593,42 @@ because I really want to have spaghetti and garlic bread.
     }
 
     std::cout << "record counts to touch: " << recordCount << "\n";
-    std::vector<std::bitset<64>> records;
+    std::vector<std::bitset<8>> records;
     records.reserve(recordCount);
 
-    for (size_t i = 0; i < recordCount; ++i) {
-        uint64_t value;
+    std::cout << "beginning loop..." << "\n";
 
+    for (size_t i = 0; i < recordCount; ++i) {
+        uint16_t value;
+        std::cout << "loading to memory..." << "\n";
+        std::cout << "testing values: " << "\n";
+        std::cout << i << "\n";
+        std::cout << &value << "\n";
+        std::cout << fileData << "\n";
+        std::cout << sizeof(uint8_t);
         // Copy 8 bytes from mapped memory
         std::memcpy(
             &value,
-            fileData + i * sizeof(uint64_t),
-            sizeof(uint64_t)
+            fileData + i * sizeof(uint8_t),
+            sizeof(uint8_t)
         );
+        std::cout << "\n" << "data is in memory! " << "\n";
         records.emplace_back(value);
         std::cout << value << "\n";
     }
 
+    munmap(fileData, fileSize);
+
+    /*
+    |==============|
+    |id |    target|     
+    | 0 |    ALL   |
+    | 1 |    POS   |
+    | 2 |    WORD  |
+    |==============|
+    */
+
+    std::cout << "returning" << "\n";
     return 0;
     }
 
@@ -602,16 +746,17 @@ because I really want to have spaghetti and garlic bread.
         for(auto word : view){
             indexable_view.push_back(word);
         }
-
+        int NP_carryover = 1;
         for(int current_block = 1; current_block <= max_blocks; current_block++){
             std::array<std::bitset<4>,16> segment;
             //save an array of size 16. Each entry is a bitset of 4 for a total of 64 bits of storage
             SentenceInfo info;
             //Save info to store important information
 
-            info = generate_segment(POS_or_concrete,input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
+            info = generate_segment(NP_carryover,POS_or_concrete,input,indexable_view,&info,initial_clause_count,current_block, max_blocks,starting_index);
             starting_index = info.ending_index+1;
             segment = info.encoding;
+            NP_carryover = info.NP_carryover;
             std::bitset<64> entry(0);
             //initialize entry to 0s. Then update with accurate values from info
             int idx = 63;
@@ -628,7 +773,7 @@ because I really want to have spaghetti and garlic bread.
         return array;
     }
 
-    encoder::SentenceInfo encoder::generate_segment(bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info,int initial_clause_count, int block, int max_blocks, int starting_index, int iteration, bool in_NP)
+    encoder::SentenceInfo encoder::generate_segment(int NP_carryover, bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info,int initial_clause_count, int block, int max_blocks, int starting_index, int iteration, bool in_NP)
     { 
         iteration = block;
         //Consider changing this to return an array.
@@ -642,6 +787,7 @@ because I really want to have spaghetti and garlic bread.
         int NP_start = 0;
         int NP_end = 0;
         int page = 0;
+        std::vector<std::array<int,2>> NP_list_builder;
         std::vector<int> NP_idxs;
         if(block!=max_blocks){
             instructions_remaining = 13;
@@ -697,11 +843,12 @@ because I really want to have spaghetti and garlic bread.
                                 NP_start = i;
                                 
 
-                                std::cout << "testing NP values for word: " << view[i] << "\n";
-                                std::cout << "index: " << NP_id << "\n";
-                                std::cout << "start: " << NP_start << "\n";
-                                std::cout << "page: " << page << "\n";
-                                NP_id++;
+                                std::cout << "testing NP values for word: " << view[i] << "\n"; //This is the word
+                                std::cout << "index: " << NP_carryover << "\n"; //This is the NP functor index - which occurance of an NP it is
+                                std::cout << "start: " << NP_start << "\n"; // This is the index in the original text (if treated as an array of strings)
+                                NP_list_builder.push_back(std::array<int,2>{NP_carryover,NP_start});
+                                //std::cout << "page: " << page << "\n";
+                                NP_carryover++;
                             }
                             in_NP = true;
                             idx++;
@@ -781,7 +928,7 @@ because I really want to have spaghetti and garlic bread.
             //std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";
             words += (13*(block-1));
 
-            SentenceInfo payload{segment_byte_array,size_t(starting_index),size_t(ending_index)};
+            SentenceInfo payload{segment_byte_array,size_t(starting_index),size_t(ending_index),NP_carryover};
             return payload;
     }
 

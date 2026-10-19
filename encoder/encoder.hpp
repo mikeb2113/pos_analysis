@@ -219,9 +219,10 @@ class encoder{
             std::array<std::bitset<4>,16> encoding;
             size_t starting_index;
             size_t ending_index;
+            int NP_carryover;
         };
         
-    SentenceInfo generate_segment(bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info, int initial_clause_count, int block, int max_blocks = 1, int starting_index = 0, int iteration = 0, bool in_NP = false);
+    SentenceInfo generate_segment(int NP_carryover, bool POS_or_concrete, sz::string_view& input, std::vector<sz::string_view> view, SentenceInfo *info, int initial_clause_count, int block, int max_blocks = 1, int starting_index = 0, int iteration = 0, bool in_NP = false);
     bool get_encoding_bit(const std::bitset<64>& bits, std::size_t index);
     bool equals(std::vector<std::bitset<64>> a, std::vector<std::bitset<64>> b);
     bool smaller(std::vector<std::bitset<64>> input, std::vector<std::bitset<64>> target);
@@ -231,6 +232,8 @@ class encoder{
     int read_from_binary(std::string file_name, int target = 0, bool include_page_file = false);
     std::bitset<64> generate_header(std::string input);
     int write_page_file(int start_index, std::string file);
+    std::string reconstruct_original(int start, int end, int index, sz::string_view& input, std::string file_name);
+    std::vector<std::string> find_text_matches(std::vector<std::array<int,2>> presence_coordinates, sz::string_view& input, std::string file_name);
 
     enum class POS : uint16_t {
         DET       = 1 << 1,

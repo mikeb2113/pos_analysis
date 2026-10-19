@@ -10,7 +10,7 @@ int main() {
 
     std::string terminal_input;
 
-    sz::string_view example = "The USSR";
+    sz::string_view example = "The quick brown fox jumped over the lazy dog";
 
     std::array<std::vector<std::bitset<64>>,2> target = 
     code.generate_encoding(example,"target");
@@ -62,9 +62,13 @@ int main() {
             std::cout << "error: could not read file from memory! " << "\n";
         } else{
             std::cout << "file successfully read from memory!" << "\n";
+            std::cout << "printing matching text: " << "\n";
+            std::vector<std::string> matches = code.find_text_matches(presence,input,source);
+            for(auto text : matches){
+                std::cout << text;
+            }
         }
     }
-
 
 
     //std::cout << "indexing: " << "\n";
