@@ -41,18 +41,20 @@ int main() {
     std::cout << "target: " << "\n";
     for(int i = 0; i < target.size(); i++){
         if(i == 0){
-            std::cout << "part of speech encoding: " << "\n";
+            std::cout << "part of speech encoding in memory: " << "\n";
         } else{
-            std::cout << "concrete encoding: " << "\n";
+            std::cout << "concrete encoding in memory: " << "\n";
         }
         for (const auto& byte : target[i]) {
             std::cout << byte << '\n';
         }
-        std::cout << "\n";
+        std::cout << "\n ";
     }
+    std::cout << "memory operations complete!" << "\n";
 
-    std::cout << "equality check: " << code.equals(encoding[0], target[0]) << "\n";
+    //std::cout << "equality check: " << code.equals(encoding[0], target[0]) << "\n";
     //std::cout << "size check: " << "\n" << code.smaller(encoding,target) << "\n";
+    std::cout << "checking document co-presence: " << "\n";
     std::vector<std::array<int,2>> presence = code.presence(encoding[0],target[0]);
 
     //std::string source = "data.bin";
