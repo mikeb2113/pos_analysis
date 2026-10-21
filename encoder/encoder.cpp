@@ -290,18 +290,23 @@ because I really want to have spaghetti and garlic bread.
        }
        std::cout << "\n" << "writing body: " << "\n";
         for(int i = 0; i < encoding.size(); i++){
-            /*
-                for(auto bit : encoding[i]){
-                    outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-                    std::cout << bit;
-                    //std::cout << bit;
-                }     
-            */
             for(auto bit : encoding[i]){
                 outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-                std::cout << bit << "\n";
+                std::cout << bit;
                 //std::cout << bit;
+            }     
+            /*
+            for (const auto& bit : encoding) {
+                uint64_t value = bit.to_ullong();
+
+                outFile.write(
+                    reinterpret_cast<const char*>(&value),
+                    sizeof(value)
+                );
+
+                std::cout << bit << "\n";
             }
+                */
         }
         std::cout << "\n" << "encoding complete! " << "\n";
 
@@ -580,10 +585,18 @@ because I really want to have spaghetti and garlic bread.
         fd,                     // File descriptor
         0                       // Offset into the file
     ));
-    std::cout << "attempting to read from binary file: " << "\n";
-    for (size_t i = 0; i < fileSize; i++) {
-        unsigned char byte = static_cast<unsigned char>(fileData[i]);
-        std::cout << static_cast<int>(byte) << "\n";
+
+    std::cout << "Attempting to read from binary file: "
+            << file_name << "\n";
+
+    for (size_t i = 0; i + sizeof(std::bitset<64>) <= fileSize;
+        i += sizeof(std::bitset<64>)) {
+
+        std::bitset<64> record;
+
+        std::memcpy(&record, fileData + i, sizeof(record));
+
+        std::cout << record << "\n";
     }
 
     if (fileData == MAP_FAILED) {
@@ -677,7 +690,16 @@ because I really want to have spaghetti and garlic bread.
     */
     std::cout << "records size: " << records.size() << "\n";
     std::cout << "printing records: " << "\n";
+/*
+    for (size_t i = 0; i + sizeof(std::bitset<64>) <= fileSize; i += sizeof(std::bitset<64>)) {
 
+        std::bitset<64> record;
+
+        std::memcpy(&record, fileData + i, sizeof(record));
+
+        std::cout << record << "\n";
+    }
+*/
     for(int i = 0; i < records.size(); i++){
         for(int i2 = 0; i2 < 8; i2++){
             std::cout << records[i][i2];
@@ -689,6 +711,20 @@ because I really want to have spaghetti and garlic bread.
     std::cout << records[0][0] << "\n";
     std::cout << "skipping to reocrd 1: " << "\n";
     std::cout << records[0][1] << "\n";
+/*
+    std::cout << "skipping to reocrd 0: " << "\n";
+    std::cout << records[1][0] << "\n";
+    std::cout << "skipping to reocrd 1: " << "\n";
+    std::cout << records[1][1] << "\n";
+    std::cout << "skipping to reocrd 0: " << "\n";
+    std::cout << records[1][2] << "\n";
+    std::cout << "skipping to reocrd 1: " << "\n";
+    std::cout << records[1][3] << "\n";
+    std::cout << "skipping to reocrd 0: " << "\n";
+    std::cout << records[1][4] << "\n";
+    std::cout << "skipping to reocrd 1: " << "\n";
+    std::cout << records[1][5] << "\n";
+*/
     std::cout << "returning" << "\n";
     return 0;
     }
