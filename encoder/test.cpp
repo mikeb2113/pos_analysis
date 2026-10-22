@@ -59,7 +59,20 @@ int main() {
 
     //std::string source = "data.bin";
     for(auto source : sources){
-        
+        std::array<std::vector<std::bitset<8>>,2> binary_data = code.read_from_binary(source,0,true);
+        std::cout << "attempting to read pos data: " << "\n";
+        for(int i = 0; i < binary_data[0].size(); i++){
+            std::cout << binary_data[0][i] << "\n";
+        }
+        std::cout << "attempting to read concrete data: " << "\n";
+        for(int i = 0; i < binary_data[1].size(); i++){
+            std::cout << binary_data[1][i] << "\n";
+        }
+        std::vector<std::string> matches = code.find_text_matches(presence,input,source);
+        for(auto text : matches){
+            std::cout << text;
+        }
+        /*
         if(code.read_from_binary(source,0,true) == 1){
             std::cout << "error: could not read file from memory! " << "\n";
         } else{
@@ -70,6 +83,7 @@ int main() {
                 std::cout << text;
             }
         }
+        */
     }
 
 

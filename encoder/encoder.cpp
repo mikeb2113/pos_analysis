@@ -290,9 +290,9 @@ because I really want to have spaghetti and garlic bread.
        }
        std::cout << "\n" << "writing body: " << "\n";
         for(int i = 0; i < encoding.size(); i++){
-            for(auto bit : encoding[i]){
-                outFile.write(reinterpret_cast<char *>(&bit),sizeof(bit));
-                std::cout << bit;
+            for(auto array : encoding[i]){
+                outFile.write(reinterpret_cast<char *>(&array),sizeof(array));
+                std::cout << array;
                 //std::cout << bit;
             }     
             /*
@@ -398,7 +398,7 @@ because I really want to have spaghetti and garlic bread.
         for(int i = 0; i < records.size(); i++){
             std::cout << records[i] << "\n";
         }
-
+        std::cout << "returning..." << "\n";
         return 0;
     }
 
@@ -546,8 +546,10 @@ because I really want to have spaghetti and garlic bread.
     }
 
 
-    int encoder::read_from_binary(std::string file_name, int target, bool include_page_file)
+    std::array<std::vector<std::bitset<8>>,2> encoder::read_from_binary(std::string file_name, int target, bool include_page_file)
     {
+    std::array<std::vector<std::bitset<8>>, 2> output_builder;
+    //idx 0 = pos, idx 1 = concrete
     if(include_page_file){
         read_page_file(file_name);
     }
@@ -556,25 +558,30 @@ because I really want to have spaghetti and garlic bread.
 
     // 1. Open the file descriptor
     int fd = open(filepath, O_RDONLY);
+    /*
     if (fd == -1) {
         std::perror("Error opening file");
         return 1;
     }
-
+*/
     // 2. Get the size of the file
+    
     struct stat sb;
+    
     if (fstat(fd, &sb) == -1) {
         std::perror("Error getting file size");
         close(fd);
-        return 1;
+        //return 1;
     } 
+    
     size_t fileSize = sb.st_size;
+    
     if (fileSize == 0) {
         std::cout << "File is empty." << std::endl;
         close(fd);
-        return 0;
+        //return 0;
     }
-
+    
     // 3. Map the file into memory
     // In C++, we must explicitly cast the void* returned by mmap
     char* fileData = static_cast<char*>(mmap(
@@ -588,6 +595,7 @@ because I really want to have spaghetti and garlic bread.
 
     std::cout << "Attempting to read from binary file: "
             << file_name << "\n";
+    std::cout << "file size: " << fileSize << "\n";
 
     for (size_t i = 0; i + sizeof(std::bitset<64>) <= fileSize;
         i += sizeof(std::bitset<64>)) {
@@ -602,24 +610,24 @@ because I really want to have spaghetti and garlic bread.
     if (fileData == MAP_FAILED) {
         std::perror("Error with mmap");
         close(fd);
-        return 1;
+        //return 1;
     }
 
     // 4. The file descriptor can be closed immediately after a successful mmap
     close(fd);
-
+std::cout << "mapped! " << "\n";
     // 5. Read from the memory-mapped file just like an ordinary array
     // Ensure file contains complete 64-bit records
     //std::cout << "file size: " << fileSize*8 << "\n";
     //std::cout << "file size test: " << sizeof(uint64_t) << "\n";
     //std::cout << "divis test: " << (fileSize*8)%sizeof(uint64_t) << "\n";
-    /*
+    
     if (((fileSize*8) % sizeof(uint64_t)) != 0) {
         std::cerr << "Invalid file size!" << std::endl;
         munmap(fileData, fileSize);
-        return 1;
+        //return 1;
     }
-    */
+    
 
     size_t recordCount;
 /*
@@ -660,7 +668,7 @@ because I really want to have spaghetti and garlic bread.
     //std::cout << "beginning loop..." << "\n";
 
     for (size_t i = 0; i < recordCount; ++i) {
-        uint16_t value;
+        uint8_t value;
         //std::cout << "loading to memory..." << "\n";
         //std::cout << "testing values: " << "\n";
         //std::cout << i << "\n";
@@ -689,7 +697,7 @@ because I really want to have spaghetti and garlic bread.
     |==============|
     */
     std::cout << "records size: " << records.size() << "\n";
-    std::cout << "printing records: " << "\n";
+    std::cout << "printing records for file: " << file_name << "\n";
 /*
     for (size_t i = 0; i + sizeof(std::bitset<64>) <= fileSize; i += sizeof(std::bitset<64>)) {
 
@@ -700,34 +708,63 @@ because I really want to have spaghetti and garlic bread.
         std::cout << record << "\n";
     }
 */
+    int record_ct = -1;
+    size_t counts = (records.size()-8)/2;
+    std::vector<std::bitset<8>> pos;
+    std::vector<std::bitset<8>> concrete;
+    pos.reserve(counts);
+    concrete.reserve(counts);
+    std::cout << "capacity test: " << "\n";
+    std::cout << pos.capacity() << "\n";
+    std::cout << concrete.capacity() << "\n";
+    int reflection_num = (16*records.size()/8)-(records.size()/2);
+
+    std::cout << "counts test: " << counts << "\n";
+    for(int i = 9; i <= (records.size()/2); i++){
+
+        std::cout << "pos index: " << i <<  " " << records[records.size()-i] << "\n";
+        std::cout << "concrete index: " << i <<  " " << records[counts+i] << "\n";
+        if(i%8==0){
+            record_ct++;
+        }
+        if(record_ct%2==0){
+            pos[pos.capacity()-i] = records[records.size()-i];
+            std::cout << "pos index: " << records.size()-i << "\n";
+            //pos.push_back(records[records.size()-i]);
+        } else {
+            concrete[concrete.capacity()-i] = records[counts+i];
+            std::cout << "concrete index: " << counts+i << "\n";
+            //concrete.push_back(records[counts+1]);
+        }
+    }
+/*
     for(int i = 0; i < records.size(); i++){
-        for(int i2 = 0; i2 < 8; i2++){
+        for(int i2 = 0; i2 < 4; i2++){
             std::cout << records[i][i2];
         }
-        //std::cout << records[i] << "\n";
+        std::cout << records[i] << "\n";
     }
-    std::cout << "\n";
-    std::cout << "skipping to reocrd 0: " << "\n";
-    std::cout << records[0][0] << "\n";
-    std::cout << "skipping to reocrd 1: " << "\n";
-    std::cout << records[0][1] << "\n";
-/*
-    std::cout << "skipping to reocrd 0: " << "\n";
-    std::cout << records[1][0] << "\n";
-    std::cout << "skipping to reocrd 1: " << "\n";
-    std::cout << records[1][1] << "\n";
-    std::cout << "skipping to reocrd 0: " << "\n";
-    std::cout << records[1][2] << "\n";
-    std::cout << "skipping to reocrd 1: " << "\n";
-    std::cout << records[1][3] << "\n";
-    std::cout << "skipping to reocrd 0: " << "\n";
-    std::cout << records[1][4] << "\n";
-    std::cout << "skipping to reocrd 1: " << "\n";
-    std::cout << records[1][5] << "\n";
 */
+
     std::cout << "returning" << "\n";
-    return 0;
+    std::cout << "value test: " << "\n" << "pos: " << "\n";
+    for(int i = 0; i < pos.size(); i++){
+        std::cout << pos[i] << "\n";
     }
+    std::cout << "concrete: " << "\n";
+    for(int i = 0; i < concrete.size(); i++){
+        std::cout << concrete[i] << "\n";
+    }
+    output_builder[0] = pos;
+    output_builder[1] = concrete;
+    return output_builder;
+    }
+/*
+std::vector<> encoder::get_original(std::bitset<8>){
+    //Note: data is ingested in 8 bit bytes. These are made of 2 bit arrays, but the ordering of each bit is put in wrong
+    //Fix this laterr
+}
+*/
 
     std::vector<std::array<int,2>> encoder::presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target){
         std::vector<std::array<int,2>> presence;
@@ -765,7 +802,7 @@ because I really want to have spaghetti and garlic bread.
                         consecutive_match++;
                         //increment consecutive match on a matching nibble
                         if(consecutive_match==min_to_match){
-                            //std::cout << "[" << 12+starting_index << ", " << 11+starting_index+(4*min_to_match) << "] index: " << byte_array << "\n";
+                            std::cout << "[" << 12+starting_index << ", " << 11+starting_index+(4*min_to_match) << "] index: " << byte_array << "\n";
                             presence.push_back(std::array<int,2>{12+starting_index,11+starting_index+(4*min_to_match)});
                             consecutive_match = 0;
                             //If we have at least min_to_match matching nibbles in a row, append the start and end
@@ -991,6 +1028,7 @@ because I really want to have spaghetti and garlic bread.
             std::bitset<4> byteEleven = sentence_byte_array[10];
             std::bitset<4> byteTwelve = sentence_byte_array[11];
             std::bitset<4> byteThirteen = sentence_byte_array[12];
+
             int instruction;
             if(block==max_blocks){
                 instruction = initial_clause_count-(13*(block-1));
@@ -1004,6 +1042,7 @@ because I really want to have spaghetti and garlic bread.
             //std::cout << std::bitset<4>(instruction) << std::bitset<4>(0) << std::bitset<4>(0) << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven << byteTwelve << byteThirteen << "\n";
         std::array<std::bitset<4>,16> segment_byte_array = 
             {
+                /*
                 byteThirteen,
                 byteTwelve,
                 byteEleven,
@@ -1020,8 +1059,8 @@ because I really want to have spaghetti and garlic bread.
                 std::bitset<4>(0),
                 std::bitset<4>(0),
                 std::bitset<4>(instruction)
+*/
 
-/*
                 std::bitset<4>(instruction),
                 std::bitset<4>(0),
                 std::bitset<4>(0),
@@ -1038,7 +1077,7 @@ because I really want to have spaghetti and garlic bread.
                 byteEleven,
                 byteTwelve,
                 byteThirteen
-*/
+
             };
             size_t test = segment_byte_array.size();
             //std::cout << byteOne << byteTwo << byteThree << byteFour << byteFive << byteSix << byteSeven << byteEight << byteNine << byteTen << byteEleven <<byteTwelve << byteThirteen << "\n";

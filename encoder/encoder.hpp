@@ -229,7 +229,7 @@ class encoder{
     std::vector<std::array<int,2>> presence(std::vector<std::bitset<64>> input,std::vector<std::bitset<64>> target);
     long long bitset_to_int(std::bitset<64>);
     int write_to_binary(std::array<std::vector<std::bitset<64>>,2> encoding, std::string file);
-    int read_from_binary(std::string file_name, int target = 0, bool include_page_file = false);
+    std::array<std::vector<std::bitset<8>>, 2> read_from_binary(std::string file_name, int target = 0, bool include_page_file = false);
     std::bitset<64> generate_header(std::string input);
     int write_page_file(int start_index, std::string file);
     std::string reconstruct_original(int start, int end, int index, sz::string_view& input, std::string file_name);
