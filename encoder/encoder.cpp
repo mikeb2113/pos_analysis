@@ -728,7 +728,10 @@ std::cout << "mapped! " << "\n";
     int initial_index = 15;
     std::cout << "inital index: " << initial_index << "\n";
     int pos_index = initial_index;
-    for(int i = 0; i < records.size(); i++){
+    for(int i = 0; i < records.size()/2; i++){
+        if(pos_index >= counts-1){
+            break;
+        }
         //int pos_index = initial_index-(i);
         int concrete_idx = (pos_index)+(8*skip);
 
