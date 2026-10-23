@@ -720,31 +720,29 @@ std::cout << "mapped! " << "\n";
     int reflection_num = (16*records.size()/8)-(records.size()/2);
 
     std::cout << "counts test: " << counts << "\n";
-    for(int i = 9; i <= (records.size()/2); i++){
-
-        std::cout << "pos index: " << i <<  " " << records[records.size()-i] << "\n";
-        std::cout << "concrete index: " << i <<  " " << records[counts+i] << "\n";
-        if(i%8==0){
-            record_ct++;
-        }
-        if(record_ct%2==0){
-            pos[pos.capacity()-i] = records[records.size()-i];
-            std::cout << "pos index: " << records.size()-i << "\n";
-            //pos.push_back(records[records.size()-i]);
-        } else {
-            concrete[concrete.capacity()-i] = records[counts+i];
-            std::cout << "concrete index: " << counts+i << "\n";
-            //concrete.push_back(records[counts+1]);
-        }
-    }
-/*
+    int skip = (counts/8);
+    std::cout << "skipping: " << skip << "\n";
+    std::cout << "test" << "\n";
+    int record_count = (records.size()/8)-1;
+    std::cout << "records size: " << records.size() << "\n";
+    int initial_index = 15;
+    std::cout << "inital index: " << initial_index << "\n";
+    int pos_index = initial_index;
     for(int i = 0; i < records.size(); i++){
-        for(int i2 = 0; i2 < 4; i2++){
-            std::cout << records[i][i2];
+        //int pos_index = initial_index-(i);
+        int concrete_idx = (pos_index)+(8*skip);
+
+        std::cout << "pos index: " << pos_index <<  " " << records[pos_index] << "\n";
+        //std::cout << "concrete index: " << (records.size()-i)+(counts/8) <<  " " << records[(records.size()-i+backwards_ct)] << "\n";
+        std::cout << "concrete index: " << concrete_idx <<  " " << records[concrete_idx] << "\n";
+
+        pos[pos.capacity()-i] = records[pos_index];
+        concrete[concrete.capacity()-i] = records[concrete_idx];
+        if(pos_index%8==0){
+            pos_index += 16;
         }
-        std::cout << records[i] << "\n";
+        pos_index--;
     }
-*/
 
     std::cout << "returning" << "\n";
     std::cout << "value test: " << "\n" << "pos: " << "\n";
