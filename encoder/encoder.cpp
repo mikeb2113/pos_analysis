@@ -698,66 +698,49 @@ std::cout << "mapped! " << "\n";
     */
     std::cout << "records size: " << records.size() << "\n";
     std::cout << "printing records for file: " << file_name << "\n";
-/*
-    for (size_t i = 0; i + sizeof(std::bitset<64>) <= fileSize; i += sizeof(std::bitset<64>)) {
 
-        std::bitset<64> record;
-
-        std::memcpy(&record, fileData + i, sizeof(record));
-
-        std::cout << record << "\n";
-    }
-*/
     int record_ct = -1;
     size_t counts = (records.size()-8)/2;
     std::vector<std::bitset<8>> pos;
     std::vector<std::bitset<8>> concrete;
     pos.reserve(counts);
     concrete.reserve(counts);
-    std::cout << "capacity test: " << "\n";
-    std::cout << pos.capacity() << "\n";
-    std::cout << concrete.capacity() << "\n";
     int reflection_num = (16*records.size()/8)-(records.size()/2);
 
-    std::cout << "counts test: " << counts << "\n";
-    int skip = (counts/8);
-    std::cout << "skipping: " << skip << "\n";
-    std::cout << "test" << "\n";
-    int record_count = (records.size()/8)-1;
-    std::cout << "records size: " << records.size() << "\n";
+    int record_count = (counts/8);
     int initial_index = 15;
-    std::cout << "inital index: " << initial_index << "\n";
     int pos_index = initial_index;
-    for(int i = 0; i < records.size()/2; i++){
-        if(pos_index >= counts-1){
+    //(records.size()-8)/2 This means that we skip the header, and keep going half way down the records. Since the 
+    //POS and NP records are mirrors, we only need to increment half way, skipping to the corresponding half.
+    for(int i = 0; i <= (records.size()-8)/2; i++){
+
+        if(pos_index > counts+8){
             break;
+            //This ends early when the index jumps over the midway in the records (^see above for the reason)
         }
-        //int pos_index = initial_index-(i);
-        int concrete_idx = (pos_index)+(8*skip);
 
-        std::cout << "pos index: " << pos_index <<  " " << records[pos_index] << "\n";
-        //std::cout << "concrete index: " << (records.size()-i)+(counts/8) <<  " " << records[(records.size()-i+backwards_ct)] << "\n";
-        std::cout << "concrete index: " << concrete_idx <<  " " << records[concrete_idx] << "\n";
+        int concrete_idx = (pos_index)+(8*record_count);
+        //From a given POS address, we know we can skip 8 times half the record count without the header
 
-        pos[pos.capacity()-i] = records[pos_index];
-        concrete[concrete.capacity()-i] = records[concrete_idx];
+        pos.emplace_back(records[pos_index]);
+        concrete.emplace_back(records[concrete_idx]);
+        //Save the records
         if(pos_index%8==0){
             pos_index += 16;
         }
         pos_index--;
     }
 
-    std::cout << "returning" << "\n";
-    std::cout << "value test: " << "\n" << "pos: " << "\n";
     for(int i = 0; i < pos.size(); i++){
         std::cout << pos[i] << "\n";
     }
-    std::cout << "concrete: " << "\n";
     for(int i = 0; i < concrete.size(); i++){
         std::cout << concrete[i] << "\n";
     }
+
     output_builder[0] = pos;
     output_builder[1] = concrete;
+    //And finally return the records in a structured array for ease of use!
     return output_builder;
     }
 /*
